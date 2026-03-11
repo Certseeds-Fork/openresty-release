@@ -6,8 +6,8 @@ diff -upr nginx-1.4.3/src/core/nginx.h nginx-1.4.3-patched/src/core/nginx.h
  
  #define nginx_version      1004003
  #define NGINX_VERSION      "1.4.3"
--#define NGINX_VER          "ngx_openresty/" NGINX_VERSION ".4"
-+#define NGINX_VER          "ngx_openresty/" NGINX_VERSION ".4 (no pool)"
+-#define NGINX_VER          "ngx_openresty/" NGINX_VERSION ".6"
++#define NGINX_VER          "ngx_openresty/" NGINX_VERSION ".6 (no pool)"
  
  #define NGINX_VAR          "NGINX"
 Only in nginx-1.4.3-patched/src/core: nginx.h.orig
