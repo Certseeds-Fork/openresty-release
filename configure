@@ -150,7 +150,10 @@ for my $opt (@ARGV) {
         $prefix = $1;
 
     } elsif ($opt eq '--without-lua51') {
-        $resty_opts{no_lua} = 1;
+        undef $resty_opts{lua};
+
+    } elsif ($opt eq '--with-lua51') {
+        $resty_opts{lua} = 1;
 
     } elsif ($opt =~ /^--with-lua51=(.*)/) {
         $resty_opts{lua_path} = $1;
@@ -181,6 +184,9 @@ for my $opt (@ARGV) {
 
     } elsif ($opt eq '--without-lua_resty_lock') {
         $resty_opts{no_lua_resty_lock} = 1;
+
+    } elsif ($opt eq '--without-lua_resty_core') {
+        $resty_opts{no_lua_resty_core} = 1;
 
     } elsif ($opt eq '--without-lua_rds_parser') {
         $resty_opts{no_lua_rds_parser} = 1;
@@ -391,11 +397,12 @@ _END_
         }
     }
 
-    if (! $opts->{luajit} && ! $opts->{luajit_path}
-        && ! $opts->{no_http_lua} && ! $opts->{no_lua}
-        && ! $opts->{lua_path})
+    if (!$opts->{lua}
+        && !$opts->{lua_path}
+        && !$opts->{no_http_lua}
+        && !$opts->{luajit_path})
     {
-        $opts->{lua} = 1;
+        $opts->{luajit} = 1;
     }
 
     if ($opts->{luajit} && $opts->{luajit_path}) {
@@ -504,7 +511,7 @@ _END_
     if ($opts->{luajit_path}) {
         my $luajit_prefix = $opts->{luajit_path};
         env LUAJIT_LIB => "$luajit_prefix/lib";
-        env LUAJIT_INC => "$luajit_prefix/include/luajit-2.0";
+        env LUAJIT_INC => "$luajit_prefix/include/luajit-2.1";
 
         push @ngx_rpaths, "$luajit_prefix/lib";
 
@@ -564,7 +571,7 @@ _END_
             . "\$(MAKE) install$extra_opts PREFIX=$luajit_prefix DESTDIR=\$(DESTDIR)";
 
         env LUAJIT_LIB => "$luajit_root$luajit_prefix/lib";
-        env LUAJIT_INC => "$luajit_root$luajit_prefix/include/luajit-2.0";
+        env LUAJIT_INC => "$luajit_root$luajit_prefix/include/luajit-2.1";
 
         push @ngx_rpaths, "$luajit_prefix/lib";
 
@@ -787,7 +794,7 @@ _EOC_
         }
 
         for my $key (qw(dns memcached redis mysql string upload websocket
-                        lock))
+                        lock core))
         {
             unless ($opts->{"no_lua_resty_$key"}) {
                 my $name = "lua-resty-$key";
@@ -844,7 +851,7 @@ sub usage ($) {
   --with-no-pool-patch               enable the no-pool patch for debugging memory issues.
 
   -jN                                pass -jN option to make while building the bundled
-                                     Lua 5.1 interpreter or LuaJIT 2.0.
+                                     Lua 5.1 interpreter or LuaJIT 2.1.
 
 _EOC_
 
@@ -911,12 +918,14 @@ _EOC_
   --without-lua_resty_string         disable the lua-resty-string library
   --without-lua_resty_websocket      disable the lua-resty-websocket library
   --without-lua_resty_lock           disable the lua-resty-lock library
+  --without-lua_resty_core           disable the lua-resty-core library
 
-  --without-lua51                    disable the bundled Lua 5.1 interpreter
+  --with-lua51                       enable and build the bundled standard Lua 5.1 interpreter
+  --without-lua51                    disable the bundled standard Lua 5.1 interpreter
   --with-lua51=PATH                  specify the external installation of Lua 5.1 by PATH
-  --with-luajit                      enable and build LuaJIT 2.0
-  --with-luajit=PATH                 use the external LuaJIT 2.0 installation specified by PATH
-  --with-luajit-xcflags=FLAGS        Specify extra C compiler flags for LuaJIT 2.0
+  --with-luajit                      enable and build the bundled LuaJIT 2.1 (the default)
+  --with-luajit=PATH                 use the external LuaJIT 2.1 installation specified by PATH
+  --with-luajit-xcflags=FLAGS        Specify extra C compiler flags for LuaJIT 2.1
   --with-libdrizzle=DIR              specify the libdrizzle 1.0 (or drizzle) installation prefix
   --with-libpq=DIR                   specify the libpq (or postgresql) installation prefix
   --with-pg_config=PATH              specify the path of the pg_config utility
@@ -1025,7 +1034,8 @@ Options directly inherited from nginx
   --without-pcre                     disable PCRE library usage
   --with-pcre                        force PCRE library usage
   --with-pcre=DIR                    set path to PCRE library sources
-  --with-pcre-opt=OPTIONS            set additional options for PCRE building
+  --with-pcre-opt=OPTIONS            set additional make options for PCRE
+  --with-pcre-conf-opt=OPTIONS       set additional configure options for PCRE
   --with-pcre-jit                    build PCRE with JIT compilation support
 
   --with-md5=DIR                     set path to md5 library sources
