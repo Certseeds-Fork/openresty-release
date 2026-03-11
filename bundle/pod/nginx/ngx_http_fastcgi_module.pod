@@ -65,12 +65,12 @@ This directive appeared in version 0.8.22.
 
 
 Makes outgoing connections to a FastCGI server originate
-from the specified local IP I<C<address>>.
+from the specified local IP address with an optional port (1.11.2).
 Parameter value can contain variables (1.3.12).
 The special value C<off> (1.3.12) cancels the effect
 of the C<fastcgi_bind> directive
 inherited from the previous configuration level, which allows the
-system to auto-assign the local IP address.
+system to auto-assign the local IP address and port.
 
 
 
@@ -1844,7 +1844,7 @@ should also be passed with the value “200”:
 
 
 
-If a directive is specified with C<if_not_empty> (1.1.11) then
+If the directive is specified with C<if_not_empty> (1.1.11) then
 such a parameter will not be passed to the server until its value is not empty:
 
     

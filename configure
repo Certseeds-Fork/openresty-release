@@ -144,7 +144,7 @@ for my $opt (@ARGV) {
 
     if ($opt =~ /^--with-cc=(.+)/) {
         $cc = $1;
-        push @ngx_opts, "'$opt'";
+        push @ngx_opts, "$opt";
         next;
     }
 
@@ -330,7 +330,7 @@ if (@ngx_ld_opts) {
 my $cmd = "sh ./configure --prefix=$ngx_prefix"
     . $resty_opts
     . $ld_opts
-    . (@ngx_opts ? " \\\n  @ngx_opts" : "");
+    . (@ngx_opts ? " \\\n  " . quote_cli_args(\@ngx_opts) : "");
     ;
 
 shell $cmd, $dry_run;
@@ -340,6 +340,12 @@ push @make_cmds, "cd $root_dir/build/$ngx_dir && "
 
 push @make_install_cmds, "cd $root_dir/build/$ngx_dir && "
     . "\$(MAKE) install DESTDIR=\$(DESTDIR)";
+
+push @make_install_cmds, "mkdir -p \$(DESTDIR)$prefix/site/lualib";
+
+if ($platform ne 'msys') {
+    push @make_install_cmds, "ln -sf $ngx_prefix/sbin/nginx \$(DESTDIR)$prefix/bin/openresty";
+}
 
 cd '../..'; # to the root
 #die "pwd: " .. `pwd`;
@@ -749,6 +755,7 @@ _END_
         # build lua modules
 
         my $lualib_prefix = File::Spec->catfile($prefix, "lualib");
+        my $site_lualib_prefix = File::Spec->catfile($prefix, "site/lualib");
 
         my $ngx_lua_dir = auto_complete 'ngx_lua';
 
@@ -756,20 +763,11 @@ _END_
             die "Cannot open $ngx_lua_dir/config for appending: $!\n";
 
         {
-            my $path_prefix = $lualib_prefix;
-
-            #if (File::Spec->rel2abs($lualib_prefix) ne File::Spec->canonpath($lualib_prefix)
-            #&& $platform eq 'msys')
-            #{
-                # being a relative path and on MSYS
-                #$path_prefix = "!/$lualib_prefix";
-            #}
-
             print $in <<"_EOC_";
 
 ngx_lua_dquote='"'
-CFLAGS="\$CFLAGS -DLUA_DEFAULT_PATH='\${ngx_lua_dquote}$path_prefix/?.lua;$path_prefix/?/init.lua\$ngx_lua_dquote'"
-CFLAGS="\$CFLAGS -DLUA_DEFAULT_CPATH='\${ngx_lua_dquote}$path_prefix/?.so\$ngx_lua_dquote'"
+CFLAGS="\$CFLAGS -DLUA_DEFAULT_PATH='\${ngx_lua_dquote}$site_lualib_prefix/?.lua;$site_lualib_prefix/?/init.lua;$lualib_prefix/?.lua;$lualib_prefix/?/init.lua\$ngx_lua_dquote'"
+CFLAGS="\$CFLAGS -DLUA_DEFAULT_CPATH='\${ngx_lua_dquote}$site_lualib_prefix/?.so;$lualib_prefix/?.so\$ngx_lua_dquote'"
 _EOC_
         }
 
@@ -1290,3 +1288,20 @@ sub can_run {
     return undef;
 }
 
+sub quote_cli_args {
+    my $args = shift;
+    my @quoted;
+    for my $arg (@$args) {
+        if ($arg =~ /[\\\s'"\$]/) {
+            if ($arg =~ /'/) {
+                $arg =~ s/([\\'])/\\$1/g;
+                push @quoted, "\$'$arg'";
+            } else {
+                push @quoted, "'$arg'";
+            }
+        } else {
+            push @quoted, $arg;
+        }
+    }
+    join " ", @quoted;
+}

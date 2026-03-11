@@ -76,6 +76,7 @@ This directive appeared in version 1.9.2.
 
 Makes outgoing connections to a proxied server originate
 from the specified local IP I<C<address>>.
+Parameter value can contain variables (1.11.2).
 The special value C<off> cancels the effect
 of the C<proxy_bind> directive
 inherited from the previous configuration level, which allows the
@@ -332,6 +333,21 @@ L<server group|ngx_stream_upstream_module>.
 
 
 
+The address can also be specified using variables (1.11.3):
+
+    
+    proxy_pass $upstream;
+
+
+In this case, the server name is searched among the described
+L<server groups|ngx_stream_upstream_module>,
+and, if not found, is determined using a
+L<ngx_stream_core_module>.
+
+
+
+
+
 
 
 =head2 proxy_protocol
@@ -559,6 +575,7 @@ verify
 the certificate of the proxied server and to be
 passed through SNI
 when establishing a connection with the proxied server.
+The server name can also be specified using variables (1.11.3).
 
 
 

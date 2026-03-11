@@ -12,7 +12,7 @@ ngx_http_rewrite_module - Module ngx_http_rewrite_module
 
 
 The C<ngx_http_rewrite_module> module is used to
-change request URI using regular expressions, return redirects, and
+change request URI using PCRE regular expressions, return redirects, and
 conditionally select configurations.
 
 

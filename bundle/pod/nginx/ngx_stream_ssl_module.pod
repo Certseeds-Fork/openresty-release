@@ -115,6 +115,36 @@ A secret key in the PEM format may be placed in the same file.
 
 
 
+Since version 1.11.0,
+this directive can be specified multiple times
+to load certificates of different types, for example, RSA and ECDSA:
+
+    
+    server {
+        listen              12345 ssl;
+    
+        ssl_certificate     example.com.rsa.crt;
+        ssl_certificate_key example.com.rsa.key;
+    
+        ssl_certificate     example.com.ecdsa.crt;
+        ssl_certificate_key example.com.ecdsa.key;
+    
+        ...
+    }
+
+
+
+B<NOTE>
+
+Only OpenSSL 1.0.2 or higher supports separate certificate chains
+for different certificates.
+With older versions, only one certificate chain can be used.
+
+
+
+
+
+
 
 
 =head2 ssl_certificate_key
@@ -615,6 +645,73 @@ B<context:> I<server>
 Specifies a time during which a client may reuse the
 session parameters stored in a cache.
 
+
+
+
+
+
+
+=head1 Embedded Variables
+
+
+
+The C<ngx_http_ssl_module> module supports variables
+since 1.11.2.
+
+=over
+
+
+
+=item C<$ssl_cipher>
+
+
+
+
+returns the string of ciphers used
+for an established SSL connection;
+
+
+
+=item C<$ssl_protocol>
+
+
+
+
+returns the protocol of an established SSL connection;
+
+
+
+=item C<$ssl_server_name>
+
+
+
+
+returns the server name requested through
+L<SNI|http://en.wikipedia.org/wiki/Server_Name_Indication>;
+
+
+
+=item C<$ssl_session_id>
+
+
+
+
+returns the session identifier of an established SSL connection;
+
+
+
+=item C<$ssl_session_reused>
+
+
+
+
+returns “C<r>” if an SSL session was reused,
+or “C<.>” otherwise.
+
+
+
+
+=back
 
 
 

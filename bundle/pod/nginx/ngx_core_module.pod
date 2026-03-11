@@ -38,7 +38,7 @@ ngx_core_module - Core functionality
 B<syntax:> accept_mutex I<C<on> E<verbar> C<off>>
 
 
-B<default:> I<on>
+B<default:> I<off>
 
 
 B<context:> I<events>
@@ -52,6 +52,11 @@ worker processes will accept new connections by turn.
 Otherwise, all worker processes will be notified about new connections,
 and if volume of new connections is low, some of the worker processes
 may just waste system resources.
+
+B<NOTE>
+
+Prior to version 1.11.3, the default value was C<on>.
+
 
 
 

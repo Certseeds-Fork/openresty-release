@@ -1135,8 +1135,8 @@ For example:
     }
 
 
-This configuration tells that for a health check to pass, the response to a
-health check request should succeed,
+This configuration shows that in order for a health check to pass, the response
+to a health check request should succeed,
 have status 200, content type “C<textE<sol>html>”,
 and contain “C<Welcome to nginx!>” in the body.
 

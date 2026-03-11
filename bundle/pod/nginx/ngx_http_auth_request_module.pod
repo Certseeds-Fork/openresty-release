@@ -39,8 +39,10 @@ configuration parameter.
 
 The module may be combined with
 other access modules, such as
-L<ngx_http_access_module|ngx_http_access_module> and
+L<ngx_http_access_module|ngx_http_access_module>,
 L<ngx_http_auth_basic_module|ngx_http_auth_basic_module>,
+and
+L<ngx_http_auth_jwt_module|ngx_http_auth_jwt_module>,
 via the L<ngx_http_core_module> directive.
 
 B<NOTE>
