@@ -322,6 +322,15 @@ and the need of establishing a new connection.
 
 
 
+Closing connections periodically is necessary to free
+per-connection memory allocations.
+Therefore, using too high maximum number of requests
+could result in excessive memory usage and not recommended.
+
+
+
+
+
 
 
 =head2 http2_push

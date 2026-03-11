@@ -1444,6 +1444,15 @@ After the maximum number of requests are made, the connection is closed.
 
 
 
+Closing connections periodically is necessary to free
+per-connection memory allocations.
+Therefore, using too high maximum number of requests
+could result in excessive memory usage and not recommended.
+
+
+
+
+
 
 
 =head2 keepalive_timeout
@@ -3186,7 +3195,8 @@ closed normally.
 B<syntax:> resolver I<
     I<C<address>> ...
     [C<valid>=I<C<time>>]
-    [C<ipv6>=C<on>E<verbar>C<off>]>
+    [C<ipv6>=C<on>E<verbar>C<off>]
+    [C<status_zone>=I<C<zone>>]>
 
 
 
@@ -3209,8 +3219,8 @@ into addresses, for example:
     resolver 127.0.0.1 [::1]:5353;
 
 
-An address can be specified as a domain name or IP address,
-and an optional port (1.3.1, 1.2.2).
+The address can be specified as a domain name or IP address,
+with an optional port (1.3.1, 1.2.2).
 If port is not specified, the port 53 is used.
 Name servers are queried in a round-robin fashion.
 
@@ -3220,6 +3230,11 @@ Before version 1.1.7, only a single name server could be configured.
 Specifying name servers using IPv6 addresses is supported
 starting from versions 1.3.1 and 1.2.2.
 
+
+
+
+
+
 By default, nginx will look up both IPv4 and IPv6 addresses while resolving.
 If looking up of IPv6 addresses is not desired,
 the C<ipv6=off> parameter can be specified.
@@ -3228,6 +3243,11 @@ B<NOTE>
 
 Resolving of names into IPv6 addresses is supported
 starting from version 1.5.8.
+
+
+
+
+
 
 By default, nginx caches answers using the TTL value of a response.
 An optional C<valid> parameter allows overriding it:
@@ -3248,6 +3268,18 @@ B<NOTE>
 To prevent DNS spoofing, it is recommended
 configuring DNS servers in a properly secured trusted local network.
 
+
+
+
+
+
+The optional C<status_zone> parameter (1.17.1)
+enables
+L<collection|ngx_http_api_module>
+of DNS server statistics of requests and responses
+in the specified I<C<zone>>.
+The parameter is available as part of our
+commercial subscription.
 
 
 
@@ -4730,8 +4762,7 @@ otherwise (1.3.12, 1.2.7)
 
 
 
-client address from the PROXY protocol header, or an empty string otherwise
-(1.5.12)
+client address from the PROXY protocol header (1.5.12)
 
 
 The PROXY protocol must be previously enabled by setting the
@@ -4747,8 +4778,39 @@ in the L</listen> directive.
 
 
 
-client port from the PROXY protocol header, or an empty string otherwise
-(1.11.0)
+client port from the PROXY protocol header (1.11.0)
+
+
+The PROXY protocol must be previously enabled by setting the
+C<proxy_protocol> parameter
+in the L</listen> directive.
+
+
+
+
+
+=item C<$proxy_protocol_server_addr>
+
+
+
+
+server address from the PROXY protocol header (1.17.6)
+
+
+The PROXY protocol must be previously enabled by setting the
+C<proxy_protocol> parameter
+in the L</listen> directive.
+
+
+
+
+
+=item C<$proxy_protocol_server_port>
+
+
+
+
+server port from the PROXY protocol header (1.17.6)
 
 
 The PROXY protocol must be previously enabled by setting the

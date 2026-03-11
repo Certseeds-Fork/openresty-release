@@ -1956,7 +1956,7 @@ Example of parameters usage (all of this needs to be typed in one line):
         --conf-path=/usr/local/nginx/nginx.conf
         --pid-path=/usr/local/nginx/nginx.pid
         --with-http_ssl_module
-        --with-pcre=../pcre-8.43
+        --with-pcre=../pcre-8.44
         --with-zlib=../zlib-1.2.11
 
 

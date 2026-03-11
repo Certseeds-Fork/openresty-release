@@ -263,6 +263,12 @@ marks the server as a backup server.
 Connections to the backup server will be passed
 when the primary servers are unavailable.
 
+B<NOTE>
+
+The parameter cannot be used along with the
+L</hash> and L</random> load balancing methods.
+
+
 
 
 =item 
@@ -308,23 +314,10 @@ The server group must reside in the shared memory.
 
 
 In order for this parameter to work,
-the L<ngx_stream_core_module> directive
+the C<resolver> directive
 must be specified in the
-L<ngx_stream_core_module> block.
-Example:
-
-    
-    stream {
-        resolver 10.0.0.1;
-    
-        upstream u {
-            zone ...;
-            ...
-            server example.com:12345 resolve;
-        }
-    }
-
-
+L<stream|ngx_stream_core_module> block
+or in the corresponding upstream block.
 
 
 
@@ -739,6 +732,135 @@ last byte of data is used.
 B<NOTE>
 
 The C<least_time> method is available as a part of our
+commercial subscription.
+
+
+
+
+
+
+
+
+=head2 resolver
+
+
+B<syntax:> resolver I<
+    I<C<address>> ...
+    [C<valid>=I<C<time>>]
+    [C<ipv6>=C<on>E<verbar>C<off>]
+    [C<status_zone>=I<C<zone>>]>
+
+
+
+B<context:> I<upstream>
+
+
+
+This directive appeared in version 1.17.5.
+
+
+
+
+
+Configures name servers used to resolve names of upstream servers
+into addresses, for example:
+
+    
+    resolver 127.0.0.1 [::1]:5353;
+
+
+The address can be specified as a domain name or IP address,
+with an optional port.
+If port is not specified, the port 53 is used.
+Name servers are queried in a round-robin fashion.
+
+
+
+
+
+By default, nginx will look up both IPv4 and IPv6 addresses while resolving.
+If looking up of IPv6 addresses is not desired,
+the C<ipv6=off> parameter can be specified.
+
+
+
+
+
+By default, nginx caches answers using the TTL value of a response.
+The optional C<valid> parameter allows overriding it:
+
+    
+    resolver 127.0.0.1 [::1]:5353 valid=30s;
+
+
+
+B<NOTE>
+
+To prevent DNS spoofing, it is recommended
+configuring DNS servers in a properly secured trusted local network.
+
+
+
+
+
+
+The optional C<status_zone> parameter
+enables
+L<collection|ngx_http_api_module>
+of DNS server statistics of requests and responses
+in the specified I<C<zone>>.
+
+
+
+
+
+
+B<NOTE>
+
+This directive is available as part of our
+commercial subscription.
+
+
+
+
+
+
+
+
+=head2 resolver_timeout
+
+
+B<syntax:> resolver_timeout I<I<C<time>>>
+
+
+B<default:> I<30s>
+
+
+B<context:> I<upstream>
+
+
+
+This directive appeared in version 1.17.5.
+
+
+
+
+
+Sets a timeout for name resolution, for example:
+
+    
+    resolver_timeout 5s;
+
+
+
+
+
+
+
+
+B<NOTE>
+
+This directive is available as part of our
 commercial subscription.
 
 

@@ -6752,7 +6752,7 @@ sent to the client, but rather stored in memory.
 The flag only affects subrequests which are processed by one of the proxying
 modules.
 After a subrequest is finalized its output is available in
-a C<r-E<gt>upstream-E<gt>buffer> of type C<ngx_buf_t>.
+C<r-E<gt>out> of type C<ngx_buf_t>.
 
 
 

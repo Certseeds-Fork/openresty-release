@@ -437,7 +437,8 @@ the connection is closed.
 B<syntax:> resolver I<
     I<C<address>> ...
     [C<valid>=I<C<time>>]
-    [C<ipv6>=C<on>E<verbar>C<off>]>
+    [C<ipv6>=C<on>E<verbar>C<off>]
+    [C<status_zone>=I<C<zone>>]>
 
 
 
@@ -461,8 +462,8 @@ into addresses, for example:
     resolver 127.0.0.1 [::1]:5353;
 
 
-An address can be specified as a domain name or IP address,
-and an optional port.
+The address can be specified as a domain name or IP address,
+with an optional port.
 If port is not specified, the port 53 is used.
 Name servers are queried in a round-robin fashion.
 
@@ -483,6 +484,29 @@ The optional C<valid> parameter allows overriding it:
 
     
     resolver 127.0.0.1 [::1]:5353 valid=30s;
+
+
+
+B<NOTE>
+
+To prevent DNS spoofing, it is recommended
+configuring DNS servers in a properly secured trusted local network.
+
+
+
+
+
+
+The optional C<status_zone> parameter (1.17.1)
+enables
+L<collection|ngx_http_api_module>
+of DNS server statistics of requests and responses
+in the specified I<C<zone>>.
+The parameter is available as part of our
+commercial subscription.
+
+
+
 
 
 
@@ -770,8 +794,7 @@ C<TCP> or C<UDP> (1.11.4)
 
 
 
-client address from the PROXY protocol header, or an empty string otherwise
-(1.11.4)
+client address from the PROXY protocol header (1.11.4)
 
 
 The PROXY protocol must be previously enabled by setting the
@@ -787,8 +810,39 @@ in the L</listen> directive.
 
 
 
-client port from the PROXY protocol header, or an empty string otherwise
-(1.11.4)
+client port from the PROXY protocol header (1.11.4)
+
+
+The PROXY protocol must be previously enabled by setting the
+C<proxy_protocol> parameter
+in the L</listen> directive.
+
+
+
+
+
+=item C<$proxy_protocol_server_addr>
+
+
+
+
+server address from the PROXY protocol header (1.17.6)
+
+
+The PROXY protocol must be previously enabled by setting the
+C<proxy_protocol> parameter
+in the L</listen> directive.
+
+
+
+
+
+=item C<$proxy_protocol_server_port>
+
+
+
+
+server port from the PROXY protocol header (1.17.6)
 
 
 The PROXY protocol must be previously enabled by setting the

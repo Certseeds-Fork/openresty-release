@@ -259,6 +259,10 @@ void ngx_http_lua_set_sa_restart(ngx_log_t *log);
         return luaL_error(L, "attempt to abort with pending subrequests");   \
     }
 
+size_t ngx_http_lua_escape_log(u_char *dst, u_char *src, size_t size);
+ngx_int_t ngx_http_lua_check_header_safe(ngx_http_request_t *r, u_char *str,
+    size_t len);
+
 
 static ngx_inline void
 ngx_http_lua_init_ctx(ngx_http_request_t *r, ngx_http_lua_ctx_t *ctx)

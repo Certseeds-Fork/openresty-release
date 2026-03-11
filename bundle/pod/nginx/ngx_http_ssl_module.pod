@@ -1303,7 +1303,7 @@ embedded variables:
 
 
 
-returns the string of ciphers used
+returns the name of the cipher used
 for an established SSL connection;
 
 
