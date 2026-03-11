@@ -333,7 +333,7 @@ module ngx_http_charset_module
 module ngx_http_core_module
   aliases ngx_core
   section 17 85 name
-  section 85 65093 directives
+  section 85 65230 directives
   section 104 472 absolute_redirect
   section 472 2923 aio
   section 2923 3347 aio_write
@@ -373,105 +373,105 @@ module ngx_http_core_module
   section 21436 22276 limit_except
   section 22276 23507 limit_rate
   section 23507 24035 limit_rate_after
-  section 24035 24901 lingering_close
-  section 24901 25315 lingering_time
-  section 25315 25879 lingering_timeout
-  section 25879 34721 listen
-  section 34721 38887 location
-  section 38887 39150 log_not_found
-  section 39150 39403 log_subrequest
-  section 39403 39855 max_ranges
-  section 39855 40907 merge_slashes
-  section 40907 41222 msie_padding
-  section 41222 41476 msie_refresh
-  section 41476 42733 open_file_cache
-  section 42733 43001 open_file_cache_errors
-  section 43001 43393 open_file_cache_min_uses
-  section 43393 43650 open_file_cache_valid
-  section 43650 43991 output_buffers
-  section 43991 44367 port_in_redirect
-  section 44367 44715 postpone_output
-  section 44715 45283 read_ahead
-  section 45283 45599 recursive_error_pages
-  section 45599 45888 request_pool_size
-  section 45888 46659 reset_timedout_connection
-  section 46659 48360 resolver
-  section 48360 48615 resolver_timeout
-  section 48615 49326 root
-  section 49326 50017 satisfy
-  section 50017 50503 send_lowat
-  section 50503 50923 send_timeout
-  section 50923 51937 sendfile
-  section 51937 52301 sendfile_max_chunk
-  section 52301 52813 server
-  section 52813 55547 server_name
-  section 55547 56151 server_name_in_redirect
-  section 56151 56531 server_names_hash_bucket_size
-  section 56531 56818 server_names_hash_max_size
-  section 56818 57550 server_tokens
-  section 57550 58199 subrequest_output_buffer_size
-  section 58199 58628 tcp_nodelay
-  section 58628 59179 tcp_nopush
-  section 59179 62228 try_files
-  section 62228 63099 types
-  section 63099 63522 types_hash_bucket_size
-  section 63522 63839 types_hash_max_size
-  section 63839 64476 underscores_in_headers
-  section 64476 64752 variables_hash_bucket_size
-  section 64752 65093 variables_hash_max_size
-  section 65093 72136 embedded variables
-  section 65410 65482 $arg_i<name>
-  section 65482 65534 $args
-  section 65534 65688 $binary_remote_addr
-  section 65688 65887 $body_bytes_sent
-  section 65887 65963 $bytes_sent
-  section 65963 66031 $connection
-  section 66031 66136 $connection_requests
-  section 66136 66207 $content_length
-  section 66207 66274 $content_type
-  section 66274 66331 $cookie_i<name>
-  section 66331 66428 $document_root
-  section 66428 66474 $document_uri
-  section 66474 66648 $host
-  section 66648 66684 $hostname
-  section 66684 66860 $http_i<name>
-  section 66860 66960 $https
-  section 66960 67058 $is_args
-  section 67058 67159 $limit_rate
-  section 67159 67253 $msec
-  section 67253 67298 $nginx_version
-  section 67298 67345 $pid
-  section 67345 67441 $pipe
-  section 67441 67655 $proxy_protocol_addr
-  section 67655 67866 $proxy_protocol_port
-  section 67866 68087 $proxy_protocol_server_addr
-  section 68087 68305 $proxy_protocol_server_port
-  section 68305 68352 $query_string
-  section 68352 68539 $realpath_root
-  section 68539 68583 $remote_addr
-  section 68583 68624 $remote_port
-  section 68624 68702 $remote_user
-  section 68702 68754 $request
-  section 68754 69042 $request_body
-  section 69042 69698 $request_body_file
-  section 69698 69803 $request_completion
-  section 69803 69939 $request_filename
-  section 69939 70049 $request_id
-  section 70049 70163 $request_length
-  section 70163 70249 $request_method
-  section 70249 70422 $request_time
-  section 70422 70494 $request_uri
-  section 70494 70566 $scheme
-  section 70566 70748 $sent_http_i<name>
-  section 70748 70958 $sent_trailer_i<name>
-  section 70958 71214 $server_addr
-  section 71214 71287 $server_name
-  section 71287 71360 $server_port
-  section 71360 71512 $server_protocol
-  section 71512 71772 $status
-  section 71772 71861 $time_iso8601
-  section 71861 71941 $time_local
-  section 71941 72136 $uri
+  section 24035 25038 lingering_close
+  section 25038 25452 lingering_time
+  section 25452 26016 lingering_timeout
+  section 26016 34858 listen
+  section 34858 39024 location
+  section 39024 39287 log_not_found
+  section 39287 39540 log_subrequest
+  section 39540 39992 max_ranges
+  section 39992 41044 merge_slashes
+  section 41044 41359 msie_padding
+  section 41359 41613 msie_refresh
+  section 41613 42870 open_file_cache
+  section 42870 43138 open_file_cache_errors
+  section 43138 43530 open_file_cache_min_uses
+  section 43530 43787 open_file_cache_valid
+  section 43787 44128 output_buffers
+  section 44128 44504 port_in_redirect
+  section 44504 44852 postpone_output
+  section 44852 45420 read_ahead
+  section 45420 45736 recursive_error_pages
+  section 45736 46025 request_pool_size
+  section 46025 46796 reset_timedout_connection
+  section 46796 48497 resolver
+  section 48497 48752 resolver_timeout
+  section 48752 49463 root
+  section 49463 50154 satisfy
+  section 50154 50640 send_lowat
+  section 50640 51060 send_timeout
+  section 51060 52074 sendfile
+  section 52074 52438 sendfile_max_chunk
+  section 52438 52950 server
+  section 52950 55684 server_name
+  section 55684 56288 server_name_in_redirect
+  section 56288 56668 server_names_hash_bucket_size
+  section 56668 56955 server_names_hash_max_size
+  section 56955 57687 server_tokens
+  section 57687 58336 subrequest_output_buffer_size
+  section 58336 58765 tcp_nodelay
+  section 58765 59316 tcp_nopush
+  section 59316 62365 try_files
+  section 62365 63236 types
+  section 63236 63659 types_hash_bucket_size
+  section 63659 63976 types_hash_max_size
+  section 63976 64613 underscores_in_headers
+  section 64613 64889 variables_hash_bucket_size
+  section 64889 65230 variables_hash_max_size
+  section 65230 72273 embedded variables
+  section 65547 65619 $arg_i<name>
+  section 65619 65671 $args
+  section 65671 65825 $binary_remote_addr
+  section 65825 66024 $body_bytes_sent
+  section 66024 66100 $bytes_sent
+  section 66100 66168 $connection
+  section 66168 66273 $connection_requests
+  section 66273 66344 $content_length
+  section 66344 66411 $content_type
+  section 66411 66468 $cookie_i<name>
+  section 66468 66565 $document_root
+  section 66565 66611 $document_uri
+  section 66611 66785 $host
+  section 66785 66821 $hostname
+  section 66821 66997 $http_i<name>
+  section 66997 67097 $https
+  section 67097 67195 $is_args
+  section 67195 67296 $limit_rate
+  section 67296 67390 $msec
+  section 67390 67435 $nginx_version
+  section 67435 67482 $pid
+  section 67482 67578 $pipe
+  section 67578 67792 $proxy_protocol_addr
+  section 67792 68003 $proxy_protocol_port
+  section 68003 68224 $proxy_protocol_server_addr
+  section 68224 68442 $proxy_protocol_server_port
+  section 68442 68489 $query_string
+  section 68489 68676 $realpath_root
+  section 68676 68720 $remote_addr
+  section 68720 68761 $remote_port
+  section 68761 68839 $remote_user
+  section 68839 68891 $request
+  section 68891 69179 $request_body
+  section 69179 69835 $request_body_file
+  section 69835 69940 $request_completion
+  section 69940 70076 $request_filename
+  section 70076 70186 $request_id
+  section 70186 70300 $request_length
+  section 70300 70386 $request_method
+  section 70386 70559 $request_time
+  section 70559 70631 $request_uri
+  section 70631 70703 $scheme
+  section 70703 70885 $sent_http_i<name>
+  section 70885 71095 $sent_trailer_i<name>
+  section 71095 71351 $server_addr
+  section 71351 71424 $server_name
+  section 71424 71497 $server_port
+  section 71497 71649 $server_protocol
+  section 71649 71909 $status
+  section 71909 71998 $time_iso8601
+  section 71998 72078 $time_local
+  section 72078 72273 $uri
 
 module ngx_http_dav_module
   aliases ngx_dav
@@ -1597,23 +1597,23 @@ module ngx_http_uwsgi_module
 module ngx_http_v2_module
   aliases ngx_v2
   section 17 402 name
-  section 402 649 known issues
-  section 649 1461 example configuration
-  section 1461 6083 directives
-  section 1480 1815 http2_body_preread_size
-  section 1815 2218 http2_chunk_size
-  section 2218 2437 http2_idle_timeout
-  section 2437 2724 http2_max_concurrent_pushes
-  section 2724 2972 http2_max_concurrent_streams
-  section 2972 3451 http2_max_field_size
-  section 3451 3787 http2_max_header_size
-  section 3787 4426 http2_max_requests
-  section 4426 5182 http2_push
-  section 5182 5635 http2_push_preload
-  section 5635 5836 http2_recv_buffer_size
-  section 5836 6083 http2_recv_timeout
-  section 6083 6383 embedded variables
-  section 6198 6383 $http2
+  section 402 772 known issues
+  section 772 1584 example configuration
+  section 1584 6206 directives
+  section 1603 1938 http2_body_preread_size
+  section 1938 2341 http2_chunk_size
+  section 2341 2560 http2_idle_timeout
+  section 2560 2847 http2_max_concurrent_pushes
+  section 2847 3095 http2_max_concurrent_streams
+  section 3095 3574 http2_max_field_size
+  section 3574 3910 http2_max_header_size
+  section 3910 4549 http2_max_requests
+  section 4549 5305 http2_push
+  section 5305 5758 http2_push_preload
+  section 5758 5959 http2_recv_buffer_size
+  section 5959 6206 http2_recv_timeout
+  section 6206 6506 embedded variables
+  section 6321 6506 $http2
 
 module ngx_http_xslt_module
   aliases ngx_xslt
@@ -4522,11 +4522,11 @@ module lua-resty-dns-0.21
   section 13376 14870 copyright and license
   section 14870 15253 see also
 
-dist lua-resty-limit-traffic-0.06
+dist lua-resty-limit-traffic-0.07
   aliases resty.limit.traffic
-  modules lua-resty-limit-traffic-0.06 resty.limit.conn resty.limit.count resty.limit.req resty.limit.traffic
+  modules lua-resty-limit-traffic-0.07 resty.limit.conn resty.limit.count resty.limit.req resty.limit.traffic
 
-module lua-resty-limit-traffic-0.06
+module lua-resty-limit-traffic-0.07
   aliases resty.limit.traffic
   section 18 129 name
   section 129 291 status

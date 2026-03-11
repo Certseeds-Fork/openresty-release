@@ -1837,6 +1837,14 @@ circumstances.
 
 
 
+To control closing
+L<HTTPE<sol>2|ngx_http_v2_module> connections,
+the directive must be specified on the L</server> level (1.19.1).
+
+
+
+
+
 
 
 =head2 lingering_time
