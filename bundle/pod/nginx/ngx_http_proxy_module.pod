@@ -866,6 +866,18 @@ By default, C<purger_sleep> is set to 50 milliseconds.
 
 
 
+B<NOTE>
+
+In versions 1.7.3, 1.7.7, and 1.11.10 cache header format has been changed.
+Previously cached responses will be considered invalid
+after upgrading to a newer nginx version.
+
+
+
+
+
+
+
 
 =head2 proxy_cache_purge
 
@@ -2235,6 +2247,16 @@ L<server group|ngx_http_upstream_module>.
 
 
 
+Parameter value can contain variables.
+In this case, if an address is specified as a domain name,
+the name is searched among the described server groups,
+and, if not found, is determined using a
+L<ngx_http_core_module>.
+
+
+
+
+
 A request URI is passed to the server as follows:
 
 =over
@@ -2300,10 +2322,12 @@ In some cases, the part of a request URI to be replaced cannot be determined:
 
 =item *
 
-When location is specified using a regular expression.
+When location is specified using a regular expression,
+and also inside named locations.
 
 
-In this case, the directive should be specified without a URI.
+In these cases,
+C<proxy_pass> should be specified without a URI.
 
 
 
@@ -2331,36 +2355,25 @@ the full changed request URI is passed to the server.
 
 
 
+
+=item *
+
+When variables are used in C<proxy_pass>:
+
+    
+    location /name/ {
+        proxy_pass http://127.0.0.1$request_uri;
+    }
+
+
+In this case, if URI is specified in the directive,
+it is passed to the server as is,
+replacing the original request URI.
+
+
 =back
 
 
-
-
-
-
-
-A server name, its port and the passed URI can also be specified using
-variables:
-
-    
-    proxy_pass http://$host$uri;
-
-
-or even like this:
-
-    
-    proxy_pass $request;
-
-
-
-
-
-
-
-In this case, the server name is searched among the described
-L<server groups|ngx_http_upstream_module>,
-and, if not found, is determined using a
-L<ngx_http_core_module>.
 
 
 
@@ -3256,7 +3269,8 @@ B<syntax:> proxy_ssl_protocols I<
     [C<SSLv3>]
     [C<TLSv1>]
     [C<TLSv1.1>]
-    [C<TLSv1.2>]>
+    [C<TLSv1.2>]
+    [C<TLSv1.3>]>
 
 
 B<default:> I<TLSv1 TLSv1.1 TLSv1.2>

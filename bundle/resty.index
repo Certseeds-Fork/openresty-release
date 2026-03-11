@@ -57,65 +57,67 @@ module debugging_log
 
 module development_guide
   section 18 72 name
-  section 72 3365 introduction
-  section 94 789 code layout
-  section 789 1173 include files
-  section 1173 1349 integers
-  section 1349 2011 common return codes
-  section 2011 3365 error handling
-  section 3365 10747 strings
-  section 3382 5245 overview
-  section 5245 6250 formatting
-  section 6250 7247 numeric conversion
-  section 7247 10747 regular expressions
-  section 10747 24411 containers
-  section 10767 12294 array
-  section 12294 14604 list
-  section 14604 16358 queue
-  section 16358 19374 red-black tree
-  section 19374 24411 hash
-  section 22186 24411 wildcard matching
-  section 24411 33108 memory management
-  section 24438 25234 heap
-  section 25234 28456 pool
-  section 28456 33108 shared memory
-  section 33108 36162 logging
-  section 36162 40228 cycle
-  section 40228 43855 buffer
-  section 43855 47018 networking
-  section 43875 47018 connection
-  section 47018 54373 events
-  section 47034 49034 event
-  section 49034 50139 i/o events
-  section 50139 50885 timer events
-  section 50885 52637 posted events
-  section 52637 54373 event loop
-  section 54373 58775 processes
-  section 58775 75773 modules
-  section 58792 62047 adding new modules
-  section 62047 68537 core modules
-  section 68537 75773 configuration directives
-  section 75773 152053 http
-  section 75787 78705 connection
-  section 78705 88213 request
-  section 88213 93765 configuration
-  section 93765 100495 phases
-  section 100495 108075 variables
-  section 100514 103462 accessing existing variables
-  section 103462 108075 creating variables
-  section 108075 110478 complex values
-  section 110478 113562 request redirection
-  section 113562 120437 subrequests
-  section 120437 122337 request finalization
-  section 122337 127032 request body
-  section 127032 132369 response
-  section 127407 128748 response header
-  section 128748 132369 header filters
-  section 132369 133876 response body
-  section 133876 139143 body filters
-  section 139143 140179 building filter modules
-  section 140179 143731 buffer reuse
-  section 143731 152053 load balancing
+  section 72 3386 introduction
+  section 94 801 code layout
+  section 801 1206 include files
+  section 1206 1384 integers
+  section 1384 2060 common return codes
+  section 2060 3386 error handling
+  section 3386 11498 strings
+  section 3403 5774 overview
+  section 5774 6865 formatting
+  section 6865 7927 numeric conversion
+  section 7927 11498 regular expressions
+  section 11498 14003 time
+  section 14003 27732 containers
+  section 14023 15566 array
+  section 15566 17895 list
+  section 17895 19664 queue
+  section 19664 22687 red-black tree
+  section 22687 27732 hash
+  section 25490 27732 wildcard matching
+  section 27732 36598 memory management
+  section 27759 28574 heap
+  section 28574 31890 pool
+  section 31890 36598 shared memory
+  section 36598 39740 logging
+  section 39740 43927 cycle
+  section 43927 47662 buffer
+  section 47662 50914 networking
+  section 47682 50914 connection
+  section 50914 58198 events
+  section 50930 52879 event
+  section 52879 53963 i/o events
+  section 53963 54671 timer events
+  section 54671 56411 posted events
+  section 56411 58198 event loop
+  section 58198 63004 processes
+  section 63004 67278 threads
+  section 67278 85195 modules
+  section 67295 70726 adding new modules
+  section 70726 77153 core modules
+  section 77153 85195 configuration directives
+  section 85195 163202 http
+  section 85209 88128 connection
+  section 88128 97943 request
+  section 97943 103527 configuration
+  section 103527 110624 phases
+  section 110624 118300 variables
+  section 110643 113585 accessing existing variables
+  section 113585 118300 creating variables
+  section 118300 120696 complex values
+  section 120696 124131 request redirection
+  section 124131 131160 subrequests
+  section 131160 133137 request finalization
+  section 133137 137851 request body
+  section 137851 143195 response
+  section 138226 139550 response header
+  section 139550 143195 header filters
+  section 143195 144683 response body
+  section 144683 149996 body filters
+  section 149996 151129 building filter modules
+  section 151129 154681 buffer reuse
+  section 154681 163202 load balancing
 
 module events
   section 18 1854 name
@@ -385,7 +387,7 @@ module ngx_http_core_module
   section 61241 61878 underscores_in_headers
   section 61878 62154 variables_hash_bucket_size
   section 62154 62495 variables_hash_max_size
-  section 62495 68949 embedded variables
+  section 62495 69159 embedded variables
   section 62812 62884 $arg_i<name>
   section 62884 62936 $args
   section 62936 63090 $binary_remote_addr
@@ -427,14 +429,15 @@ module ngx_http_core_module
   section 67445 67517 $request_uri
   section 67517 67589 $scheme
   section 67589 67771 $sent_http_i<name>
-  section 67771 68027 $server_addr
-  section 68027 68100 $server_name
-  section 68100 68173 $server_port
-  section 68173 68325 $server_protocol
-  section 68325 68585 $status
-  section 68585 68674 $time_iso8601
-  section 68674 68754 $time_local
-  section 68754 68949 $uri
+  section 67771 67981 $sent_trailer_i<name>
+  section 67981 68237 $server_addr
+  section 68237 68310 $server_name
+  section 68310 68383 $server_port
+  section 68383 68535 $server_protocol
+  section 68535 68795 $status
+  section 68795 68884 $time_iso8601
+  section 68884 68964 $time_local
+  section 68964 69159 $uri
 
 module ngx_http_dav_module
   aliases ngx_dav
@@ -465,7 +468,7 @@ module ngx_http_fastcgi_module
   aliases ngx_fastcgi
   section 17 188 name
   section 188 628 example configuration
-  section 628 38662 directives
+  section 628 39104 directives
   section 647 1717 fastcgi_bind
   section 1717 2214 fastcgi_buffer_size
   section 2214 3478 fastcgi_buffering
@@ -481,54 +484,54 @@ module ngx_http_fastcgi_module
   section 7832 8237 fastcgi_cache_max_range_offset
   section 8237 8782 fastcgi_cache_methods
   section 8782 9042 fastcgi_cache_min_uses
-  section 9042 13554 fastcgi_cache_path
-  section 13554 14931 fastcgi_cache_purge
-  section 14931 15314 fastcgi_cache_revalidate
-  section 15314 17105 fastcgi_cache_use_stale
-  section 17105 18995 fastcgi_cache_valid
-  section 18995 19613 fastcgi_catch_stderr
-  section 19613 19942 fastcgi_connect_timeout
-  section 19942 20331 fastcgi_force_ranges
-  section 20331 20823 fastcgi_hide_header
-  section 20823 21171 fastcgi_ignore_client_abort
-  section 21171 22290 fastcgi_ignore_headers
-  section 22290 22994 fastcgi_index
-  section 22994 23409 fastcgi_intercept_errors
-  section 23409 23957 fastcgi_keep_conn
-  section 23957 24590 fastcgi_limit_rate
-  section 24590 25383 fastcgi_max_temp_file_size
-  section 25383 27881 fastcgi_next_upstream
-  section 25902 26046 error
-  section 26046 26197 timeout
-  section 26197 26274 invalid_header
-  section 26274 26345 http_500
-  section 26345 26416 http_503
-  section 26416 26487 http_403
-  section 26487 26558 http_404
-  section 26558 26639 http_429
-  section 26639 26955 non_idempotent
-  section 26955 27881 off
-  section 27881 28238 fastcgi_next_upstream_timeout
-  section 28238 28598 fastcgi_next_upstream_tries
-  section 28598 29148 fastcgi_no_cache
-  section 29148 30663 fastcgi_param
-  section 30663 31225 fastcgi_pass
-  section 31225 31469 fastcgi_pass_header
-  section 31469 31805 fastcgi_pass_request_body
-  section 31805 32161 fastcgi_pass_request_headers
-  section 32161 32613 fastcgi_read_timeout
-  section 32613 33293 fastcgi_request_buffering
-  section 33293 33805 fastcgi_send_lowat
-  section 33805 34255 fastcgi_send_timeout
-  section 34255 35157 fastcgi_split_path_info
-  section 35157 36827 fastcgi_store
-  section 36827 37317 fastcgi_store_access
-  section 37317 37890 fastcgi_temp_file_write_size
-  section 37890 38662 fastcgi_temp_path
-  section 38662 39130 parameters passed to a fastcgi server
-  section 39130 40290 embedded variables
-  section 39309 40100 $fastcgi_script_name
-  section 40100 40290 $fastcgi_path_info
+  section 9042 13743 fastcgi_cache_path
+  section 13743 15120 fastcgi_cache_purge
+  section 15120 15503 fastcgi_cache_revalidate
+  section 15503 17294 fastcgi_cache_use_stale
+  section 17294 19184 fastcgi_cache_valid
+  section 19184 19802 fastcgi_catch_stderr
+  section 19802 20131 fastcgi_connect_timeout
+  section 20131 20520 fastcgi_force_ranges
+  section 20520 21012 fastcgi_hide_header
+  section 21012 21360 fastcgi_ignore_client_abort
+  section 21360 22479 fastcgi_ignore_headers
+  section 22479 23183 fastcgi_index
+  section 23183 23598 fastcgi_intercept_errors
+  section 23598 24146 fastcgi_keep_conn
+  section 24146 24779 fastcgi_limit_rate
+  section 24779 25572 fastcgi_max_temp_file_size
+  section 25572 28070 fastcgi_next_upstream
+  section 26091 26235 error
+  section 26235 26386 timeout
+  section 26386 26463 invalid_header
+  section 26463 26534 http_500
+  section 26534 26605 http_503
+  section 26605 26676 http_403
+  section 26676 26747 http_404
+  section 26747 26828 http_429
+  section 26828 27144 non_idempotent
+  section 27144 28070 off
+  section 28070 28427 fastcgi_next_upstream_timeout
+  section 28427 28787 fastcgi_next_upstream_tries
+  section 28787 29337 fastcgi_no_cache
+  section 29337 30852 fastcgi_param
+  section 30852 31667 fastcgi_pass
+  section 31667 31911 fastcgi_pass_header
+  section 31911 32247 fastcgi_pass_request_body
+  section 32247 32603 fastcgi_pass_request_headers
+  section 32603 33055 fastcgi_read_timeout
+  section 33055 33735 fastcgi_request_buffering
+  section 33735 34247 fastcgi_send_lowat
+  section 34247 34697 fastcgi_send_timeout
+  section 34697 35599 fastcgi_split_path_info
+  section 35599 37269 fastcgi_store
+  section 37269 37759 fastcgi_store_access
+  section 37759 38332 fastcgi_temp_file_write_size
+  section 38332 39104 fastcgi_temp_path
+  section 39104 39572 parameters passed to a fastcgi server
+  section 39572 40732 embedded variables
+  section 39751 40542 $fastcgi_script_name
+  section 40542 40732 $fastcgi_path_info
 
 module ngx_http_flv_module
   aliases ngx_flv
@@ -621,9 +624,10 @@ module ngx_http_headers_module
   aliases ngx_headers
   section 17 252 name
   section 252 489 example configuration
-  section 489 3025 directives
-  section 508 1185 add_header
-  section 1185 3025 expires
+  section 489 3744 directives
+  section 508 1187 add_header
+  section 1187 1904 add_trailer
+  section 1904 3744 expires
 
 module ngx_http_hls_module
   aliases ngx_hls
@@ -814,7 +818,7 @@ module ngx_http_proxy_module
   aliases ngx_proxy
   section 17 180 name
   section 180 386 example configuration
-  section 386 52067 directives
+  section 386 52438 directives
   section 405 1467 proxy_bind
   section 1467 1960 proxy_buffer_size
   section 1960 3163 proxy_buffering
@@ -831,71 +835,71 @@ module ngx_http_proxy_module
   section 8079 8480 proxy_cache_max_range_offset
   section 8480 9019 proxy_cache_methods
   section 9019 9275 proxy_cache_min_uses
-  section 9275 13764 proxy_cache_path
-  section 13764 15119 proxy_cache_purge
-  section 15119 15498 proxy_cache_revalidate
-  section 15498 17312 proxy_cache_use_stale
-  section 17312 19184 proxy_cache_valid
-  section 19184 19509 proxy_connect_timeout
-  section 19509 21172 proxy_cookie_domain
-  section 21172 22700 proxy_cookie_path
-  section 22700 23085 proxy_force_ranges
-  section 23085 23482 proxy_headers_hash_bucket_size
-  section 23482 23874 proxy_headers_hash_max_size
-  section 23874 24378 proxy_hide_header
-  section 24378 24824 proxy_http_version
-  section 24824 25168 proxy_ignore_client_abort
-  section 25168 26283 proxy_ignore_headers
-  section 26283 26687 proxy_intercept_errors
-  section 26687 27316 proxy_limit_rate
-  section 27316 28099 proxy_max_temp_file_size
-  section 28099 28424 proxy_method
-  section 28424 31138 proxy_next_upstream
-  section 28991 29135 error
-  section 29135 29286 timeout
-  section 29286 29363 invalid_header
-  section 29363 29434 http_500
-  section 29434 29505 http_502
-  section 29505 29576 http_503
-  section 29576 29647 http_504
-  section 29647 29718 http_403
-  section 29718 29789 http_404
-  section 29789 29870 http_429
-  section 29870 30186 non_idempotent
-  section 30186 31138 off
-  section 31138 31491 proxy_next_upstream_timeout
-  section 31491 31847 proxy_next_upstream_tries
-  section 31847 32387 proxy_no_cache
-  section 32387 35222 proxy_pass
-  section 35222 35462 proxy_pass_header
-  section 35462 36006 proxy_pass_request_body
-  section 36006 36566 proxy_pass_request_headers
-  section 36566 37014 proxy_read_timeout
-  section 37014 39801 proxy_redirect
-  section 39801 40684 proxy_request_buffering
-  section 40684 41192 proxy_send_lowat
-  section 41192 41638 proxy_send_timeout
-  section 41638 41921 proxy_set_body
-  section 41921 43573 proxy_set_header
-  section 43573 43894 proxy_ssl_certificate
-  section 43894 44406 proxy_ssl_certificate_key
-  section 44406 44855 proxy_ssl_ciphers
-  section 44855 45180 proxy_ssl_crl
-  section 45180 45652 proxy_ssl_name
-  section 45652 46027 proxy_ssl_password_file
-  section 46027 46492 proxy_ssl_server_name
-  section 46492 46884 proxy_ssl_session_reuse
-  section 46884 47267 proxy_ssl_protocols
-  section 47267 47621 proxy_ssl_trusted_certificate
-  section 47621 47925 proxy_ssl_verify
-  section 47925 48231 proxy_ssl_verify_depth
-  section 48231 50264 proxy_store
-  section 50264 50746 proxy_store_access
-  section 50746 51309 proxy_temp_file_write_size
-  section 51309 52067 proxy_temp_path
-  section 52067 52824 embedded variables
-  section 52248 52354 $proxy_host
-  section 52354 52824 $proxy_port
+  section 9275 13953 proxy_cache_path
+  section 13953 15308 proxy_cache_purge
+  section 15308 15687 proxy_cache_revalidate
+  section 15687 17501 proxy_cache_use_stale
+  section 17501 19373 proxy_cache_valid
+  section 19373 19698 proxy_connect_timeout
+  section 19698 21361 proxy_cookie_domain
+  section 21361 22889 proxy_cookie_path
+  section 22889 23274 proxy_force_ranges
+  section 23274 23671 proxy_headers_hash_bucket_size
+  section 23671 24063 proxy_headers_hash_max_size
+  section 24063 24567 proxy_hide_header
+  section 24567 25013 proxy_http_version
+  section 25013 25357 proxy_ignore_client_abort
+  section 25357 26472 proxy_ignore_headers
+  section 26472 26876 proxy_intercept_errors
+  section 26876 27505 proxy_limit_rate
+  section 27505 28288 proxy_max_temp_file_size
+  section 28288 28613 proxy_method
+  section 28613 31327 proxy_next_upstream
+  section 29180 29324 error
+  section 29324 29475 timeout
+  section 29475 29552 invalid_header
+  section 29552 29623 http_500
+  section 29623 29694 http_502
+  section 29694 29765 http_503
+  section 29765 29836 http_504
+  section 29836 29907 http_403
+  section 29907 29978 http_404
+  section 29978 30059 http_429
+  section 30059 30375 non_idempotent
+  section 30375 31327 off
+  section 31327 31680 proxy_next_upstream_timeout
+  section 31680 32036 proxy_next_upstream_tries
+  section 32036 32576 proxy_no_cache
+  section 32576 35576 proxy_pass
+  section 35576 35816 proxy_pass_header
+  section 35816 36360 proxy_pass_request_body
+  section 36360 36920 proxy_pass_request_headers
+  section 36920 37368 proxy_read_timeout
+  section 37368 40155 proxy_redirect
+  section 40155 41038 proxy_request_buffering
+  section 41038 41546 proxy_send_lowat
+  section 41546 41992 proxy_send_timeout
+  section 41992 42275 proxy_set_body
+  section 42275 43927 proxy_set_header
+  section 43927 44248 proxy_ssl_certificate
+  section 44248 44760 proxy_ssl_certificate_key
+  section 44760 45209 proxy_ssl_ciphers
+  section 45209 45534 proxy_ssl_crl
+  section 45534 46006 proxy_ssl_name
+  section 46006 46381 proxy_ssl_password_file
+  section 46381 46846 proxy_ssl_server_name
+  section 46846 47238 proxy_ssl_session_reuse
+  section 47238 47638 proxy_ssl_protocols
+  section 47638 47992 proxy_ssl_trusted_certificate
+  section 47992 48296 proxy_ssl_verify
+  section 48296 48602 proxy_ssl_verify_depth
+  section 48602 50635 proxy_store
+  section 50635 51117 proxy_store_access
+  section 51117 51680 proxy_temp_file_write_size
+  section 51680 52438 proxy_temp_path
+  section 52438 53195 embedded variables
+  section 52619 52725 $proxy_host
+  section 52725 53195 $proxy_port
 
 module ngx_http_random_index_module
   aliases ngx_random_index
@@ -908,13 +912,13 @@ module ngx_http_realip_module
   aliases ngx_realip
   section 17 366 name
   section 366 586 example configuration
-  section 586 2558 directives
-  section 605 1059 set_real_ip_from
-  section 1059 1888 real_ip_header
-  section 1888 2558 real_ip_recursive
-  section 2558 2764 embedded variables
-  section 2597 2675 $realip_remote_addr
-  section 2675 2764 $realip_remote_port
+  section 586 2625 directives
+  section 605 1126 set_real_ip_from
+  section 1126 1955 real_ip_header
+  section 1955 2625 real_ip_recursive
+  section 2625 2831 embedded variables
+  section 2664 2742 $realip_remote_addr
+  section 2742 2831 $realip_remote_port
 
 module ngx_http_referer_module
   aliases ngx_referer
@@ -953,7 +957,7 @@ module ngx_http_scgi_module
   aliases ngx_scgi
   section 17 177 name
   section 177 309 example configuration
-  section 309 33902 directives
+  section 309 34344 directives
   section 328 1333 scgi_bind
   section 1333 1821 scgi_buffer_size
   section 1821 3007 scgi_buffering
@@ -969,45 +973,45 @@ module ngx_http_scgi_module
   section 7263 7659 scgi_cache_max_range_offset
   section 7659 8149 scgi_cache_methods
   section 8149 8403 scgi_cache_min_uses
-  section 8403 12886 scgi_cache_path
-  section 12886 14242 scgi_cache_purge
-  section 14242 14619 scgi_cache_revalidate
-  section 14619 16387 scgi_cache_use_stale
-  section 16387 18250 scgi_cache_valid
-  section 18250 18571 scgi_connect_timeout
-  section 18571 18951 scgi_force_ranges
-  section 18951 19429 scgi_hide_header
-  section 19429 19769 scgi_ignore_client_abort
-  section 19769 20879 scgi_ignore_headers
-  section 20879 21288 scgi_intercept_errors
-  section 21288 21906 scgi_limit_rate
-  section 21906 22681 scgi_max_temp_file_size
-  section 22681 25173 scgi_next_upstream
-  section 23194 23338 error
-  section 23338 23489 timeout
-  section 23489 23566 invalid_header
-  section 23566 23637 http_500
-  section 23637 23708 http_503
-  section 23708 23779 http_403
-  section 23779 23850 http_404
-  section 23850 23931 http_429
-  section 23931 24247 non_idempotent
-  section 24247 25173 off
-  section 25173 25524 scgi_next_upstream_timeout
-  section 25524 25878 scgi_next_upstream_tries
-  section 25878 26413 scgi_no_cache
-  section 26413 27326 scgi_param
-  section 27326 27871 scgi_pass
-  section 27871 28107 scgi_pass_header
-  section 28107 28431 scgi_pass_request_body
-  section 28431 28775 scgi_pass_request_headers
-  section 28775 29215 scgi_read_timeout
-  section 29215 30046 scgi_request_buffering
-  section 30046 30484 scgi_send_timeout
-  section 30484 32121 scgi_store
-  section 32121 32599 scgi_store_access
-  section 32599 33154 scgi_temp_file_write_size
-  section 33154 33902 scgi_temp_path
+  section 8403 13075 scgi_cache_path
+  section 13075 14431 scgi_cache_purge
+  section 14431 14808 scgi_cache_revalidate
+  section 14808 16576 scgi_cache_use_stale
+  section 16576 18439 scgi_cache_valid
+  section 18439 18760 scgi_connect_timeout
+  section 18760 19140 scgi_force_ranges
+  section 19140 19618 scgi_hide_header
+  section 19618 19958 scgi_ignore_client_abort
+  section 19958 21068 scgi_ignore_headers
+  section 21068 21477 scgi_intercept_errors
+  section 21477 22095 scgi_limit_rate
+  section 22095 22870 scgi_max_temp_file_size
+  section 22870 25362 scgi_next_upstream
+  section 23383 23527 error
+  section 23527 23678 timeout
+  section 23678 23755 invalid_header
+  section 23755 23826 http_500
+  section 23826 23897 http_503
+  section 23897 23968 http_403
+  section 23968 24039 http_404
+  section 24039 24120 http_429
+  section 24120 24436 non_idempotent
+  section 24436 25362 off
+  section 25362 25713 scgi_next_upstream_timeout
+  section 25713 26067 scgi_next_upstream_tries
+  section 26067 26602 scgi_no_cache
+  section 26602 27515 scgi_param
+  section 27515 28313 scgi_pass
+  section 28313 28549 scgi_pass_header
+  section 28549 28873 scgi_pass_request_body
+  section 28873 29217 scgi_pass_request_headers
+  section 29217 29657 scgi_read_timeout
+  section 29657 30488 scgi_request_buffering
+  section 30488 30926 scgi_send_timeout
+  section 30926 32563 scgi_store
+  section 32563 33041 scgi_store_access
+  section 33041 33596 scgi_temp_file_write_size
+  section 33596 34344 scgi_temp_path
 
 module ngx_http_secure_link_module
   aliases ngx_secure_link
@@ -1100,7 +1104,7 @@ module ngx_http_ssl_module
   aliases ngx_ssl
   section 17 375 name
   section 375 1418 example configuration
-  section 1418 14742 directives
+  section 1418 14644 directives
   section 1437 1752 ssl
   section 1752 2220 ssl_buffer_size
   section 2220 3964 ssl_certificate
@@ -1112,43 +1116,43 @@ module ngx_http_ssl_module
   section 5830 6524 ssl_ecdh_curve
   section 6524 7327 ssl_password_file
   section 7327 7614 ssl_prefer_server_ciphers
-  section 7614 8218 ssl_protocols
-  section 8218 9621 ssl_session_cache
-  section 8584 8720 off
-  section 8720 8901 none
-  section 8901 9136 builtin
-  section 9136 9621 shared
-  section 9621 10532 ssl_session_ticket_key
-  section 10532 10848 ssl_session_tickets
-  section 10848 11073 ssl_session_timeout
-  section 11073 11848 ssl_stapling
-  section 11848 12270 ssl_stapling_file
-  section 12270 12752 ssl_stapling_responder
-  section 12752 13246 ssl_stapling_verify
-  section 13246 13719 ssl_trusted_certificate
-  section 13719 14533 ssl_verify_client
-  section 14533 14742 ssl_verify_depth
-  section 14742 15314 error processing
-  section 15314 18877 embedded variables
-  section 15424 15522 $ssl_cipher
-  section 15522 15927 $ssl_ciphers
-  section 15927 16182 $ssl_client_cert
-  section 16182 16320 $ssl_client_fingerprint
-  section 16320 16520 $ssl_client_i_dn
-  section 16520 16736 $ssl_client_i_dn_legacy
-  section 16736 16858 $ssl_client_raw_cert
-  section 16858 17059 $ssl_client_s_dn
-  section 17059 17276 $ssl_client_s_dn_legacy
-  section 17276 17398 $ssl_client_serial
-  section 17398 17489 $ssl_client_v_end
-  section 17489 17600 $ssl_client_v_remain
-  section 17600 17695 $ssl_client_v_start
-  section 17695 17989 $ssl_client_verify
-  section 17989 18420 $ssl_curves
-  section 18420 18505 $ssl_protocol
-  section 18505 18648 $ssl_server_name
-  section 18648 18745 $ssl_session_id
-  section 18745 18877 $ssl_session_reused
+  section 7614 8120 ssl_protocols
+  section 8120 9523 ssl_session_cache
+  section 8486 8622 off
+  section 8622 8803 none
+  section 8803 9038 builtin
+  section 9038 9523 shared
+  section 9523 10434 ssl_session_ticket_key
+  section 10434 10750 ssl_session_tickets
+  section 10750 10975 ssl_session_timeout
+  section 10975 11750 ssl_stapling
+  section 11750 12172 ssl_stapling_file
+  section 12172 12654 ssl_stapling_responder
+  section 12654 13148 ssl_stapling_verify
+  section 13148 13621 ssl_trusted_certificate
+  section 13621 14435 ssl_verify_client
+  section 14435 14644 ssl_verify_depth
+  section 14644 15216 error processing
+  section 15216 18779 embedded variables
+  section 15326 15424 $ssl_cipher
+  section 15424 15829 $ssl_ciphers
+  section 15829 16084 $ssl_client_cert
+  section 16084 16222 $ssl_client_fingerprint
+  section 16222 16422 $ssl_client_i_dn
+  section 16422 16638 $ssl_client_i_dn_legacy
+  section 16638 16760 $ssl_client_raw_cert
+  section 16760 16961 $ssl_client_s_dn
+  section 16961 17178 $ssl_client_s_dn_legacy
+  section 17178 17300 $ssl_client_serial
+  section 17300 17391 $ssl_client_v_end
+  section 17391 17502 $ssl_client_v_remain
+  section 17502 17597 $ssl_client_v_start
+  section 17597 17891 $ssl_client_verify
+  section 17891 18322 $ssl_curves
+  section 18322 18407 $ssl_protocol
+  section 18407 18550 $ssl_server_name
+  section 18550 18647 $ssl_session_id
+  section 18647 18779 $ssl_session_reused
 
 module ngx_http_status_module
   aliases ngx_status
@@ -1408,7 +1412,7 @@ module ngx_http_uwsgi_module
   aliases ngx_uwsgi
   section 17 180 name
   section 180 315 example configuration
-  section 315 39751 directives
+  section 315 40210 directives
   section 334 1344 uwsgi_bind
   section 1344 1835 uwsgi_buffer_size
   section 1835 3032 uwsgi_buffering
@@ -1424,59 +1428,59 @@ module ngx_http_uwsgi_module
   section 7320 7719 uwsgi_cache_max_range_offset
   section 7719 8212 uwsgi_cache_methods
   section 8212 8468 uwsgi_cache_min_uses
-  section 8468 12955 uwsgi_cache_path
-  section 12955 14318 uwsgi_cache_purge
-  section 14318 14697 uwsgi_cache_revalidate
-  section 14697 16472 uwsgi_cache_use_stale
-  section 16472 18344 uwsgi_cache_valid
-  section 18344 18667 uwsgi_connect_timeout
-  section 18667 19050 uwsgi_force_ranges
-  section 19050 19532 uwsgi_hide_header
-  section 19532 19874 uwsgi_ignore_client_abort
-  section 19874 20987 uwsgi_ignore_headers
-  section 20987 21398 uwsgi_intercept_errors
-  section 21398 22022 uwsgi_limit_rate
-  section 22022 22803 uwsgi_max_temp_file_size
-  section 22803 23123 uwsgi_modifier1
-  section 23123 23443 uwsgi_modifier2
-  section 23443 25937 uwsgi_next_upstream
-  section 23958 24102 error
-  section 24102 24253 timeout
-  section 24253 24330 invalid_header
-  section 24330 24401 http_500
-  section 24401 24472 http_503
-  section 24472 24543 http_403
-  section 24543 24614 http_404
-  section 24614 24695 http_429
-  section 24695 25011 non_idempotent
-  section 25011 25937 off
-  section 25937 26290 uwsgi_next_upstream_timeout
-  section 26290 26646 uwsgi_next_upstream_tries
-  section 26646 27186 uwsgi_no_cache
-  section 27186 28107 uwsgi_param
-  section 28107 28960 uwsgi_pass
-  section 28960 29198 uwsgi_pass_header
-  section 29198 29526 uwsgi_pass_request_body
-  section 29526 29874 uwsgi_pass_request_headers
-  section 29874 30318 uwsgi_read_timeout
-  section 30318 31152 uwsgi_request_buffering
-  section 31152 31594 uwsgi_send_timeout
-  section 31594 31915 uwsgi_ssl_certificate
-  section 31915 32427 uwsgi_ssl_certificate_key
-  section 32427 32876 uwsgi_ssl_ciphers
-  section 32876 33201 uwsgi_ssl_crl
-  section 33201 33676 uwsgi_ssl_name
-  section 33676 34051 uwsgi_ssl_password_file
-  section 34051 34434 uwsgi_ssl_protocols
-  section 34434 34899 uwsgi_ssl_server_name
-  section 34899 35340 uwsgi_ssl_session_reuse
-  section 35340 35694 uwsgi_ssl_trusted_certificate
-  section 35694 35998 uwsgi_ssl_verify
-  section 35998 36304 uwsgi_ssl_verify_depth
-  section 36304 37952 uwsgi_store
-  section 37952 38434 uwsgi_store_access
-  section 38434 38995 uwsgi_temp_file_write_size
-  section 38995 39751 uwsgi_temp_path
+  section 8468 13144 uwsgi_cache_path
+  section 13144 14507 uwsgi_cache_purge
+  section 14507 14886 uwsgi_cache_revalidate
+  section 14886 16661 uwsgi_cache_use_stale
+  section 16661 18533 uwsgi_cache_valid
+  section 18533 18856 uwsgi_connect_timeout
+  section 18856 19239 uwsgi_force_ranges
+  section 19239 19721 uwsgi_hide_header
+  section 19721 20063 uwsgi_ignore_client_abort
+  section 20063 21176 uwsgi_ignore_headers
+  section 21176 21587 uwsgi_intercept_errors
+  section 21587 22211 uwsgi_limit_rate
+  section 22211 22992 uwsgi_max_temp_file_size
+  section 22992 23312 uwsgi_modifier1
+  section 23312 23632 uwsgi_modifier2
+  section 23632 26126 uwsgi_next_upstream
+  section 24147 24291 error
+  section 24291 24442 timeout
+  section 24442 24519 invalid_header
+  section 24519 24590 http_500
+  section 24590 24661 http_503
+  section 24661 24732 http_403
+  section 24732 24803 http_404
+  section 24803 24884 http_429
+  section 24884 25200 non_idempotent
+  section 25200 26126 off
+  section 26126 26479 uwsgi_next_upstream_timeout
+  section 26479 26835 uwsgi_next_upstream_tries
+  section 26835 27375 uwsgi_no_cache
+  section 27375 28296 uwsgi_param
+  section 28296 29402 uwsgi_pass
+  section 29402 29640 uwsgi_pass_header
+  section 29640 29968 uwsgi_pass_request_body
+  section 29968 30316 uwsgi_pass_request_headers
+  section 30316 30760 uwsgi_read_timeout
+  section 30760 31594 uwsgi_request_buffering
+  section 31594 32036 uwsgi_send_timeout
+  section 32036 32357 uwsgi_ssl_certificate
+  section 32357 32869 uwsgi_ssl_certificate_key
+  section 32869 33318 uwsgi_ssl_ciphers
+  section 33318 33643 uwsgi_ssl_crl
+  section 33643 34118 uwsgi_ssl_name
+  section 34118 34493 uwsgi_ssl_password_file
+  section 34493 34893 uwsgi_ssl_protocols
+  section 34893 35358 uwsgi_ssl_server_name
+  section 35358 35799 uwsgi_ssl_session_reuse
+  section 35799 36153 uwsgi_ssl_trusted_certificate
+  section 36153 36457 uwsgi_ssl_verify
+  section 36457 36763 uwsgi_ssl_verify_depth
+  section 36763 38411 uwsgi_store
+  section 38411 38893 uwsgi_store_access
+  section 38893 39454 uwsgi_temp_file_write_size
+  section 39454 40210 uwsgi_temp_path
 
 module ngx_http_v2_module
   aliases ngx_v2
@@ -1573,7 +1577,7 @@ module ngx_mail_smtp_module
 module ngx_mail_ssl_module
   section 17 428 name
   section 428 1372 example configuration
-  section 1372 11820 directives
+  section 1372 11723 directives
   section 1391 1580 ssl
   section 1580 2678 ssl_certificate
   section 2678 3078 ssl_certificate_key
@@ -1584,22 +1588,22 @@ module ngx_mail_ssl_module
   section 4533 5227 ssl_ecdh_curve
   section 5227 6032 ssl_password_file
   section 6032 6322 ssl_prefer_server_ciphers
-  section 6322 6925 ssl_protocols
-  section 6925 8320 ssl_session_cache
-  section 7291 7427 off
-  section 7427 7608 none
-  section 7608 7843 builtin
-  section 7843 8320 shared
-  section 8320 9231 ssl_session_ticket_key
-  section 9231 9547 ssl_session_tickets
-  section 9547 9772 ssl_session_timeout
-  section 9772 10196 ssl_trusted_certificate
-  section 10196 11131 ssl_verify_client
-  section 11131 11386 ssl_verify_depth
-  section 11386 11820 starttls
-  section 11557 11675 on
-  section 11675 11747 off
-  section 11747 11820 only
+  section 6322 6828 ssl_protocols
+  section 6828 8223 ssl_session_cache
+  section 7194 7330 off
+  section 7330 7511 none
+  section 7511 7746 builtin
+  section 7746 8223 shared
+  section 8223 9134 ssl_session_ticket_key
+  section 9134 9450 ssl_session_tickets
+  section 9450 9675 ssl_session_timeout
+  section 9675 10099 ssl_trusted_certificate
+  section 10099 11034 ssl_verify_client
+  section 11034 11289 ssl_verify_depth
+  section 11289 11723 starttls
+  section 11460 11578 on
+  section 11578 11650 off
+  section 11650 11723 only
 
 module ngx_stream_access_module
   section 17 206 name
@@ -1735,7 +1739,7 @@ module ngx_stream_map_module
 module ngx_stream_proxy_module
   section 17 229 name
   section 229 739 example configuration
-  section 739 10144 directives
+  section 739 10161 directives
   section 758 1752 proxy_bind
   section 1752 2107 proxy_buffer_size
   section 2107 2337 proxy_connect_timeout
@@ -1755,12 +1759,12 @@ module ngx_stream_proxy_module
   section 7213 7519 proxy_ssl_password_file
   section 7519 7909 proxy_ssl_server_name
   section 7909 8277 proxy_ssl_session_reuse
-  section 8277 8588 proxy_ssl_protocols
-  section 8588 8867 proxy_ssl_trusted_certificate
-  section 8867 9096 proxy_ssl_verify
-  section 9096 9327 proxy_ssl_verify_depth
-  section 9327 9655 proxy_timeout
-  section 9655 10144 proxy_upload_rate
+  section 8277 8605 proxy_ssl_protocols
+  section 8605 8884 proxy_ssl_trusted_certificate
+  section 8884 9113 proxy_ssl_verify
+  section 9113 9344 proxy_ssl_verify_depth
+  section 9344 9672 proxy_timeout
+  section 9672 10161 proxy_upload_rate
 
 module ngx_stream_realip_module
   section 17 501 name
@@ -1786,7 +1790,7 @@ module ngx_stream_split_clients_module
 module ngx_stream_ssl_module
   section 17 362 name
   section 362 1310 example configuration
-  section 1310 10805 directives
+  section 1310 10921 directives
   section 1329 2431 ssl_certificate
   section 2431 2825 ssl_certificate_key
   section 2825 3261 ssl_ciphers
@@ -1797,36 +1801,36 @@ module ngx_stream_ssl_module
   section 4738 4952 ssl_handshake_timeout
   section 4952 5702 ssl_password_file
   section 5702 5994 ssl_prefer_server_ciphers
-  section 5994 6369 ssl_protocols
-  section 6369 7766 ssl_session_cache
-  section 6737 6873 off
-  section 6873 7054 none
-  section 7054 7289 builtin
-  section 7289 7766 shared
-  section 7766 8634 ssl_session_ticket_key
-  section 8634 8907 ssl_session_tickets
-  section 8907 9134 ssl_session_timeout
-  section 9134 9560 ssl_trusted_certificate
-  section 9560 10548 ssl_verify_client
-  section 10548 10805 ssl_verify_depth
-  section 10805 13777 embedded variables
-  section 10913 11011 $ssl_cipher
-  section 11011 11416 $ssl_ciphers
-  section 11416 11608 $ssl_client_cert
-  section 11608 11747 $ssl_client_fingerprint
-  section 11747 11947 $ssl_client_i_dn
-  section 11947 12078 $ssl_client_raw_cert
-  section 12078 12279 $ssl_client_s_dn
-  section 12279 12410 $ssl_client_serial
-  section 12410 12501 $ssl_client_v_end
-  section 12501 12612 $ssl_client_v_remain
-  section 12612 12707 $ssl_client_v_start
-  section 12707 12906 $ssl_client_verify
-  section 12906 13337 $ssl_curves
-  section 13337 13422 $ssl_protocol
-  section 13422 13557 $ssl_server_name
-  section 13557 13654 $ssl_session_id
-  section 13654 13777 $ssl_session_reused
+  section 5994 6485 ssl_protocols
+  section 6485 7882 ssl_session_cache
+  section 6853 6989 off
+  section 6989 7170 none
+  section 7170 7405 builtin
+  section 7405 7882 shared
+  section 7882 8750 ssl_session_ticket_key
+  section 8750 9023 ssl_session_tickets
+  section 9023 9250 ssl_session_timeout
+  section 9250 9676 ssl_trusted_certificate
+  section 9676 10664 ssl_verify_client
+  section 10664 10921 ssl_verify_depth
+  section 10921 13893 embedded variables
+  section 11029 11127 $ssl_cipher
+  section 11127 11532 $ssl_ciphers
+  section 11532 11724 $ssl_client_cert
+  section 11724 11863 $ssl_client_fingerprint
+  section 11863 12063 $ssl_client_i_dn
+  section 12063 12194 $ssl_client_raw_cert
+  section 12194 12395 $ssl_client_s_dn
+  section 12395 12526 $ssl_client_serial
+  section 12526 12617 $ssl_client_v_end
+  section 12617 12728 $ssl_client_v_remain
+  section 12728 12823 $ssl_client_v_start
+  section 12823 13022 $ssl_client_verify
+  section 13022 13453 $ssl_curves
+  section 13453 13538 $ssl_protocol
+  section 13538 13673 $ssl_server_name
+  section 13673 13770 $ssl_session_id
+  section 13770 13893 $ssl_session_reused
 
 module ngx_stream_ssl_preread_module
   section 17 546 name
@@ -1865,11 +1869,11 @@ module ngx_stream_upstream_module
 
 module njs_about
   section 18 476 name
-  section 476 2148 what is currently supported
-  section 2148 2600 what is not supported yet
-  section 2600 3781 download and install
-  section 2925 3230 installing as a linux package
-  section 3230 3781 building from the sources
+  section 476 2393 what is currently supported
+  section 2393 2794 what is not supported yet
+  section 2794 3975 download and install
+  section 3119 3424 installing as a linux package
+  section 3424 3975 building from the sources
 
 module request_processing
   section 18 85 name
@@ -2421,7 +2425,7 @@ dist luajit-2.1
   modules changes contact ext_c_api ext_ffi ext_ffi_api ext_ffi_semantics ext_ffi_tutorial ext_jit ext_profiler extensions faq install luajit-2.1 running status
 
 module changes
-  section 14 35931 luajit change history
+  section 14 39336 luajit change history
   section 51 74 luajit
   section 74 104 download e<rchevron>
   section 104 126 installation
@@ -2440,566 +2444,626 @@ module changes
   section 403 436 performance e<rchevron>
   section 436 462 wiki e<rchevron>
   section 462 716 mailing list e<rchevron>
-  section 716 1217 luajit 2.1.0-beta2 e<mdash> 2016-03-03
-  section 770 803 enable trace stitching.
-  section 803 878 use internal implementation for converting fp numbers to
-  section 878 943 parse unicode escape \u{xx...} in string literals.
-  section 943 981 add mips soft-float support.
-  section 981 1028 switch mips port to dual-number mode.
-  section 1028 1094 x86/x64: add support for aes-ni, avx and avx2 to dynasm.
-  section 1094 1136 ffi: add ssize_t declaration.
-  section 1136 1180 ffi: parse #line nn and #nn.
-  section 1180 1217 various minor fixes.
-  section 1217 3463 luajit 2.1.0-beta1 e<mdash> 2015-08-25
-  section 1407 1447 changes to the vm core:
-  section 1447 1492 add low-overhead profiler (-jp).
-  section 1492 1594 add lj_gc64 mode: 64 bit gc object references (really: 47
-  section 1594 1673 add lj_fr2 mode: two-slot frame info. required by lj_gc64
-  section 1673 1723 add table.new() and table.clear().
-  section 1723 1780 parse binary number literals (0bxxx).
-  section 1780 1830 improvements to the jit compiler:
-  section 1830 1879 add trace stitching (disabled for now).
-  section 1879 2103 compile various builtins: string.char(),
-  section 2103 2178 compile string.find() for fixed string searches (no
-  section 2178 2229 compile bc_tsetm, e.g. {1,2,3,f()}.
-  section 2229 2281 compile string concatenations (bc_cat).
-  section 2281 2322 compile __concat metamethod.
-  section 2322 2367 various minor optimizations.
-  section 2367 2401 internal changes:
-  section 2401 2466 add support for embedding luajit bytecode for builtins.
-  section 2466 2524 replace various builtins with embedded bytecode.
-  section 2524 2580 refactor string buffers and string formatting.
-  section 2580 2658 remove obsolete non-truncating number to integer conversions.
-  section 2658 2681 ports:
-  section 2681 2727 add xbox one port (lj_gc64 mode).
-  section 2727 2790 arm64: add port of the interpreter (lj_gc64 mode).
-  section 2790 2861 x64: add separate port of the interpreter to lj_gc64 mode.
-  section 2861 2933 x86/x64: drop internal x87 math functions. use libm functions.
-  section 2933 3007 x86: remove x87 support from interpreter. sse2 is mandatory
-  section 3007 3069 ppc/e500: drop support for this architecture.
-  section 3069 3098 ffi library:
-  section 3098 3143 ffi: add 64 bit bitwise operations.
-  section 3143 3230 ffi: compile vla/vls and large cdata allocations with default
-  section 3230 3301 ffi: compile conversions from functions to function pointers.
-  section 3301 3362 ffi: compile lightuserdata to void * conversion.
-  section 3362 3412 ffi: compile ffi.gc(cdata, nil), too.
-  section 3412 3463 ffi: add ffi.typeinfo().
-  section 3463 6289 luajit 2.0.4 e<mdash> 2015-05-14
-  section 3511 3563 fix stack check in narrowing optimization.
-  section 3563 3623 fix lua/c api typecheck error for special indexes.
-  section 3623 3665 fix string to number conversion.
-  section 3665 3717 fix lexer error for chunks without tokens.
-  section 3717 3791 dont compile ir_retf after callt to ff with-side
-  section 3791 3858 fix bc_uclo/bc_jmp join optimization in lua parser.
-  section 3858 3915 fix corner case in string to number conversion.
-  section 3915 3984 gracefully handle lua_error() for a suspended coroutine.
-  section 3984 4040 avoid error messages when building with clang.
-  section 4040 4114 fix snapshot #0 handling for traces with a stack check on
-  section 4114 4178 fix fused constant loads under high register pressure.
-  section 4178 4231 invalidate backpropagation cache after dce.
-  section 4231 4261 fix abc elimination.
-  section 4261 4322 fix debug info for main chunk of stripped bytecode.
-  section 4322 4377 fix fold rule for string.sub(s, ...) == k.
-  section 4377 4426 fix fold rule for strref of snew.
-  section 4426 4491 fix frame traversal while searching for error function.
-  section 4491 4557 prevent gc estimate miscalculation due to buffer growth.
-  section 4557 4611 prevent adding side traces for stack checks.
-  section 4611 4679 fix top slot calculation for snapshots with continuations.
-  section 4679 4736 fix check for reuse of scev results in forl.
-  section 4736 4763 add ps vita port.
-  section 4763 4811 fix compatibility issues with illumos.
-  section 4811 4855 fix dragonfly build (unsupported).
-  section 4855 4927 openbsd/x86: better executable memory allocation for w^x mode.
-  section 4927 4987 x86: fix argument checks for ipairs() iterator.
-  section 4987 5058 x86: lj_math_random_step() clobbers xmm regs on osx clang.
-  section 5058 5131 x86: fix code generation for unused result of math.random().
-  section 5131 5217 x64: allow building with luajit_use_sysmalloc and
-  section 5217 5270 x86/x64: fix argument check for bit shifts.
-  section 5270 5334 x86/x64: fix code generation for fused test/arith ops.
-  section 5334 5388 arm: fix write barrier check in bc_usets.
-  section 5388 5452 ppc: fix red zone overflow in machine code generation.
-  section 5452 5493 ppc: dont use mcrxr on ppe.
-  section 5493 5557 various archs: fix excess stack growth in interpreter.
-  section 5557 5617 ffi: fix fold rule for tobit + conv num.u32.
-  section 5617 5667 ffi: prevent dse across ffi.string().
-  section 5667 5742 ffi: no meta fallback when indexing pointer to incomplete
-  section 5742 5798 ffi: fix initialization of unions of subtypes.
-  section 5798 5864 ffi: fix cdata vs. non-cdata arithmetic and comparisons.
-  section 5864 5941 ffi: fix __index/__newindex metamethod resolution for
-  section 5941 5998 ffi: fix compilation of reference field access.
-  section 5998 6067 ffi: fix frame traversal for backtraces with ffi callbacks.
-  section 6067 6145 ffi: fix recording of indexing a struct pointer ctype object
-  section 6145 6222 ffi: allow non-scalar cdata to be compared for equality by
-  section 6222 6289 ffi: fix pseudo type conversions for type punning.
-  section 6289 8078 luajit 2.0.3 e<mdash> 2014-03-12
-  section 6337 6360 add ps4 port.
-  section 6360 6409 add support for multilib distro builds.
-  section 6409 6433 fix osx build.
-  section 6433 6459 fix mingw build.
-  section 6459 6488 fix xbox 360 build.
-  section 6488 6541 improve uload forwarding for open upvalues.
-  section 6541 6616 fix gc steps threshold handling when called by jit-compiled
-  section 6616 6682 fix argument checks for math.deg() and math.rad().
-  section 6682 6720 fix jit.flush(func|true).
-  section 6720 6789 respect jit.off(func) when returning to a function, too.
-  section 6789 6844 fix compilation of string.byte(s, nil, n).
-  section 6844 6912 fix line number for relocated bytecode after closure fixup
-  section 6912 6957 fix frame traversal for backtraces.
-  section 6957 6987 fix abc elimination.
-  section 6987 7028 fix handling of redundant phis.
-  section 7028 7087 fix snapshot restore for exit to function header.
-  section 7087 7152 fix type punning alias analysis for constified pointers
-  section 7152 7222 fix call unroll checks in the presence of metamethod frames.
-  section 7222 7278 fix initial maxslot for down-recursive traces.
-  section 7278 7347 prevent base register coalescing if parent uses ir_retf.
-  section 7347 7417 dont purge modified function from stack slots in bc_ret.
-  section 7417 7455 fix recording of bc_varg.
-  section 7455 7515 dont access dangling reference to reallocated ir.
-  section 7515 7580 fix frame depth display for bytecode dump in -jdump.
-  section 7580 7645 arm: fix register allocation when rematerializing fprs.
-  section 7645 7706 x64: fix store to upvalue for lightuserdata values.
-  section 7706 7776 ffi: add missing gc steps for callback argument conversions.
-  section 7776 7819 ffi: properly unload loaded dlls.
-  section 7819 7874 ffi: fix argument checks for ffi.string().
-  section 7874 7934 ffi/x64: fix passing of vector arguments to calls.
-  section 7934 7998 ffi: rehash finalizer table after gc cycle, if needed.
-  section 7998 8078 ffi: fix cts->l for cdata unsinking in snapshot restore.
-  section 8078 9838 luajit 2.0.2 e<mdash> 2013-06-03
-  section 8126 8186 fix memory access check for fast string interning.
-  section 8186 8235 fix msvc intrinsics for older versions.
-  section 8235 8288 add missing gc steps for io.* functions.
-  section 8288 8357 fix spurious red zone overflows in machine code generation.
-  section 8357 8411 fix jump-range constrained mcode allocation.
-  section 8411 8462 inhibit dse for implicit loads via calls.
-  section 8462 8532 fix builtin string to number conversion for overflow digits.
-  section 8532 8598 fix optional argument handling while recording builtins.
-  section 8598 8660 fix optional argument handling in table.concat().
-  section 8660 8728 add partial support for building with mingw64 gcc 4.8-seh.
-  section 8728 8808 add missing phi barrier to string.sub(str, a, b) == kstr
-  section 8808 8856 fix compatibility issues with illumos.
-  section 8856 8928 arm: fix cache flush/sync for exit stubs of jit-compiled code.
-  section 8928 8997 mips: fix cache flush/sync for jit-compiled code jump area.
-  section 8997 9069 ppc: add plt suffix for external calls from assembler code.
-  section 9069 9124 ffi: fix snapshot substitution in split pass.
-  section 9124 9190 ffi/x86: fix register allocation for 64 bit comparisons.
-  section 9190 9265 ffi: fix tailcall in lowest frame to c function with bool
-  section 9265 9329 ffi: ignore long type specifier in ffi.istype().
-  section 9329 9418 ffi: fix calling conventions for 32 bit osx and ios simulator
-  section 9418 9498 ffi: fix calling conventions for arm hard-float eabi (nested
-  section 9498 9576 ffi: improve error messages for arithmetic and comparison
-  section 9576 9648 ffi: insert no-op type conversion for pointer to integer cast.
-  section 9648 9698 ffi: fix unroll limit for ffi.fill().
-  section 9698 9756 ffi: must sink xbar together with xstores.
-  section 9756 9838 ffi: preserve intermediate string for const char *
-  section 9838 10885 luajit 2.0.1 e<mdash> 2013-02-19
-  section 9886 9938 dont clear frame for out-of-memory error.
-  section 9938 10002 leave hook when resume catches error thrown from hook.
-  section 10002 10061 add missing gc steps for template table creation.
-  section 10061 10120 fix discharge order of comparisons in lua parser.
-  section 10120 10171 improve buffer handling for io.read().
-  section 10171 10238 osx: add support for mach-o object files to -b option.
-  section 10238 10261 fix ps3 port.
-  section 10261 10296 fix/enable xbox 360 port.
-  section 10296 10359 x86/x64: always mark ref for shift count as non-weak.
-  section 10359 10423 x64: dont fuse implicitly 32-to-64 extended operands.
-  section 10423 10471 arm: fix armhf call argument handling.
-  section 10471 10536 arm: fix code generation for integer math.min/math.max.
-  section 10536 10589 ppc/e500: fix lj_vm_floor() for inf/nan.
-  section 10589 10662 ffi: change priority of table initializer variants for structs.
-  section 10662 10735 ffi: fix code generation for bool call result check on x86/x64.
-  section 10735 10810 ffi: load ffi library on-demand for bytecode with cdata
-  section 10810 10885 ffi: fix handling of qualified transparent structs/unions.
-  section 10885 11754 luajit 2.0.0 e<mdash> 2012-11-08
-  section 10933 10979 correctness and completeness:
-  section 10979 11011 fix android/x86 build.
-  section 11011 11084 fix recording of equality comparisons with __eq metamethods.
-  section 11084 11130 fix detection of immutable upvalues.
-  section 11130 11202 replace error with panic for callbacks from jit-compiled code.
-  section 11202 11267 fix builtin string to number conversion for int_min.
-  section 11267 11330 dont create unneeded array part for template tables.
-  section 11330 11368 fix conv.num.int sinking.
-  section 11368 11441 dont propagate implicitly widened number to index metamethods.
-  section 11441 11505 arm: fix ordered comparisons of number vs. non-number.
-  section 11505 11572 ffi: fix code generation for replay of sunk float fields.
-  section 11572 11610 ffi: fix signedness of bool.
-  section 11610 11676 ffi: fix recording of bool call result check on x86/x64.
-  section 11676 11754 ffi: fix stack-adjustment for __thiscall callbacks.
-  section 11754 17299 luajit 2.0.0-beta11 e<mdash> 2012-10-16
-  section 11809 11839 new features:
-  section 11839 11911 use arm vfp instructions, if available (build-time detection).
-  section 11911 11968 add support for arm hard-float eabi (armhf).
-  section 11968 11991 add ps3 port.
-  section 11991 12073 add many features from lua 5.2, e.g. goto/labels. refer to
-  section 12073 12114 ffi: add parameterized c types.
-  section 12114 12163 ffi: add support for copy constructors.
-  section 12163 12247 ffi: equality comparisons never raise an error (treat as
-  section 12247 12297 ffi: box all accessed or returned enums.
-  section 12297 12369 ffi: check for __new metamethod when calling a constructor.
-  section 12369 12444 ffi: handle __pairs/__ipairs metamethods for cdata
-  section 12444 12529 ffi: convert io.* file handle to file * pointer (but as a
-  section 12529 12591 ffi: detect and support type punning through unions.
-  section 12591 12644 ffi: improve various error messages.
-  section 12644 12689 build-system reorganization:
-  section 12689 12881 reorganize directory layout:
-  section 12881 12962 add minified lua interpreter plus lua bitop (minilua) to run
-  section 12962 13017 change dynasm bit operations to use lua bitop
-  section 13017 13088 translate only vm_*.dasc for detected target architecture.
-  section 13088 13144 improve target detection for msvcbuild.bat.
-  section 13144 13210 fix build issues on cygwin and mingw with optional msys.
-  section 13210 13290 handle cross-compiles with fpu/no-fpu or hard-fp/soft-fp abi
-  section 13290 13355 remove some library functions for no-jit/no-ffi builds.
-  section 13355 13415 add uninstall target to top-level makefile.
-  section 13415 13461 correctness and completeness:
-  section 13461 13510 preserve snapshot #0 pc for all traces.
-  section 13510 13566 fix argument checks for coroutine.create().
-  section 13566 13647 command line prints version and jit status to stdout, not
-  section 13647 13709 fix userdata __gc separations at lua state close.
-  section 13709 13779 fix tdup to hload forwarding for lj_dualnum builds.
-  section 13779 13825 fix buffer check in bytecode writer.
-  section 13825 13865 make os.date() thread-safe.
-  section 13865 13920 add missing declarations for msvc intrinsics.
-  section 13920 13980 fix dispatch table modifications for return hooks.
-  section 13980 14076 workaround for msvc conversion bug (double e<rarr>
-  section 14076 14122 fix fold rule (i-j)-i => 0-j.
-  section 14122 14168 never use dwarf unwinder on windows.
-  section 14168 14237 fix shrinking of direct mapped blocks in builtin allocator.
-  section 14237 14296 limit recursion depth in string.match() et al.
-  section 14296 14372 fix late despecialization of itern after loop has been
-  section 14372 14456 fix f and l options for debug.getinfo() and
-  section 14456 14494 fix package.searchpath().
-  section 14494 14566 osx: change dylib names to be consistent with other platforms.
-  section 14566 14630 android: workaround for broken sprintf(%g, -0.0).
-  section 14630 14714 x86: remove support for ancient cpus without cmov (before
-  section 14714 14787 x86: fix register allocation for calls returning register pair.
-  section 14787 14868 x86/x64: fix fusion of unsigned byte comparisons with swapped
-  section 14868 14916 arm: fix tonumber() argument check.
-  section 14916 15004 arm: fix modulo operator and math.floor()/math.ceil() for
-  section 15004 15062 arm: invoke split pass for leftover ir_tobit.
-  section 15062 15106 arm: fix base register coalescing.
-  section 15106 15162 ppc: fix interpreter state setup in callbacks.
-  section 15162 15209 ppc: fix string.sub() range check.
-  section 15209 15281 mips: support generation of mips/mipsel bytecode object files.
-  section 15281 15342 mips: fix calls to floor()/ceil()/trunc().
-  section 15342 15402 arm/ppc: detect more target architecture variants.
-  section 15402 15485 arm/ppc/e500/mips: fix tailcalls from fast functions, esp.
-  section 15485 15547 arm/ppc/mips: fix rematerialization of fp constants.
-  section 15547 15609 ffi: dont call freelibrary() on our own exe/dll.
-  section 15609 15666 ffi: resolve metamethods for constructors, too.
-  section 15666 15749 ffi: properly disable callbacks on ios (would require
-  section 15749 15806 ffi: fix cdecl string parsing during recording.
-  section 15806 15871 ffi: show address pointed to for tostring(ref), too.
-  section 15871 15936 ffi: fix alignment of c call argument/return structure.
-  section 15936 15991 ffi: initialize all fields of standard types.
-  section 15991 16070 ffi: fix callback handling when new c types are declared in
-  section 16070 16128 ffi: fix recording of constructors for pointers.
-  section 16128 16194 ffi: always resolve metamethods for pointers to structs.
-  section 16194 16274 ffi: correctly propagate alignment when interning nested types.
-  section 16274 16331 structural and performance enhancements:
-  section 16331 16395 add allocation sinking and store sinking optimization.
-  section 16395 16433 constify immutable upvalues.
-  section 16433 16550 add builtin string to integer or fp number conversion. improves
-  section 16550 16658 create string hash slots in template tables for non-const
-  section 16658 16723 eliminate hrefk guard for template table references.
-  section 16723 16760 add various new fold rules.
-  section 16760 16829 dont use stack unwinding for lua_yield() (slow on x64).
-  section 16829 16908 arm, ppc, mips: improve xload operand fusion and register
-  section 16908 16986 ppc, mips: compile math.sqrt() to sqrt instruction, if
-  section 16986 17046 ffi: fold kptr + constant offset in split pass.
-  section 17046 17109 ffi: optimize/inline ffi.copy() and ffi.fill().
-  section 17109 17165 ffi: compile and optimize array/struct copies.
-  section 17165 17299 ffi: compile ffi.typeof(cdata|ctype), ffi.sizeof(),
-  section 17299 20651 luajit 2.0.0-beta10 e<mdash> 2012-05-09
-  section 17354 17384 new features:
-  section 17384 17549 the mips of luajit is complete. it requires a cpu conforming to
-  section 17549 17638 auto-detect target arch via cross-compiler. no need for
-  section 17638 17684 make dynasm compatible with lua 5.2.
-  section 17684 17774 from lua 5.2: try __tostring metamethod on non-string error
-  section 17774 17820 correctness and completeness:
-  section 17820 17873 fix parsing of hex literals with exponents.
-  section 17873 17930 fix bytecode dump for certain number constants.
-  section 17930 17998 fix argument type in error message for relative arguments.
-  section 17998 18066 fix argument error handling on lua stacks without a frame.
-  section 18066 18127 add missing mcode limit check in assembler backend.
-  section 18127 18164 fix compilation on openbsd.
-  section 18164 18229 avoid recursive gc steps after gc-triggered trace exit.
-  section 18229 18294 replace <unwind.h> definitions with our own.
-  section 18294 18368 fix osx build issues. bump minimum required osx version to
-  section 18368 18427 fix discharge order of comparisons in lua parser.
-  section 18427 18506 ensure running __gc of userdata created in __gc at state
-  section 18506 18576 limit number of userdata __gc separations at state close.
-  section 18576 18664 fix bytecode jmp slot range when optimizing and/or
-  section 18664 18695 fix dse of ustore.
-  section 18695 18762 make lua_concat() work from c hook with partial frame.
-  section 18762 18844 add required phis for implicit conversions, e.g. via xref
-  section 18844 18913 add more comparison variants to valgrind suppressions file.
-  section 18913 18984 disable loading bytecode with an extra header (bom or #!).
-  section 18984 19021 fix phi stack slot syncing.
-  section 19021 19081 arm: reorder type/value tests to silence valgrind.
-  section 19081 19151 arm: fix register allocation for ldrd-optimized hrefk.
-  section 19151 19207 arm: fix conditional branch fixup for obar.
-  section 19207 19271 arm: invoke split pass for double args in ffi call.
-  section 19271 19347 arm: handle all call* ops with double results in split
-  section 19347 19397 arm: fix rejoin of pow in split pass.
-  section 19397 19472 arm: fix compilation of math.sinh, math.cosh,
-  section 19472 19537 arm, ppc: avoid pointless arg clearing in bc_ifuncf.
-  section 19537 19585 ppc: fix resume after yield from hook.
-  section 19585 19638 ppc: fix argument checking for rawget().
-  section 19638 19701 ppc: fix fusion of floating-point xload/xstore.
-  section 19701 19761 ppc: fix hrefk code generation for huge tables.
-  section 19761 19821 ppc: use builtin d-cache/i-cache sync code.
-  section 19821 19850 ffi library:
-  section 19850 19901 ignore empty statements in ffi.cdef().
-  section 19901 19967 ignore number parsing errors while skipping definitions.
-  section 19967 20041 dont touch frame in callbacks with tailcalls to fast
-  section 20041 20090 fix library unloading on posix systems.
-  section 20090 20154 finalize cdata before userdata when closing the state.
-  section 20154 20220 change ffi.load() library name resolution for cygwin.
-  section 20220 20286 fix resolving of function name redirects on windows/x86.
-  section 20286 20343 fix symbol resolving error messages on windows.
-  section 20343 20403 fix blacklisting of c functions calling callbacks.
-  section 20403 20451 fix result type of pointer difference.
-  section 20451 20508 use correct pc in ffi metamethod error message.
-  section 20508 20573 allow typedef _bool int bool; for the windows api.
-  section 20573 20651 dont record test for bool result of call, if ignored.
-  section 20651 24148 luajit 2.0.0-beta9 e<mdash> 2011-12-14
-  section 20705 20735 new features:
-  section 20735 20891 ppc port of luajit is complete. default is the dual-number port
-  section 20891 20926 add ffi callback support.
-  section 20926 21017 extend -b to generate .c, .h or .obj/.o files with
-  section 21017 21077 allow loading embedded bytecode with require().
-  section 21077 21168 from lua 5.2: change to \z escape. reject undefined escape
-  section 21168 21214 correctness and completeness:
-  section 21214 21286 fix osx 10.7 build. fix install_name and versioning on osx.
-  section 21286 21310 fix ios build.
-  section 21310 21348 install dis_arm.lua, too.
-  section 21348 21402 mark installed shared library as executable.
-  section 21402 21476 add debug option to msvcbuild.bat and improve error
-  section 21476 21523 fix data-flow analysis for iterators.
-  section 21523 21585 fix forced unwinding triggered by external unwinder.
-  section 21585 21657 record missing for loop slot loads (return to lower frame).
-  section 21657 21720 always use ansi variants of windows system functions.
-  section 21720 21791 fix gc barrier for multi-result table constructor (tsetm).
-  section 21791 21828 fix/add various fold rules.
-  section 21828 21903 add potential phi for number conversions due to type
-  section 21903 21967 do not eliminate phis only referenced from other phis.
-  section 21967 22045 correctly anchor implicit number to string conversions in lua/c
-  section 22045 22086 fix various stack limit checks.
-  section 22086 22167 x64: use thread-safe exceptions for external unwinding (gcc
-  section 22167 22225 x64: fix result type of cdata index conversions.
-  section 22225 22296 x64: fix math.random() and bit.bswap() code generation.
-  section 22296 22344 x64: fix lightuserdata comparisons.
-  section 22344 22412 x64: always extend stack-passed arguments to pointer size.
-  section 22412 22465 arm: many fixes to code generation backend.
-  section 22465 22520 ppc/e500: fix dispatch for binop metamethods.
-  section 22520 22602 ppc/e500: save/restore condition registers when
-  section 22602 22680 ppc/e500: fix write barrier in stores of strings to upvalues.
-  section 22680 22709 ffi library:
-  section 22709 22741 fix c comment parsing.
-  section 22741 22799 fix snapshot optimization for cdata comparisons.
-  section 22799 22859 fix recording of const/enum lookups in namespaces.
-  section 22859 22934 fix call argument and return handling for i8/u8/i16/u16
-  section 22934 22978 fix unfused loads of float fields.
-  section 22978 23018 fix ffi.string() recording.
-  section 23018 23098 save getlasterror() around ffi.load() and symbol
-  section 23098 23153 improve ld script detection in ffi.load().
-  section 23153 23219 record loads/stores to external variables in namespaces.
-  section 23219 23285 compile calls to stdcall, fastcall and vararg functions.
-  section 23285 23346 treat function ctypes like pointers in comparisons.
-  section 23346 23403 resolve __call metamethod for pointers, too.
-  section 23403 23461 record c function calls with bool return values.
-  section 23461 23493 record ffi.errno().
-  section 23493 23554 x86: fix number to uint32_t conversion rounding.
-  section 23554 23612 x86: fix 64 bit arithmetic in assembler backend.
-  section 23612 23667 x64: fix struct-by-value calling conventions.
-  section 23667 23743 arm: ensure invocation of split pass for float conversions.
-  section 23743 23800 structural and performance enhancements:
-  section 23800 23856 display trace types with -jv and -jdump.
-  section 23856 23927 record isolated calls. but prefer recording loops over calls.
-  section 23927 24064 specialize to prototype for non-monomorphic functions. solves
-  section 24064 24148 always generate a portable vmdef.lua. easier for distros.
-  section 24148 25774 luajit 2.0.0-beta8 e<mdash> 2011-06-23
-  section 24202 24232 new features:
-  section 24232 24284 soft-float arm port of luajit is complete.
-  section 24284 24364 add support for bytecode loading/saving and -b command line
-  section 24364 24448 from lua 5.2: __len metamethod for tables (disabled by
-  section 24448 24494 correctness and completeness:
-  section 24494 24537 arm: misc. fixes for interpreter.
-  section 24537 24602 x86/x64: fix bit.* argument checking in interpreter.
-  section 24602 24673 catch early out-of-memory in memory allocator initialization.
-  section 24673 24744 fix data-flow analysis for paths leading to an upvalue close.
-  section 24744 24808 fix check for missing arguments in string.format().
-  section 24808 24871 fix solaris/x86 build (note: not a supported target).
-  section 24871 24944 fix recording of loops with instable directions in side traces.
-  section 24944 25016 x86/x64: fix fusion of comparisons with u8/u16 xload.
-  section 25016 25086 x86/x64: fix register allocation for variable shifts.
-  section 25086 25115 ffi library:
-  section 25115 25200 add ffi.errno(). save errno/getlasterror() around
-  section 25200 25248 fix __gc for vla/vls cdata objects.
-  section 25248 25320 fix recording of casts from 32 bit cdata pointers to integers.
-  section 25320 25380 tonumber(cdata) returns nil for non-numbers.
-  section 25380 25439 show address pointed to for tostring(pointer).
-  section 25439 25507 print null pointers as cdata<... *>: null.
-  section 25507 25586 support __tostring metamethod for pointers to structs, too.
-  section 25586 25643 structural and performance enhancements:
-  section 25643 25695 more tuning for loop unrolling heuristics.
-  section 25695 25774 flatten and compress in-memory debug info (saves ~70%).
-  section 25774 27535 luajit 2.0.0-beta7 e<mdash> 2011-05-05
-  section 25828 25858 new features:
-  section 25858 25915 arm port of the luajit interpreter is complete.
-  section 25915 25990 ffi library: add ffi.gc(), ffi.metatype(),
-  section 25990 26060 ffi library: resolve ld script redirection in ffi.load().
-  section 26060 26143 from lua 5.2: package.searchpath(), fp:read(*l),
-  section 26143 26263 from lua 5.2, disabled by default: empty statement,
-  section 26263 26309 correctness and completeness:
-  section 26309 26347 ffi library: numerous fixes.
-  section 26347 26405 fix type mismatches in store-to-load forwarding.
-  section 26405 26453 fix error handling within metamethods.
-  section 26453 26483 fix table.maxn().
-  section 26483 26528 improve accuracy of x^-k on x64.
-  section 26528 26585 fix code generation for intel atom in x64 mode.
-  section 26585 26616 fix narrowing of pow.
-  section 26616 26666 fix recording of retried fast functions.
-  section 26666 26729 fix code generation for bit.bnot() and multiplies.
-  section 26729 26779 fix error location within cpcall frames.
-  section 26779 26830 add workaround for old libgcc unwind bug.
-  section 26830 26901 fix lua_yield() and getmetatable(lightuserdata) on x64.
-  section 26901 26948 misc. fixes for ppc/e500 interpreter.
-  section 26948 27007 fix stack slot updates for down-recursion.
-  section 27007 27064 structural and performance enhancements:
-  section 27064 27136 add dual-number mode (int/double) for the vm. enabled for arm.
-  section 27136 27205 improve narrowing of arithmetic operators and for loops.
-  section 27205 27281 tune loop unrolling heuristics and increase trace recorder
-  section 27281 27359 eliminate dead slots in snapshots using bytecode data-flow
-  section 27359 27406 avoid phantom stores to proxy tables.
-  section 27406 27455 optimize lookups in empty proxy tables.
-  section 27455 27535 improve bytecode optimization of and/or operators.
-  section 27535 29494 luajit 2.0.0-beta6 e<mdash> 2011-02-11
-  section 27589 27619 new features:
-  section 27619 27687 powerpc/e500v2 port of the luajit interpreter is complete.
-  section 27687 27899 various minor features from lua 5.2: hex escapes in literals,
-  section 27899 27978 lua 5.2 __pairs and __ipairs metamethods (disabled by
-  section 27978 28030 initial release of the ffi library.
-  section 28030 28076 correctness and completeness:
-  section 28076 28132 fix string.format() for non-finite numbers.
-  section 28132 28202 fix memory leak when compiled to use the built-in allocator.
-  section 28202 28265 x86/x64: fix unnecessary resize in tsetm bytecode.
-  section 28265 28328 fix various gc issues with traces and jit.flush().
-  section 28328 28386 x64: fix fusion of indexes for array references.
-  section 28386 28455 x86/x64: fix stack overflow handling for coroutine results.
-  section 28455 28513 enable low-2gb memory allocation on freebsd/x64.
-  section 28513 28588 fix collectgarbage(count) result if more than 2gb is in
-  section 28588 28624 fix parsing of hex floats.
-  section 28624 28697 x86/x64: fix loop branch inversion with trailing href+ne/eq.
-  section 28697 28728 add jit.os string.
-  section 28728 28793 coroutine.create() permits running c functions, too.
-  section 28793 28850 fix osx build to work with newer ld64 versions.
-  section 28850 28919 fix bytecode optimization of and/or operators.
-  section 28919 28976 structural and performance enhancements:
-  section 28976 29037 emit specialized bytecode for pairs()/next().
-  section 29037 29095 improve bytecode coalescing of nil constants.
-  section 29095 29139 compile calls to vararg functions.
-  section 29139 29169 compile select().
-  section 29169 29235 improve alias analysis, esp. for loads from allocations.
-  section 29235 29283 tuning of various compiler heuristics.
-  section 29283 29340 refactor and extend ir conversion instructions.
-  section 29340 29407 x86/x64: various backend enhancements related to the ffi.
-  section 29407 29494 add split pass to split 64 bit ir instructions for 32 bit cpus.
-  section 29494 30816 luajit 2.0.0-beta5 e<mdash> 2010-08-24
-  section 29548 29594 correctness and completeness:
-  section 29594 29648 fix trace exit dispatch to function headers.
-  section 29648 29709 fix windows and osx builds with luajit_disable_jit.
-  section 29709 29781 reorganize and fix placement of generated machine code on x64.
-  section 29781 29819 fix tnew in x64 interpreter.
-  section 29819 29894 do not eliminate phis for values only referenced from side
-  section 29894 29970 os-independent canonicalization of strings for non-finite
-  section 29970 30020 fix string.char() range check on x64.
-  section 30020 30076 fix tostring() resolving within print().
-  section 30076 30119 fix error handling for next().
-  section 30119 30188 fix passing of constant arguments to external calls on x64.
-  section 30188 30265 fix interpreter argument check for two-argument sse math
-  section 30265 30330 fix c frame chain corruption caused by lua_cpcall().
-  section 30330 30393 fix return from pcall() within active hook.
-  section 30393 30450 structural and performance enhancements:
-  section 30450 30516 replace on-trace gc frame syncing with interpreter exit.
-  section 30516 30597 improve hash lookup specialization by not removing dead keys
-  section 30597 30640 turn traces into true gc objects.
-  section 30640 30707 avoid starting a gc cycle immediately after library init.
-  section 30707 30766 add weak guards to improve dead-code elimination.
-  section 30766 30816 speed up string interning.
-  section 30816 31584 luajit 2.0.0-beta4 e<mdash> 2010-03-28
-  section 30870 30916 correctness and completeness:
-  section 30916 30979 fix precondition for on-trace creation of table keys.
-  section 30979 31031 fix {f()} on x64 when table is resized.
-  section 31031 31097 fix folding of ordered comparisons with same references.
-  section 31097 31156 fix snapshot restores for multi-result bytecodes.
-  section 31156 31230 fix potential hang when recording bytecode with nested
-  section 31230 31313 fix recording of getmetatable(), tonumber() and bad
-  section 31313 31378 fix sload fusion across returns to lower frames.
-  section 31378 31435 structural and performance enhancements:
-  section 31435 31512 add array bounds check elimination. -oabc is enabled by
-  section 31512 31584 more tuning for x64, e.g. smaller table objects.
-  section 31584 33966 luajit 2.0.0-beta3 e<mdash> 2010-03-07
-  section 31638 31671 luajit x64 port:
-  section 31671 31752 port integrated memory allocator to linux/x64, windows/x64 and
-  section 31752 31803 port interpreter and jit compiler to x64.
-  section 31803 31832 port dynasm to x64.
-  section 31832 31876 many 32/64 bit cleanups in the vm.
-  section 31876 31953 allow building the interpreter with either x87 or sse2
-  section 31953 32036 add external unwinding and c++ exception interop (default on
-  section 32036 32082 correctness and completeness:
-  section 32082 32159 fix constructor bytecode generation for certain conditional
-  section 32159 32214 fix some cases of ordered string comparisons.
-  section 32214 32249 fix lua_tocfunction().
-  section 32249 32328 fix cutoff register in jmp bytecode for some conditional
-  section 32328 32398 fix phi marking algorithm for references from variant slots.
-  section 32398 32452 fix package.cpath for non-default prefix.
-  section 32452 32521 fix dwarf2 frame unwind information for interpreter on osx.
-  section 32521 32588 drive the gc forward on string allocations in the parser.
-  section 32588 32650 implement call/return hooks (zero-cost if disabled).
-  section 32650 32689 implement yield from c hooks.
-  section 32689 32770 disable jit compiler on older non-sse2 cpus instead of
-  section 32770 32827 structural and performance enhancements:
-  section 32827 32892 compile recursive code (tail-, up- and down-recursion).
-  section 32892 32961 improve heuristics for bytecode penalties and blacklisting.
-  section 32961 33039 split call/func recording and clean up fast function call
-  section 33039 33099 major redesign of internal function call handling.
-  section 33099 33170 improve for loop const specialization and integerness checks.
-  section 33170 33235 switch to pre-initialized stacks. avoid frame-clearing.
-  section 33235 33320 colocation of prototypes and related data: bytecode, constants,
-  section 33320 33380 cleanup parser and streamline bytecode generation.
-  section 33380 33447 add support for weak ir references to register allocator.
-  section 33447 33500 switch to compressed, extensible snapshots.
-  section 33500 33558 compile returns to frames below the start frame.
-  section 33558 33637 improve alias analysis of upvalues using a disambiguation hash
-  section 33637 33716 compile floor/ceil/trunc to sse2 helper calls or sse4.1
-  section 33716 33772 add generic c call handling to ir and backend.
-  section 33772 33820 improve knum fuse vs. load heuristics.
-  section 33820 33866 compile various io.*() functions.
-  section 33866 33966 compile math.sinh(), math.cosh(), math.tanh() and
-  section 33966 35353 luajit 2.0.0-beta2 e<mdash> 2009-11-09
-  section 34020 34092 reorganize build system. build static+shared library on posix.
-  section 34092 34175 allow c++ exception conversion on all platforms using a wrapper
-  section 34175 34256 automatically catch c++ exceptions and rethrow lua error
-  section 34256 34326 check for the correct x87 fpu precision at strategic points.
-  section 34326 34375 always use wrappers for libm functions.
-  section 34375 34439 resurrect metamethod name strings before copying them.
-  section 34439 34494 mark current trace, even if compiler is idle.
-  section 34494 34547 ensure file metatable is created only once.
-  section 34547 34620 fix type comparisons when different integer types are involved.
-  section 34620 34662 fix getmetatable() recording.
-  section 34662 34714 fix tdup with dead keys in template table.
-  section 34714 34809 jit.flush(tr) returns status. prevent manual flush of a
-  section 34809 34883 improve register allocation heuristics for invariant
-  section 34883 34966 compile the push/pop variants of table.insert() and
-  section 34966 35015 compatibility with msvc link /debug.
-  section 35015 35050 fix lua_iscfunction().
-  section 35050 35115 fix math.random() when compiled with -fpic (osx).
-  section 35115 35145 fix table.maxn().
-  section 35145 35198 bump macosx_deployment_target to 10.4
-  section 35198 35353 lual_check*() and lual_opt*() now support negative
-  section 35353 35931 luajit 2.0.0-beta1 e<mdash> 2009-10-31
-  section 35407 35464 this is the first public release of luajit 2.0.
-  section 35464 35931 the whole vm has been rewritten from the ground up, so theres
+  section 716 1836 luajit 2.1.0-beta3 e<mdash> 2017-05-01
+  section 770 811 rewrite memory block allocator.
+  section 811 860 add various extension from lua 5.2/5.3.
+  section 860 911 remove old lua 5.0 compatibility defines.
+  section 911 982 set arg table before evaluating lua_init and -e chunks.
+  section 982 1041 fix fold rules for math.abs() and fp negation.
+  section 1041 1093 fix soft-float math.abs() and negation.
+  section 1093 1159 fix formatting of some small denormals at low precision.
+  section 1159 1203 lj_gc64: add jit compiler support.
+  section 1203 1251 x64/lj_gc64: add jit compiler backend.
+  section 1251 1317 x86/x64: generate bmi2 shifts and rotates, if available.
+  section 1317 1376 windows/x86: add full exception interoperability.
+  section 1376 1416 arm64: add big-endian support.
+  section 1416 1458 arm64: add jit compiler backend.
+  section 1458 1495 mips: fix tsetr barrier.
+  section 1495 1539 mips: support mips16 interlinking.
+  section 1539 1598 mips soft-float: fix code generation for href.
+  section 1598 1659 mips64: add mips64 hard-float jit compiler backend.
+  section 1659 1733 mips64: add mips64 hard-float/soft-float support to
+  section 1733 1778 ffi: compile bitfield loads/stores.
+  section 1778 1836 various fixes common with the 2.0 branch.
+  section 1836 2337 luajit 2.1.0-beta2 e<mdash> 2016-03-03
+  section 1890 1923 enable trace stitching.
+  section 1923 1998 use internal implementation for converting fp numbers to
+  section 1998 2063 parse unicode escape \u{xx...} in string literals.
+  section 2063 2101 add mips soft-float support.
+  section 2101 2148 switch mips port to dual-number mode.
+  section 2148 2214 x86/x64: add support for aes-ni, avx and avx2 to dynasm.
+  section 2214 2256 ffi: add ssize_t declaration.
+  section 2256 2300 ffi: parse #line nn and #nn.
+  section 2300 2337 various minor fixes.
+  section 2337 4583 luajit 2.1.0-beta1 e<mdash> 2015-08-25
+  section 2527 2567 changes to the vm core:
+  section 2567 2612 add low-overhead profiler (-jp).
+  section 2612 2714 add lj_gc64 mode: 64 bit gc object references (really: 47
+  section 2714 2793 add lj_fr2 mode: two-slot frame info. required by lj_gc64
+  section 2793 2843 add table.new() and table.clear().
+  section 2843 2900 parse binary number literals (0bxxx).
+  section 2900 2950 improvements to the jit compiler:
+  section 2950 2999 add trace stitching (disabled for now).
+  section 2999 3223 compile various builtins: string.char(),
+  section 3223 3298 compile string.find() for fixed string searches (no
+  section 3298 3349 compile bc_tsetm, e.g. {1,2,3,f()}.
+  section 3349 3401 compile string concatenations (bc_cat).
+  section 3401 3442 compile __concat metamethod.
+  section 3442 3487 various minor optimizations.
+  section 3487 3521 internal changes:
+  section 3521 3586 add support for embedding luajit bytecode for builtins.
+  section 3586 3644 replace various builtins with embedded bytecode.
+  section 3644 3700 refactor string buffers and string formatting.
+  section 3700 3778 remove obsolete non-truncating number to integer conversions.
+  section 3778 3801 ports:
+  section 3801 3847 add xbox one port (lj_gc64 mode).
+  section 3847 3910 arm64: add port of the interpreter (lj_gc64 mode).
+  section 3910 3981 x64: add separate port of the interpreter to lj_gc64 mode.
+  section 3981 4053 x86/x64: drop internal x87 math functions. use libm functions.
+  section 4053 4127 x86: remove x87 support from interpreter. sse2 is mandatory
+  section 4127 4189 ppc/e500: drop support for this architecture.
+  section 4189 4218 ffi library:
+  section 4218 4263 ffi: add 64 bit bitwise operations.
+  section 4263 4350 ffi: compile vla/vls and large cdata allocations with default
+  section 4350 4421 ffi: compile conversions from functions to function pointers.
+  section 4421 4482 ffi: compile lightuserdata to void * conversion.
+  section 4482 4532 ffi: compile ffi.gc(cdata, nil), too.
+  section 4532 4583 ffi: add ffi.typeinfo().
+  section 4583 6868 luajit 2.0.5 e<mdash> 2017-05-01
+  section 4631 4684 add workaround for msvc 2015 stdio changes.
+  section 4684 4758 limit mcode alloc probing, depending on the available pool
+  section 4758 4829 fix overly restrictive range calculation in mcode allocation.
+  section 4829 4880 fix out-of-scope goto handling in parser.
+  section 4880 4950 remove internal __mode = k and replace with safe check.
+  section 4950 5004 add proto field to jit.util.funcinfo().
+  section 5004 5043 fix gc step size calculation.
+  section 5043 5115 initialize uv->immutable for upvalues of loaded chunks.
+  section 5115 5177 fix for cdata vs. non-cdata arithmetics/comparisons.
+  section 5177 5240 drop leftover regs in for iterator assignment, too.
+  section 5240 5281 fix phi remarking in sink pass.
+  section 5281 5354 dont try to record outermost pcall() return to lower frame.
+  section 5354 5431 add guard for obscure aliasing between open upvalues and ssa
+  section 5431 5510 remove assumption that lj_math_random_step() doesnt clobber
+  section 5510 5580 fix handling of non-numeric strings in arithmetic coercions.
+  section 5580 5647 fix recording of select(n, ...) with off-trace varargs
+  section 5647 5686 fix install for cross-builds.
+  section 5686 5762 dont allocate unused 2nd result register in jit compiler
+  section 5762 5823 drop marks from replayed instructions when sinking.
+  section 5823 5853 fix unsinking check.
+  section 5853 5902 properly handle oom in trace_save().
+  section 5902 5979 limit number of arguments given to io.lines() and
+  section 5979 6015 fix narrowing of tobit.
+  section 6015 6058 osx: fix build with recent xcode.
+  section 6058 6123 x86/x64: dont spill an explicit ref_base in the ir.
+  section 6123 6173 x86/x64: fix instruction length decoder.
+  section 6173 6246 x86/x64: search for exit jumps with instruction length decoder.
+  section 6246 6310 arm: fix blx encoding for thumb interworking calls.
+  section 6310 6368 mips: dont use rid_gp as a scratch register.
+  section 6368 6429 mips: fix emitted code for u32 to float conversion.
+  section 6429 6491 mips: backport workaround for compact unwind tables.
+  section 6491 6535 mips: fix cross-endian jit.bcsave.
+  section 6535 6582 mips: fix bc_isnext fallback path.
+  section 6582 6646 mips: fix use of ffgccheck delay slots in interpreter.
+  section 6646 6703 ffi: fix fold rules for int64_t comparisons.
+  section 6703 6753 ffi: fix split pass for conv i64.u64.
+  section 6753 6794 ffi: fix ipairs() recording.
+  section 6794 6868 ffi: dont propagate qualifiers into subtypes of complex.
+  section 6868 9694 luajit 2.0.4 e<mdash> 2015-05-14
+  section 6916 6968 fix stack check in narrowing optimization.
+  section 6968 7028 fix lua/c api typecheck error for special indexes.
+  section 7028 7070 fix string to number conversion.
+  section 7070 7122 fix lexer error for chunks without tokens.
+  section 7122 7196 dont compile ir_retf after callt to ff with-side
+  section 7196 7263 fix bc_uclo/bc_jmp join optimization in lua parser.
+  section 7263 7320 fix corner case in string to number conversion.
+  section 7320 7389 gracefully handle lua_error() for a suspended coroutine.
+  section 7389 7445 avoid error messages when building with clang.
+  section 7445 7519 fix snapshot #0 handling for traces with a stack check on
+  section 7519 7583 fix fused constant loads under high register pressure.
+  section 7583 7636 invalidate backpropagation cache after dce.
+  section 7636 7666 fix abc elimination.
+  section 7666 7727 fix debug info for main chunk of stripped bytecode.
+  section 7727 7782 fix fold rule for string.sub(s, ...) == k.
+  section 7782 7831 fix fold rule for strref of snew.
+  section 7831 7896 fix frame traversal while searching for error function.
+  section 7896 7962 prevent gc estimate miscalculation due to buffer growth.
+  section 7962 8016 prevent adding side traces for stack checks.
+  section 8016 8084 fix top slot calculation for snapshots with continuations.
+  section 8084 8141 fix check for reuse of scev results in forl.
+  section 8141 8168 add ps vita port.
+  section 8168 8216 fix compatibility issues with illumos.
+  section 8216 8260 fix dragonfly build (unsupported).
+  section 8260 8332 openbsd/x86: better executable memory allocation for w^x mode.
+  section 8332 8392 x86: fix argument checks for ipairs() iterator.
+  section 8392 8463 x86: lj_math_random_step() clobbers xmm regs on osx clang.
+  section 8463 8536 x86: fix code generation for unused result of math.random().
+  section 8536 8622 x64: allow building with luajit_use_sysmalloc and
+  section 8622 8675 x86/x64: fix argument check for bit shifts.
+  section 8675 8739 x86/x64: fix code generation for fused test/arith ops.
+  section 8739 8793 arm: fix write barrier check in bc_usets.
+  section 8793 8857 ppc: fix red zone overflow in machine code generation.
+  section 8857 8898 ppc: dont use mcrxr on ppe.
+  section 8898 8962 various archs: fix excess stack growth in interpreter.
+  section 8962 9022 ffi: fix fold rule for tobit + conv num.u32.
+  section 9022 9072 ffi: prevent dse across ffi.string().
+  section 9072 9147 ffi: no meta fallback when indexing pointer to incomplete
+  section 9147 9203 ffi: fix initialization of unions of subtypes.
+  section 9203 9269 ffi: fix cdata vs. non-cdata arithmetic and comparisons.
+  section 9269 9346 ffi: fix __index/__newindex metamethod resolution for
+  section 9346 9403 ffi: fix compilation of reference field access.
+  section 9403 9472 ffi: fix frame traversal for backtraces with ffi callbacks.
+  section 9472 9550 ffi: fix recording of indexing a struct pointer ctype object
+  section 9550 9627 ffi: allow non-scalar cdata to be compared for equality by
+  section 9627 9694 ffi: fix pseudo type conversions for type punning.
+  section 9694 11483 luajit 2.0.3 e<mdash> 2014-03-12
+  section 9742 9765 add ps4 port.
+  section 9765 9814 add support for multilib distro builds.
+  section 9814 9838 fix osx build.
+  section 9838 9864 fix mingw build.
+  section 9864 9893 fix xbox 360 build.
+  section 9893 9946 improve uload forwarding for open upvalues.
+  section 9946 10021 fix gc steps threshold handling when called by jit-compiled
+  section 10021 10087 fix argument checks for math.deg() and math.rad().
+  section 10087 10125 fix jit.flush(func|true).
+  section 10125 10194 respect jit.off(func) when returning to a function, too.
+  section 10194 10249 fix compilation of string.byte(s, nil, n).
+  section 10249 10317 fix line number for relocated bytecode after closure fixup
+  section 10317 10362 fix frame traversal for backtraces.
+  section 10362 10392 fix abc elimination.
+  section 10392 10433 fix handling of redundant phis.
+  section 10433 10492 fix snapshot restore for exit to function header.
+  section 10492 10557 fix type punning alias analysis for constified pointers
+  section 10557 10627 fix call unroll checks in the presence of metamethod frames.
+  section 10627 10683 fix initial maxslot for down-recursive traces.
+  section 10683 10752 prevent base register coalescing if parent uses ir_retf.
+  section 10752 10822 dont purge modified function from stack slots in bc_ret.
+  section 10822 10860 fix recording of bc_varg.
+  section 10860 10920 dont access dangling reference to reallocated ir.
+  section 10920 10985 fix frame depth display for bytecode dump in -jdump.
+  section 10985 11050 arm: fix register allocation when rematerializing fprs.
+  section 11050 11111 x64: fix store to upvalue for lightuserdata values.
+  section 11111 11181 ffi: add missing gc steps for callback argument conversions.
+  section 11181 11224 ffi: properly unload loaded dlls.
+  section 11224 11279 ffi: fix argument checks for ffi.string().
+  section 11279 11339 ffi/x64: fix passing of vector arguments to calls.
+  section 11339 11403 ffi: rehash finalizer table after gc cycle, if needed.
+  section 11403 11483 ffi: fix cts->l for cdata unsinking in snapshot restore.
+  section 11483 13243 luajit 2.0.2 e<mdash> 2013-06-03
+  section 11531 11591 fix memory access check for fast string interning.
+  section 11591 11640 fix msvc intrinsics for older versions.
+  section 11640 11693 add missing gc steps for io.* functions.
+  section 11693 11762 fix spurious red zone overflows in machine code generation.
+  section 11762 11816 fix jump-range constrained mcode allocation.
+  section 11816 11867 inhibit dse for implicit loads via calls.
+  section 11867 11937 fix builtin string to number conversion for overflow digits.
+  section 11937 12003 fix optional argument handling while recording builtins.
+  section 12003 12065 fix optional argument handling in table.concat().
+  section 12065 12133 add partial support for building with mingw64 gcc 4.8-seh.
+  section 12133 12213 add missing phi barrier to string.sub(str, a, b) == kstr
+  section 12213 12261 fix compatibility issues with illumos.
+  section 12261 12333 arm: fix cache flush/sync for exit stubs of jit-compiled code.
+  section 12333 12402 mips: fix cache flush/sync for jit-compiled code jump area.
+  section 12402 12474 ppc: add plt suffix for external calls from assembler code.
+  section 12474 12529 ffi: fix snapshot substitution in split pass.
+  section 12529 12595 ffi/x86: fix register allocation for 64 bit comparisons.
+  section 12595 12670 ffi: fix tailcall in lowest frame to c function with bool
+  section 12670 12734 ffi: ignore long type specifier in ffi.istype().
+  section 12734 12823 ffi: fix calling conventions for 32 bit osx and ios simulator
+  section 12823 12903 ffi: fix calling conventions for arm hard-float eabi (nested
+  section 12903 12981 ffi: improve error messages for arithmetic and comparison
+  section 12981 13053 ffi: insert no-op type conversion for pointer to integer cast.
+  section 13053 13103 ffi: fix unroll limit for ffi.fill().
+  section 13103 13161 ffi: must sink xbar together with xstores.
+  section 13161 13243 ffi: preserve intermediate string for const char *
+  section 13243 14290 luajit 2.0.1 e<mdash> 2013-02-19
+  section 13291 13343 dont clear frame for out-of-memory error.
+  section 13343 13407 leave hook when resume catches error thrown from hook.
+  section 13407 13466 add missing gc steps for template table creation.
+  section 13466 13525 fix discharge order of comparisons in lua parser.
+  section 13525 13576 improve buffer handling for io.read().
+  section 13576 13643 osx: add support for mach-o object files to -b option.
+  section 13643 13666 fix ps3 port.
+  section 13666 13701 fix/enable xbox 360 port.
+  section 13701 13764 x86/x64: always mark ref for shift count as non-weak.
+  section 13764 13828 x64: dont fuse implicitly 32-to-64 extended operands.
+  section 13828 13876 arm: fix armhf call argument handling.
+  section 13876 13941 arm: fix code generation for integer math.min/math.max.
+  section 13941 13994 ppc/e500: fix lj_vm_floor() for inf/nan.
+  section 13994 14067 ffi: change priority of table initializer variants for structs.
+  section 14067 14140 ffi: fix code generation for bool call result check on x86/x64.
+  section 14140 14215 ffi: load ffi library on-demand for bytecode with cdata
+  section 14215 14290 ffi: fix handling of qualified transparent structs/unions.
+  section 14290 15159 luajit 2.0.0 e<mdash> 2012-11-08
+  section 14338 14384 correctness and completeness:
+  section 14384 14416 fix android/x86 build.
+  section 14416 14489 fix recording of equality comparisons with __eq metamethods.
+  section 14489 14535 fix detection of immutable upvalues.
+  section 14535 14607 replace error with panic for callbacks from jit-compiled code.
+  section 14607 14672 fix builtin string to number conversion for int_min.
+  section 14672 14735 dont create unneeded array part for template tables.
+  section 14735 14773 fix conv.num.int sinking.
+  section 14773 14846 dont propagate implicitly widened number to index metamethods.
+  section 14846 14910 arm: fix ordered comparisons of number vs. non-number.
+  section 14910 14977 ffi: fix code generation for replay of sunk float fields.
+  section 14977 15015 ffi: fix signedness of bool.
+  section 15015 15081 ffi: fix recording of bool call result check on x86/x64.
+  section 15081 15159 ffi: fix stack-adjustment for __thiscall callbacks.
+  section 15159 20704 luajit 2.0.0-beta11 e<mdash> 2012-10-16
+  section 15214 15244 new features:
+  section 15244 15316 use arm vfp instructions, if available (build-time detection).
+  section 15316 15373 add support for arm hard-float eabi (armhf).
+  section 15373 15396 add ps3 port.
+  section 15396 15478 add many features from lua 5.2, e.g. goto/labels. refer to
+  section 15478 15519 ffi: add parameterized c types.
+  section 15519 15568 ffi: add support for copy constructors.
+  section 15568 15652 ffi: equality comparisons never raise an error (treat as
+  section 15652 15702 ffi: box all accessed or returned enums.
+  section 15702 15774 ffi: check for __new metamethod when calling a constructor.
+  section 15774 15849 ffi: handle __pairs/__ipairs metamethods for cdata
+  section 15849 15934 ffi: convert io.* file handle to file * pointer (but as a
+  section 15934 15996 ffi: detect and support type punning through unions.
+  section 15996 16049 ffi: improve various error messages.
+  section 16049 16094 build-system reorganization:
+  section 16094 16286 reorganize directory layout:
+  section 16286 16367 add minified lua interpreter plus lua bitop (minilua) to run
+  section 16367 16422 change dynasm bit operations to use lua bitop
+  section 16422 16493 translate only vm_*.dasc for detected target architecture.
+  section 16493 16549 improve target detection for msvcbuild.bat.
+  section 16549 16615 fix build issues on cygwin and mingw with optional msys.
+  section 16615 16695 handle cross-compiles with fpu/no-fpu or hard-fp/soft-fp abi
+  section 16695 16760 remove some library functions for no-jit/no-ffi builds.
+  section 16760 16820 add uninstall target to top-level makefile.
+  section 16820 16866 correctness and completeness:
+  section 16866 16915 preserve snapshot #0 pc for all traces.
+  section 16915 16971 fix argument checks for coroutine.create().
+  section 16971 17052 command line prints version and jit status to stdout, not
+  section 17052 17114 fix userdata __gc separations at lua state close.
+  section 17114 17184 fix tdup to hload forwarding for lj_dualnum builds.
+  section 17184 17230 fix buffer check in bytecode writer.
+  section 17230 17270 make os.date() thread-safe.
+  section 17270 17325 add missing declarations for msvc intrinsics.
+  section 17325 17385 fix dispatch table modifications for return hooks.
+  section 17385 17481 workaround for msvc conversion bug (double e<rarr>
+  section 17481 17527 fix fold rule (i-j)-i => 0-j.
+  section 17527 17573 never use dwarf unwinder on windows.
+  section 17573 17642 fix shrinking of direct mapped blocks in builtin allocator.
+  section 17642 17701 limit recursion depth in string.match() et al.
+  section 17701 17777 fix late despecialization of itern after loop has been
+  section 17777 17861 fix f and l options for debug.getinfo() and
+  section 17861 17899 fix package.searchpath().
+  section 17899 17971 osx: change dylib names to be consistent with other platforms.
+  section 17971 18035 android: workaround for broken sprintf(%g, -0.0).
+  section 18035 18119 x86: remove support for ancient cpus without cmov (before
+  section 18119 18192 x86: fix register allocation for calls returning register pair.
+  section 18192 18273 x86/x64: fix fusion of unsigned byte comparisons with swapped
+  section 18273 18321 arm: fix tonumber() argument check.
+  section 18321 18409 arm: fix modulo operator and math.floor()/math.ceil() for
+  section 18409 18467 arm: invoke split pass for leftover ir_tobit.
+  section 18467 18511 arm: fix base register coalescing.
+  section 18511 18567 ppc: fix interpreter state setup in callbacks.
+  section 18567 18614 ppc: fix string.sub() range check.
+  section 18614 18686 mips: support generation of mips/mipsel bytecode object files.
+  section 18686 18747 mips: fix calls to floor()/ceil()/trunc().
+  section 18747 18807 arm/ppc: detect more target architecture variants.
+  section 18807 18890 arm/ppc/e500/mips: fix tailcalls from fast functions, esp.
+  section 18890 18952 arm/ppc/mips: fix rematerialization of fp constants.
+  section 18952 19014 ffi: dont call freelibrary() on our own exe/dll.
+  section 19014 19071 ffi: resolve metamethods for constructors, too.
+  section 19071 19154 ffi: properly disable callbacks on ios (would require
+  section 19154 19211 ffi: fix cdecl string parsing during recording.
+  section 19211 19276 ffi: show address pointed to for tostring(ref), too.
+  section 19276 19341 ffi: fix alignment of c call argument/return structure.
+  section 19341 19396 ffi: initialize all fields of standard types.
+  section 19396 19475 ffi: fix callback handling when new c types are declared in
+  section 19475 19533 ffi: fix recording of constructors for pointers.
+  section 19533 19599 ffi: always resolve metamethods for pointers to structs.
+  section 19599 19679 ffi: correctly propagate alignment when interning nested types.
+  section 19679 19736 structural and performance enhancements:
+  section 19736 19800 add allocation sinking and store sinking optimization.
+  section 19800 19838 constify immutable upvalues.
+  section 19838 19955 add builtin string to integer or fp number conversion. improves
+  section 19955 20063 create string hash slots in template tables for non-const
+  section 20063 20128 eliminate hrefk guard for template table references.
+  section 20128 20165 add various new fold rules.
+  section 20165 20234 dont use stack unwinding for lua_yield() (slow on x64).
+  section 20234 20313 arm, ppc, mips: improve xload operand fusion and register
+  section 20313 20391 ppc, mips: compile math.sqrt() to sqrt instruction, if
+  section 20391 20451 ffi: fold kptr + constant offset in split pass.
+  section 20451 20514 ffi: optimize/inline ffi.copy() and ffi.fill().
+  section 20514 20570 ffi: compile and optimize array/struct copies.
+  section 20570 20704 ffi: compile ffi.typeof(cdata|ctype), ffi.sizeof(),
+  section 20704 24056 luajit 2.0.0-beta10 e<mdash> 2012-05-09
+  section 20759 20789 new features:
+  section 20789 20954 the mips of luajit is complete. it requires a cpu conforming to
+  section 20954 21043 auto-detect target arch via cross-compiler. no need for
+  section 21043 21089 make dynasm compatible with lua 5.2.
+  section 21089 21179 from lua 5.2: try __tostring metamethod on non-string error
+  section 21179 21225 correctness and completeness:
+  section 21225 21278 fix parsing of hex literals with exponents.
+  section 21278 21335 fix bytecode dump for certain number constants.
+  section 21335 21403 fix argument type in error message for relative arguments.
+  section 21403 21471 fix argument error handling on lua stacks without a frame.
+  section 21471 21532 add missing mcode limit check in assembler backend.
+  section 21532 21569 fix compilation on openbsd.
+  section 21569 21634 avoid recursive gc steps after gc-triggered trace exit.
+  section 21634 21699 replace <unwind.h> definitions with our own.
+  section 21699 21773 fix osx build issues. bump minimum required osx version to
+  section 21773 21832 fix discharge order of comparisons in lua parser.
+  section 21832 21911 ensure running __gc of userdata created in __gc at state
+  section 21911 21981 limit number of userdata __gc separations at state close.
+  section 21981 22069 fix bytecode jmp slot range when optimizing and/or
+  section 22069 22100 fix dse of ustore.
+  section 22100 22167 make lua_concat() work from c hook with partial frame.
+  section 22167 22249 add required phis for implicit conversions, e.g. via xref
+  section 22249 22318 add more comparison variants to valgrind suppressions file.
+  section 22318 22389 disable loading bytecode with an extra header (bom or #!).
+  section 22389 22426 fix phi stack slot syncing.
+  section 22426 22486 arm: reorder type/value tests to silence valgrind.
+  section 22486 22556 arm: fix register allocation for ldrd-optimized hrefk.
+  section 22556 22612 arm: fix conditional branch fixup for obar.
+  section 22612 22676 arm: invoke split pass for double args in ffi call.
+  section 22676 22752 arm: handle all call* ops with double results in split
+  section 22752 22802 arm: fix rejoin of pow in split pass.
+  section 22802 22877 arm: fix compilation of math.sinh, math.cosh,
+  section 22877 22942 arm, ppc: avoid pointless arg clearing in bc_ifuncf.
+  section 22942 22990 ppc: fix resume after yield from hook.
+  section 22990 23043 ppc: fix argument checking for rawget().
+  section 23043 23106 ppc: fix fusion of floating-point xload/xstore.
+  section 23106 23166 ppc: fix hrefk code generation for huge tables.
+  section 23166 23226 ppc: use builtin d-cache/i-cache sync code.
+  section 23226 23255 ffi library:
+  section 23255 23306 ignore empty statements in ffi.cdef().
+  section 23306 23372 ignore number parsing errors while skipping definitions.
+  section 23372 23446 dont touch frame in callbacks with tailcalls to fast
+  section 23446 23495 fix library unloading on posix systems.
+  section 23495 23559 finalize cdata before userdata when closing the state.
+  section 23559 23625 change ffi.load() library name resolution for cygwin.
+  section 23625 23691 fix resolving of function name redirects on windows/x86.
+  section 23691 23748 fix symbol resolving error messages on windows.
+  section 23748 23808 fix blacklisting of c functions calling callbacks.
+  section 23808 23856 fix result type of pointer difference.
+  section 23856 23913 use correct pc in ffi metamethod error message.
+  section 23913 23978 allow typedef _bool int bool; for the windows api.
+  section 23978 24056 dont record test for bool result of call, if ignored.
+  section 24056 27553 luajit 2.0.0-beta9 e<mdash> 2011-12-14
+  section 24110 24140 new features:
+  section 24140 24296 ppc port of luajit is complete. default is the dual-number port
+  section 24296 24331 add ffi callback support.
+  section 24331 24422 extend -b to generate .c, .h or .obj/.o files with
+  section 24422 24482 allow loading embedded bytecode with require().
+  section 24482 24573 from lua 5.2: change to \z escape. reject undefined escape
+  section 24573 24619 correctness and completeness:
+  section 24619 24691 fix osx 10.7 build. fix install_name and versioning on osx.
+  section 24691 24715 fix ios build.
+  section 24715 24753 install dis_arm.lua, too.
+  section 24753 24807 mark installed shared library as executable.
+  section 24807 24881 add debug option to msvcbuild.bat and improve error
+  section 24881 24928 fix data-flow analysis for iterators.
+  section 24928 24990 fix forced unwinding triggered by external unwinder.
+  section 24990 25062 record missing for loop slot loads (return to lower frame).
+  section 25062 25125 always use ansi variants of windows system functions.
+  section 25125 25196 fix gc barrier for multi-result table constructor (tsetm).
+  section 25196 25233 fix/add various fold rules.
+  section 25233 25308 add potential phi for number conversions due to type
+  section 25308 25372 do not eliminate phis only referenced from other phis.
+  section 25372 25450 correctly anchor implicit number to string conversions in lua/c
+  section 25450 25491 fix various stack limit checks.
+  section 25491 25572 x64: use thread-safe exceptions for external unwinding (gcc
+  section 25572 25630 x64: fix result type of cdata index conversions.
+  section 25630 25701 x64: fix math.random() and bit.bswap() code generation.
+  section 25701 25749 x64: fix lightuserdata comparisons.
+  section 25749 25817 x64: always extend stack-passed arguments to pointer size.
+  section 25817 25870 arm: many fixes to code generation backend.
+  section 25870 25925 ppc/e500: fix dispatch for binop metamethods.
+  section 25925 26007 ppc/e500: save/restore condition registers when
+  section 26007 26085 ppc/e500: fix write barrier in stores of strings to upvalues.
+  section 26085 26114 ffi library:
+  section 26114 26146 fix c comment parsing.
+  section 26146 26204 fix snapshot optimization for cdata comparisons.
+  section 26204 26264 fix recording of const/enum lookups in namespaces.
+  section 26264 26339 fix call argument and return handling for i8/u8/i16/u16
+  section 26339 26383 fix unfused loads of float fields.
+  section 26383 26423 fix ffi.string() recording.
+  section 26423 26503 save getlasterror() around ffi.load() and symbol
+  section 26503 26558 improve ld script detection in ffi.load().
+  section 26558 26624 record loads/stores to external variables in namespaces.
+  section 26624 26690 compile calls to stdcall, fastcall and vararg functions.
+  section 26690 26751 treat function ctypes like pointers in comparisons.
+  section 26751 26808 resolve __call metamethod for pointers, too.
+  section 26808 26866 record c function calls with bool return values.
+  section 26866 26898 record ffi.errno().
+  section 26898 26959 x86: fix number to uint32_t conversion rounding.
+  section 26959 27017 x86: fix 64 bit arithmetic in assembler backend.
+  section 27017 27072 x64: fix struct-by-value calling conventions.
+  section 27072 27148 arm: ensure invocation of split pass for float conversions.
+  section 27148 27205 structural and performance enhancements:
+  section 27205 27261 display trace types with -jv and -jdump.
+  section 27261 27332 record isolated calls. but prefer recording loops over calls.
+  section 27332 27469 specialize to prototype for non-monomorphic functions. solves
+  section 27469 27553 always generate a portable vmdef.lua. easier for distros.
+  section 27553 29179 luajit 2.0.0-beta8 e<mdash> 2011-06-23
+  section 27607 27637 new features:
+  section 27637 27689 soft-float arm port of luajit is complete.
+  section 27689 27769 add support for bytecode loading/saving and -b command line
+  section 27769 27853 from lua 5.2: __len metamethod for tables (disabled by
+  section 27853 27899 correctness and completeness:
+  section 27899 27942 arm: misc. fixes for interpreter.
+  section 27942 28007 x86/x64: fix bit.* argument checking in interpreter.
+  section 28007 28078 catch early out-of-memory in memory allocator initialization.
+  section 28078 28149 fix data-flow analysis for paths leading to an upvalue close.
+  section 28149 28213 fix check for missing arguments in string.format().
+  section 28213 28276 fix solaris/x86 build (note: not a supported target).
+  section 28276 28349 fix recording of loops with instable directions in side traces.
+  section 28349 28421 x86/x64: fix fusion of comparisons with u8/u16 xload.
+  section 28421 28491 x86/x64: fix register allocation for variable shifts.
+  section 28491 28520 ffi library:
+  section 28520 28605 add ffi.errno(). save errno/getlasterror() around
+  section 28605 28653 fix __gc for vla/vls cdata objects.
+  section 28653 28725 fix recording of casts from 32 bit cdata pointers to integers.
+  section 28725 28785 tonumber(cdata) returns nil for non-numbers.
+  section 28785 28844 show address pointed to for tostring(pointer).
+  section 28844 28912 print null pointers as cdata<... *>: null.
+  section 28912 28991 support __tostring metamethod for pointers to structs, too.
+  section 28991 29048 structural and performance enhancements:
+  section 29048 29100 more tuning for loop unrolling heuristics.
+  section 29100 29179 flatten and compress in-memory debug info (saves ~70%).
+  section 29179 30940 luajit 2.0.0-beta7 e<mdash> 2011-05-05
+  section 29233 29263 new features:
+  section 29263 29320 arm port of the luajit interpreter is complete.
+  section 29320 29395 ffi library: add ffi.gc(), ffi.metatype(),
+  section 29395 29465 ffi library: resolve ld script redirection in ffi.load().
+  section 29465 29548 from lua 5.2: package.searchpath(), fp:read(*l),
+  section 29548 29668 from lua 5.2, disabled by default: empty statement,
+  section 29668 29714 correctness and completeness:
+  section 29714 29752 ffi library: numerous fixes.
+  section 29752 29810 fix type mismatches in store-to-load forwarding.
+  section 29810 29858 fix error handling within metamethods.
+  section 29858 29888 fix table.maxn().
+  section 29888 29933 improve accuracy of x^-k on x64.
+  section 29933 29990 fix code generation for intel atom in x64 mode.
+  section 29990 30021 fix narrowing of pow.
+  section 30021 30071 fix recording of retried fast functions.
+  section 30071 30134 fix code generation for bit.bnot() and multiplies.
+  section 30134 30184 fix error location within cpcall frames.
+  section 30184 30235 add workaround for old libgcc unwind bug.
+  section 30235 30306 fix lua_yield() and getmetatable(lightuserdata) on x64.
+  section 30306 30353 misc. fixes for ppc/e500 interpreter.
+  section 30353 30412 fix stack slot updates for down-recursion.
+  section 30412 30469 structural and performance enhancements:
+  section 30469 30541 add dual-number mode (int/double) for the vm. enabled for arm.
+  section 30541 30610 improve narrowing of arithmetic operators and for loops.
+  section 30610 30686 tune loop unrolling heuristics and increase trace recorder
+  section 30686 30764 eliminate dead slots in snapshots using bytecode data-flow
+  section 30764 30811 avoid phantom stores to proxy tables.
+  section 30811 30860 optimize lookups in empty proxy tables.
+  section 30860 30940 improve bytecode optimization of and/or operators.
+  section 30940 32899 luajit 2.0.0-beta6 e<mdash> 2011-02-11
+  section 30994 31024 new features:
+  section 31024 31092 powerpc/e500v2 port of the luajit interpreter is complete.
+  section 31092 31304 various minor features from lua 5.2: hex escapes in literals,
+  section 31304 31383 lua 5.2 __pairs and __ipairs metamethods (disabled by
+  section 31383 31435 initial release of the ffi library.
+  section 31435 31481 correctness and completeness:
+  section 31481 31537 fix string.format() for non-finite numbers.
+  section 31537 31607 fix memory leak when compiled to use the built-in allocator.
+  section 31607 31670 x86/x64: fix unnecessary resize in tsetm bytecode.
+  section 31670 31733 fix various gc issues with traces and jit.flush().
+  section 31733 31791 x64: fix fusion of indexes for array references.
+  section 31791 31860 x86/x64: fix stack overflow handling for coroutine results.
+  section 31860 31918 enable low-2gb memory allocation on freebsd/x64.
+  section 31918 31993 fix collectgarbage(count) result if more than 2gb is in
+  section 31993 32029 fix parsing of hex floats.
+  section 32029 32102 x86/x64: fix loop branch inversion with trailing href+ne/eq.
+  section 32102 32133 add jit.os string.
+  section 32133 32198 coroutine.create() permits running c functions, too.
+  section 32198 32255 fix osx build to work with newer ld64 versions.
+  section 32255 32324 fix bytecode optimization of and/or operators.
+  section 32324 32381 structural and performance enhancements:
+  section 32381 32442 emit specialized bytecode for pairs()/next().
+  section 32442 32500 improve bytecode coalescing of nil constants.
+  section 32500 32544 compile calls to vararg functions.
+  section 32544 32574 compile select().
+  section 32574 32640 improve alias analysis, esp. for loads from allocations.
+  section 32640 32688 tuning of various compiler heuristics.
+  section 32688 32745 refactor and extend ir conversion instructions.
+  section 32745 32812 x86/x64: various backend enhancements related to the ffi.
+  section 32812 32899 add split pass to split 64 bit ir instructions for 32 bit cpus.
+  section 32899 34221 luajit 2.0.0-beta5 e<mdash> 2010-08-24
+  section 32953 32999 correctness and completeness:
+  section 32999 33053 fix trace exit dispatch to function headers.
+  section 33053 33114 fix windows and osx builds with luajit_disable_jit.
+  section 33114 33186 reorganize and fix placement of generated machine code on x64.
+  section 33186 33224 fix tnew in x64 interpreter.
+  section 33224 33299 do not eliminate phis for values only referenced from side
+  section 33299 33375 os-independent canonicalization of strings for non-finite
+  section 33375 33425 fix string.char() range check on x64.
+  section 33425 33481 fix tostring() resolving within print().
+  section 33481 33524 fix error handling for next().
+  section 33524 33593 fix passing of constant arguments to external calls on x64.
+  section 33593 33670 fix interpreter argument check for two-argument sse math
+  section 33670 33735 fix c frame chain corruption caused by lua_cpcall().
+  section 33735 33798 fix return from pcall() within active hook.
+  section 33798 33855 structural and performance enhancements:
+  section 33855 33921 replace on-trace gc frame syncing with interpreter exit.
+  section 33921 34002 improve hash lookup specialization by not removing dead keys
+  section 34002 34045 turn traces into true gc objects.
+  section 34045 34112 avoid starting a gc cycle immediately after library init.
+  section 34112 34171 add weak guards to improve dead-code elimination.
+  section 34171 34221 speed up string interning.
+  section 34221 34989 luajit 2.0.0-beta4 e<mdash> 2010-03-28
+  section 34275 34321 correctness and completeness:
+  section 34321 34384 fix precondition for on-trace creation of table keys.
+  section 34384 34436 fix {f()} on x64 when table is resized.
+  section 34436 34502 fix folding of ordered comparisons with same references.
+  section 34502 34561 fix snapshot restores for multi-result bytecodes.
+  section 34561 34635 fix potential hang when recording bytecode with nested
+  section 34635 34718 fix recording of getmetatable(), tonumber() and bad
+  section 34718 34783 fix sload fusion across returns to lower frames.
+  section 34783 34840 structural and performance enhancements:
+  section 34840 34917 add array bounds check elimination. -oabc is enabled by
+  section 34917 34989 more tuning for x64, e.g. smaller table objects.
+  section 34989 37371 luajit 2.0.0-beta3 e<mdash> 2010-03-07
+  section 35043 35076 luajit x64 port:
+  section 35076 35157 port integrated memory allocator to linux/x64, windows/x64 and
+  section 35157 35208 port interpreter and jit compiler to x64.
+  section 35208 35237 port dynasm to x64.
+  section 35237 35281 many 32/64 bit cleanups in the vm.
+  section 35281 35358 allow building the interpreter with either x87 or sse2
+  section 35358 35441 add external unwinding and c++ exception interop (default on
+  section 35441 35487 correctness and completeness:
+  section 35487 35564 fix constructor bytecode generation for certain conditional
+  section 35564 35619 fix some cases of ordered string comparisons.
+  section 35619 35654 fix lua_tocfunction().
+  section 35654 35733 fix cutoff register in jmp bytecode for some conditional
+  section 35733 35803 fix phi marking algorithm for references from variant slots.
+  section 35803 35857 fix package.cpath for non-default prefix.
+  section 35857 35926 fix dwarf2 frame unwind information for interpreter on osx.
+  section 35926 35993 drive the gc forward on string allocations in the parser.
+  section 35993 36055 implement call/return hooks (zero-cost if disabled).
+  section 36055 36094 implement yield from c hooks.
+  section 36094 36175 disable jit compiler on older non-sse2 cpus instead of
+  section 36175 36232 structural and performance enhancements:
+  section 36232 36297 compile recursive code (tail-, up- and down-recursion).
+  section 36297 36366 improve heuristics for bytecode penalties and blacklisting.
+  section 36366 36444 split call/func recording and clean up fast function call
+  section 36444 36504 major redesign of internal function call handling.
+  section 36504 36575 improve for loop const specialization and integerness checks.
+  section 36575 36640 switch to pre-initialized stacks. avoid frame-clearing.
+  section 36640 36725 colocation of prototypes and related data: bytecode, constants,
+  section 36725 36785 cleanup parser and streamline bytecode generation.
+  section 36785 36852 add support for weak ir references to register allocator.
+  section 36852 36905 switch to compressed, extensible snapshots.
+  section 36905 36963 compile returns to frames below the start frame.
+  section 36963 37042 improve alias analysis of upvalues using a disambiguation hash
+  section 37042 37121 compile floor/ceil/trunc to sse2 helper calls or sse4.1
+  section 37121 37177 add generic c call handling to ir and backend.
+  section 37177 37225 improve knum fuse vs. load heuristics.
+  section 37225 37271 compile various io.*() functions.
+  section 37271 37371 compile math.sinh(), math.cosh(), math.tanh() and
+  section 37371 38758 luajit 2.0.0-beta2 e<mdash> 2009-11-09
+  section 37425 37497 reorganize build system. build static+shared library on posix.
+  section 37497 37580 allow c++ exception conversion on all platforms using a wrapper
+  section 37580 37661 automatically catch c++ exceptions and rethrow lua error
+  section 37661 37731 check for the correct x87 fpu precision at strategic points.
+  section 37731 37780 always use wrappers for libm functions.
+  section 37780 37844 resurrect metamethod name strings before copying them.
+  section 37844 37899 mark current trace, even if compiler is idle.
+  section 37899 37952 ensure file metatable is created only once.
+  section 37952 38025 fix type comparisons when different integer types are involved.
+  section 38025 38067 fix getmetatable() recording.
+  section 38067 38119 fix tdup with dead keys in template table.
+  section 38119 38214 jit.flush(tr) returns status. prevent manual flush of a
+  section 38214 38288 improve register allocation heuristics for invariant
+  section 38288 38371 compile the push/pop variants of table.insert() and
+  section 38371 38420 compatibility with msvc link /debug.
+  section 38420 38455 fix lua_iscfunction().
+  section 38455 38520 fix math.random() when compiled with -fpic (osx).
+  section 38520 38550 fix table.maxn().
+  section 38550 38603 bump macosx_deployment_target to 10.4
+  section 38603 38758 lual_check*() and lual_opt*() now support negative
+  section 38758 39336 luajit 2.0.0-beta1 e<mdash> 2009-10-31
+  section 38812 38869 this is the first public release of luajit 2.0.
+  section 38869 39336 the whole vm has been rewritten from the ground up, so theres
 
 module contact
   section 14 1157 contact

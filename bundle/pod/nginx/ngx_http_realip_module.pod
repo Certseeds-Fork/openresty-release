@@ -71,6 +71,7 @@ Defines trusted addresses that are known to send correct
 replacement addresses.
 If the special value C<unix:> is specified,
 all UNIX-domain sockets will be trusted.
+Trusted addresses may also be specified using a hostname (1.13.1).
 
 B<NOTE>
 

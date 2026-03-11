@@ -686,7 +686,8 @@ B<syntax:> proxy_ssl_protocols I<
     [C<SSLv3>]
     [C<TLSv1>]
     [C<TLSv1.1>]
-    [C<TLSv1.2>]>
+    [C<TLSv1.2>]
+    [C<TLSv1.3>]>
 
 
 B<default:> I<TLSv1 TLSv1.1 TLSv1.2>

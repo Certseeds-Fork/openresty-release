@@ -607,7 +607,8 @@ B<syntax:> ssl_protocols I<
     [C<SSLv3>]
     [C<TLSv1>]
     [C<TLSv1.1>]
-    [C<TLSv1.2>]>
+    [C<TLSv1.2>]
+    [C<TLSv1.3>]>
 
 
 B<default:> I<TLSv1 TLSv1.1 TLSv1.2>
@@ -623,16 +624,17 @@ B<context:> I<server>
 
 
 Enables the specified protocols.
-The C<TLSv1.1> and C<TLSv1.2> parameters work
-only when the OpenSSL library of version 1.0.1 or higher is used.
 
 B<NOTE>
 
-The C<TLSv1.1> and C<TLSv1.2> parameters are
-supported starting from versions 1.1.13 and 1.0.12,
-so when the OpenSSL version 1.0.1 or higher
-is used on older nginx versions, these protocols work, but cannot
-be disabled.
+The C<TLSv1.1> and C<TLSv1.2> parameters
+(1.1.13, 1.0.12) work only when OpenSSL 1.0.1 or higher is used.
+
+
+B<NOTE>
+
+The C<TLSv1.3> parameter (1.13.0) works only when
+OpenSSL 1.1.1 built with TLSv1.3 support is used.
 
 
 

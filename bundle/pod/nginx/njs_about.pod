@@ -114,8 +114,35 @@ C<fromBytes>, C<toBytes>
 
 =item *
 
-C<Object>:
-rudimentary C<Object.create()> support without properties list
+C<Object> methods:
+
+=over
+
+
+
+=item *
+
+ES5.1:
+C<create> (support without properties list),
+C<keys>,
+C<defineProperty>,
+C<defineProperties>,
+C<getOwnPropertyDescriptor>,
+C<getPrototypeOf>,
+C<hasOwnProperty>,
+C<isPrototypeOf>,
+C<preventExtensions>,
+C<isExtensible>,
+C<freeze>,
+C<isFrozen>,
+C<seal>,
+C<isSealed>
+
+
+=back
+
+
+
 
 
 
@@ -254,10 +281,8 @@ C<setImmediate> functions
 =item *
 
 non-integer fractions (C<.235>),
-exponential (C<3.35e10>),
 binary (C<0b0101>),
-octal (C<0o77>),
-hexadecimal (C<0x1123>) literals
+octal (C<0o77>) literals
 
 
 

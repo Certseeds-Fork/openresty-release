@@ -813,6 +813,18 @@ By default, C<purger_sleep> is set to 50 milliseconds.
 
 
 
+B<NOTE>
+
+In versions 1.7.3, 1.7.7, and 1.11.10 cache header format has been changed.
+Previously cached responses will be considered invalid
+after upgrading to a newer nginx version.
+
+
+
+
+
+
+
 
 =head2 scgi_cache_purge
 
@@ -1866,6 +1878,17 @@ If a domain name resolves to several addresses, all of them will be
 used in a round-robin fashion.
 In addition, an address can be specified as a
 L<server group|ngx_http_upstream_module>.
+
+
+
+
+
+Parameter value can contain variables.
+In this case, if an address is specified as a domain name,
+the name is searched among the described
+L<server groups|ngx_http_upstream_module>,
+and, if not found, is determined using a
+L<ngx_http_core_module>.
 
 
 

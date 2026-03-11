@@ -4856,6 +4856,17 @@ to lower case with dashes replaced by underscores
 
 
 
+=item C<$sent_trailer_>I<C<name>>
+
+
+
+
+arbitrary field sent at the end of the response (1.13.2);
+the last part of a variable name is the field name converted
+to lower case with dashes replaced by underscores
+
+
+
 =item C<$server_addr>
 
 
