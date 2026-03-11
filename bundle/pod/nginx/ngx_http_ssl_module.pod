@@ -44,13 +44,17 @@ To reduce the processor load it is recommended to
 
 =item *
 
-set the number of worker processes equal to the number of processors,
+set the number of
+L<worker processes|ngx_core_module>
+equal to the number of processors,
 
 
 
 =item *
 
-enable keep-alive connections,
+enable
+L<keep-alive|ngx_http_core_module>
+connections,
 
 
 
@@ -68,7 +72,8 @@ disable the built-in session cache,
 
 =item *
 
-and possibly increase the session lifetime (by default, 5 minutes):
+and possibly increase the session lifetime
+(by default, 5 minutes):
 
 
 
@@ -242,27 +247,9 @@ With older versions, only one certificate chain can be used.
 
 
 It should be kept in mind that due to the HTTPS protocol limitations
-virtual servers should listen on different IP addresses:
-
-    
-    server {
-        listen          192.168.1.1:443;
-        server_name     one.example.com;
-        ssl_certificate one.example.com.crt;
-        ...
-    }
-    
-    server {
-        listen          192.168.1.2:443;
-        server_name     two.example.com;
-        ssl_certificate two.example.com.crt;
-        ...
-    }
-
-
-otherwise
-L<the first server’s certificate|configuring_https_servers>
-will be issued for the second site.
+for maximum interoperability virtual servers should listen on
+L<different
+IP addresses|configuring_https_servers>.
 
 
 
@@ -1235,6 +1222,16 @@ only for new sessions and lists only known ciphers.
 
 
 
+=item C<$ssl_client_escaped_cert>
+
+
+
+
+returns the client certificate in the PEM format (urlencoded)
+for an established SSL connection (1.13.5);
+
+
+
 =item C<$ssl_client_cert>
 
 
@@ -1245,6 +1242,12 @@ for an established SSL connection, with each line except the first
 prepended with the tab character;
 this is intended for the use in the
 L<ngx_http_proxy_module> directive;
+
+B<NOTE>
+
+The variable is deprecated,
+the C<$ssl_client_escaped_cert> variable should be used instead.
+
 
 
 

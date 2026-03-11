@@ -108,7 +108,7 @@ sources into lib directory:
     cd objs/lib
     tar -xzf ../../pcre-8.41.tar.gz
     tar -xzf ../../zlib-1.2.11.tar.gz
-    tar -xzf ../../openssl-1.0.2k.tar.gz
+    tar -xzf ../../openssl-1.0.2l.tar.gz
 
 
 
@@ -119,15 +119,27 @@ sources into lib directory:
 Run configure script:
 
     
-    auto/configure --with-cc=cl --builddir=objs --prefix= \
-    --conf-path=conf/nginx.conf --pid-path=logs/nginx.pid \
-    --http-log-path=logs/access.log --error-log-path=logs/error.log \
-    --sbin-path=nginx.exe --http-client-body-temp-path=temp/client_body_temp \
-    --http-proxy-temp-path=temp/proxy_temp \
-    --http-fastcgi-temp-path=temp/fastcgi_temp \
-    --with-cc-opt=-DFD_SETSIZE=1024 --with-pcre=objs/lib/pcre-8.41 \
-    --with-zlib=objs/lib/zlib-1.2.11 --with-openssl=objs/lib/openssl-1.0.2k \
-    --with-select_module --with-http_ssl_module
+    auto/configure \
+        --with-cc=cl \
+        --with-debug \
+        --prefix= \
+        --conf-path=conf/nginx.conf \
+        --pid-path=logs/nginx.pid \
+        --http-log-path=logs/access.log \
+        --error-log-path=logs/error.log \
+        --sbin-path=nginx.exe \
+        --http-client-body-temp-path=temp/client_body_temp \
+        --http-proxy-temp-path=temp/proxy_temp \
+        --http-fastcgi-temp-path=temp/fastcgi_temp \
+        --http-scgi-temp-path=temp/scgi_temp \
+        --http-uwsgi-temp-path=temp/uwsgi_temp \
+        --with-cc-opt=-DFD_SETSIZE=1024 \
+        --with-pcre=objs/lib/pcre-8.41 \
+        --with-zlib=objs/lib/zlib-1.2.11 \
+        --with-openssl=objs/lib/openssl-1.0.2l \
+        --with-openssl-opt=no-asm \
+        --with-select_module \
+        --with-http_ssl_module
 
 
 
@@ -138,7 +150,7 @@ Run configure script:
 Run make:
 
     
-    nmake -f objs/Makefile
+    nmake
 
 
 

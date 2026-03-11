@@ -341,6 +341,12 @@ L<ngx_http_addition_module|ngx_http_addition_module>
 
 =item *
 
+L<ngx_http_api_module|ngx_http_api_module>
+
+
+
+=item *
+
 L<ngx_http_auth_basic_module|ngx_http_auth_basic_module>
 
 
@@ -462,6 +468,12 @@ L<ngx_http_index_module|ngx_http_index_module>
 =item *
 
 L<ngx_http_js_module|ngx_http_js_module>
+
+
+
+=item *
+
+L<ngx_http_keyval_module|ngx_http_keyval_module>
 
 
 

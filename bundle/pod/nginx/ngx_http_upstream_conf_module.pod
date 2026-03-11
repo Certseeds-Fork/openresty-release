@@ -22,6 +22,13 @@ server group must reside in the shared memory.
 
 B<NOTE>
 
+This module was superseded by the
+L<ngx_http_api_module|ngx_http_api_module> module
+in 1.13.0.
+
+
+B<NOTE>
+
 This module is available as part of our
 commercial subscription.
 

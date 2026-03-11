@@ -1069,6 +1069,17 @@ In this case, by default, the response code 302 is returned to the client.
 It can only be changed to one of the redirect status
 codes (301, 302, 303, 307, and 308).
 
+B<NOTE>
+
+The code 307 was not treated as a redirect until versions 1.1.16 and 1.0.13.
+
+
+
+B<NOTE>
+
+The code 308 was not treated as a redirect until version 1.13.0.
+
+
 
 
 
@@ -1303,9 +1314,11 @@ subrequests formed by the
 “C<include virtual>”
 command of the
 L<ngx_http_ssi_module|ngx_http_ssi_module>
-module and by the
+module, by the
 L<ngx_http_addition_module|ngx_http_addition_module>
-module directives;
+module directives, and by
+L<ngx_http_auth_request_module> and
+L<ngx_http_mirror_module> directives;
 
 
 

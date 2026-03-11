@@ -274,9 +274,6 @@ B<context:> I<http>
 B<context:> I<server>
 
 
-B<context:> I<location>
-
-
 
 This directive appeared in version 1.11.6.
 

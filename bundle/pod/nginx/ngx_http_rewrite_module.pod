@@ -19,7 +19,8 @@ conditionally select configurations.
 
 
 
-The C<ngx_http_rewrite_module> module directives are
+The L</break>, L</if>, L</return>,
+L</rewrite>, and L</set> directives are
 processed in the following order:
 
 =over

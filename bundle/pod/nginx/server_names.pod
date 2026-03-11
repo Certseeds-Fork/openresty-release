@@ -347,6 +347,27 @@ while the other will be the default for port *:80:
 
 
 
+=head1 Internationalized names
+
+
+
+Internationalized domain names
+(L<IDNs|https://en.wikipedia.org/wiki/Internationalized_domain_name>)
+should be specified using an ASCII (Punycode) representation
+in the L<ngx_http_core_module> directive:
+
+    
+    server {
+        listen       80;
+        server_name  xn--e1afmkfd.xn--80akhbyknj4f;  # пример.испытание
+        ...
+    }
+
+
+
+
+
+
 =head1 Optimization
 
 

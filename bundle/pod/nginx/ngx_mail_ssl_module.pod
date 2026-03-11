@@ -44,7 +44,9 @@ To reduce the processor load, it is recommended to
 
 =item *
 
-set the number of worker processes equal to the number of processors,
+set the number of
+L<worker processes|ngx_core_module>
+equal to the number of processors,
 
 
 
@@ -62,7 +64,8 @@ disable the built-in session cache,
 
 =item *
 
-and possibly increase the session lifetime (by default, 5 minutes):
+and possibly increase the session lifetime
+(by default, 5 minutes):
 
 
 

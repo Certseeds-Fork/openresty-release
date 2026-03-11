@@ -690,6 +690,17 @@ in a shared memory zone, whose I<C<name>> and I<C<size>>
 are configured by the C<keys_zone> parameter.
 One megabyte zone can store about 8 thousand keys.
 
+B<NOTE>
+
+As part of
+commercial subscription,
+the shared memory zone also stores extended
+cache L<information|ngx_http_api_module>,
+thus, it is required to specify a larger zone size for the same number of keys.
+For example,
+one megabyte zone can store about 4 thousand keys.
+
+
 
 
 

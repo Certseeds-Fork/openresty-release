@@ -1043,8 +1043,8 @@ This directive appeared in version 1.5.12.
 If an upstream server cannot be selected immediately
 while processing a request,
 the request will be placed into the queue.
-The directive specifies the maximum number of requests that can be in the queue
-at the same time.
+The directive specifies the maximum I<C<number>> of requests
+that can be in the queue at the same time.
 If the queue is filled up,
 or the server to pass the request to cannot be selected within
 the time period specified in the C<timeout> parameter,
@@ -1103,7 +1103,8 @@ B<syntax:> sticky I<
     C<create=>I<C<$variable>>
     C<lookup=>I<C<$variable>>
     C<zone=>I<C<name>>:I<C<size>>
-    [C<timeout=>I<C<time>>]>
+    [C<timeout=>I<C<time>>]
+    [C<header>]>
 
 
 
@@ -1160,6 +1161,29 @@ selected as if the client has not been bound yet.
 
 
 The first parameter sets the name of the cookie to be set or inspected.
+The cookie value is
+a hexadecimal representation of the MD5 hash of the IP address and port,
+or of the UNIX-domain socket path.
+However, if the “C<route>” parameter of the
+L</server> directive is specified, the cookie value will be
+the value of the “C<route>” parameter:
+
+    
+    upstream backend {
+        server backend1.example.com route=<emphasis>a</emphasis>;
+        server backend2.example.com route=<emphasis>b</emphasis>;
+    
+        sticky cookie srv_id expires=1h domain=.example.com path=/;
+    }
+
+
+In this case, the value of the “C<srv_id>” cookie will be
+either I<C<a>> or I<C<b>>.
+
+
+
+
+
 Additional parameters may be as follows:
 
 =over
@@ -1344,6 +1368,13 @@ By default, C<timeout> is set to 10 minutes.
 
 
 
+The C<header> parameter (1.13.1) allows creating a session
+right after receiving response headers from the upstream server.
+
+
+
+
+
 
 =back
 
@@ -1427,6 +1458,8 @@ C<X-Accel-Redirect> or
 L<ngx_http_core_module>,
 then the server addresses from different groups are separated by colons, e.g.
 “C<192.168.1.1:80, 192.168.1.2:80, unix:E<sol>tmpE<sol>sock : 192.168.10.1:80, 192.168.10.2:80>”.
+If a server cannot be selected,
+the variable keeps the name of the server group.
 
 
 
@@ -1550,6 +1583,8 @@ keeps status code of the response obtained from the upstream server.
 Status codes of several responses
 are separated by commas and colons like addresses in the
 $upstream_addr variable.
+If a server cannot be selected,
+the variable keeps the C<502> (C<Bad Gateway>) status code.
 
 
 

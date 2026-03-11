@@ -696,6 +696,8 @@ or the path to the UNIX-domain socket of the upstream server (1.11.4).
 If several servers were contacted during proxying,
 their addresses are separated by commas, e.g.
 “C<192.168.1.1:12345, 192.168.1.2:12345, unix:E<sol>tmpE<sol>sock>”.
+If a server cannot be selected,
+the variable keeps the name of the server group.
 
 
 

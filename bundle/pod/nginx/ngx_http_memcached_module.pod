@@ -328,7 +328,7 @@ The directive also defines what is considered an
 L<unsuccessful
 attempt|ngx_http_upstream_module> of communication with a server.
 The cases of C<error>, C<timeout> and
-C<invalid_header> are always considered unsuccessful attempts,
+C<invalid_response> are always considered unsuccessful attempts,
 even if they are not specified in the directive.
 The case of C<not_found>
 is never considered an unsuccessful attempt.

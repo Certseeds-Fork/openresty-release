@@ -212,6 +212,14 @@ the C<openssl> command-line utility may be used, for example:
 
 
 
+
+B<NOTE>
+
+When testing configurations with SNI,
+it is important to specify the C<-servername> option
+as C<openssl> does not use SNI by default.
+
+
 In this example the subject (“I<s>”) of the
 C<www.GoDaddy.com> server certificate #0 is signed by an issuer
 (“I<i>”) which itself is the subject of the certificate #1,
@@ -398,52 +406,9 @@ Server Name Indication extension|http://en.wikipedia.org/wiki/Server_Name_Indica
 which allows a browser to pass a requested server name during the SSL handshake
 and, therefore, the server will know which certificate it should use
 for the connection.
-However, SNI has limited browser support.
-Currently it is supported starting with the following browsers versions:
-
-
-
-
-
-
-=over
-
-
-
-
-=item *
-
-Opera 8.0;
-
-
-
-=item *
-
-MSIE 7.0 (but only on Windows Vista or higher);
-
-
-
-=item *
-
-Firefox 2.0 and other browsers using Mozilla Platform rv:1.8.1;
-
-
-
-=item *
-
-Safari 3.2.1 (Windows version supports SNI on Vista or higher);
-
-
-
-=item *
-
-and Chrome (Windows version supports SNI on Vista or higher, too).
-
-
-
-=back
-
-
+SNI is currently
+L<supported|http://en.wikipedia.org/wiki/Server_Name_Indication#Support>
+by most modern browsers, though may not be used by some old or special clients.
 
 B<NOTE>
 
