@@ -1,0 +1,281 @@
+Name
+    ngx_srcache - Transparent subrequest-based caching layout for
+            arbitrary nginx locations
+
+    *This module is not distributed with the Nginx source.* See the
+    installation instructions.
+
+Status
+    This module is already being used in production but is still under
+    active development.
+
+Synopsis
+
+    location /foo {
+        charset utf-8; # or some other encoding
+        default_type text/plain; # or some other MIME type
+
+        set $key $uri;
+        srcache_fetch GET /memc $key;
+        srcache_store PUT /memc $key;
+
+        # proxy_pass/fastcgi_pass/drizzle_pass/echo/etc...
+        # or even static files on the disk
+    }
+
+    location /memc {
+        set $memc_key $query_string;
+        set $memc_exptime 300;
+        memc_pass 127.0.0.1:11211;
+    }
+
+Description
+    This module provides a transparent caching layer for
+    arbitrary nginx locations (like those use an upstream
+    or even serve static disk files).
+
+    Usually, the ngx_memc module is used together with
+    this module to provide a concrete caching storage backend.
+    But technically, any modules that provide a REST
+    interface can be used as the fetching and storage subrequests
+    used by ngx_srcache.
+
+    For main requests, the srcache_fetch directive works at the end of
+    the access phase, so the standard access module's "allow" and
+    "deny" direcives run *before* ours, which is usually the desired behavior
+    for security reasons.
+
+    For subrequests, we explicitly disallow the use of this module
+    because it's too difficult to get right. There used to be an implementation
+    but it was buggy and I finally gave up fixing it and abandoned it.
+
+    However, if you're using ngx_lua, it's easy to do subrequest caching in Lua
+    all by yourself. That is, first issue a subrequest to a ngx_memc location
+    to do an explicit cache lookup, if cache hit, just use the cached data
+    returned; otherwise, fall back to the true backend, and finally
+    do a cache insertion to feed the data into the cache.
+
+    Using ngx_srcache for main request caching and Lua for subrequest caching
+    is the approach that we're taking in our business. This hybrid solution
+    works great in production.
+
+    The srcache_store directive works in an output filter.
+
+Known Issues
+    *   On certain systems, enabling aio and/or sendfile may stop srcache_store
+        from working. You can disable them in the locations configured by srcache_store.
+
+    * Do not use the `error_page` directive or ngx_lua's `ngx.exec()` or ngx_echo's
+      echo_exec directive within locations to be captured by `ngx.location.capture()` or
+      `ngx.location.capture_multi()`; this module's srcache_store directive cannot capture
+      locations with internal redirections.
+
+      Also be careful with server-wide `error_page` settings that are automatically
+      inherited by *all* locations by default. If you're using the ngx_openresty bundle
+      (<http://github.com/agentzh/ngx_openresty>),
+
+      you can use the `no_error_pages` directive within locations that are to be captured
+      by srcache_store, for example,
+
+        server {
+            # server-wide error page settings
+            error_page 500 503 504 html/50x.html;
+
+            location /memc {
+                # explicitly disable error_page setting inheritance
+                #  within this location:
+                no_error_pages; # this directive is provided by ngx_openresty only
+
+                set $memc_key $query_string;
+                memc_pass 127.0.0.1:11211;
+            }
+
+            location /foo {
+                set $key ...;
+                srcache_fetch GET /memc $key;
+                srcache_store PUT /memc $key;
+                srcache_store_max_size 1m;
+
+                # proxy_pass/fastcgi_pass/...
+            }
+        }
+
+Caveat
+    For now, ngx_srcache does not cache response headers. So it's
+    necessary to use the <charset>, <default_type> and <add_header>
+    directives to explicitly set the Content-Type header and etc.
+    So it's probably a bad idea to combine this module with ngx_proxy
+    which usually returns varying response headers.
+
+    Support for response header caching is a TODO and you're very
+    welcome to submit patches for this :)
+
+Directives
+    srcache_fetch <method> <uri> <args>?
+
+    srcache_fetch_skip <flag>
+        Default: srcache_fetch_skip 0
+
+        The <flag> argument supports nginx variables.
+        When this argument's value is not empty AND not equal to "0",
+        then the fetching process will be unconditionally skipped.
+
+    srcache_store <method> <uri> <args>?
+
+    srcache_store_max_size <size>
+        Default: srcache_store_max_size 0
+
+        When the response body length is exceeding this size, this module
+        will not try to store the response body into the cache using
+        the subrequest template that is specified in srcache_store.
+
+        This is particular useful when using cache storage backend that
+        does have a hard upper limit on the input data. For example,
+        for memcached server, the limit is usually 1 MB.
+
+        When 0 is specified (the default value), there's no limit check at all.
+
+    srcache_store_skip <flag>
+        Default: srcache_store_skip 0
+
+        The <flag> argument supports nginx variables.
+        When this argument's value is not empty AND not
+        equal to "0", then the storing process will be
+        unconditionally skipped.
+
+        Here's an example using Lua to set $nocache to avoid
+        storing URIs that contain the string "/tmp":
+
+            set_by_lua $nocache '
+                if string.match(ngx.var.uri, "/tmp") then
+                  return 1
+                end
+                return 0';
+
+            srcache_store_skip $nocache;
+
+Installation
+    1. Grab the nginx source code from nginx.net (< http://nginx.net/ >), for
+        example, the version 1.0.4 (see nginx compatibility),
+    2. and then build the source with this module:
+
+        $ wget 'http://sysoev.ru/nginx/nginx-1.0.4.tar.gz'
+        $ tar -xzvf nginx-1.0.4.tar.gz
+        $ cd nginx-1.0.4/
+
+        # Here we assume you would install you nginx under /opt/nginx/.
+        $ ./configure --prefix=/opt/nginx \
+            --add-module=/path/to/srcache-nginx-module
+
+        $ make -j2
+        $ make install
+
+    Download the latest version of the release tarball of this module from
+    srcache-nginx-module file list
+    (<http://github.com/agentzh/srcache-nginx-module/downloads>).
+
+    Do NOT use ngx_http_js_module with this module because it has a serious
+    bug in subrequest handling:
+
+        https://github.com/kung-fu-tzu/ngx_http_js_module/issues/issue/41
+
+Compatibility
+    The following versions of Nginx should work with this module:
+
+    *   1.0.x (last tested: 1.0.4)
+
+    *   0.9.x (last tested: 0.9.4)
+
+    *   0.8.x (last tested: 0.8.54)
+
+    *   0.7.x >= 0.7.46 (last tested: 0.7.68)
+
+    Earlier versions of Nginx like 0.6.x and 0.5.x, as well as
+    latest nginx 0.8.42+  will *not* work.
+
+    If you find that any particular version of Nginx above 0.7.44 does not
+    work with this module, please consider reporting a bug.
+
+Report Bugs
+    Although a lot of effort has been put into testing and code tuning,
+    there must be some serious bugs lurking somewhere in this module. So
+    whenever you are bitten by any quirks, please don't hesitate to
+
+    1.  send a bug report or even patches to <agentzh@gmail.com>,
+
+    2.  or create a ticket on the issue tracking interface
+        (<http://github.com/agentzh/srcache-nginx-module/issues>)
+        provided by GitHub.
+
+Source Repository
+    Available on github at agentzh/srcache-nginx-module
+    (<http://github.com/agentzh/srcache-nginx-module>).
+
+ChangeLog
+
+Test Suite
+    This module comes with a Perl-driven test suite. The test cases
+    (<http://github.com/agentzh/srcache-nginx-module/tree/master/test/t
+    />) are declarative
+    (<http://github.com/agentzh/srcache-nginx-module/blob/master/test/t
+    /sanity.t>) too. Thanks to the Test::Base
+    (<http://search.cpan.org/perldoc?Test::Base>) module in the Perl world.
+
+    To run it on your side:
+
+        $ PATH=/path/to/your/nginx-with-srcache-module:$PATH prove -r t
+
+    You need to terminate any Nginx processes before running the test suite
+    if you have changed the Nginx server binary.
+
+    Because a single nginx server (by default, "localhost:1984") is used
+    across all the test scripts (".t" files), it's meaningless to run the
+    test suite in parallel by specifying "-jN" when invoking the "prove"
+    utility.
+
+    Some parts of the test suite requires modules rewrite, and echo
+    to be enabled as well when building Nginx.
+
+TODO
+
+Getting involved
+    You'll be very welcomed to submit patches to the author or just ask for
+    a commit bit to the source repository on GitHub.
+
+Author
+    agentzh (章亦春) *<agentzh@gmail.com>*
+
+Copyright & License
+    Copyright (c) 2010, 2011 Taobao Inc., Alibaba Group ( http://www.taobao.com
+    ).
+
+    Copyright (c) 2010, 2011, Yichun "agentzh" Zhang <agentzh@gmail.com>.
+
+    This module is licensed under the terms of the BSD license.
+
+    Redistribution and use in source and binary forms, with or without
+    modification, are permitted provided that the following conditions are
+    met:
+
+    *   Redistributions of source code must retain the above copyright
+        notice, this list of conditions and the following disclaimer.
+
+    *   Redistributions in binary form must reproduce the above copyright
+        notice, this list of conditions and the following disclaimer in the
+        documentation and/or other materials provided with the distribution.
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS
+    IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
+    TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+    PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+    HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+    SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
+    TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
+    PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
+    LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+    NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+    SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+See Also
+    The ngx_memc module < http://wiki.nginx.org/NginxHttpMemcModule >.
+

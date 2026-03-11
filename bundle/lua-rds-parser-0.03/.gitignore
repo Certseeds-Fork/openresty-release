@@ -1,0 +1,8 @@
+*~
+*.swp
+*.swo
+test.rds
+test_case.lua
+*.o
+*.so
+reindex
