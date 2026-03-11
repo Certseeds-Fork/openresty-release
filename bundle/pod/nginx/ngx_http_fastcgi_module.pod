@@ -44,7 +44,10 @@ requests to a FastCGI server.
 =head2 fastcgi_bind
 
 
-B<syntax:> fastcgi_bind I<I<C<address>> [transparent] E<verbar> C<off>>
+B<syntax:> fastcgi_bind I<
+    I<C<address>>
+    [C<transparent>] E<verbar>
+    C<off>>
 
 
 
@@ -292,6 +295,44 @@ The same zone can be used in several places.
 Parameter value can contain variables (1.7.9).
 The C<off> parameter disables caching inherited
 from the previous configuration level.
+
+
+
+
+
+
+
+=head2 fastcgi_cache_background_update
+
+
+B<syntax:> fastcgi_cache_background_update I<C<on> E<verbar> C<off>>
+
+
+B<default:> I<off>
+
+
+B<context:> I<http>
+
+
+B<context:> I<server>
+
+
+B<context:> I<location>
+
+
+
+This directive appeared in version 1.11.10.
+
+
+
+
+
+Allows starting a background subrequest
+to update an expired cache item,
+while a stale cached response is returned to the client.
+Note that it is necessary to
+allow
+the usage of a stale cached response when it is being updated.
 
 
 
@@ -919,6 +960,7 @@ B<syntax:> fastcgi_cache_use_stale I<
     C<http_503> E<verbar>
     C<http_403> E<verbar>
     C<http_404> E<verbar>
+    C<http_429> E<verbar>
     C<off>
     ...>
 
@@ -959,6 +1001,42 @@ Additionally, the C<updating> parameter permits
 using a stale cached response if it is currently being updated.
 This allows minimizing the number of accesses to FastCGI servers
 when updating cached data.
+
+
+
+
+
+Using a stale cached response
+can also be enabled directly in the response header
+for a specified number of seconds after the response became stale (1.11.10).
+This has lower priority than using the directive parameters.
+
+=over
+
+
+
+
+=item *
+
+The
+“L<stale-while-revalidate|https://tools.ietf.org/html/rfc5861#section-3>”
+extension of the C<Cache-Control> header field permits
+using a stale cached response if it is currently being updated.
+
+
+
+=item *
+
+The
+“L<stale-if-error|https://tools.ietf.org/html/rfc5861#section-4>”
+extension of the C<Cache-Control> header field permits
+using a stale cached response in case of an error.
+
+
+
+=back
+
+
 
 
 
@@ -1567,6 +1645,7 @@ B<syntax:> fastcgi_next_upstream I<
     C<http_503> E<verbar>
     C<http_403> E<verbar>
     C<http_404> E<verbar>
+    C<http_429> E<verbar>
     C<non_idempotent> E<verbar>
     C<off>
     ...>
@@ -1644,12 +1723,19 @@ a server returned a response with the code 403;
 a server returned a response with the code 404;
 
 
+=item C<http_429>
+
+
+
+a server returned a response with the code 429 (1.11.13);
+
+
 =item C<non_idempotent>
 
 
 
 normally, requests with a
-L<non-idempotent|http://tools.ietf.org/html/rfc7231#section-4.2.2>
+L<non-idempotent|https://tools.ietf.org/html/rfc7231#section-4.2.2>
 method
 (C<POST>, C<LOCK>, C<PATCH>)
 are not passed to the next server
@@ -1689,7 +1775,8 @@ attempt|ngx_http_upstream_module> of communication with a server.
 The cases of C<error>, C<timeout> and
 C<invalid_header> are always considered unsuccessful attempts,
 even if they are not specified in the directive.
-The cases of C<http_500> and C<http_503> are
+The cases of C<http_500>, C<http_503>,
+and C<http_429> are
 considered unsuccessful attempts only if they are specified in the directive.
 The cases of C<http_403> and C<http_404>
 are never considered unsuccessful attempts.

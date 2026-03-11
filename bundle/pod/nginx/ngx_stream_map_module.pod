@@ -117,7 +117,7 @@ variable, and their combination.
 
 
 
-The directive also supports three special parameters:
+The following special parameters are also supported:
 
 =over
 
@@ -170,6 +170,15 @@ This parameter should be specified before the list of values.
 
 includes a file with values.
 There can be several inclusions.
+
+
+
+=item C<volatile>
+
+
+
+
+indicates that the variable is not cacheable (1.11.7).
 
 
 

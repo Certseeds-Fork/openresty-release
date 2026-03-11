@@ -57,7 +57,10 @@ data streams over TCP, UDP (1.9.13), and UNIX-domain sockets.
 =head2 proxy_bind
 
 
-B<syntax:> proxy_bind I<I<C<address>> [transparent] E<verbar> C<off>>
+B<syntax:> proxy_bind I<
+    I<C<address>>
+    [C<transparent>] E<verbar>
+    C<off>>
 
 
 

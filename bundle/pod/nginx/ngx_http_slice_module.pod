@@ -54,7 +54,7 @@ the response is split into 1-megabyte cacheable slices.
 =head2 slice
 
 
-B<syntax:> slice I<C<size>>
+B<syntax:> slice I<I<C<size>>>
 
 
 B<default:> I<0>

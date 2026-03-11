@@ -65,7 +65,7 @@ B<context:> I<if in location>
 
 
 Adds the specified field to a response header provided that
-the response code equals 200, 201, 204, 206, 301, 302, 303, 304, or 307.
+the response code equals 200, 201, 204, 206, 301, 302, 303, 304, 307, or 308.
 A value can contain variables.
 
 
@@ -123,7 +123,7 @@ B<context:> I<if in location>
 
 Enables or disables adding or modifying the C<Expires>
 and C<Cache-Control> response header fields provided that
-the response code equals 200, 201, 204, 206, 301, 302, 303, 304, or 307.
+the response code equals 200, 201, 204, 206, 301, 302, 303, 304, 307, or 308.
 The parameter can be a positive or negative
 L<time|syntax>.
 

@@ -145,6 +145,22 @@ L<stream_processing>
 
 =item *
 
+L<njs_about>
+
+
+
+=back
+
+
+
+
+=over
+
+
+
+
+=item *
+
 L<Chapter “nginx” in
 “The Architecture of Open Source Applications”|http://www.aosabook.org/en/nginx.html>
 
@@ -233,6 +249,12 @@ L<websocket>
 =item *
 
 L<contributing_changes>
+
+
+
+=item *
+
+L<development_guide>
 
 
 
@@ -439,6 +461,12 @@ L<ngx_http_index_module|ngx_http_index_module>
 
 =item *
 
+L<ngx_http_js_module|ngx_http_js_module>
+
+
+
+=item *
+
 L<ngx_http_limit_conn_module|ngx_http_limit_conn_module>
 
 
@@ -589,6 +617,12 @@ L<ngx_http_upstream_conf_module|ngx_http_upstream_conf_module>
 
 =item *
 
+L<ngx_http_upstream_hc_module|ngx_http_upstream_hc_module>
+
+
+
+=item *
+
 L<ngx_http_userid_module|ngx_http_userid_module>
 
 
@@ -707,6 +741,12 @@ L<ngx_stream_geoip_module|ngx_stream_geoip_module>
 
 =item *
 
+L<ngx_stream_js_module|ngx_stream_js_module>
+
+
+
+=item *
+
 L<ngx_stream_limit_conn_module|ngx_stream_limit_conn_module>
 
 
@@ -762,6 +802,32 @@ L<ngx_stream_ssl_preread_module|ngx_stream_ssl_preread_module>
 =item *
 
 L<ngx_stream_upstream_module|ngx_stream_upstream_module>
+
+
+
+=item *
+
+L<ngx_stream_upstream_hc_module|ngx_stream_upstream_hc_module>
+
+
+
+=back
+
+
+
+
+
+
+
+
+=over
+
+
+
+
+=item *
+
+L<ngx_google_perftools_module|ngx_google_perftools_module>
 
 
 

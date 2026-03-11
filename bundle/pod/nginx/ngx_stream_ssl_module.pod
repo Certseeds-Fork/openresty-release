@@ -222,6 +222,73 @@ The full list can be viewed using the
 
 
 
+=head2 ssl_client_certificate
+
+
+B<syntax:> ssl_client_certificate I<I<C<file>>>
+
+
+
+B<context:> I<stream>
+
+
+B<context:> I<server>
+
+
+
+This directive appeared in version 1.11.8.
+
+
+
+
+
+Specifies a I<C<file>> with trusted CA certificates in the PEM format
+used to verify client certificates.
+
+
+
+
+
+The list of certificates will be sent to clients.
+If this is not desired, the L</ssl_trusted_certificate>
+directive can be used.
+
+
+
+
+
+
+
+=head2 ssl_crl
+
+
+B<syntax:> ssl_crl I<I<C<file>>>
+
+
+
+B<context:> I<stream>
+
+
+B<context:> I<server>
+
+
+
+This directive appeared in version 1.11.8.
+
+
+
+
+
+Specifies a I<C<file>> with revoked certificates (CRL)
+in the PEM format used to verify
+client certificates.
+
+
+
+
+
+
+
 =head2 ssl_dhparam
 
 
@@ -583,13 +650,15 @@ This allows configuring key rotation, for example:
 
 
 
-The I<C<file>> must contain 48 bytes of random data and can
-be created using the following command:
+The I<C<file>> must contain 80 or 48 bytes
+of random data and can be created using the following command:
 
     
-    openssl rand 48 > ticket.key
+    openssl rand 80 > ticket.key
 
 
+Depending on the file size either AES256 (for 80-byte keys, 1.11.8)
+or AES128 (for 48-byte keys) is used for encryption.
 
 
 
@@ -616,7 +685,7 @@ B<context:> I<server>
 
 
 Enables or disables session resumption through
-L<TLS session tickets|http://tools.ietf.org/html/rfc5077>.
+L<TLS session tickets|https://tools.ietf.org/html/rfc5077>.
 
 
 
@@ -651,6 +720,128 @@ session parameters.
 
 
 
+=head2 ssl_trusted_certificate
+
+
+B<syntax:> ssl_trusted_certificate I<I<C<file>>>
+
+
+
+B<context:> I<stream>
+
+
+B<context:> I<server>
+
+
+
+This directive appeared in version 1.11.8.
+
+
+
+
+
+Specifies a I<C<file>> with trusted CA certificates in the PEM format
+used to verify client certificates.
+
+
+
+
+
+In contrast to the certificate set by L</ssl_client_certificate>,
+the list of these certificates will not be sent to clients.
+
+
+
+
+
+
+
+=head2 ssl_verify_client
+
+
+B<syntax:> ssl_verify_client I<
+    C<on> E<verbar> C<off> E<verbar>
+    C<optional> E<verbar> C<optional_no_ca>>
+
+
+B<default:> I<off>
+
+
+B<context:> I<stream>
+
+
+B<context:> I<server>
+
+
+
+This directive appeared in version 1.11.8.
+
+
+
+
+
+Enables verification of client certificates.
+The verification result is stored in the
+$ssl_client_verify variable.
+If an error has occurred during the client certificate verification
+or a client has not presented the required certificate,
+the connection is closed.
+
+
+
+
+
+The C<optional> parameter requests the client
+certificate and verifies it if the certificate is present.
+
+
+
+
+
+The C<optional_no_ca> parameter
+requests the client
+certificate but does not require it to be signed by a trusted CA certificate.
+This is intended for the use in cases when a service that is external to nginx
+performs the actual certificate verification.
+The contents of the certificate is accessible through the
+$ssl_client_cert variable.
+
+
+
+
+
+
+
+=head2 ssl_verify_depth
+
+
+B<syntax:> ssl_verify_depth I<I<C<number>>>
+
+
+B<default:> I<1>
+
+
+B<context:> I<stream>
+
+
+B<context:> I<server>
+
+
+
+This directive appeared in version 1.11.8.
+
+
+
+
+
+Sets the verification depth in the client certificates chain.
+
+
+
+
+
+
+
 =head1 Embedded Variables
 
 
@@ -669,6 +860,159 @@ since 1.11.2.
 
 returns the string of ciphers used
 for an established SSL connection;
+
+
+
+=item C<$ssl_ciphers>
+
+
+
+
+returns the list of ciphers supported by the client (1.11.7).
+Known ciphers are listed by names, unknown are shown in hexadecimal,
+for example:
+
+    
+    AES128-SHA:AES256-SHA:0x00ff
+
+
+
+B<NOTE>
+
+The variable is fully supported only when using OpenSSL version 1.0.2 or higher.
+With older versions, the variable is available
+only for new sessions and lists only known ciphers.
+
+
+
+
+=item C<$ssl_client_cert>
+
+
+
+
+returns the client certificate in the PEM format
+for an established SSL connection, with each line except the first
+prepended with the tab character (1.11.8);
+
+
+
+=item C<$ssl_client_fingerprint>
+
+
+
+
+returns the SHA1 fingerprint of the client certificate
+for an established SSL connection (1.11.8);
+
+
+
+=item C<$ssl_client_i_dn>
+
+
+
+
+returns the “issuer DN” string of the client certificate
+for an established SSL connection according to
+L<RFC 2253|https://tools.ietf.org/html/rfc2253> (1.11.8);
+
+
+
+=item C<$ssl_client_raw_cert>
+
+
+
+
+
+returns the client certificate in the PEM format
+for an established SSL connection (1.11.8);
+
+
+
+=item C<$ssl_client_s_dn>
+
+
+
+
+returns the “subject DN” string of the client certificate
+for an established SSL connection according to
+L<RFC 2253|https://tools.ietf.org/html/rfc2253> (1.11.8);
+
+
+
+=item C<$ssl_client_serial>
+
+
+
+
+returns the serial number of the client certificate
+for an established SSL connection (1.11.8);
+
+
+
+=item C<$ssl_client_v_end>
+
+
+
+
+returns the end date of the client certificate (1.11.8);
+
+
+
+=item C<$ssl_client_v_remain>
+
+
+
+
+returns the number of days
+until the client certificate expires (1.11.8);
+
+
+
+=item C<$ssl_client_v_start>
+
+
+
+
+returns the start date of the client certificate (1.11.8);
+
+
+
+=item C<$ssl_client_verify>
+
+
+
+
+returns the result of client certificate verification (1.11.8):
+“C<SUCCESS>”, “C<FAILED:>I<C<reason>>”,
+and “C<NONE>” if a certificate was not present;
+
+
+
+=item C<$ssl_curves>
+
+
+
+
+returns the list of curves supported by the client (1.11.7).
+Known curves are listed by names, unknown are shown in hexadecimal,
+for example:
+
+    
+    0x001d:prime256v1:secp521r1:secp384r1
+
+
+
+B<NOTE>
+
+The variable is supported only when using OpenSSL version 1.0.2 or higher.
+With older versions, the variable value will be an empty string.
+
+
+B<NOTE>
+
+The variable is available only for new sessions.
+
 
 
 

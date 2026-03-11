@@ -2,10 +2,10 @@ Name
     README-win32 - README for the Windows 32-bit build of OpenResty
 
 Description
-    The binary distributions of OpenResty can be downloaded from the
-    following web page:
+    The official binary Win32 distribution of OpenResty can be downloaded
+    from the following web page:
 
-    https://openresty.org/#Download
+    https://openresty.org/en/download.html
 
     To start the NGINX server of the nginx server of the Win32 binary
     distribution of OpenResty:
@@ -114,7 +114,7 @@ Details About The Building Process
 
         PCRE=pcre-8.39
         ZLIB=zlib-1.2.8
-        OPENSSL=openssl-1.0.2h
+        OPENSSL=openssl-1.0.2j
     
         mkdir -p objs/lib || exit 1
         cd objs/lib || exit 1
@@ -125,7 +125,7 @@ Details About The Building Process
         cd ../..
     
         cd objs/lib/$OPENSSL || exit 1
-        patch -p1 < ../../../patches/$OPENSSL-sess_set_get_cb_yield.patch || exit 1
+        patch -p1 < ../../../patches/openssl-1.0.2h-sess_set_get_cb_yield.patch || exit 1
         cd ../../..
     
         ./configure \
@@ -184,13 +184,13 @@ Details About The Building Process
     OpenResty without installing the build toolchain.
 
 Author
-    Yichun "agentzh" Zhang <agentzh@gmail.com>, CloudFlare Inc.
+    Yichun "agentzh" Zhang <agentzh@gmail.com>, OpenResty Inc.
 
 Copyright & License
     This module is licensed under the BSD license.
 
     Copyright (C) 2015-2016, by Yichun "agentzh" Zhang (章亦春)
-    <agentzh@gmail.com>, CloudFlare Inc.
+    <agentzh@gmail.com>, OpenResty Inc.
 
     All rights reserved.
 

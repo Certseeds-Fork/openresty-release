@@ -31,12 +31,6 @@ configuration parameter.
 
 
 
-The module is experimental, caveat emptor applies.
-
-
-
-
-
 Before version 1.9.14,
 buffering of a client request body could not be disabled
 regardless of
@@ -224,7 +218,7 @@ B<context:> I<server>
 
 
 Limits the maximum size of
-an L<HPACK|http://tools.ietf.org/html/rfc7541>-compressed
+an L<HPACK|https://tools.ietf.org/html/rfc7541>-compressed
 request header field.
 The limit applies equally to both name and value.
 Note that if Huffman encoding is applied,
@@ -256,7 +250,7 @@ B<context:> I<server>
 
 
 Limits the maximum size of the entire request header list after
-L<HPACK|http://tools.ietf.org/html/rfc7541> decompression.
+L<HPACK|https://tools.ietf.org/html/rfc7541> decompression.
 For most requests, the default limit should be enough.
 
 

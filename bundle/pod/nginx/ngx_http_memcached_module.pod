@@ -48,7 +48,10 @@ external to nginx.
 =head2 memcached_bind
 
 
-B<syntax:> memcached_bind I<I<C<address>> [transparent] E<verbar> C<off>>
+B<syntax:> memcached_bind I<
+    I<C<address>>
+    [ C<transparent >] E<verbar>
+    C<off>>
 
 
 

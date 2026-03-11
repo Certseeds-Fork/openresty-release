@@ -1,8 +1,12 @@
 #!/bin/bash
 
-PCRE=pcre-8.39
-ZLIB=zlib-1.2.8
-OPENSSL=openssl-1.0.2j
+PCRE=pcre-8.40
+ZLIB=zlib-1.2.11
+OPENSSL=openssl-1.0.2k
+
+# wget https://www.openssl.org/source/openssl-1.0.2k.tar.gz
+# wget http://zlib.net/zlib-1.2.11.tar.gz
+# wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.40.tar.gz
 
 rm -rf objs || exit 1
 mkdir -p objs/lib || exit 1

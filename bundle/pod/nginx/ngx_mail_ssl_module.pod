@@ -701,13 +701,15 @@ This allows configuring key rotation, for example:
 
 
 
-The I<C<file>> must contain 48 bytes of random data and can
-be created using the following command:
+The I<C<file>> must contain 80 or 48 bytes
+of random data and can be created using the following command:
 
     
-    openssl rand 48 > ticket.key
+    openssl rand 80 > ticket.key
 
 
+Depending on the file size either AES256 (for 80-byte keys, 1.11.8)
+or AES128 (for 48-byte keys) is used for encryption.
 
 
 
@@ -738,7 +740,7 @@ This directive appeared in version 1.5.9.
 
 
 Enables or disables session resumption through
-L<TLS session tickets|http://tools.ietf.org/html/rfc5077>.
+L<TLS session tickets|https://tools.ietf.org/html/rfc5077>.
 
 
 
@@ -927,7 +929,7 @@ B<context:> I<server>
 
 
 allow usage of the C<STLS> command for the POP3
-and the C<STARTTLS> command for the IMAP;
+and the C<STARTTLS> command for the IMAP and SMTP;
 
 
 

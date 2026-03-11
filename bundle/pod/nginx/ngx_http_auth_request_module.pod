@@ -113,7 +113,7 @@ the URI to which the subrequest will be sent.
 =head2 auth_request_set
 
 
-B<syntax:> auth_request_set I<I<C<variable>> I<C<value>>>
+B<syntax:> auth_request_set I<I<C<$variable>> I<C<value>>>
 
 
 

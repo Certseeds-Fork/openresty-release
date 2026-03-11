@@ -124,6 +124,58 @@ inherited from the previous configuration level.
 
 
 
+=head2 auth_jwt_header_set
+
+
+B<syntax:> auth_jwt_header_set I<I<C<$variable>> I<C<name>>>
+
+
+
+B<context:> I<http>
+
+
+
+This directive appeared in version 1.11.10.
+
+
+
+
+
+Sets the I<C<variable>> to the given
+JOSE header parameter I<C<name>>.
+
+
+
+
+
+
+
+=head2 auth_jwt_claim_set
+
+
+B<syntax:> auth_jwt_claim_set I<I<C<$variable>> I<C<name>>>
+
+
+
+B<context:> I<http>
+
+
+
+This directive appeared in version 1.11.10.
+
+
+
+
+
+Sets the I<C<variable>> to the given
+JWT claim parameter I<C<name>>.
+
+
+
+
+
+
+
 =head2 auth_jwt_key_file
 
 
@@ -159,148 +211,33 @@ Parameter value can contain variables.
 
 
 The C<ngx_http_auth_jwt_module> module
-supports embedded variables.
+supports embedded variables:
 
 
 
 
-
-Variables that return
-L<JWT claims|https://tools.ietf.org/html/rfc7519#section-4>:
 
 
 =over
 
 
-=item C<$jwt_claim_aud>
+=item C<$jwt_header_>I<C<name>>
 
 
 
 
-audience
+returns the value of a specified
+L<JOSE header|https://tools.ietf.org/html/rfc7515#section-4>
 
 
 
-=item C<$jwt_claim_email>
+=item C<$jwt_claim_>I<C<name>>
 
 
 
 
-email
-
-
-
-=item C<$jwt_claim_exp>
-
-
-
-
-expiration time
-
-
-
-=item C<$jwt_claim_iat>
-
-
-
-
-issued at
-
-
-
-=item C<$jwt_claim_iss>
-
-
-
-
-issuer
-
-
-
-=item C<$jwt_claim_jti>
-
-
-
-
-JWT ID
-
-
-
-=item C<$jwt_claim_nbf>
-
-
-
-
-not-before
-
-
-
-=item C<$jwt_claim_sub>
-
-
-
-
-subject
-
-
-
-=back
-
-
-
-
-
-
-
-Variables that return parameters of
-L<JOSE header|https://tools.ietf.org/html/rfc7515#section-4>:
-
-
-=over
-
-
-=item C<$jwt_header_alg>
-
-
-
-
-algorithm
-
-
-
-=item C<$jwt_header_cty>
-
-
-
-
-content type
-
-
-
-=item C<$jwt_header_enc>
-
-
-
-
-encryption algorithm
-
-
-
-=item C<$jwt_header_kid>
-
-
-
-
-key ID
-
-
-
-=item C<$jwt_header_typ>
-
-
-
-
-type
+returns the value of a specified
+L<JWT claim|https://tools.ietf.org/html/rfc7519#section-4>
 
 
 
