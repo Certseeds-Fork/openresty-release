@@ -266,7 +266,7 @@ will not be logged:
 
 B<syntax:> log_format I<
     I<C<name>>
-    [C<escape>=C<default>E<verbar>C<json>]
+    [C<escape>=C<default>E<verbar>C<json>E<verbar>C<none>]
     I<C<string>> ...>
 
 
@@ -288,6 +288,7 @@ Specifies log format.
 The C<escape> parameter (1.11.8) allows setting
 C<json> or C<default> characters escaping
 in variables, by default, C<default> escaping is used.
+The C<none> parameter (1.13.10) disables escaping.
 
 
 

@@ -185,6 +185,35 @@ is excluded from this mask.
 
 
 
+=head2 gzip_http_version
+
+
+B<syntax:> gzip_http_version I<C<1.0> E<verbar> C<1.1>>
+
+
+B<default:> I<1.1>
+
+
+B<context:> I<http>
+
+
+B<context:> I<server>
+
+
+B<context:> I<location>
+
+
+
+
+
+Sets the minimum HTTP version of a request required to compress a response.
+
+
+
+
+
+
+
 =head2 gzip_min_length
 
 
@@ -209,35 +238,6 @@ B<context:> I<location>
 Sets the minimum length of a response that will be gzipped.
 The length is determined only from the C<Content-Length>
 response header field.
-
-
-
-
-
-
-
-=head2 gzip_http_version
-
-
-B<syntax:> gzip_http_version I<C<1.0> E<verbar> C<1.1>>
-
-
-B<default:> I<1.1>
-
-
-B<context:> I<http>
-
-
-B<context:> I<server>
-
-
-B<context:> I<location>
-
-
-
-
-
-Sets the minimum HTTP version of a request required to compress a response.
 
 
 

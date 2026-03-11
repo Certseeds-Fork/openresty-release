@@ -458,9 +458,16 @@ as part of our commercial subscription,
 such groups allow changing the group membership
 or modifying the settings of a particular server
 without the need of restarting nginx.
-The configuration is accessible via a special location
+The configuration is accessible via the
+L<API|ngx_http_api_module> module (1.13.3).
+
+B<NOTE>
+
+Prior to version 1.13.3,
+the configuration was accessible only via a special location
 handled by
 L<ngx_http_upstream_conf_module>.
+
 
 
 

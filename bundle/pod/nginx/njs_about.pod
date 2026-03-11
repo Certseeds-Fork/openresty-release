@@ -4,18 +4,18 @@
 =head1 Name
 
 
-njs_about - About nginScript
+njs_about - About njs
 
 
 =head1
 
 
 
-nginScript is a subset of the JavaScript language that allows
+njs is a subset of the JavaScript language that allows
 implementing location and variable handlers in
 L<http|ngx_http_js_module> and
 L<stream|ngx_stream_js_module>.
-nginScript is created in compliance with
+njs is created in compliance with
 L<ECMAScript 5.1|http://www.ecma-international.org/ecma-262/5.1/>
 with some
 L<ECMAScript 6|http://www.ecma-international.org/ecma-262/6.0/>
@@ -210,11 +210,54 @@ ES5.1 C<Date> methods
 
 =item *
 
+ES5.1 C<JSON> object
+
+
+
+=item *
+
 ES5.1 global functions:
 C<isFinite>, C<isNaN>,
 C<parseFloat>, C<parseInt>,
 C<decodeURI>, C<decodeURIComponent>,
 C<encodeURI>, C<encodeURIComponent>
+
+
+
+=item *
+
+C<Error> objects:
+C<Error>, C<EvalError>,
+C<InternalError>, C<RangeError>,
+C<ReferenceError>, C<SyntaxError>,
+C<TypeError>, C<URIError>
+
+
+
+=item *
+
+C<setTimeout()> and C<clearTimeout()> functions
+(0.2.0)
+
+
+
+=item *
+
+L<Node.js style|https://nodejs.org/api/fs.html#fs_file_system>
+C<File system> methods:
+C<fs.readFile>, C<fs.readFileSync>,
+C<fs.appendFile>, C<fs.appendFileSync>,
+C<fs.writeFile>, C<fs.writeFileSync>
+
+
+
+=item *
+
+L<Node.js style|https://nodejs.org/api/crypto.html#crypto_class_hash>
+C<Crypto> methods (0.2.0):
+C<crypto.createHash>,
+C<crypto.createHmac>
+
 
 
 
@@ -261,19 +304,13 @@ C<eval> function
 
 =item *
 
-C<JSON> object
+C<new Function()> constructor
 
 
 
 =item *
 
-C<Error> object
-
-
-
-=item *
-
-C<setTimeout>, C<setInterval>,
+C<setInterval>,
 C<setImmediate> functions
 
 
@@ -281,8 +318,7 @@ C<setImmediate> functions
 =item *
 
 non-integer fractions (C<.235>),
-binary (C<0b0101>),
-octal (C<0o77>) literals
+binary literals (C<0b0101>)
 
 
 
@@ -293,11 +329,20 @@ octal (C<0o77>) literals
 
 
 
+=head1 Change Log
+
+
+
+The complete list of njs changes is available
+L<here|njs_changes>.
+
+
+
 =head1 Download and install
 
 
 
-nginScript is available in two modules:
+njs is available in two modules:
 
 =over
 
@@ -331,7 +376,7 @@ or installed as a Linux package.
 
 
 
-For Linux, nginScript modules
+For Linux, njs modules
 L<packages|linux_packages> can be used:
 
 =over
@@ -341,7 +386,7 @@ L<packages|linux_packages> can be used:
 
 =item *
 
-C<nginx-module-njs> — nginScript
+C<nginx-module-njs> — njs
 L<dynamic|ngx_core_module> modules
 
 
@@ -365,7 +410,7 @@ C<nginx-module-njs> package
 
 
 The L<repository|http://hg.nginx.org/njs>
-with nginScript sources can be cloned with the following command:
+with njs sources can be cloned with the following command:
 (requires L<Mercurial|https://www.mercurial-scm.org> client):
 
     

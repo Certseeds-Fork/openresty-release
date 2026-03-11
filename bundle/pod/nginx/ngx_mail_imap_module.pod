@@ -150,7 +150,7 @@ B<context:> I<server>
 
 
 
-Sets the IMAP commands read buffer size.
+Sets the I<C<size>> of the buffer used for reading IMAP commands.
 By default, the buffer size is equal to one memory page.
 This is either 4K or 8K, depending on a platform.
 

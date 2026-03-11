@@ -38,6 +38,44 @@ via the L<ngx_http_core_module> directive.
 
 
 
+The module supports the following cryptographic
+L<algorithms|https://tools.ietf.org/html/rfc7518#section-3.1>:
+
+
+=over
+
+
+
+
+=item *
+
+HS256, HS384, HS512
+
+
+
+=item *
+
+RS256, RS384, RS512
+
+
+
+=item *
+
+ES256, ES384, ES512
+
+
+
+=back
+
+
+
+Prior to version 1.13.7,
+only HS256, RS256, ES256 algorithms were supported.
+
+
+
+
+
 
 B<NOTE>
 
@@ -87,6 +125,9 @@ B<context:> I<server>
 B<context:> I<location>
 
 
+B<context:> I<limit_except>
+
+
 
 
 
@@ -124,36 +165,10 @@ inherited from the previous configuration level.
 
 
 
-=head2 auth_jwt_header_set
-
-
-B<syntax:> auth_jwt_header_set I<I<C<$variable>> I<C<name>>>
-
-
-
-B<context:> I<http>
-
-
-
-This directive appeared in version 1.11.10.
-
-
-
-
-
-Sets the I<C<variable>> to the given
-JOSE header parameter I<C<name>>.
-
-
-
-
-
-
-
 =head2 auth_jwt_claim_set
 
 
-B<syntax:> auth_jwt_claim_set I<I<C<$variable>> I<C<name>>>
+B<syntax:> auth_jwt_claim_set I<I<C<$variable>> I<C<name>> ...>
 
 
 
@@ -167,8 +182,60 @@ This directive appeared in version 1.11.10.
 
 
 
-Sets the I<C<variable>> to the given
-JWT claim parameter I<C<name>>.
+Sets the I<C<variable>> to a JWT claim parameter
+identified by key names.
+Name matching starts from the top level of the JSON tree.
+For arrays, the variable keeps a list of array elements separated by commas.
+
+    
+    location / {
+        auth_jwt           "closed site";
+        auth_jwt_key_file  conf/keys.json;
+        auth_jwt_claim_set $email info e-mail;
+        auth_jwt_claim_set $job info "job title";
+    }
+
+
+
+B<NOTE>
+
+Prior to version 1.13.7, only one key name could be specified,
+and the result was undefined for arrays.
+
+
+
+
+
+
+
+
+=head2 auth_jwt_header_set
+
+
+B<syntax:> auth_jwt_header_set I<I<C<$variable>> I<C<name>> ...>
+
+
+
+B<context:> I<http>
+
+
+
+This directive appeared in version 1.11.10.
+
+
+
+
+
+Sets the I<C<variable>> to a JOSE header parameter
+identified by key names.
+Name matching starts from the top level of the JSON tree.
+For arrays, the variable keeps a list of array elements separated by commas.
+
+B<NOTE>
+
+Prior to version 1.13.7, only one key name could be specified,
+and the result was undefined for arrays.
+
 
 
 
@@ -192,6 +259,9 @@ B<context:> I<server>
 B<context:> I<location>
 
 
+B<context:> I<limit_except>
+
+
 
 
 
@@ -199,6 +269,44 @@ Specifies a I<C<file>> in
 L<JSON Web Key Set|https://tools.ietf.org/html/rfc7517#section-5>
 format for validating JWT signature.
 Parameter value can contain variables.
+
+
+
+
+
+
+
+=head2 auth_jwt_leeway
+
+
+B<syntax:> auth_jwt_leeway I<I<C<time>>>
+
+
+B<default:> I<0s>
+
+
+B<context:> I<http>
+
+
+B<context:> I<server>
+
+
+B<context:> I<location>
+
+
+
+This directive appeared in version 1.13.10.
+
+
+
+
+
+Sets the maximum allowable leeway to compensate
+clock skew when verifying the
+L<exp|https://tools.ietf.org/html/rfc7519#section-4.1.4>
+and
+L<nbf|https://tools.ietf.org/html/rfc7519#section-4.1.5>
+JWT claims.
 
 
 

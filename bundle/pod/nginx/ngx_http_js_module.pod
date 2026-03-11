@@ -13,7 +13,7 @@ ngx_http_js_module - Module ngx_http_js_module
 
 The C<ngx_http_js_module> module is used to implement
 location and variable handlers
-in L<nginScript|njs_about> —
+in L<njs|njs_about> —
 a subset of the JavaScript language.
 
 
@@ -21,7 +21,7 @@ a subset of the JavaScript language.
 
 
 This module is not built by default, it should be compiled with
-the nginScript module using the
+the njs module using the
 C<--add-module> configuration parameter:
 
     
@@ -29,7 +29,7 @@ C<--add-module> configuration parameter:
 
 
 The L<repository|http://hg.nginx.org/njs>
-with the nginScript module can be cloned with the following command
+with the njs module can be cloned with the following command
 (requires L<Mercurial|https://www.mercurial-scm.org> client):
 
     
@@ -129,27 +129,6 @@ The F<http.js> file:
 
 =head1 Directives
 
-=head2 js_include
-
-
-B<syntax:> js_include I<I<C<file>>>
-
-
-
-B<context:> I<http>
-
-
-
-
-
-Specifies a file that implements location and variable handlers in nginScript.
-
-
-
-
-
-
-
 =head2 js_content
 
 
@@ -166,7 +145,28 @@ B<context:> I<limit_except>
 
 
 
-Sets an nginScript function as a location content handler.
+Sets an njs function as a location content handler.
+
+
+
+
+
+
+
+=head2 js_include
+
+
+B<syntax:> js_include I<I<C<file>>>
+
+
+
+B<context:> I<http>
+
+
+
+
+
+Specifies a file that implements location and variable handlers in njs.
 
 
 
@@ -188,7 +188,7 @@ B<context:> I<http>
 
 
 
-Sets an nginScript function for the specified variable.
+Sets an njs function for the specified variable.
 
 
 
@@ -200,7 +200,7 @@ Sets an nginScript function for the specified variable.
 
 
 
-Each HTTP nginScript handler receives two arguments, request and response.
+Each HTTP njs handler receives two arguments, request and response.
 
 
 
@@ -282,12 +282,121 @@ nginx variables object, read-only
 
 
 
+=item C<response>
+
+
+
+
+the response object (0.2.0), read-only
+
+
+
+=back
+
+
+
+
+
+
+
+The request object has the following methods:
+
+=over
+
+
+
 =item C<log(I<C<string>>)>
 
 
 
 
 writes a C<string> to the error log
+on the C<info> level of logging
+
+
+
+=item C<warn(I<C<string>>)>
+
+
+
+
+writes a C<string> to the error log
+on the C<warning> level of logging (0.2.0)
+
+
+
+=item C<error(I<C<string>>)>
+
+
+
+
+writes a C<string> to the error log
+on the C<error> level of logging (0.2.0)
+
+
+
+=item C<subrequest(I<C<uri>>[, I<C<options>>[,
+I<C<callback>>]])>
+
+
+
+
+creates a subrequest with the given C<uri> and
+C<options>, and installs
+an optional completion C<callback> (0.2.0).
+
+
+
+If C<options> is a string, then it
+holds the subrequest arguments string.
+Otherwise C<options> is expected to be
+an object with the following keys:
+
+=over
+
+
+=item C<args>
+
+
+
+arguments string
+
+
+=item C<body>
+
+
+
+request body
+
+
+=item C<method>
+
+
+
+HTTP method
+
+
+=back
+
+
+
+
+
+
+
+The C<callback> receives a response object
+with the following properties:
+C<uri>, C<method>,
+C<status>, C<contentType>,
+C<contentLength>, C<headers>,
+C<args>.
+These properties have the same meaning as the request object properties.
+Additionally, a reply object has the C<body> property
+holding the subrequest response body
+and the C<parent> property
+referencing the parent request object.
+
+
 
 
 
@@ -379,6 +488,24 @@ sends a part of the response body to the client
 
 
 finishes sending a response to the client
+
+
+
+=item C<return(status[, string])>
+
+
+
+
+sends
+the entire response with the specified C<status> to the client
+(0.2.0)
+
+
+It is possible to specify either a redirect URL
+(for codes 301, 302, 303, 307, and 308)
+or the response body text (for other codes) as the second argument.
+
+
 
 
 

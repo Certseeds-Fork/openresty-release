@@ -16,8 +16,9 @@ is used to define groups of servers that can be referenced
 by the L<ngx_http_proxy_module>,
 L<ngx_http_fastcgi_module>,
 L<ngx_http_uwsgi_module>,
-L<ngx_http_scgi_module>, and
-L<ngx_http_memcached_module> directives.
+L<ngx_http_scgi_module>,
+L<ngx_http_memcached_module>, and
+L<ngx_http_grpc_module> directives.
 
 
 
@@ -231,8 +232,9 @@ What is considered an unsuccessful attempt is defined by the
 L<ngx_http_proxy_module>,
 L<ngx_http_fastcgi_module>,
 L<ngx_http_uwsgi_module>,
-L<ngx_http_scgi_module>, and
-L<ngx_http_memcached_module>
+L<ngx_http_scgi_module>,
+L<ngx_http_memcached_module>, and
+L<ngx_http_grpc_module>
 directives.
 
 
@@ -436,6 +438,26 @@ L</hash> and L</ip_hash> load balancing methods.
 
 
 
+=item 
+C<drain>
+
+
+
+
+
+puts the server into the “draining” mode (1.13.6).
+In this mode, only requests bound to the server
+will be proxied to it.
+
+B<NOTE>
+
+Prior to version 1.13.6,
+the parameter could be changed only with the
+L<API|ngx_http_api_module> module.
+
+
+
+
 
 =back
 
@@ -491,9 +513,16 @@ as part of our commercial subscription,
 such groups allow changing the group membership
 or modifying the settings of a particular server
 without the need of restarting nginx.
-The configuration is accessible via a special location
+The configuration is accessible via the
+L<API|ngx_http_api_module> module (1.13.3).
+
+B<NOTE>
+
+Prior to version 1.13.3,
+the configuration was accessible only via a special location
 handled by
 L<ngx_http_upstream_conf_module>.
+
 
 
 
@@ -1104,7 +1133,8 @@ B<syntax:> sticky I<
     C<lookup=>I<C<$variable>>
     C<zone=>I<C<name>>:I<C<size>>
     [C<timeout=>I<C<time>>]
-    [C<header>]>
+    [C<header>]
+    [C<sync>]>
 
 
 
@@ -1359,7 +1389,7 @@ non-empty variable is used.
 
 Sessions are stored in a shared memory zone, whose I<C<name>> and
 I<C<size>> are configured by the C<zone> parameter.
-One megabyte zone can store about 8000 sessions on the 64-bit platform.
+One megabyte zone can store about 4000 sessions on the 64-bit platform.
 The sessions that are not accessed during the time specified by the
 C<timeout> parameter get removed from the zone.
 By default, C<timeout> is set to 10 minutes.
@@ -1370,6 +1400,14 @@ By default, C<timeout> is set to 10 minutes.
 
 The C<header> parameter (1.13.1) allows creating a session
 right after receiving response headers from the upstream server.
+
+
+
+
+
+The C<sync> parameter (1.13.8) enables
+L<synchronization|ngx_stream_zone_sync_module>
+of the shared memory zone.
 
 
 
@@ -1546,6 +1584,20 @@ Only the header fields from the response of the last server are saved.
 
 
 
+=item C<$upstream_queue_time>
+
+
+
+
+keeps time the request spent in the upstream queue
+(1.13.9);
+the time is kept in seconds with millisecond resolution.
+Times of several responses
+are separated by commas and colons like addresses in the
+$upstream_addr variable.
+
+
+
 =item C<$upstream_response_length>
 
 
@@ -1585,6 +1637,16 @@ are separated by commas and colons like addresses in the
 $upstream_addr variable.
 If a server cannot be selected,
 the variable keeps the C<502> (C<Bad Gateway>) status code.
+
+
+
+=item C<$upstream_trailer_>I<C<name>>
+
+
+
+
+keeps fields from the end of the response
+obtained from the upstream server (1.13.10).
 
 
 

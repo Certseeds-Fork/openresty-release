@@ -159,7 +159,7 @@ ngx_stream_ssl_preread_handler(ngx_stream_session_t *s)
 
         rc = ngx_stream_ssl_preread_parse_record(ctx, p, p + len);
         if (rc != NGX_AGAIN) {
-            return rc;
+            return rc == NGX_OK ? NGX_DECLINED : rc;
         }
 
         p += len;

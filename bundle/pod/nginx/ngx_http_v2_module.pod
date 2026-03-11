@@ -81,6 +81,38 @@ black list and supported by clients.
 
 =head1 Directives
 
+=head2 http2_body_preread_size
+
+
+B<syntax:> http2_body_preread_size I<I<C<size>>>
+
+
+B<default:> I<64k>
+
+
+B<context:> I<http>
+
+
+B<context:> I<server>
+
+
+
+This directive appeared in version 1.11.0.
+
+
+
+
+
+Sets the I<C<size>> of the buffer per each request
+in which the request body may be saved
+before it is started to be processed.
+
+
+
+
+
+
+
 =head2 http2_chunk_size
 
 
@@ -114,38 +146,6 @@ L<HOL blocking|http://en.wikipedia.org/wiki/Head-of-line_blocking>.
 
 
 
-=head2 http2_body_preread_size
-
-
-B<syntax:> http2_body_preread_size I<I<C<size>>>
-
-
-B<default:> I<64k>
-
-
-B<context:> I<http>
-
-
-B<context:> I<server>
-
-
-
-This directive appeared in version 1.11.0.
-
-
-
-
-
-Sets the I<C<size>> of the buffer per each request
-in which the request body may be saved
-before it is started to be processed.
-
-
-
-
-
-
-
 =head2 http2_idle_timeout
 
 
@@ -165,6 +165,37 @@ B<context:> I<server>
 
 
 Sets the timeout of inactivity after which the connection is closed.
+
+
+
+
+
+
+
+=head2 http2_max_concurrent_pushes
+
+
+B<syntax:> http2_max_concurrent_pushes I<I<C<number>>>
+
+
+B<default:> I<10>
+
+
+B<context:> I<http>
+
+
+B<context:> I<server>
+
+
+
+This directive appeared in version 1.13.9.
+
+
+
+
+
+Limits the maximum number of concurrent
+push requests in a connection.
 
 
 
@@ -281,10 +312,103 @@ This directive appeared in version 1.11.6.
 
 
 
-Sets the maximum number of requests that can be
-served through one HTTPE<sol>2 connection,
-after which the connection is closed
-and the client should use a new connection.
+Sets the maximum number of requests (including
+push requests) that can be served
+through one HTTPE<sol>2 connection,
+after which the next client request will lead to connection closing
+and the need of establishing a new connection.
+
+
+
+
+
+
+
+=head2 http2_push
+
+
+B<syntax:> http2_push I<I<C<uri>> E<verbar> C<off>>
+
+
+B<default:> I<off>
+
+
+B<context:> I<http>
+
+
+B<context:> I<server>
+
+
+B<context:> I<location>
+
+
+
+This directive appeared in version 1.13.9.
+
+
+
+
+
+Pre-emptively sends
+(L<pushes|https://tools.ietf.org/html/rfc7540#section-8.2>)
+a request to the specified I<C<uri>>
+along with the response to the original request.
+Only relative URIs with absolute path will be processed,
+for example:
+
+    
+    http2_push /static/css/main.css;
+
+
+The I<C<uri>> value can contain variables.
+
+
+
+
+
+Several C<http2_push> directives
+can be specified on the same configuration level.
+The C<off> parameter cancels the effect
+of the C<http2_push> directives
+inherited from the previous configuration level.
+
+
+
+
+
+
+
+=head2 http2_push_preload
+
+
+B<syntax:> http2_push_preload I<C<on> E<verbar> C<off>>
+
+
+B<default:> I<off>
+
+
+B<context:> I<http>
+
+
+B<context:> I<server>
+
+
+B<context:> I<location>
+
+
+
+This directive appeared in version 1.13.9.
+
+
+
+
+
+Enables automatic conversion of
+L<preload
+links|https://www.w3.org/TR/preload/#server-push-http-2>
+specified in the C<Link> response header fields into
+L<push|https://tools.ietf.org/html/rfc7540#section-8.2>
+requests.
 
 
 

@@ -84,9 +84,12 @@ for example, from a real IP address of a client:
 
 
 In order for this parameter to work,
-it is necessary to run nginx worker processes with the
-L<superuser|ngx_core_module> privileges
-and configure kernel routing table
+it is usually necessary to run nginx worker processes with the
+L<superuser|ngx_core_module> privileges.
+On Linux it is not required (1.13.8) as if
+the C<transparent> parameter is specified, worker processes
+inherit the C<CAP_NET_RAW> capability from the master process.
+It is also necessary to configure kernel routing table
 to intercept network traffic from the proxied server.
 
 
@@ -3203,6 +3206,45 @@ Passphrases are tried in turn when loading the key.
 
 
 
+=head2 proxy_ssl_protocols
+
+
+B<syntax:> proxy_ssl_protocols I<
+    [C<SSLv2>]
+    [C<SSLv3>]
+    [C<TLSv1>]
+    [C<TLSv1.1>]
+    [C<TLSv1.2>]
+    [C<TLSv1.3>]>
+
+
+B<default:> I<TLSv1 TLSv1.1 TLSv1.2>
+
+
+B<context:> I<http>
+
+
+B<context:> I<server>
+
+
+B<context:> I<location>
+
+
+
+This directive appeared in version 1.5.6.
+
+
+
+
+
+Enables the specified protocols for requests to a proxied HTTPS server.
+
+
+
+
+
+
+
 =head2 proxy_ssl_server_name
 
 
@@ -3265,45 +3307,6 @@ the proxied server.
 If the errors
 “C<SSL3_GET_FINISHED:digest check failed>”
 appear in the logs, try disabling session reuse.
-
-
-
-
-
-
-
-=head2 proxy_ssl_protocols
-
-
-B<syntax:> proxy_ssl_protocols I<
-    [C<SSLv2>]
-    [C<SSLv3>]
-    [C<TLSv1>]
-    [C<TLSv1.1>]
-    [C<TLSv1.2>]
-    [C<TLSv1.3>]>
-
-
-B<default:> I<TLSv1 TLSv1.1 TLSv1.2>
-
-
-B<context:> I<http>
-
-
-B<context:> I<server>
-
-
-B<context:> I<location>
-
-
-
-This directive appeared in version 1.5.6.
-
-
-
-
-
-Enables the specified protocols for requests to a proxied HTTPS server.
 
 
 

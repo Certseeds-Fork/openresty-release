@@ -104,25 +104,26 @@ commercial subscription.
     }
 
 
-All API requests include a supported API version in the URI.
+All API requests include
+a supported API version in the URI.
 Examples of API requests with this configuration:
 
     
-    http://127.0.0.1/api/1/
-    http://127.0.0.1/api/1/nginx
-    http://127.0.0.1/api/1/connections
-    http://127.0.0.1/api/1/http/requests
-    http://127.0.0.1/api/1/http/server_zones/server_backend
-    http://127.0.0.1/api/1/http/caches/cache_backend
-    http://127.0.0.1/api/1/http/upstreams/backend
-    http://127.0.0.1/api/1/http/upstreams/backend/servers/
-    http://127.0.0.1/api/1/http/upstreams/backend/servers/1
-    http://127.0.0.1/api/1/http/keyvals/one?key=arg1
-    http://127.0.0.1/api/1/stream/
-    http://127.0.0.1/api/1/stream/server_zones/server_backend
-    http://127.0.0.1/api/1/stream/upstreams/
-    http://127.0.0.1/api/1/stream/upstreams/backend
-    http://127.0.0.1/api/1/stream/upstreams/backend/servers/1
+    http://127.0.0.1/api/3/
+    http://127.0.0.1/api/3/nginx
+    http://127.0.0.1/api/3/connections
+    http://127.0.0.1/api/3/http/requests
+    http://127.0.0.1/api/3/http/server_zones/server_backend
+    http://127.0.0.1/api/3/http/caches/cache_backend
+    http://127.0.0.1/api/3/http/upstreams/backend
+    http://127.0.0.1/api/3/http/upstreams/backend/servers/
+    http://127.0.0.1/api/3/http/upstreams/backend/servers/1
+    http://127.0.0.1/api/3/http/keyvals/one?key=arg1
+    http://127.0.0.1/api/3/stream/
+    http://127.0.0.1/api/3/stream/server_zones/server_backend
+    http://127.0.0.1/api/3/stream/upstreams/
+    http://127.0.0.1/api/3/stream/upstreams/backend
+    http://127.0.0.1/api/3/stream/upstreams/backend/servers/1
 
 
 
@@ -164,7 +165,7 @@ By default, the API is read-only.
 All API requests should contain a supported API version in the URI.
 If the request URI equals the location prefix,
 the list of supported API versions is returned.
-The current and the only API version is “C<1>”.
+The current API version is “C<3>”.
 
 
 
@@ -174,10 +175,48 @@ The optional “C<fields>” argument in the request line
 specifies which fields of the requested objects will be output:
 
     
-    http://127.0.0.1/api/1/nginx?fields=version,build
+    http://127.0.0.1/api/3/nginx?fields=version,build
 
 
 
+
+
+
+
+
+
+=head1 Compatibility
+
+
+
+
+=over
+
+
+
+
+=item *
+
+The E<sol>streamE<sol>zone_syncE<sol> data
+were added in version 3.
+
+
+
+=item *
+
+The drain parameter
+was added in version 2.
+
+
+
+=item *
+
+The E<sol>streamE<sol>keyvalsE<sol> data
+were added in version 2.
+
+
+
+=back
 
 
 

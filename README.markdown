@@ -10,6 +10,8 @@ Table of Contents
 * [Description](#description)
     * [For Users](#for-users)
     * [For Bundle Maintainers](#for-bundle-maintainers)
+* [Additional Features](#additional-features)
+    * [resolv.conf parsing](#resolvconf-parsing)
 * [Mailing List](#mailing-list)
 * [Report Bugs](#report-bugs)
 * [Copyright & License](#copyright--license)
@@ -58,6 +60,35 @@ is as simple as running the following commands:
 ```bash
 sudo dnf install perl dos2unix mercurial
 ```
+
+[Back to TOC](#table-of-contents)
+
+Additional Features
+===================
+
+In additional to the standard nginx core features, this bundle also supports the following:
+
+[Back to TOC](#table-of-contents)
+
+resolv.conf parsing
+--------------------
+
+**syntax:** *resolver address ... [valid=time] [ipv6=on|off] [local=on|off|path]*
+
+**default:** *-*
+
+**context:** *http, stream, server, location*
+
+Similar to the [`resolver` directive](https://nginx.org/en/docs/http/ngx_http_core_module.html#resolver)
+in standard nginx core with additional support for parsing additional resolvers from the `resolv.conf` file
+format.
+
+When `local=on`, the standard path of `/etc/resolv.conf` will be used. You may also specify arbitrary
+path to be used for parsing, for example: `local=/tmp/test.conf`.
+
+When `local=off`, parsing will be disabled (this is the default).
+
+This feature is not available on Windows platforms.
 
 [Back to TOC](#table-of-contents)
 

@@ -1016,7 +1016,7 @@ using the “C<=>I<C<response>>” syntax, for example:
 
 
 If an error response is processed by a proxied server
-or a FastCGIE<sol>uwsgiE<sol>SCGI server,
+or a FastCGIE<sol>uwsgiE<sol>SCGIE<sol>gRPC server,
 and the server may return different response codes (e.g., 200, 302, 401
 or 404), it is possible to respond with the code it returns:
 
@@ -1560,9 +1560,11 @@ C<PATCH>.
 Allowing the C<GET> method makes the
 C<HEAD> method also allowed.
 Access to other methods can be limited using the
-L<ngx_http_access_module|ngx_http_access_module>
+L<ngx_http_access_module|ngx_http_access_module>,
+L<ngx_http_auth_basic_module|ngx_http_auth_basic_module>,
 and
-L<ngx_http_auth_basic_module|ngx_http_auth_basic_module>
+L<ngx_http_auth_jwt_module|ngx_http_auth_jwt_module>
+(1.13.10)
 modules directives:
 
     
@@ -2003,6 +2005,11 @@ allows specifying that all connections accepted on this port should use the
 L<PROXY
 protocol|http://www.haproxy.org/download/1.5/doc/proxy-protocol.txt>.
 
+B<NOTE>
+
+The PROXY protocol version 2 is supported since version 1.13.11.
+
+
 
 
 
@@ -2422,8 +2429,9 @@ and requests are processed by one of
 L<ngx_http_proxy_module>,
 L<ngx_http_fastcgi_module>,
 L<ngx_http_uwsgi_module>,
-L<ngx_http_scgi_module>, or
-L<ngx_http_memcached_module>,
+L<ngx_http_scgi_module>,
+L<ngx_http_memcached_module>, or
+L<ngx_http_grpc_module>,
 then the special processing is performed.
 In response to a request with URI equal to this string,
 but without the trailing slash,
@@ -3922,6 +3930,52 @@ An empty string disables the emission of the C<Server> field.
 
 
 
+=head2 subrequest_output_buffer_size
+
+
+B<syntax:> subrequest_output_buffer_size I<I<C<size>>>
+
+
+B<default:> I<4kE<verbar>8k>
+
+
+B<context:> I<http>
+
+
+B<context:> I<server>
+
+
+B<context:> I<location>
+
+
+
+This directive appeared in version 1.13.10.
+
+
+
+
+
+Sets the I<C<size>> of the buffer used for
+storing the response body of a subrequest.
+By default, the buffer size is equal to one memory page.
+This is either 4K or 8K, depending on a platform.
+It can be made smaller, however.
+
+
+
+
+
+The directive is applicable only for subrequests
+with response bodies saved into memory.
+For example, such subrequests are created by
+L<SSI|ngx_http_ssi_module>.
+
+
+
+
+
+
+
 =head2 tcp_nodelay
 
 
@@ -3944,8 +3998,11 @@ B<context:> I<location>
 
 
 Enables or disables the use of the C<TCP_NODELAY> option.
-The option is enabled only when a connection is transitioned into the
+The option is enabled when a connection is transitioned into the
 keep-alive state.
+Additionally, it is enabled on SSL connections,
+for unbuffered proxying,
+and for L<WebSocket|websocket> proxying.
 
 
 

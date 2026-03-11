@@ -25,6 +25,12 @@ L<install>
 
 =item *
 
+L<configure>
+
+
+
+=item *
+
 L<beginners_guide>
 
 
@@ -180,12 +186,6 @@ L<Chapter “nginx” in
 
 =over
 
-
-
-
-=item *
-
-L<configure>
 
 
 
@@ -420,6 +420,12 @@ L<ngx_http_geo_module|ngx_http_geo_module>
 =item *
 
 L<ngx_http_geoip_module|ngx_http_geoip_module>
+
+
+
+=item *
+
+L<ngx_http_grpc_module|ngx_http_grpc_module>
 
 
 
@@ -765,6 +771,12 @@ L<ngx_stream_js_module|ngx_stream_js_module>
 
 =item *
 
+L<ngx_stream_keyval_module|ngx_stream_keyval_module>
+
+
+
+=item *
+
 L<ngx_stream_limit_conn_module|ngx_stream_limit_conn_module>
 
 
@@ -826,6 +838,12 @@ L<ngx_stream_upstream_module|ngx_stream_upstream_module>
 =item *
 
 L<ngx_stream_upstream_hc_module|ngx_stream_upstream_hc_module>
+
+
+
+=item *
+
+L<ngx_stream_zone_sync_module|ngx_stream_zone_sync_module>
 
 
 

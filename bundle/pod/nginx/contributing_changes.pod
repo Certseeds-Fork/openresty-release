@@ -28,45 +28,11 @@ with the following command:
 
 
 
-Changes should be formatted according to the code style used by nginx.
-Code formatting should not rely on such editor features like syntax
-highlighting or automatic line breaking.
-Below are some basic rules:
-
-=over
-
-
-
-
-=item *
-
-maximum text width is 80 characters
-
-
-
-=item *
-
-indentation is four spaces
-
-
-
-=item *
-
-no tabs
-
-
-
-=item *
-
-logical code blocks in a file are separated with two empty lines
-
-
-
-=back
-
-
-Examine how existing nginx sources are formatted and mimic this style
-in your code.
+Changes should be formatted according to the
+L<code style|development_guide>
+used by nginx.
+Sometimes, there is no clear rule; in such cases
+examine how existing nginx sources are formatted and mimic this style.
 Changes will more likely be accepted if style corresponds to the surrounding
 code.
 

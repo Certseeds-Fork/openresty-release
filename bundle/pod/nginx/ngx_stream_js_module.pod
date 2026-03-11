@@ -12,7 +12,7 @@ ngx_stream_js_module - Module ngx_stream_js_module
 
 
 The C<ngx_stream_js_module> module is used to implement
-handlers in L<nginScript|njs_about> —
+handlers in L<njs|njs_about> —
 a subset of the JavaScript language.
 
 
@@ -20,7 +20,7 @@ a subset of the JavaScript language.
 
 
 This module is not built by default, it should be compiled with
-the nginScript module using the
+the njs module using the
 C<--add-module> configuration parameter:
 
     
@@ -28,7 +28,7 @@ C<--add-module> configuration parameter:
 
 
 The L<repository|http://hg.nginx.org/njs>
-with the nginScript module can be cloned with the following command
+with the njs module can be cloned with the following command
 (requires L<Mercurial|https://www.mercurial-scm.org> client):
 
     
@@ -187,7 +187,7 @@ B<context:> I<server>
 
 
 
-Sets an nginScript function which will be called at the
+Sets an njs function which will be called at the
 L<access|stream_processing> phase.
 
 
@@ -233,7 +233,7 @@ B<context:> I<stream>
 
 
 
-Specifies a file that implements server and variable handlers in nginScript.
+Specifies a file that implements server and variable handlers in njs.
 
 
 
@@ -257,7 +257,7 @@ B<context:> I<server>
 
 
 
-Sets an nginScript function which will be called at the
+Sets an njs function which will be called at the
 L<preread|stream_processing> phase.
 
 
@@ -280,7 +280,7 @@ B<context:> I<stream>
 
 
 
-Sets an nginScript function for the specified variable.
+Sets an njs function for the specified variable.
 
 
 
@@ -292,7 +292,7 @@ Sets an nginScript function for the specified variable.
 
 
 
-Each stream nginScript handler receives one argument, a stream session object.
+Each stream njs handler receives one argument, a stream session object.
 
 
 
@@ -417,6 +417,7 @@ The session object has the following methods:
 
 
 writes a sent I<C<string>> to the error log
+on the C<info> level of logging
 
 
 

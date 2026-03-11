@@ -140,3 +140,59 @@ L<www.iana.org|http://www.iana.org/assignments/mail-parameters>.
 
 
 
+=head2 smtp_client_buffer
+
+
+B<syntax:> smtp_client_buffer I<I<C<size>>>
+
+
+B<default:> I<4kE<verbar>8k>
+
+
+B<context:> I<mail>
+
+
+B<context:> I<server>
+
+
+
+
+
+Sets the I<C<size>> of the buffer used for reading SMTP commands.
+By default, the buffer size is equal to one memory page.
+This is either 4K or 8K, depending on a platform.
+
+
+
+
+
+
+
+=head2 smtp_greeting_delay
+
+
+B<syntax:> smtp_greeting_delay I<I<C<time>>>
+
+
+B<default:> I<0>
+
+
+B<context:> I<mail>
+
+
+B<context:> I<server>
+
+
+
+
+
+Allows setting a delay before sending an SMTP greeting
+in order to reject clients who fail to wait for the greeting before
+sending SMTP commands.
+
+
+
+
+
+
+

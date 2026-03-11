@@ -150,6 +150,11 @@ allows specifying that all connections accepted on this port should use the
 L<PROXY
 protocol|http://www.haproxy.org/download/1.5/doc/proxy-protocol.txt>.
 
+B<NOTE>
+
+The PROXY protocol version 2 is supported since version 1.13.11.
+
+
 
 
 
