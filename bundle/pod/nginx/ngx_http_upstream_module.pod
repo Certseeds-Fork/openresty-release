@@ -1917,6 +1917,35 @@ Only the header fields from the response of the last server are saved.
 
 
 
+=item C<$upstream_last_server_name>
+
+
+
+
+keeps the name of last selected upstream server (1.25.3);
+allows passing it
+L<through SNI|ngx_http_proxy_module>:
+
+    
+    proxy_ssl_server_name on;
+    proxy_ssl_name        $upstream_last_server_name;
+
+
+
+
+
+
+B<NOTE>
+
+This variable is available as part of our
+commercial subscription.
+
+
+
+
+
+
+
 =item C<$upstream_queue_time>
 
 

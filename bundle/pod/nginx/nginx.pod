@@ -917,6 +917,12 @@ L<ngx_google_perftools_module|ngx_google_perftools_module>
 
 =item *
 
+L<ngx_mgmt_module|ngx_mgmt_module>
+
+
+
+=item *
+
 L<ngx_otel_module|ngx_otel_module>
 
 
