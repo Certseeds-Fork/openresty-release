@@ -11,7 +11,7 @@ ngx_otel_module - Module ngx_otel_module
 
 
 
-The C<ngx_otel_module> module provides
+The C<ngx_otel_module> module (1.23.4) provides
 L<OpenTelemetry|https://opentelemetry.io>
 distributed tracing support.
 The module supports
@@ -22,22 +22,15 @@ context propagation and OTLPE<sol>gRPC export protocol.
 
 
 
-The source code of the module is available
-L<here|https://github.com/nginxinc/nginx-otel>.
-Download and install instructions are available
-L<here|https://github.com/nginxinc/nginx-otel/blob/main/README.md>.
 
+B<NOTE>
 
+This module is available as part of our
+commercial subscription
+in C<nginx-plus-module-otel> package.
+After installation, the module can be loaded
+L<dynamically|ngx_core_module>.
 
-
-
-The module is also available in a prebuilt
-C<nginx-module-otel>
-L<package|linux_packages>
-since 1.25.3
-and in C<nginx-plus-module-otel> package
-as part of our
-commercial subscription since 1.23.4.
 
 
 
@@ -98,39 +91,16 @@ Specifies OTel data export parameters:
 
 
 
-=item C<
-    endpoint [(httpE<verbar>https):E<sol>E<sol>]host:port;>
+=item C<endpoint>
 
 
 
 
-OTLPE<sol>gRPC endpoint that will accept telemetry data.
-TLS is supported since 0.1.2.
+the address of OTLPE<sol>gRPC endpoint that will accept telemetry data.
 
 
 
-=item C<
-    trusted_certificate path;>
-
-
-
-
-the CA certificates file in PEM format used to verify TLS endpoint
-(since 0.1.2).
-Defaults to OS provided CA bundle.
-
-
-
-=item C<header name value;>
-
-
-
-
-a custom HTTP header to add to telemetry export request (since 0.1.2).
-
-
-
-=item C<interval time;>
+=item C<interval>
 
 
 
@@ -140,7 +110,7 @@ by default is C<5> seconds.
 
 
 
-=item C<batch_size number;>
+=item C<batch_size>
 
 
 
@@ -150,7 +120,7 @@ by default is C<512>.
 
 
 
-=item C<batch_count number;>
+=item C<batch_count>
 
 
 
@@ -169,9 +139,10 @@ Example:
 
     
     otel_exporter {
-        endpoint https://otel-example.nginx.com:4317;
-    
-        header X-API-Token "my-token-value";
+        endpoint    localhost:4317;
+        interval    5s;
+        batch_size  512;
+        batch_count 4;
     }
 
 
@@ -200,31 +171,6 @@ B<context:> I<http>
 Sets the
 “L<C<service.name>|https://opentelemetry.io/docs/reference/specification/resource/semantic_conventions/#service>”
 attribute of the OTel resource.
-
-
-
-
-
-
-
-=head2 otel_resource_attr
-
-
-B<syntax:> otel_resource_attr I<I<C<name>> I<C<value>>>
-
-
-
-B<context:> I<http>
-
-
-
-This directive appeared in version 0.1.2.
-
-
-
-
-
-Sets a custom OTel resource attribute.
 
 
 
@@ -426,9 +372,7 @@ The value can contain variables.
 
 
 
-The following
-L<span
-attributes|https://opentelemetry.io/docs/specs/semconv/registry/attributes/http/>
+The following L<span attributes|https://github.com/open-telemetry/opentelemetry-specification/blob/main/specification/trace/semantic_conventions/http.md>
 are added automatically:
 
 

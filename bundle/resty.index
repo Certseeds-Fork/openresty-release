@@ -1,5 +1,5 @@
 dist nginx
-  modules accept_failed beginners_guide chunked_encoding_from_backend configure configuring_https_servers contributing_changes control converting_rewrite_rules daemon_master_process_off debugging_log development_guide events example faq freebsd_tuning governance hash howto_build_on_win32 install license_copyright load_balancing nginx nginx nginx_dtrace_pid_provider ngx_core_module ngx_google_perftools_module ngx_http_access_module ngx_http_acme_module ngx_http_addition_module ngx_http_api_module_head ngx_http_auth_basic_module ngx_http_auth_jwt_module ngx_http_auth_request_module ngx_http_auth_require_module ngx_http_autoindex_module ngx_http_browser_module ngx_http_charset_module ngx_http_core_module ngx_http_dav_module ngx_http_empty_gif_module ngx_http_f4f_module ngx_http_fastcgi_module ngx_http_flv_module ngx_http_geo_module ngx_http_geoip_module ngx_http_grpc_module ngx_http_gunzip_module ngx_http_gzip_module ngx_http_gzip_static_module ngx_http_headers_module ngx_http_hls_module ngx_http_image_filter_module ngx_http_index_module ngx_http_internal_redirect_module ngx_http_js_module ngx_http_keyval_module ngx_http_limit_conn_module ngx_http_limit_req_module ngx_http_log_module ngx_http_map_module ngx_http_memcached_module ngx_http_mirror_module ngx_http_mp4_module ngx_http_num_map_module ngx_http_oidc_module ngx_http_perl_module ngx_http_proxy_module ngx_http_proxy_protocol_vendor_module ngx_http_random_index_module ngx_http_realip_module ngx_http_referer_module ngx_http_rewrite_module ngx_http_scgi_module ngx_http_secure_link_module ngx_http_session_log_module ngx_http_slice_module ngx_http_spdy_module ngx_http_split_clients_module ngx_http_ssi_module ngx_http_ssl_module ngx_http_status_module ngx_http_stub_status_module ngx_http_sub_module ngx_http_tunnel_module ngx_http_upstream_conf_module ngx_http_upstream_hc_module ngx_http_upstream_module ngx_http_userid_module ngx_http_uwsgi_module ngx_http_v2_module ngx_http_v3_module ngx_http_xslt_module ngx_mail_auth_http_module ngx_mail_core_module ngx_mail_imap_module ngx_mail_pop3_module ngx_mail_proxy_module ngx_mail_realip_module ngx_mail_smtp_module ngx_mail_ssl_module ngx_mgmt_module ngx_otel_module ngx_stream_access_module ngx_stream_core_module ngx_stream_geo_module ngx_stream_geoip_module ngx_stream_js_module ngx_stream_keyval_module ngx_stream_limit_conn_module ngx_stream_log_module ngx_stream_map_module ngx_stream_mqtt_filter_module ngx_stream_mqtt_preread_module ngx_stream_num_map_module ngx_stream_pass_module ngx_stream_proxy_module ngx_stream_proxy_protocol_vendor_module ngx_stream_realip_module ngx_stream_return_module ngx_stream_set_module ngx_stream_split_clients_module ngx_stream_ssl_module ngx_stream_ssl_preread_module ngx_stream_upstream_hc_module ngx_stream_upstream_module ngx_stream_zone_sync_module quic request_processing server_names stream_processing switches syntax sys_errlist syslog variables_in_config websocket welcome_nginx_facebook windows
+  modules accept_failed beginners_guide chunked_encoding_from_backend configure configuring_https_servers contributing_changes control converting_rewrite_rules daemon_master_process_off debugging_log development_guide events example faq freebsd_tuning hash howto_build_on_win32 install license_copyright load_balancing nginx nginx_dtrace_pid_provider ngx_core_module ngx_google_perftools_module ngx_http_access_module ngx_http_addition_module ngx_http_api_module_head ngx_http_auth_basic_module ngx_http_auth_jwt_module ngx_http_auth_request_module ngx_http_autoindex_module ngx_http_browser_module ngx_http_charset_module ngx_http_core_module ngx_http_dav_module ngx_http_empty_gif_module ngx_http_f4f_module ngx_http_fastcgi_module ngx_http_flv_module ngx_http_geo_module ngx_http_geoip_module ngx_http_grpc_module ngx_http_gunzip_module ngx_http_gzip_module ngx_http_gzip_static_module ngx_http_headers_module ngx_http_hls_module ngx_http_image_filter_module ngx_http_index_module ngx_http_internal_redirect_module ngx_http_js_module ngx_http_keyval_module ngx_http_limit_conn_module ngx_http_limit_req_module ngx_http_log_module ngx_http_map_module ngx_http_memcached_module ngx_http_mirror_module ngx_http_mp4_module ngx_http_perl_module ngx_http_proxy_module ngx_http_proxy_protocol_vendor_module ngx_http_random_index_module ngx_http_realip_module ngx_http_referer_module ngx_http_rewrite_module ngx_http_scgi_module ngx_http_secure_link_module ngx_http_session_log_module ngx_http_slice_module ngx_http_spdy_module ngx_http_split_clients_module ngx_http_ssi_module ngx_http_ssl_module ngx_http_status_module ngx_http_stub_status_module ngx_http_sub_module ngx_http_upstream_conf_module ngx_http_upstream_hc_module ngx_http_upstream_module ngx_http_userid_module ngx_http_uwsgi_module ngx_http_v2_module ngx_http_v3_module ngx_http_xslt_module ngx_mail_auth_http_module ngx_mail_core_module ngx_mail_imap_module ngx_mail_pop3_module ngx_mail_proxy_module ngx_mail_realip_module ngx_mail_smtp_module ngx_mail_ssl_module ngx_otel_module ngx_stream_access_module ngx_stream_core_module ngx_stream_geo_module ngx_stream_geoip_module ngx_stream_js_module ngx_stream_keyval_module ngx_stream_limit_conn_module ngx_stream_log_module ngx_stream_map_module ngx_stream_mqtt_filter_module ngx_stream_mqtt_preread_module ngx_stream_proxy_module ngx_stream_proxy_protocol_vendor_module ngx_stream_realip_module ngx_stream_return_module ngx_stream_set_module ngx_stream_split_clients_module ngx_stream_ssl_module ngx_stream_ssl_preread_module ngx_stream_upstream_hc_module ngx_stream_upstream_module ngx_stream_zone_sync_module quic request_processing server_names stream_processing switches syntax sys_errlist syslog variables_in_config websocket welcome_nginx_facebook windows
 
 module accept_failed
   section 18 652 name
@@ -16,26 +16,25 @@ module chunked_encoding_from_backend
   section 18 883 name
 
 module configure
-  section 18 25846 name
+  section 18 26170 name
 
 module configuring_https_servers
-  section 18 1722 name
-  section 1722 3224 https server optimization
-  section 3224 6727 ssl certificate chains
-  section 6727 7585 a single http/https server
-  section 7585 11868 name-based https servers
-  section 8880 10213 an ssl certificate with several names
-  section 10213 11868 server name indication
-  section 11868 13550 compatibility
+  section 18 1750 name
+  section 1750 3266 https server optimization
+  section 3266 6946 ssl certificate chains
+  section 6946 7778 a single http/https server
+  section 7778 12008 name-based https servers
+  section 9073 10406 an ssl certificate with several names
+  section 10406 12008 server name indication
+  section 12008 13466 compatibility
 
 module contributing_changes
   section 18 78 name
-  section 78 315 getting sources
-  section 315 2270 formatting changes
-  section 2270 2882 before submitting
-  section 2882 3207 submitting changes
-  section 3207 3519 website
-  section 3519 3655 license
+  section 78 314 getting sources
+  section 314 2243 formatting changes
+  section 2243 2840 before submitting
+  section 2840 3110 submitting changes
+  section 3110 3246 license
 
 module control
   section 18 899 name
@@ -86,61 +85,61 @@ module development_guide
   section 44126 47861 buffer
   section 47861 51113 networking
   section 47881 51113 connection
-  section 51113 58489 events
+  section 51113 58493 events
   section 51129 53078 event
   section 53078 54162 i/o events
   section 54162 54966 timer events
-  section 54966 56702 posted events
-  section 56702 58489 event loop
-  section 58489 63295 processes
-  section 63295 67569 threads
-  section 67569 85480 modules
-  section 67586 71017 adding new modules
-  section 71017 77444 core modules
-  section 77444 85480 configuration directives
-  section 85480 169291 http
-  section 85494 88414 connection
-  section 88414 98229 request
-  section 98229 103813 configuration
-  section 103813 111015 phases
-  section 111015 118675 variables
-  section 111034 113976 accessing existing variables
-  section 113976 118675 creating variables
-  section 118675 121071 complex values
-  section 121071 124506 request redirection
-  section 124506 131516 subrequests
-  section 131516 133493 request finalization
-  section 133493 138208 request body
-  section 138208 143930 request body filters
-  section 143930 149274 response
-  section 144305 145629 response header
-  section 145629 149274 header filters
-  section 149274 150763 response body
-  section 150763 156085 response body filters
-  section 156085 157218 building filter modules
-  section 157218 160770 buffer reuse
-  section 160770 169291 load balancing
-  section 169291 169428 examples
-  section 169428 183516 code style
-  section 169448 170373 general rules
-  section 170373 171633 files
-  section 171633 172094 comments
-  section 172094 173150 preprocessor
-  section 173150 175420 types
-  section 175420 176938 variables
-  section 176938 178720 functions
-  section 178720 180764 expressions
-  section 180764 183031 conditionals and loops
-  section 183031 183516 labels
-  section 183516 184756 debugging memory issues
-  section 184756 189531 common pitfalls
-  section 184781 185447 writing a c module
-  section 185447 185924 c strings
-  section 185924 186608 global variables
-  section 186608 187075 manual memory management
-  section 187075 187656 threads
-  section 187656 188133 blocking libraries
-  section 188133 189531 http requests to external services
+  section 54966 56706 posted events
+  section 56706 58493 event loop
+  section 58493 63299 processes
+  section 63299 67573 threads
+  section 67573 85484 modules
+  section 67590 71021 adding new modules
+  section 71021 77448 core modules
+  section 77448 85484 configuration directives
+  section 85484 169295 http
+  section 85498 88418 connection
+  section 88418 98233 request
+  section 98233 103817 configuration
+  section 103817 111019 phases
+  section 111019 118679 variables
+  section 111038 113980 accessing existing variables
+  section 113980 118679 creating variables
+  section 118679 121075 complex values
+  section 121075 124510 request redirection
+  section 124510 131520 subrequests
+  section 131520 133497 request finalization
+  section 133497 138212 request body
+  section 138212 143934 request body filters
+  section 143934 149278 response
+  section 144309 145633 response header
+  section 145633 149278 header filters
+  section 149278 150767 response body
+  section 150767 156089 response body filters
+  section 156089 157222 building filter modules
+  section 157222 160774 buffer reuse
+  section 160774 169295 load balancing
+  section 169295 169427 examples
+  section 169427 183515 code style
+  section 169447 170372 general rules
+  section 170372 171632 files
+  section 171632 172093 comments
+  section 172093 173149 preprocessor
+  section 173149 175419 types
+  section 175419 176937 variables
+  section 176937 178719 functions
+  section 178719 180763 expressions
+  section 180763 183030 conditionals and loops
+  section 183030 183515 labels
+  section 183515 184755 debugging memory issues
+  section 184755 189514 common pitfalls
+  section 184780 185446 writing a c module
+  section 185446 185923 c strings
+  section 185923 186607 global variables
+  section 186607 187074 manual memory management
+  section 187074 187655 threads
+  section 187655 188132 blocking libraries
+  section 188132 189514 http requests to external services
 
 module events
   section 18 1854 name
@@ -153,25 +152,24 @@ module faq
 
 module freebsd_tuning
   section 18 83 name
-  section 83 1589 listen queues
-  section 1589 3552 socket buffers
-  section 3552 6723 mbufs, mbuf clusters, etc.
-  section 6723 6875 outgoing connections
-  section 6875 6956 finalizing connection
-
-module governance
-  section 18 454 name
-  section 454 971 our core commitments
-  section 971 1313 nginx open source principles
+  section 83 302 syncache and syncookies
+  section 302 1826 listen queues
+  section 1826 1877 sockets and files
+  section 1877 3863 socket buffers
+  section 3863 7821 mbufs, mbuf clusters, etc.
+  section 7821 7961 proxying
+  section 7961 8042 finalizing connection
+  section 8042 8099 i386 specific tuning
+  section 8099 8189 minor optimizations
 
 module hash
   section 18 1414 name
 
 module howto_build_on_win32
   section 18 108 name
-  section 108 798 prerequisites
-  section 798 2369 build steps
-  section 2369 2434 see also
+  section 108 809 prerequisites
+  section 809 2391 build steps
+  section 2391 2456 see also
 
 module install
   section 18 146 name
@@ -191,28 +189,14 @@ module load_balancing
   section 3072 4215 session persistence
   section 4215 5439 weighted load balancing
   section 5439 6439 health checks
-  section 6439 6979 further reading
-
-module nginx
-  section 18 5755 nginx.org website
-  section 323 1692 static site generation
-  section 1692 2324 local development with docker
-  section 2324 3420 local development with toolchain
-  section 2366 3105 prerequisities
-  section 3105 3286 building the site content
-  section 3286 3420 running the website locally
-  section 3420 5755 authoring content
-  section 3447 3491 how pages are constructed
-  section 3491 3684 making changes
-  section 3684 4528 creating new pages
-  section 4528 5755 style guide
+  section 6439 7570 further reading
 
 module nginx
   section 18 62 name
-  section 62 878 introduction
-  section 878 1237 how-to
-  section 1237 1351 development
-  section 1351 7947 modules reference
+  section 62 881 introduction
+  section 881 1233 how-to
+  section 1233 1347 development
+  section 1347 7433 modules reference
 
 module nginx_dtrace_pid_provider
   section 18 5021 name
@@ -221,7 +205,7 @@ module nginx_dtrace_pid_provider
 module ngx_core_module
   section 17 71 name
   section 71 297 example configuration
-  section 297 16411 directives
+  section 297 14866 directives
   section 316 930 accept_mutex
   section 930 1262 accept_mutex_delay
   section 1262 1457 daemon
@@ -237,22 +221,20 @@ module ngx_core_module
   section 7145 7596 multi_accept
   section 7596 8255 pcre_jit
   section 8255 8441 pid
-  section 8441 8678 ssl_engine
-  section 8678 9602 ssl_object_cache_inheritable
-  section 9602 10129 stall_threshold
-  section 10129 10922 thread_pool
-  section 10922 11597 timer_resolution
-  section 11597 11858 use
-  section 11858 12135 user
-  section 12135 12548 worker_aio_requests
-  section 12548 13129 worker_connections
-  section 13129 14293 worker_cpu_affinity
-  section 14293 14647 worker_priority
-  section 14647 15228 worker_processes
-  section 15228 15491 worker_rlimit_core
-  section 15491 15763 worker_rlimit_nofile
-  section 15763 16105 worker_shutdown_timeout
-  section 16105 16411 working_directory
+  section 8441 8584 ssl_engine
+  section 8584 9377 thread_pool
+  section 9377 10052 timer_resolution
+  section 10052 10313 use
+  section 10313 10590 user
+  section 10590 11003 worker_aio_requests
+  section 11003 11584 worker_connections
+  section 11584 12748 worker_cpu_affinity
+  section 12748 13102 worker_priority
+  section 13102 13683 worker_processes
+  section 13683 13946 worker_rlimit_core
+  section 13946 14218 worker_rlimit_nofile
+  section 14218 14560 worker_shutdown_timeout
+  section 14560 14866 working_directory
 
 module ngx_google_perftools_module
   section 17 560 name
@@ -267,29 +249,6 @@ module ngx_http_access_module
   section 1060 1847 directives
   section 1079 1464 allow
   section 1464 1847 deny
-
-module ngx_http_acme_module
-  aliases ngx_acme
-  section 17 645 name
-  section 645 1491 example configuration
-  section 1491 7446 directives
-  section 1510 1658 acme_issuer
-  section 1658 1871 uri
-  section 1871 2500 account_key
-  section 2500 2990 challenge
-  section 2990 3244 contact
-  section 3244 3875 external_account_key
-  section 3875 4282 preferred_chain
-  section 4282 4688 profile
-  section 4688 4933 ssl_trusted_certificate
-  section 4933 5132 ssl_verify
-  section 5132 5806 state_path
-  section 5806 6195 accept_terms_of_service
-  section 6195 6674 acme_shared_zone
-  section 6674 7446 acme_certificate
-  section 7446 7861 embedded variables
-  section 7638 7737 $acme_certificate
-  section 7737 7861 $acme_certificate_key
 
 module ngx_http_addition_module
   aliases ngx_addition
@@ -306,7 +265,7 @@ module ngx_http_api_module_head
   section 3022 4572 directives
   section 3041 3785 api
   section 3785 4572 status_zone
-  section 4572 6105 compatibility
+  section 4572 5942 compatibility
 
 module ngx_http_auth_basic_module
   aliases ngx_auth_basic
@@ -319,22 +278,22 @@ module ngx_http_auth_basic_module
 module ngx_http_auth_jwt_module
   aliases ngx_auth_jwt
   section 17 994 name
-  section 994 1963 supported algorithms
-  section 1963 2113 example configuration
-  section 2113 8294 directives
-  section 2132 2970 auth_jwt
-  section 2970 3722 auth_jwt_claim_set
-  section 3722 4224 auth_jwt_header_set
-  section 4224 4655 auth_jwt_key_cache
-  section 4655 5322 auth_jwt_key_file
-  section 5322 6561 auth_jwt_key_request
-  section 6561 7006 auth_jwt_leeway
-  section 7006 7459 auth_jwt_type
-  section 7459 8294 auth_jwt_require
-  section 8294 9228 embedded variables
-  section 8405 8548 $jwt_header_i<name>
-  section 8548 9003 $jwt_claim_i<name>
-  section 9003 9228 $jwt_payload
+  section 994 1922 supported algorithms
+  section 1922 2072 example configuration
+  section 2072 8262 directives
+  section 2091 2929 auth_jwt
+  section 2929 3681 auth_jwt_claim_set
+  section 3681 4183 auth_jwt_header_set
+  section 4183 4614 auth_jwt_key_cache
+  section 4614 5281 auth_jwt_key_file
+  section 5281 6520 auth_jwt_key_request
+  section 6520 6965 auth_jwt_leeway
+  section 6965 7427 auth_jwt_type
+  section 7427 8262 auth_jwt_require
+  section 8262 9196 embedded variables
+  section 8373 8516 $jwt_header_i<name>
+  section 8516 8971 $jwt_claim_i<name>
+  section 8971 9196 $jwt_payload
 
 module ngx_http_auth_request_module
   aliases ngx_auth_request
@@ -343,13 +302,6 @@ module ngx_http_auth_request_module
   section 1446 2122 directives
   section 1465 1759 auth_request
   section 1759 2122 auth_request_set
-
-module ngx_http_auth_require_module
-  aliases ngx_auth_require
-  section 17 486 name
-  section 486 838 example configuration
-  section 838 1455 directives
-  section 857 1455 auth_require
 
 module ngx_http_autoindex_module
   aliases ngx_autoindex
@@ -388,7 +340,7 @@ module ngx_http_charset_module
 module ngx_http_core_module
   aliases ngx_core
   section 17 85 name
-  section 85 67254 directives
+  section 85 66141 directives
   section 104 472 absolute_redirect
   section 472 2923 aio
   section 2923 3347 aio_write
@@ -412,128 +364,124 @@ module ngx_http_core_module
   section 11842 11942 on
   section 11942 12122 if_not_owner
   section 12122 13532 from=part
-  section 13532 14182 early_hints
-  section 14182 16337 error_page
-  section 16337 16642 etag
-  section 16642 16798 http
-  section 16798 17459 if_modified_since
-  section 17194 17267 off
-  section 17267 17302 exact
-  section 17302 17459 before
-  section 17459 18037 ignore_invalid_headers
-  section 18037 19386 internal
-  section 19386 20217 keepalive_disable
-  section 20217 20610 keepalive_min_timeout
-  section 20610 21274 keepalive_requests
-  section 21274 21685 keepalive_time
-  section 21685 22360 keepalive_timeout
-  section 22360 23307 large_client_header_buffers
-  section 23307 24147 limit_except
-  section 24147 25378 limit_rate
-  section 25378 25906 limit_rate_after
-  section 25906 26909 lingering_close
-  section 26909 27323 lingering_time
-  section 27323 27887 lingering_timeout
-  section 27887 36735 listen
-  section 36735 40901 location
-  section 40901 41164 log_not_found
-  section 41164 41417 log_subrequest
-  section 41417 41869 max_ranges
-  section 41869 42903 merge_slashes
-  section 42903 43218 msie_padding
-  section 43218 43472 msie_refresh
-  section 43472 44729 open_file_cache
-  section 44729 44997 open_file_cache_errors
-  section 44997 45389 open_file_cache_min_uses
-  section 45389 45646 open_file_cache_valid
-  section 45646 45987 output_buffers
-  section 45987 46363 port_in_redirect
-  section 46363 46711 postpone_output
-  section 46711 47279 read_ahead
-  section 47279 47595 recursive_error_pages
-  section 47595 47884 request_pool_size
-  section 47884 48655 reset_timedout_connection
-  section 48655 50427 resolver
-  section 50427 50682 resolver_timeout
-  section 50682 51393 root
-  section 51393 52158 satisfy
-  section 52158 52644 send_lowat
-  section 52644 53064 send_timeout
-  section 53064 54078 sendfile
-  section 54078 54480 sendfile_max_chunk
-  section 54480 54992 server
-  section 54992 57726 server_name
-  section 57726 58330 server_name_in_redirect
-  section 58330 58710 server_names_hash_bucket_size
-  section 58710 58997 server_names_hash_max_size
-  section 58997 59729 server_tokens
-  section 59729 60378 subrequest_output_buffer_size
-  section 60378 60807 tcp_nodelay
-  section 60807 61358 tcp_nopush
-  section 61358 64407 try_files
-  section 64407 65278 types
-  section 65278 65701 types_hash_bucket_size
-  section 65701 66018 types_hash_max_size
-  section 66018 66637 underscores_in_headers
-  section 66637 66913 variables_hash_bucket_size
-  section 66913 67254 variables_hash_max_size
-  section 67254 76494 embedded variables
-  section 67571 67643 $arg_i<name>
-  section 67643 67695 $args
-  section 67695 67849 $binary_remote_addr
-  section 67849 68048 $body_bytes_sent
-  section 68048 68124 $bytes_sent
-  section 68124 68192 $connection
-  section 68192 68297 $connection_requests
-  section 68297 68398 $connection_time
-  section 68398 68469 $content_length
-  section 68469 68536 $content_type
-  section 68536 68593 $cookie_i<name>
-  section 68593 68690 $document_root
-  section 68690 68736 $document_uri
-  section 68736 68910 $host
-  section 68910 68946 $hostname
-  section 68946 69122 $http_i<name>
-  section 69122 69222 $https
-  section 69222 69320 $is_args
-  section 69320 69433 $is_request_port
-  section 69433 69534 $limit_rate
-  section 69534 69628 $msec
-  section 69628 69673 $nginx_version
-  section 69673 69720 $pid
-  section 69720 69816 $pipe
-  section 69816 70030 $proxy_protocol_addr
-  section 70030 70241 $proxy_protocol_port
-  section 70241 70462 $proxy_protocol_server_addr
-  section 70462 70680 $proxy_protocol_server_port
-  section 70680 72390 $proxy_protocol_tlv_i<name>
-  section 72390 72437 $query_string
-  section 72437 72624 $realpath_root
-  section 72624 72668 $remote_addr
-  section 72668 72709 $remote_port
-  section 72709 72787 $remote_user
-  section 72787 72839 $request
-  section 72839 73127 $request_body
-  section 73127 73783 $request_body_file
-  section 73783 73888 $request_completion
-  section 73888 74024 $request_filename
-  section 74024 74134 $request_id
-  section 74134 74248 $request_length
-  section 74248 74334 $request_method
-  section 74334 74564 $request_port
-  section 74564 74737 $request_time
-  section 74737 74809 $request_uri
-  section 74809 74881 $scheme
-  section 74881 75063 $sent_http_i<name>
-  section 75063 75273 $sent_trailer_i<name>
-  section 75273 75529 $server_addr
-  section 75529 75602 $server_name
-  section 75602 75675 $server_port
-  section 75675 75870 $server_protocol
-  section 75870 76130 $status
-  section 76130 76219 $time_iso8601
-  section 76219 76299 $time_local
-  section 76299 76494 $uri
+  section 13532 15687 error_page
+  section 15687 15992 etag
+  section 15992 16148 http
+  section 16148 16809 if_modified_since
+  section 16544 16617 off
+  section 16617 16652 exact
+  section 16652 16809 before
+  section 16809 17387 ignore_invalid_headers
+  section 17387 18736 internal
+  section 18736 19567 keepalive_disable
+  section 19567 20231 keepalive_requests
+  section 20231 20642 keepalive_time
+  section 20642 21317 keepalive_timeout
+  section 21317 22264 large_client_header_buffers
+  section 22264 23104 limit_except
+  section 23104 24335 limit_rate
+  section 24335 24863 limit_rate_after
+  section 24863 25866 lingering_close
+  section 25866 26280 lingering_time
+  section 26280 26844 lingering_timeout
+  section 26844 35696 listen
+  section 35696 39862 location
+  section 39862 40125 log_not_found
+  section 40125 40378 log_subrequest
+  section 40378 40830 max_ranges
+  section 40830 41864 merge_slashes
+  section 41864 42179 msie_padding
+  section 42179 42433 msie_refresh
+  section 42433 43690 open_file_cache
+  section 43690 43958 open_file_cache_errors
+  section 43958 44350 open_file_cache_min_uses
+  section 44350 44607 open_file_cache_valid
+  section 44607 44948 output_buffers
+  section 44948 45324 port_in_redirect
+  section 45324 45672 postpone_output
+  section 45672 46240 read_ahead
+  section 46240 46556 recursive_error_pages
+  section 46556 46845 request_pool_size
+  section 46845 47616 reset_timedout_connection
+  section 47616 49388 resolver
+  section 49388 49643 resolver_timeout
+  section 49643 50354 root
+  section 50354 51045 satisfy
+  section 51045 51531 send_lowat
+  section 51531 51951 send_timeout
+  section 51951 52965 sendfile
+  section 52965 53367 sendfile_max_chunk
+  section 53367 53879 server
+  section 53879 56613 server_name
+  section 56613 57217 server_name_in_redirect
+  section 57217 57597 server_names_hash_bucket_size
+  section 57597 57884 server_names_hash_max_size
+  section 57884 58616 server_tokens
+  section 58616 59265 subrequest_output_buffer_size
+  section 59265 59694 tcp_nodelay
+  section 59694 60245 tcp_nopush
+  section 60245 63294 try_files
+  section 63294 64165 types
+  section 64165 64588 types_hash_bucket_size
+  section 64588 64905 types_hash_max_size
+  section 64905 65524 underscores_in_headers
+  section 65524 65800 variables_hash_bucket_size
+  section 65800 66141 variables_hash_max_size
+  section 66141 75038 embedded variables
+  section 66458 66530 $arg_i<name>
+  section 66530 66582 $args
+  section 66582 66736 $binary_remote_addr
+  section 66736 66935 $body_bytes_sent
+  section 66935 67011 $bytes_sent
+  section 67011 67079 $connection
+  section 67079 67184 $connection_requests
+  section 67184 67285 $connection_time
+  section 67285 67356 $content_length
+  section 67356 67423 $content_type
+  section 67423 67480 $cookie_i<name>
+  section 67480 67577 $document_root
+  section 67577 67623 $document_uri
+  section 67623 67797 $host
+  section 67797 67833 $hostname
+  section 67833 68009 $http_i<name>
+  section 68009 68109 $https
+  section 68109 68207 $is_args
+  section 68207 68308 $limit_rate
+  section 68308 68402 $msec
+  section 68402 68447 $nginx_version
+  section 68447 68494 $pid
+  section 68494 68590 $pipe
+  section 68590 68804 $proxy_protocol_addr
+  section 68804 69015 $proxy_protocol_port
+  section 69015 69236 $proxy_protocol_server_addr
+  section 69236 69454 $proxy_protocol_server_port
+  section 69454 71164 $proxy_protocol_tlv_i<name>
+  section 71164 71211 $query_string
+  section 71211 71398 $realpath_root
+  section 71398 71442 $remote_addr
+  section 71442 71483 $remote_port
+  section 71483 71561 $remote_user
+  section 71561 71613 $request
+  section 71613 71901 $request_body
+  section 71901 72557 $request_body_file
+  section 72557 72662 $request_completion
+  section 72662 72798 $request_filename
+  section 72798 72908 $request_id
+  section 72908 73022 $request_length
+  section 73022 73108 $request_method
+  section 73108 73281 $request_time
+  section 73281 73353 $request_uri
+  section 73353 73425 $scheme
+  section 73425 73607 $sent_http_i<name>
+  section 73607 73817 $sent_trailer_i<name>
+  section 73817 74073 $server_addr
+  section 74073 74146 $server_name
+  section 74146 74219 $server_port
+  section 74219 74414 $server_protocol
+  section 74414 74674 $status
+  section 74674 74763 $time_iso8601
+  section 74763 74843 $time_local
+  section 74843 75038 $uri
 
 module ngx_http_dav_module
   aliases ngx_dav
@@ -564,75 +512,71 @@ module ngx_http_fastcgi_module
   aliases ngx_fastcgi
   section 17 188 name
   section 188 628 example configuration
-  section 628 42479 directives
-  section 647 1556 fastcgi_allow_upstream
-  section 1556 2821 fastcgi_bind
-  section 2821 3211 fastcgi_bind_dynamic
-  section 3211 3708 fastcgi_buffer_size
-  section 3708 4972 fastcgi_buffering
-  section 4972 5405 fastcgi_buffers
-  section 5405 6080 fastcgi_busy_buffers_size
-  section 6080 6490 fastcgi_cache
-  section 6490 6980 fastcgi_cache_background_update
-  section 6980 7559 fastcgi_cache_bypass
-  section 7559 7813 fastcgi_cache_key
-  section 7813 8454 fastcgi_cache_lock
-  section 8454 8869 fastcgi_cache_lock_age
-  section 8869 9326 fastcgi_cache_lock_timeout
-  section 9326 9731 fastcgi_cache_max_range_offset
-  section 9731 10276 fastcgi_cache_methods
-  section 10276 10536 fastcgi_cache_min_uses
-  section 10536 15686 fastcgi_cache_path
-  section 15686 17063 fastcgi_cache_purge
-  section 17063 17446 fastcgi_cache_revalidate
-  section 17446 19257 fastcgi_cache_use_stale
-  section 19257 21147 fastcgi_cache_valid
-  section 21147 21766 fastcgi_catch_stderr
-  section 21766 22095 fastcgi_connect_timeout
-  section 22095 22484 fastcgi_force_ranges
-  section 22484 22976 fastcgi_hide_header
-  section 22976 23324 fastcgi_ignore_client_abort
-  section 23324 24443 fastcgi_ignore_headers
-  section 24443 25147 fastcgi_index
-  section 25147 25562 fastcgi_intercept_errors
-  section 25562 26110 fastcgi_keep_conn
-  section 26110 26791 fastcgi_limit_rate
-  section 26791 27584 fastcgi_max_temp_file_size
-  section 27584 30275 fastcgi_next_upstream
-  section 28127 28271 error
-  section 28271 28422 timeout
-  section 28422 28570 denied
-  section 28570 28647 invalid_header
-  section 28647 28718 http_500
-  section 28718 28789 http_503
-  section 28789 28860 http_403
-  section 28860 28931 http_404
-  section 28931 29012 http_429
-  section 29012 29338 non_idempotent
-  section 29338 30275 off
-  section 30275 30632 fastcgi_next_upstream_timeout
-  section 30632 30992 fastcgi_next_upstream_tries
-  section 30992 31542 fastcgi_no_cache
-  section 31542 33130 fastcgi_param
-  section 33130 33945 fastcgi_pass
-  section 33945 34189 fastcgi_pass_header
-  section 34189 34525 fastcgi_pass_request_body
-  section 34525 34881 fastcgi_pass_request_headers
-  section 34881 35333 fastcgi_read_timeout
-  section 35333 36013 fastcgi_request_buffering
-  section 36013 36584 fastcgi_request_dynamic
-  section 36584 37096 fastcgi_send_lowat
-  section 37096 37546 fastcgi_send_timeout
-  section 37546 38072 fastcgi_socket_keepalive
-  section 38072 38974 fastcgi_split_path_info
-  section 38974 40644 fastcgi_store
-  section 40644 41134 fastcgi_store_access
-  section 41134 41707 fastcgi_temp_file_write_size
-  section 41707 42479 fastcgi_temp_path
-  section 42479 42947 parameters passed to a fastcgi server
-  section 42947 44107 embedded variables
-  section 43126 43917 $fastcgi_script_name
-  section 43917 44107 $fastcgi_path_info
+  section 628 40317 directives
+  section 647 1912 fastcgi_bind
+  section 1912 2409 fastcgi_buffer_size
+  section 2409 3673 fastcgi_buffering
+  section 3673 4106 fastcgi_buffers
+  section 4106 4781 fastcgi_busy_buffers_size
+  section 4781 5191 fastcgi_cache
+  section 5191 5681 fastcgi_cache_background_update
+  section 5681 6260 fastcgi_cache_bypass
+  section 6260 6514 fastcgi_cache_key
+  section 6514 7155 fastcgi_cache_lock
+  section 7155 7570 fastcgi_cache_lock_age
+  section 7570 8027 fastcgi_cache_lock_timeout
+  section 8027 8432 fastcgi_cache_max_range_offset
+  section 8432 8977 fastcgi_cache_methods
+  section 8977 9237 fastcgi_cache_min_uses
+  section 9237 14387 fastcgi_cache_path
+  section 14387 15764 fastcgi_cache_purge
+  section 15764 16147 fastcgi_cache_revalidate
+  section 16147 17958 fastcgi_cache_use_stale
+  section 17958 19848 fastcgi_cache_valid
+  section 19848 20467 fastcgi_catch_stderr
+  section 20467 20796 fastcgi_connect_timeout
+  section 20796 21185 fastcgi_force_ranges
+  section 21185 21677 fastcgi_hide_header
+  section 21677 22025 fastcgi_ignore_client_abort
+  section 22025 23144 fastcgi_ignore_headers
+  section 23144 23848 fastcgi_index
+  section 23848 24263 fastcgi_intercept_errors
+  section 24263 24811 fastcgi_keep_conn
+  section 24811 25444 fastcgi_limit_rate
+  section 25444 26237 fastcgi_max_temp_file_size
+  section 26237 28745 fastcgi_next_upstream
+  section 26756 26900 error
+  section 26900 27051 timeout
+  section 27051 27128 invalid_header
+  section 27128 27199 http_500
+  section 27199 27270 http_503
+  section 27270 27341 http_403
+  section 27341 27412 http_404
+  section 27412 27493 http_429
+  section 27493 27819 non_idempotent
+  section 27819 28745 off
+  section 28745 29102 fastcgi_next_upstream_timeout
+  section 29102 29462 fastcgi_next_upstream_tries
+  section 29462 30012 fastcgi_no_cache
+  section 30012 31539 fastcgi_param
+  section 31539 32354 fastcgi_pass
+  section 32354 32598 fastcgi_pass_header
+  section 32598 32934 fastcgi_pass_request_body
+  section 32934 33290 fastcgi_pass_request_headers
+  section 33290 33742 fastcgi_read_timeout
+  section 33742 34422 fastcgi_request_buffering
+  section 34422 34934 fastcgi_send_lowat
+  section 34934 35384 fastcgi_send_timeout
+  section 35384 35910 fastcgi_socket_keepalive
+  section 35910 36812 fastcgi_split_path_info
+  section 36812 38482 fastcgi_store
+  section 38482 38972 fastcgi_store_access
+  section 38972 39545 fastcgi_temp_file_write_size
+  section 39545 40317 fastcgi_temp_path
+  section 40317 40785 parameters passed to a fastcgi server
+  section 40785 41945 embedded variables
+  section 40964 41755 $fastcgi_script_name
+  section 41755 41945 $fastcgi_path_info
 
 module ngx_http_flv_module
   aliases ngx_flv
@@ -645,15 +589,14 @@ module ngx_http_geo_module
   aliases ngx_geo
   section 17 197 name
   section 197 428 example configuration
-  section 428 3923 directives
-  section 447 3923 geo
+  section 428 3843 directives
+  section 447 3843 geo
   section 1419 1482 delete
   section 1482 1809 default
   section 1809 1909 include
   section 1909 2271 proxy
   section 2271 2717 proxy_recursive
-  section 2717 2914 ranges
-  section 2914 3923 volatile
+  section 2717 3843 ranges
 
 module ngx_http_geoip_module
   aliases ngx_geoip
@@ -685,53 +628,47 @@ module ngx_http_grpc_module
   aliases ngx_grpc
   section 17 259 name
   section 259 440 example configuration
-  section 440 19820 directives
-  section 459 1365 grpc_allow_upstream
-  section 1365 2519 grpc_bind
-  section 2519 2903 grpc_bind_dynamic
-  section 2903 3260 grpc_buffer_size
-  section 3260 3580 grpc_connect_timeout
-  section 3580 4067 grpc_hide_header
-  section 4067 4687 grpc_ignore_headers
-  section 4687 5093 grpc_intercept_errors
-  section 5093 7979 grpc_next_upstream
-  section 5682 5826 error
-  section 5826 5977 timeout
-  section 5977 6125 denied
-  section 6125 6202 invalid_header
-  section 6202 6273 http_500
-  section 6273 6344 http_502
-  section 6344 6415 http_503
-  section 6415 6486 http_504
-  section 6486 6557 http_403
-  section 6557 6628 http_404
-  section 6628 6699 http_429
-  section 6699 7016 non_idempotent
-  section 7016 7979 off
-  section 7979 8285 grpc_next_upstream_timeout
-  section 8285 8594 grpc_next_upstream_tries
-  section 8594 9628 grpc_pass
-  section 9628 9863 grpc_pass_header
-  section 9863 10303 grpc_read_timeout
-  section 10303 11031 grpc_request_dynamic
-  section 11031 11469 grpc_send_timeout
-  section 11469 12149 grpc_set_header
-  section 12149 12666 grpc_socket_keepalive
-  section 12666 13008 grpc_ssl_certificate
-  section 13008 14281 grpc_ssl_certificate_cache
-  section 14281 15084 grpc_ssl_certificate_key
-  section 15084 15481 grpc_ssl_ciphers
-  section 15481 16283 grpc_ssl_conf_command
-  section 16283 16556 grpc_ssl_crl
-  section 16556 17070 grpc_ssl_key_log
-  section 17070 17486 grpc_ssl_name
-  section 17486 17814 grpc_ssl_password_file
-  section 17814 18230 grpc_ssl_protocols
-  section 18230 18643 grpc_ssl_server_name
-  section 18643 19012 grpc_ssl_session_reuse
-  section 19012 19314 grpc_ssl_trusted_certificate
-  section 19314 19566 grpc_ssl_verify
-  section 19566 19820 grpc_ssl_verify_depth
+  section 440 15586 directives
+  section 459 1613 grpc_bind
+  section 1613 1970 grpc_buffer_size
+  section 1970 2290 grpc_connect_timeout
+  section 2290 2777 grpc_hide_header
+  section 2777 3397 grpc_ignore_headers
+  section 3397 3803 grpc_intercept_errors
+  section 3803 6506 grpc_next_upstream
+  section 4368 4512 error
+  section 4512 4663 timeout
+  section 4663 4740 invalid_header
+  section 4740 4811 http_500
+  section 4811 4882 http_502
+  section 4882 4953 http_503
+  section 4953 5024 http_504
+  section 5024 5095 http_403
+  section 5095 5166 http_404
+  section 5166 5237 http_429
+  section 5237 5554 non_idempotent
+  section 5554 6506 off
+  section 6506 6812 grpc_next_upstream_timeout
+  section 6812 7121 grpc_next_upstream_tries
+  section 7121 8155 grpc_pass
+  section 8155 8390 grpc_pass_header
+  section 8390 8830 grpc_read_timeout
+  section 8830 9268 grpc_send_timeout
+  section 9268 9948 grpc_set_header
+  section 9948 10465 grpc_socket_keepalive
+  section 10465 10807 grpc_ssl_certificate
+  section 10807 11332 grpc_ssl_certificate_key
+  section 11332 11729 grpc_ssl_ciphers
+  section 11729 12531 grpc_ssl_conf_command
+  section 12531 12804 grpc_ssl_crl
+  section 12804 13220 grpc_ssl_name
+  section 13220 13548 grpc_ssl_password_file
+  section 13548 13978 grpc_ssl_protocols
+  section 13978 14391 grpc_ssl_server_name
+  section 14391 14778 grpc_ssl_session_reuse
+  section 14778 15080 grpc_ssl_trusted_certificate
+  section 15080 15332 grpc_ssl_verify
+  section 15332 15586 grpc_ssl_verify_depth
 
 module ngx_http_gunzip_module
   aliases ngx_gunzip
@@ -778,12 +715,10 @@ module ngx_http_headers_module
   aliases ngx_headers
   section 17 252 name
   section 252 489 example configuration
-  section 489 5833 directives
-  section 508 1329 add_header
-  section 1329 2207 add_header_inherit
-  section 2207 3032 add_trailer
-  section 3032 3914 add_trailer_inherit
-  section 3914 5833 expires
+  section 489 3898 directives
+  section 508 1242 add_header
+  section 1242 1979 add_trailer
+  section 1979 3898 expires
 
 module ngx_http_hls_module
   aliases ngx_hls
@@ -834,39 +769,31 @@ module ngx_http_js_module
   aliases ngx_js
   section 17 308 name
   section 308 3001 example configuration
-  section 3001 23238 directives
-  section 3020 5489 js_body_filter
-  section 3447 3502 r
-  section 3502 3809 data
-  section 3809 3878 flags
-  section 3878 5489 last
-  section 5489 5888 js_content
-  section 5888 6339 js_context_reuse
-  section 6339 6729 js_engine
-  section 6729 7047 js_fetch_buffer_size
-  section 7047 7511 js_fetch_ciphers
-  section 7511 7844 js_fetch_max_response_buffer_size
-  section 7844 8220 js_fetch_protocols
-  section 8220 8681 js_fetch_timeout
-  section 8681 9052 js_fetch_trusted_certificate
-  section 9052 9373 js_fetch_verify
-  section 9373 9699 js_fetch_verify_depth
-  section 9699 10439 js_fetch_proxy
-  section 10439 11253 js_fetch_keepalive
-  section 11253 11892 js_fetch_keepalive_requests
-  section 11892 12346 js_fetch_keepalive_time
-  section 12346 12709 js_fetch_keepalive_timeout
-  section 12709 13416 js_header_filter
-  section 13416 14226 js_import
-  section 14226 14745 js_include
-  section 14745 16049 js_load_http_native_module
-  section 16049 16381 js_path
-  section 16381 18237 js_periodic
-  section 18237 18899 js_preload_object
-  section 18899 20380 js_set
-  section 20380 22705 js_shared_dict_zone
-  section 22705 23238 js_var
-  section 23238 23345 request argument
+  section 3001 16623 directives
+  section 3020 4857 js_body_filter
+  section 3472 3527 r
+  section 3527 3662 data
+  section 3662 3731 flags
+  section 3731 4857 last
+  section 4857 5281 js_content
+  section 5281 5599 js_fetch_buffer_size
+  section 5599 6063 js_fetch_ciphers
+  section 6063 6396 js_fetch_max_response_buffer_size
+  section 6396 6772 js_fetch_protocols
+  section 6772 7233 js_fetch_timeout
+  section 7233 7604 js_fetch_trusted_certificate
+  section 7604 7925 js_fetch_verify
+  section 7925 8251 js_fetch_verify_depth
+  section 8251 8983 js_header_filter
+  section 8983 9793 js_import
+  section 9793 10312 js_include
+  section 10312 10644 js_path
+  section 10644 12533 js_periodic
+  section 12533 13192 js_preload_object
+  section 13192 14323 js_set
+  section 14323 16090 js_shared_dict_zone
+  section 16090 16623 js_var
+  section 16623 16730 request argument
 
 module ngx_http_keyval_module
   aliases ngx_keyval
@@ -947,28 +874,25 @@ module ngx_http_memcached_module
   aliases ngx_memcached
   section 17 329 name
   section 329 657 example configuration
-  section 657 8903 directives
-  section 676 1593 memcached_allow_upstream
-  section 1593 2873 memcached_bind
-  section 2873 3267 memcached_bind_dynamic
-  section 3267 3639 memcached_buffer_size
-  section 3639 3974 memcached_connect_timeout
-  section 3974 4371 memcached_gzip_flag
-  section 4371 6158 memcached_next_upstream
-  section 4785 4929 error
-  section 4929 5080 timeout
-  section 5080 5228 denied
-  section 5228 5307 invalid_response
-  section 5307 5371 not_found
-  section 5371 6158 off
-  section 6158 6519 memcached_next_upstream_timeout
-  section 6519 6883 memcached_next_upstream_tries
-  section 6883 7453 memcached_pass
-  section 7453 7913 memcached_read_timeout
-  section 7913 8371 memcached_send_timeout
-  section 8371 8903 memcached_socket_keepalive
-  section 8903 9048 embedded variables
-  section 8942 9048 $memcached_key
+  section 657 7409 directives
+  section 676 1956 memcached_bind
+  section 1956 2328 memcached_buffer_size
+  section 2328 2663 memcached_connect_timeout
+  section 2663 3060 memcached_gzip_flag
+  section 3060 4664 memcached_next_upstream
+  section 3450 3594 error
+  section 3594 3745 timeout
+  section 3745 3824 invalid_response
+  section 3824 3888 not_found
+  section 3888 4664 off
+  section 4664 5025 memcached_next_upstream_timeout
+  section 5025 5389 memcached_next_upstream_tries
+  section 5389 5959 memcached_pass
+  section 5959 6419 memcached_read_timeout
+  section 6419 6877 memcached_send_timeout
+  section 6877 7409 memcached_socket_keepalive
+  section 7409 7554 embedded variables
+  section 7448 7554 $memcached_key
 
 module ngx_http_mirror_module
   aliases ngx_mirror
@@ -989,47 +913,6 @@ module ngx_http_mp4_module
   section 4349 5128 mp4_limit_rate
   section 5128 5546 mp4_limit_rate_after
   section 5546 6082 mp4_start_key_frame
-
-module ngx_http_num_map_module
-  aliases ngx_num_map
-  section 17 314 name
-  section 314 522 example configuration
-  section 522 1562 directives
-  section 541 1562 num_map
-  section 1193 1389 default
-  section 1389 1475 include
-  section 1475 1562 volatile
-
-module ngx_http_oidc_module
-  aliases ngx_oidc
-  section 17 851 name
-  section 851 1559 example configuration
-  section 1559 8546 directives
-  section 1578 1756 oidc_provider
-  section 1756 2181 auth_oidc
-  section 2181 2475 issuer
-  section 2475 2641 client_id
-  section 2641 3123 client_secret
-  section 3123 3358 config_url
-  section 3358 3528 cookie_name
-  section 3528 3834 extra_auth_args
-  section 3834 4430 frontchannel_logout_uri
-  section 4430 4690 pkce
-  section 4690 5074 redirect_uri
-  section 5074 5523 logout_uri
-  section 5523 6251 post_logout_uri
-  section 6251 6753 logout_token_hint
-  section 6753 6942 scope
-  section 6942 7385 session_store
-  section 7385 7661 session_timeout
-  section 7661 7894 ssl_crl
-  section 7894 8189 ssl_trusted_certificate
-  section 8189 8546 userinfo
-  section 8546 9350 embedded variables
-  section 8654 8694 $oidc_id_token
-  section 8694 8742 $oidc_access_token
-  section 8742 9264 $oidc_claim_i<name>
-  section 9264 9350 $oidc_userinfo
 
 module ngx_http_perl_module
   aliases ngx_perl
@@ -1064,98 +947,91 @@ module ngx_http_proxy_module
   aliases ngx_proxy
   section 17 180 name
   section 180 386 example configuration
-  section 386 61486 directives
-  section 405 1306 proxy_allow_upstream
-  section 1306 2563 proxy_bind
-  section 2563 2949 proxy_bind_dynamic
-  section 2949 3442 proxy_buffer_size
-  section 3442 4645 proxy_buffering
-  section 4645 5074 proxy_buffers
-  section 5074 5741 proxy_busy_buffers_size
-  section 5741 6147 proxy_cache
-  section 6147 6633 proxy_cache_background_update
-  section 6633 7201 proxy_cache_bypass
-  section 7201 7641 proxy_cache_convert_head
-  section 7641 8066 proxy_cache_key
-  section 8066 8699 proxy_cache_lock
-  section 8699 9110 proxy_cache_lock_age
-  section 9110 9561 proxy_cache_lock_timeout
-  section 9561 9962 proxy_cache_max_range_offset
-  section 9962 10501 proxy_cache_methods
-  section 10501 10757 proxy_cache_min_uses
-  section 10757 15884 proxy_cache_path
-  section 15884 17239 proxy_cache_purge
-  section 17239 17618 proxy_cache_revalidate
-  section 17618 19452 proxy_cache_use_stale
-  section 19452 21324 proxy_cache_valid
-  section 21324 21649 proxy_connect_timeout
-  section 21649 23319 proxy_cookie_domain
-  section 23319 24706 proxy_cookie_flags
-  section 24706 26266 proxy_cookie_path
-  section 26266 26651 proxy_force_ranges
-  section 26651 27048 proxy_headers_hash_bucket_size
-  section 27048 27440 proxy_headers_hash_max_size
-  section 27440 27944 proxy_hide_header
-  section 27944 28428 proxy_http_version
-  section 28428 28772 proxy_ignore_client_abort
-  section 28772 29887 proxy_ignore_headers
-  section 29887 30291 proxy_intercept_errors
-  section 30291 30968 proxy_limit_rate
-  section 30968 31751 proxy_max_temp_file_size
-  section 31751 32076 proxy_method
-  section 32076 34983 proxy_next_upstream
-  section 32667 32811 error
-  section 32811 32962 timeout
-  section 32962 33110 denied
-  section 33110 33187 invalid_header
-  section 33187 33258 http_500
-  section 33258 33329 http_502
-  section 33329 33400 http_503
-  section 33400 33471 http_504
-  section 33471 33542 http_403
-  section 33542 33613 http_404
-  section 33613 33694 http_429
-  section 33694 34020 non_idempotent
-  section 34020 34983 off
-  section 34983 35336 proxy_next_upstream_timeout
-  section 35336 35692 proxy_next_upstream_tries
-  section 35692 36232 proxy_no_cache
-  section 36232 39232 proxy_pass
-  section 39232 39472 proxy_pass_header
-  section 39472 40016 proxy_pass_request_body
-  section 40016 40576 proxy_pass_request_headers
-  section 40576 41221 proxy_pass_trailers
-  section 41221 41669 proxy_read_timeout
-  section 41669 44484 proxy_redirect
-  section 44484 45382 proxy_request_buffering
-  section 45382 46120 proxy_request_dynamic
-  section 46120 46628 proxy_send_lowat
-  section 46628 47074 proxy_send_timeout
-  section 47074 47357 proxy_set_body
-  section 47357 49366 proxy_set_header
-  section 49366 49888 proxy_socket_keepalive
-  section 49888 50282 proxy_ssl_certificate
-  section 50282 51563 proxy_ssl_certificate_cache
-  section 51563 52426 proxy_ssl_certificate_key
-  section 52426 52875 proxy_ssl_ciphers
-  section 52875 53686 proxy_ssl_conf_command
-  section 53686 54011 proxy_ssl_crl
-  section 54011 54532 proxy_ssl_key_log
-  section 54532 55004 proxy_ssl_name
-  section 55004 55379 proxy_ssl_password_file
-  section 55379 55847 proxy_ssl_protocols
-  section 55847 56312 proxy_ssl_server_name
-  section 56312 56686 proxy_ssl_session_reuse
-  section 56686 57040 proxy_ssl_trusted_certificate
-  section 57040 57344 proxy_ssl_verify
-  section 57344 57650 proxy_ssl_verify_depth
-  section 57650 59683 proxy_store
-  section 59683 60165 proxy_store_access
-  section 60165 60728 proxy_temp_file_write_size
-  section 60728 61486 proxy_temp_path
-  section 61486 62243 embedded variables
-  section 61667 61773 $proxy_host
-  section 61773 62243 $proxy_port
+  section 386 56141 directives
+  section 405 1662 proxy_bind
+  section 1662 2155 proxy_buffer_size
+  section 2155 3358 proxy_buffering
+  section 3358 3787 proxy_buffers
+  section 3787 4454 proxy_busy_buffers_size
+  section 4454 4860 proxy_cache
+  section 4860 5346 proxy_cache_background_update
+  section 5346 5914 proxy_cache_bypass
+  section 5914 6354 proxy_cache_convert_head
+  section 6354 6779 proxy_cache_key
+  section 6779 7412 proxy_cache_lock
+  section 7412 7823 proxy_cache_lock_age
+  section 7823 8274 proxy_cache_lock_timeout
+  section 8274 8675 proxy_cache_max_range_offset
+  section 8675 9214 proxy_cache_methods
+  section 9214 9470 proxy_cache_min_uses
+  section 9470 14597 proxy_cache_path
+  section 14597 15952 proxy_cache_purge
+  section 15952 16331 proxy_cache_revalidate
+  section 16331 18165 proxy_cache_use_stale
+  section 18165 20037 proxy_cache_valid
+  section 20037 20362 proxy_connect_timeout
+  section 20362 22032 proxy_cookie_domain
+  section 22032 23419 proxy_cookie_flags
+  section 23419 24979 proxy_cookie_path
+  section 24979 25364 proxy_force_ranges
+  section 25364 25761 proxy_headers_hash_bucket_size
+  section 25761 26153 proxy_headers_hash_max_size
+  section 26153 26657 proxy_hide_header
+  section 26657 27103 proxy_http_version
+  section 27103 27447 proxy_ignore_client_abort
+  section 27447 28562 proxy_ignore_headers
+  section 28562 28966 proxy_intercept_errors
+  section 28966 29595 proxy_limit_rate
+  section 29595 30378 proxy_max_temp_file_size
+  section 30378 30703 proxy_method
+  section 30703 33427 proxy_next_upstream
+  section 31270 31414 error
+  section 31414 31565 timeout
+  section 31565 31642 invalid_header
+  section 31642 31713 http_500
+  section 31713 31784 http_502
+  section 31784 31855 http_503
+  section 31855 31926 http_504
+  section 31926 31997 http_403
+  section 31997 32068 http_404
+  section 32068 32149 http_429
+  section 32149 32475 non_idempotent
+  section 32475 33427 off
+  section 33427 33780 proxy_next_upstream_timeout
+  section 33780 34136 proxy_next_upstream_tries
+  section 34136 34676 proxy_no_cache
+  section 34676 37676 proxy_pass
+  section 37676 37916 proxy_pass_header
+  section 37916 38460 proxy_pass_request_body
+  section 38460 39020 proxy_pass_request_headers
+  section 39020 39468 proxy_read_timeout
+  section 39468 42283 proxy_redirect
+  section 42283 43166 proxy_request_buffering
+  section 43166 43674 proxy_send_lowat
+  section 43674 44120 proxy_send_timeout
+  section 44120 44403 proxy_set_body
+  section 44403 46069 proxy_set_header
+  section 46069 46591 proxy_socket_keepalive
+  section 46591 46985 proxy_ssl_certificate
+  section 46985 47570 proxy_ssl_certificate_key
+  section 47570 48019 proxy_ssl_ciphers
+  section 48019 48830 proxy_ssl_conf_command
+  section 48830 49155 proxy_ssl_crl
+  section 49155 49627 proxy_ssl_name
+  section 49627 50002 proxy_ssl_password_file
+  section 50002 50484 proxy_ssl_protocols
+  section 50484 50949 proxy_ssl_server_name
+  section 50949 51341 proxy_ssl_session_reuse
+  section 51341 51695 proxy_ssl_trusted_certificate
+  section 51695 51999 proxy_ssl_verify
+  section 51999 52305 proxy_ssl_verify_depth
+  section 52305 54338 proxy_store
+  section 54338 54820 proxy_store_access
+  section 54820 55383 proxy_temp_file_write_size
+  section 55383 56141 proxy_temp_path
+  section 56141 56898 embedded variables
+  section 56322 56428 $proxy_host
+  section 56428 56898 $proxy_port
 
 module ngx_http_proxy_protocol_vendor_module
   aliases ngx_proxy_protocol_vendor
@@ -1222,66 +1098,62 @@ module ngx_http_scgi_module
   aliases ngx_scgi
   section 17 177 name
   section 177 309 example configuration
-  section 309 37686 directives
-  section 328 1221 scgi_allow_upstream
-  section 1221 2421 scgi_bind
-  section 2421 2805 scgi_bind_dynamic
-  section 2805 3293 scgi_buffer_size
-  section 3293 4479 scgi_buffering
-  section 4479 4903 scgi_buffers
-  section 4903 5563 scgi_busy_buffers_size
-  section 5563 5967 scgi_cache
-  section 5967 6451 scgi_cache_background_update
-  section 6451 7015 scgi_cache_bypass
-  section 7015 7260 scgi_cache_key
-  section 7260 7887 scgi_cache_lock
-  section 7887 8290 scgi_cache_lock_age
-  section 8290 8735 scgi_cache_lock_timeout
-  section 8735 9131 scgi_cache_max_range_offset
-  section 9131 9621 scgi_cache_methods
-  section 9621 9875 scgi_cache_min_uses
-  section 9875 14996 scgi_cache_path
-  section 14996 16352 scgi_cache_purge
-  section 16352 16729 scgi_cache_revalidate
-  section 16729 18517 scgi_cache_use_stale
-  section 18517 20380 scgi_cache_valid
-  section 20380 20701 scgi_connect_timeout
-  section 20701 21081 scgi_force_ranges
-  section 21081 21559 scgi_hide_header
-  section 21559 21899 scgi_ignore_client_abort
-  section 21899 23009 scgi_ignore_headers
-  section 23009 23418 scgi_intercept_errors
-  section 23418 24084 scgi_limit_rate
-  section 24084 24859 scgi_max_temp_file_size
-  section 24859 27544 scgi_next_upstream
-  section 25396 25540 error
-  section 25540 25691 timeout
-  section 25691 25839 denied
-  section 25839 25916 invalid_header
-  section 25916 25987 http_500
-  section 25987 26058 http_503
-  section 26058 26129 http_403
-  section 26129 26200 http_404
-  section 26200 26281 http_429
-  section 26281 26607 non_idempotent
-  section 26607 27544 off
-  section 27544 27895 scgi_next_upstream_timeout
-  section 27895 28249 scgi_next_upstream_tries
-  section 28249 28784 scgi_no_cache
-  section 28784 29780 scgi_param
-  section 29780 30578 scgi_pass
-  section 30578 30814 scgi_pass_header
-  section 30814 31138 scgi_pass_request_body
-  section 31138 31482 scgi_pass_request_headers
-  section 31482 31922 scgi_read_timeout
-  section 31922 32753 scgi_request_buffering
-  section 32753 33312 scgi_request_dynamic
-  section 33312 33750 scgi_send_timeout
-  section 33750 34268 scgi_socket_keepalive
-  section 34268 35905 scgi_store
-  section 35905 36383 scgi_store_access
-  section 36383 36938 scgi_temp_file_write_size
-  section 36938 37686 scgi_temp_path
+  section 309 35558 directives
+  section 328 1528 scgi_bind
+  section 1528 2016 scgi_buffer_size
+  section 2016 3202 scgi_buffering
+  section 3202 3626 scgi_buffers
+  section 3626 4286 scgi_busy_buffers_size
+  section 4286 4690 scgi_cache
+  section 4690 5174 scgi_cache_background_update
+  section 5174 5738 scgi_cache_bypass
+  section 5738 5983 scgi_cache_key
+  section 5983 6610 scgi_cache_lock
+  section 6610 7013 scgi_cache_lock_age
+  section 7013 7458 scgi_cache_lock_timeout
+  section 7458 7854 scgi_cache_max_range_offset
+  section 7854 8344 scgi_cache_methods
+  section 8344 8598 scgi_cache_min_uses
+  section 8598 13719 scgi_cache_path
+  section 13719 15075 scgi_cache_purge
+  section 15075 15452 scgi_cache_revalidate
+  section 15452 17240 scgi_cache_use_stale
+  section 17240 19103 scgi_cache_valid
+  section 19103 19424 scgi_connect_timeout
+  section 19424 19804 scgi_force_ranges
+  section 19804 20282 scgi_hide_header
+  section 20282 20622 scgi_ignore_client_abort
+  section 20622 21732 scgi_ignore_headers
+  section 21732 22141 scgi_intercept_errors
+  section 22141 22759 scgi_limit_rate
+  section 22759 23534 scgi_max_temp_file_size
+  section 23534 26036 scgi_next_upstream
+  section 24047 24191 error
+  section 24191 24342 timeout
+  section 24342 24419 invalid_header
+  section 24419 24490 http_500
+  section 24490 24561 http_503
+  section 24561 24632 http_403
+  section 24632 24703 http_404
+  section 24703 24784 http_429
+  section 24784 25110 non_idempotent
+  section 25110 26036 off
+  section 26036 26387 scgi_next_upstream_timeout
+  section 26387 26741 scgi_next_upstream_tries
+  section 26741 27276 scgi_no_cache
+  section 27276 28211 scgi_param
+  section 28211 29009 scgi_pass
+  section 29009 29245 scgi_pass_header
+  section 29245 29569 scgi_pass_request_body
+  section 29569 29913 scgi_pass_request_headers
+  section 29913 30353 scgi_read_timeout
+  section 30353 31184 scgi_request_buffering
+  section 31184 31622 scgi_send_timeout
+  section 31622 32140 scgi_socket_keepalive
+  section 32140 33777 scgi_store
+  section 33777 34255 scgi_store_access
+  section 34255 34810 scgi_temp_file_write_size
+  section 34810 35558 scgi_temp_path
 
 module ngx_http_secure_link_module
   aliases ngx_secure_link
@@ -1309,12 +1181,11 @@ module ngx_http_session_log_module
 module ngx_http_slice_module
   aliases ngx_slice
   section 17 427 name
-  section 427 642 known issues
-  section 642 1098 example configuration
-  section 1098 1861 directives
-  section 1117 1861 slice
-  section 1861 2166 embedded variables
-  section 1979 2166 $slice_range
+  section 427 883 example configuration
+  section 883 1646 directives
+  section 902 1646 slice
+  section 1646 1952 embedded variables
+  section 1764 1952 $slice_range
 
 module ngx_http_spdy_module
   aliases ngx_spdy
@@ -1366,74 +1237,66 @@ module ngx_http_ssi_module
 module ngx_http_ssl_module
   aliases ngx_ssl
   section 17 375 name
-  section 375 1456 example configuration
-  section 1456 23693 directives
-  section 1475 1780 ssl
-  section 1780 2248 ssl_buffer_size
-  section 2248 4403 ssl_certificate
-  section 4403 5610 ssl_certificate_cache
-  section 5610 6215 ssl_certificate_compression
-  section 6215 7321 ssl_certificate_key
-  section 7321 7866 ssl_ciphers
-  section 7866 8295 ssl_client_certificate
-  section 8295 9114 ssl_conf_command
-  section 9114 9377 ssl_crl
-  section 9377 9758 ssl_dhparam
-  section 9758 10697 ssl_early_data
-  section 10697 11618 ssl_ecdh_curve
-  section 11618 12199 ssl_ech_file
-  section 12199 12668 ssl_key_log
-  section 12668 13350 ssl_ocsp
-  section 13350 13861 ssl_ocsp_cache
-  section 13861 14380 ssl_ocsp_responder
-  section 14380 15183 ssl_password_file
-  section 15183 15473 ssl_prefer_server_ciphers
-  section 15473 16234 ssl_protocols
-  section 16234 16957 ssl_reject_handshake
-  section 16957 18544 ssl_session_cache
-  section 17323 17459 off
-  section 17459 17640 none
-  section 17640 17875 builtin
-  section 17875 18544 shared
-  section 18544 19455 ssl_session_ticket_key
-  section 19455 19781 ssl_session_tickets
-  section 19781 20006 ssl_session_timeout
-  section 20006 20789 ssl_stapling
-  section 20789 21211 ssl_stapling_file
-  section 21211 21703 ssl_stapling_responder
-  section 21703 22197 ssl_stapling_verify
-  section 22197 22670 ssl_trusted_certificate
-  section 22670 23484 ssl_verify_client
-  section 23484 23693 ssl_verify_depth
-  section 23693 24265 error processing
-  section 24265 30225 embedded variables
-  section 24367 24505 $ssl_alpn_protocol
-  section 24505 24604 $ssl_cipher
-  section 24604 25009 $ssl_ciphers
-  section 25009 25156 $ssl_client_escaped_cert
-  section 25156 25515 $ssl_client_cert
-  section 25515 25653 $ssl_client_fingerprint
-  section 25653 25863 $ssl_client_i_dn
-  section 25863 26079 $ssl_client_i_dn_legacy
-  section 26079 26201 $ssl_client_raw_cert
-  section 26201 26412 $ssl_client_s_dn
-  section 26412 26629 $ssl_client_s_dn_legacy
-  section 26629 26751 $ssl_client_serial
-  section 26751 27188 $ssl_client_sigalg
-  section 27188 27279 $ssl_client_v_end
-  section 27279 27390 $ssl_client_v_remain
-  section 27390 27485 $ssl_client_v_start
-  section 27485 27779 $ssl_client_verify
-  section 27779 28142 $ssl_curve
-  section 28142 28573 $ssl_curves
-  section 28573 28716 $ssl_early_data
-  section 28716 28923 $ssl_ech_outer_server_name
-  section 28923 29338 $ssl_ech_status
-  section 29338 29423 $ssl_protocol
-  section 29423 29566 $ssl_server_name
-  section 29566 29663 $ssl_session_id
-  section 29663 29782 $ssl_session_reused
-  section 29782 30225 $ssl_sigalg
+  section 375 1469 example configuration
+  section 1469 20246 directives
+  section 1488 1793 ssl
+  section 1793 2261 ssl_buffer_size
+  section 2261 4291 ssl_certificate
+  section 4291 5119 ssl_certificate_key
+  section 5119 5664 ssl_ciphers
+  section 5664 6093 ssl_client_certificate
+  section 6093 6912 ssl_conf_command
+  section 6912 7175 ssl_crl
+  section 7175 7556 ssl_dhparam
+  section 7556 8289 ssl_early_data
+  section 8289 9210 ssl_ecdh_curve
+  section 9210 9892 ssl_ocsp
+  section 9892 10403 ssl_ocsp_cache
+  section 10403 10922 ssl_ocsp_responder
+  section 10922 11725 ssl_password_file
+  section 11725 12012 ssl_prefer_server_ciphers
+  section 12012 12787 ssl_protocols
+  section 12787 13510 ssl_reject_handshake
+  section 13510 15097 ssl_session_cache
+  section 13876 14012 off
+  section 14012 14193 none
+  section 14193 14428 builtin
+  section 14428 15097 shared
+  section 15097 16008 ssl_session_ticket_key
+  section 16008 16334 ssl_session_tickets
+  section 16334 16559 ssl_session_timeout
+  section 16559 17342 ssl_stapling
+  section 17342 17764 ssl_stapling_file
+  section 17764 18256 ssl_stapling_responder
+  section 18256 18750 ssl_stapling_verify
+  section 18750 19223 ssl_trusted_certificate
+  section 19223 20037 ssl_verify_client
+  section 20037 20246 ssl_verify_depth
+  section 20246 20818 error processing
+  section 20818 25289 embedded variables
+  section 20920 21058 $ssl_alpn_protocol
+  section 21058 21157 $ssl_cipher
+  section 21157 21562 $ssl_ciphers
+  section 21562 21709 $ssl_client_escaped_cert
+  section 21709 22068 $ssl_client_cert
+  section 22068 22206 $ssl_client_fingerprint
+  section 22206 22416 $ssl_client_i_dn
+  section 22416 22632 $ssl_client_i_dn_legacy
+  section 22632 22754 $ssl_client_raw_cert
+  section 22754 22965 $ssl_client_s_dn
+  section 22965 23182 $ssl_client_s_dn_legacy
+  section 23182 23304 $ssl_client_serial
+  section 23304 23395 $ssl_client_v_end
+  section 23395 23506 $ssl_client_v_remain
+  section 23506 23601 $ssl_client_v_start
+  section 23601 23895 $ssl_client_verify
+  section 23895 24258 $ssl_curve
+  section 24258 24689 $ssl_curves
+  section 24689 24832 $ssl_early_data
+  section 24832 24917 $ssl_protocol
+  section 24917 25060 $ssl_server_name
+  section 25060 25157 $ssl_session_id
+  section 25157 25289 $ssl_session_reused
 
 module ngx_http_status_module
   aliases ngx_status
@@ -1599,29 +1462,6 @@ module ngx_http_sub_module
   section 1678 1933 sub_filter_once
   section 1933 2297 sub_filter_types
 
-module ngx_http_tunnel_module
-  aliases ngx_tunnel
-  section 17 361 name
-  section 361 938 example configuration
-  section 938 8156 directives
-  section 957 1654 tunnel_allow_upstream
-  section 1654 2176 tunnel_bind
-  section 2176 2657 tunnel_bind_dynamic
-  section 2657 2993 tunnel_buffer_size
-  section 2993 3320 tunnel_connect_timeout
-  section 3320 4690 tunnel_next_upstream
-  section 3667 3786 error
-  section 3786 3938 timeout
-  section 3938 3993 denied
-  section 3993 4690 off
-  section 4690 5000 tunnel_next_upstream_timeout
-  section 5000 5313 tunnel_next_upstream_tries
-  section 5313 6364 tunnel_pass
-  section 6364 6720 tunnel_read_timeout
-  section 6720 7230 tunnel_send_lowat
-  section 7230 7678 tunnel_send_timeout
-  section 7678 8156 tunnel_socket_keepalive
-
 module ngx_http_upstream_conf_module
   aliases ngx_upstream_conf
   section 17 581 name
@@ -1658,51 +1498,49 @@ module ngx_http_upstream_module
   aliases ngx_upstream
   section 17 387 name
   section 387 1639 example configuration
-  section 1639 29942 directives
+  section 1639 29496 directives
   section 1658 2738 upstream
-  section 2738 8489 server
-  section 8489 9318 zone
-  section 9318 10211 state
-  section 10211 11340 hash
-  section 11340 12541 ip_hash
-  section 12541 14984 keepalive
-  section 14984 15601 keepalive_requests
-  section 15601 15965 keepalive_time
-  section 15965 16238 keepalive_timeout
-  section 16238 17554 ntlm
-  section 17554 17990 least_conn
-  section 17990 18955 least_time
-  section 18955 19854 queue
-  section 19854 20871 random
-  section 20871 22361 resolver
-  section 22361 22756 resolver_timeout
-  section 22756 29522 sticky
-  section 23503 25145 cookie
-  section 25145 25442 expires=time
-  section 25442 25580 domain=domain
-  section 25580 25660 httponly
-  section 25660 26161 samesite=strict e<verbar>
-  section 26161 26237 secure
-  section 26237 26411 path=path
-  section 26411 27809 route
-  section 27809 29522 learn
-  section 29522 29942 sticky_cookie_insert
-  section 29942 34499 embedded variables
-  section 30063 30749 $upstream_addr
-  section 30749 30963 $upstream_bytes_received
-  section 30963 31167 $upstream_bytes_sent
-  section 31167 31412 $upstream_cache_status
-  section 31412 31750 $upstream_connect_time
-  section 31750 31977 $upstream_cookie_i<name>
-  section 31977 32267 $upstream_header_time
-  section 32267 32685 $upstream_http_i<name>
-  section 32685 32911 $upstream_last_addr
-  section 32911 33244 $upstream_last_server_name
-  section 33244 33508 $upstream_queue_time
-  section 33508 33768 $upstream_response_length
-  section 33768 34044 $upstream_response_time
-  section 34044 34354 $upstream_status
-  section 34354 34499 $upstream_trailer_i<name>
+  section 2738 8259 server
+  section 8259 9088 zone
+  section 9088 9981 state
+  section 9981 11110 hash
+  section 11110 12311 ip_hash
+  section 12311 14740 keepalive
+  section 14740 15357 keepalive_requests
+  section 15357 15721 keepalive_time
+  section 15721 15994 keepalive_timeout
+  section 15994 17296 ntlm
+  section 17296 17732 least_conn
+  section 17732 18697 least_time
+  section 18697 19596 queue
+  section 19596 20613 random
+  section 20613 21971 resolver
+  section 21971 22310 resolver_timeout
+  section 22310 29076 sticky
+  section 23057 24699 cookie
+  section 24699 24996 expires=time
+  section 24996 25134 domain=domain
+  section 25134 25214 httponly
+  section 25214 25715 samesite=strict e<verbar>
+  section 25715 25791 secure
+  section 25791 25965 path=path
+  section 25965 27363 route
+  section 27363 29076 learn
+  section 29076 29496 sticky_cookie_insert
+  section 29496 33494 embedded variables
+  section 29617 30303 $upstream_addr
+  section 30303 30517 $upstream_bytes_received
+  section 30517 30721 $upstream_bytes_sent
+  section 30721 30966 $upstream_cache_status
+  section 30966 31304 $upstream_connect_time
+  section 31304 31531 $upstream_cookie_i<name>
+  section 31531 31821 $upstream_header_time
+  section 31821 32239 $upstream_http_i<name>
+  section 32239 32503 $upstream_queue_time
+  section 32503 32763 $upstream_response_length
+  section 32763 33039 $upstream_response_time
+  section 33039 33349 $upstream_status
+  section 33349 33494 $upstream_trailer_i<name>
 
 module ngx_http_userid_module
   aliases ngx_userid
@@ -1731,90 +1569,84 @@ module ngx_http_uwsgi_module
   aliases ngx_uwsgi
   section 17 180 name
   section 180 315 example configuration
-  section 315 46651 directives
-  section 334 1231 uwsgi_allow_upstream
-  section 1231 2436 uwsgi_bind
-  section 2436 2822 uwsgi_bind_dynamic
-  section 2822 3313 uwsgi_buffer_size
-  section 3313 4510 uwsgi_buffering
-  section 4510 4937 uwsgi_buffers
-  section 4937 5602 uwsgi_busy_buffers_size
-  section 5602 6008 uwsgi_cache
-  section 6008 6494 uwsgi_cache_background_update
-  section 6494 7063 uwsgi_cache_bypass
-  section 7063 7311 uwsgi_cache_key
-  section 7311 7942 uwsgi_cache_lock
-  section 7942 8349 uwsgi_cache_lock_age
-  section 8349 8798 uwsgi_cache_lock_timeout
-  section 8798 9197 uwsgi_cache_max_range_offset
-  section 9197 9690 uwsgi_cache_methods
-  section 9690 9946 uwsgi_cache_min_uses
-  section 9946 15071 uwsgi_cache_path
-  section 15071 16434 uwsgi_cache_purge
-  section 16434 16813 uwsgi_cache_revalidate
-  section 16813 18608 uwsgi_cache_use_stale
-  section 18608 20480 uwsgi_cache_valid
-  section 20480 20803 uwsgi_connect_timeout
-  section 20803 21186 uwsgi_force_ranges
-  section 21186 21668 uwsgi_hide_header
-  section 21668 22010 uwsgi_ignore_client_abort
-  section 22010 23123 uwsgi_ignore_headers
-  section 23123 23534 uwsgi_intercept_errors
-  section 23534 24206 uwsgi_limit_rate
-  section 24206 24987 uwsgi_max_temp_file_size
-  section 24987 25307 uwsgi_modifier1
-  section 25307 25627 uwsgi_modifier2
-  section 25627 28314 uwsgi_next_upstream
-  section 26166 26310 error
-  section 26310 26461 timeout
-  section 26461 26609 denied
-  section 26609 26686 invalid_header
-  section 26686 26757 http_500
-  section 26757 26828 http_503
-  section 26828 26899 http_403
-  section 26899 26970 http_404
-  section 26970 27051 http_429
-  section 27051 27377 non_idempotent
-  section 27377 28314 off
-  section 28314 28667 uwsgi_next_upstream_timeout
-  section 28667 29023 uwsgi_next_upstream_tries
-  section 29023 29563 uwsgi_no_cache
-  section 29563 30567 uwsgi_param
-  section 30567 31673 uwsgi_pass
-  section 31673 31911 uwsgi_pass_header
-  section 31911 32239 uwsgi_pass_request_body
-  section 32239 32587 uwsgi_pass_request_headers
-  section 32587 33031 uwsgi_read_timeout
-  section 33031 33865 uwsgi_request_buffering
-  section 33865 34428 uwsgi_request_dynamic
-  section 34428 34870 uwsgi_send_timeout
-  section 34870 35390 uwsgi_socket_keepalive
-  section 35390 35784 uwsgi_ssl_certificate
-  section 35784 37065 uwsgi_ssl_certificate_cache
-  section 37065 37928 uwsgi_ssl_certificate_key
-  section 37928 38377 uwsgi_ssl_ciphers
-  section 38377 39188 uwsgi_ssl_conf_command
-  section 39188 39513 uwsgi_ssl_crl
-  section 39513 40034 uwsgi_ssl_key_log
-  section 40034 40509 uwsgi_ssl_name
-  section 40509 40884 uwsgi_ssl_password_file
-  section 40884 41352 uwsgi_ssl_protocols
-  section 41352 41817 uwsgi_ssl_server_name
-  section 41817 42240 uwsgi_ssl_session_reuse
-  section 42240 42594 uwsgi_ssl_trusted_certificate
-  section 42594 42898 uwsgi_ssl_verify
-  section 42898 43204 uwsgi_ssl_verify_depth
-  section 43204 44852 uwsgi_store
-  section 44852 45334 uwsgi_store_access
-  section 45334 45895 uwsgi_temp_file_write_size
-  section 45895 46651 uwsgi_temp_path
+  section 315 42465 directives
+  section 334 1539 uwsgi_bind
+  section 1539 2030 uwsgi_buffer_size
+  section 2030 3227 uwsgi_buffering
+  section 3227 3654 uwsgi_buffers
+  section 3654 4319 uwsgi_busy_buffers_size
+  section 4319 4725 uwsgi_cache
+  section 4725 5211 uwsgi_cache_background_update
+  section 5211 5780 uwsgi_cache_bypass
+  section 5780 6028 uwsgi_cache_key
+  section 6028 6659 uwsgi_cache_lock
+  section 6659 7066 uwsgi_cache_lock_age
+  section 7066 7515 uwsgi_cache_lock_timeout
+  section 7515 7914 uwsgi_cache_max_range_offset
+  section 7914 8407 uwsgi_cache_methods
+  section 8407 8663 uwsgi_cache_min_uses
+  section 8663 13788 uwsgi_cache_path
+  section 13788 15151 uwsgi_cache_purge
+  section 15151 15530 uwsgi_cache_revalidate
+  section 15530 17325 uwsgi_cache_use_stale
+  section 17325 19197 uwsgi_cache_valid
+  section 19197 19520 uwsgi_connect_timeout
+  section 19520 19903 uwsgi_force_ranges
+  section 19903 20385 uwsgi_hide_header
+  section 20385 20727 uwsgi_ignore_client_abort
+  section 20727 21840 uwsgi_ignore_headers
+  section 21840 22251 uwsgi_intercept_errors
+  section 22251 22875 uwsgi_limit_rate
+  section 22875 23656 uwsgi_max_temp_file_size
+  section 23656 23976 uwsgi_modifier1
+  section 23976 24296 uwsgi_modifier2
+  section 24296 26800 uwsgi_next_upstream
+  section 24811 24955 error
+  section 24955 25106 timeout
+  section 25106 25183 invalid_header
+  section 25183 25254 http_500
+  section 25254 25325 http_503
+  section 25325 25396 http_403
+  section 25396 25467 http_404
+  section 25467 25548 http_429
+  section 25548 25874 non_idempotent
+  section 25874 26800 off
+  section 26800 27153 uwsgi_next_upstream_timeout
+  section 27153 27509 uwsgi_next_upstream_tries
+  section 27509 28049 uwsgi_no_cache
+  section 28049 28992 uwsgi_param
+  section 28992 30098 uwsgi_pass
+  section 30098 30336 uwsgi_pass_header
+  section 30336 30664 uwsgi_pass_request_body
+  section 30664 31012 uwsgi_pass_request_headers
+  section 31012 31456 uwsgi_read_timeout
+  section 31456 32290 uwsgi_request_buffering
+  section 32290 32732 uwsgi_send_timeout
+  section 32732 33252 uwsgi_socket_keepalive
+  section 33252 33646 uwsgi_ssl_certificate
+  section 33646 34231 uwsgi_ssl_certificate_key
+  section 34231 34680 uwsgi_ssl_ciphers
+  section 34680 35491 uwsgi_ssl_conf_command
+  section 35491 35816 uwsgi_ssl_crl
+  section 35816 36291 uwsgi_ssl_name
+  section 36291 36666 uwsgi_ssl_password_file
+  section 36666 37148 uwsgi_ssl_protocols
+  section 37148 37613 uwsgi_ssl_server_name
+  section 37613 38054 uwsgi_ssl_session_reuse
+  section 38054 38408 uwsgi_ssl_trusted_certificate
+  section 38408 38712 uwsgi_ssl_verify
+  section 38712 39018 uwsgi_ssl_verify_depth
+  section 39018 40666 uwsgi_store
+  section 40666 41148 uwsgi_store_access
+  section 41148 41709 uwsgi_temp_file_write_size
+  section 41709 42465 uwsgi_temp_path
 
 module ngx_http_v2_module
   aliases ngx_v2
   section 17 341 name
   section 341 711 known issues
   section 711 1399 example configuration
-  section 1399 7216 directives
+  section 1399 7157 directives
   section 1418 1684 http2
   section 1684 2019 http2_body_preread_size
   section 2019 2422 http2_chunk_size
@@ -1824,29 +1656,29 @@ module ngx_http_v2_module
   section 3368 3984 http2_max_field_size
   section 3984 4457 http2_max_header_size
   section 4457 5223 http2_max_requests
-  section 5223 6113 http2_push
-  section 6113 6641 http2_push_preload
-  section 6641 6842 http2_recv_buffer_size
-  section 6842 7216 http2_recv_timeout
-  section 7216 7516 embedded variables
-  section 7331 7516 $http2
+  section 5223 6054 http2_push
+  section 6054 6582 http2_push_preload
+  section 6582 6783 http2_recv_buffer_size
+  section 6783 7157 http2_recv_timeout
+  section 7157 7457 embedded variables
+  section 7272 7457 $http2
 
 module ngx_http_v3_module
   aliases ngx_v3
-  section 17 776 name
-  section 776 1043 known issues
-  section 1043 1847 example configuration
-  section 1847 4544 directives
-  section 1866 2374 http3
-  section 2374 2630 http3_max_concurrent_streams
-  section 2630 2871 http3_stream_buffer_size
-  section 2871 3206 quic_active_connection_id_limit
-  section 3206 3516 quic_bpf
-  section 3516 3817 quic_gso
-  section 3817 4142 quic_host_key
-  section 4142 4544 quic_retry
-  section 4544 4830 embedded variables
-  section 4659 4830 $http3
+  section 17 784 name
+  section 784 862 known issues
+  section 862 1832 example configuration
+  section 1832 4529 directives
+  section 1851 2359 http3
+  section 2359 2615 http3_max_concurrent_streams
+  section 2615 2856 http3_stream_buffer_size
+  section 2856 3191 quic_active_connection_id_limit
+  section 3191 3501 quic_bpf
+  section 3501 3802 quic_gso
+  section 3802 4127 quic_host_key
+  section 4127 4529 quic_retry
+  section 4529 4815 embedded variables
+  section 4644 4815 $http3
 
 module ngx_http_xslt_module
   aliases ngx_xslt
@@ -1872,16 +1704,16 @@ module ngx_mail_auth_http_module
 module ngx_mail_core_module
   section 17 206 name
   section 206 1219 example configuration
-  section 1219 9719 directives
-  section 1238 5534 listen
-  section 5534 5690 mail
-  section 5690 5944 max_errors
-  section 5944 6677 protocol
-  section 6677 8646 resolver
-  section 8646 8874 resolver_timeout
-  section 8874 8980 server
-  section 8980 9521 server_name
-  section 9521 9719 timeout
+  section 1219 9723 directives
+  section 1238 5538 listen
+  section 5538 5694 mail
+  section 5694 5948 max_errors
+  section 5948 6681 protocol
+  section 6681 8650 resolver
+  section 8650 8878 resolver_timeout
+  section 8878 8984 server
+  section 8984 9525 server_name
+  section 9525 9723 timeout
 
 module ngx_mail_imap_module
   section 17 85 name
@@ -1935,81 +1767,60 @@ module ngx_mail_smtp_module
 
 module ngx_mail_ssl_module
   section 17 428 name
-  section 428 1385 example configuration
-  section 1385 14799 directives
-  section 1404 1709 ssl
-  section 1709 3135 ssl_certificate
-  section 3135 3740 ssl_certificate_compression
-  section 3740 4708 ssl_certificate_key
-  section 4708 5253 ssl_ciphers
-  section 5253 5678 ssl_client_certificate
-  section 5678 6497 ssl_conf_command
-  section 6497 6761 ssl_crl
-  section 6761 7142 ssl_dhparam
-  section 7142 8063 ssl_ecdh_curve
-  section 8063 8868 ssl_password_file
-  section 8868 9158 ssl_prefer_server_ciphers
-  section 9158 9710 ssl_protocols
-  section 9710 11289 ssl_session_cache
-  section 10076 10212 off
-  section 10212 10393 none
-  section 10393 10628 builtin
-  section 10628 11289 shared
-  section 11289 12200 ssl_session_ticket_key
-  section 12200 12526 ssl_session_tickets
-  section 12526 12751 ssl_session_timeout
-  section 12751 13175 ssl_trusted_certificate
-  section 13175 14110 ssl_verify_client
-  section 14110 14365 ssl_verify_depth
-  section 14365 14799 starttls
-  section 14536 14654 on
-  section 14654 14726 off
-  section 14726 14799 only
-
-module ngx_mgmt_module
-  section 17 1508 name
-  section 1508 1768 example configuration
-  section 1768 6200 directives
-  section 1787 1966 mgmt
-  section 1966 2637 enforce_initial_report
-  section 2637 3013 license_token
-  section 3013 3214 proxy
-  section 3214 3418 proxy_username
-  section 3418 4229 proxy_password
-  section 4229 4614 resolver
-  section 4614 4836 ssl_crl
-  section 4836 5120 ssl_trusted_certificate
-  section 5120 5381 ssl_verify
-  section 5381 5761 state_path
-  section 5761 6200 usage_report
+  section 428 1399 example configuration
+  section 1399 13915 directives
+  section 1418 1723 ssl
+  section 1723 3120 ssl_certificate
+  section 3120 3810 ssl_certificate_key
+  section 3810 4355 ssl_ciphers
+  section 4355 4780 ssl_client_certificate
+  section 4780 5599 ssl_conf_command
+  section 5599 5863 ssl_crl
+  section 5863 6244 ssl_dhparam
+  section 6244 7165 ssl_ecdh_curve
+  section 7165 7970 ssl_password_file
+  section 7970 8260 ssl_prefer_server_ciphers
+  section 8260 8826 ssl_protocols
+  section 8826 10405 ssl_session_cache
+  section 9192 9328 off
+  section 9328 9509 none
+  section 9509 9744 builtin
+  section 9744 10405 shared
+  section 10405 11316 ssl_session_ticket_key
+  section 11316 11642 ssl_session_tickets
+  section 11642 11867 ssl_session_timeout
+  section 11867 12291 ssl_trusted_certificate
+  section 12291 13226 ssl_verify_client
+  section 13226 13481 ssl_verify_depth
+  section 13481 13915 starttls
+  section 13652 13770 on
+  section 13770 13842 off
+  section 13842 13915 only
 
 module ngx_otel_module
-  section 17 732 name
-  section 732 1183 example configuration
-  section 1183 4830 directives
-  section 1202 2283 otel_exporter
-  section 1328 1491 c<
-  section 1491 1655 c<
-  section 1655 1761 header name value;
-  section 1761 1862 interval time;
-  section 1862 1983 batch_size number;
-  section 1983 2283 batch_count number;
-  section 2283 2585 otel_service_name
-  section 2585 2788 otel_resource_attr
-  section 2788 3436 otel_trace
-  section 3436 4259 otel_trace_context
-  section 3827 3996 extract
-  section 3996 4092 inject
-  section 4092 4186 propagate
-  section 4186 4259 ignore
-  section 4259 4601 otel_span_name
-  section 4601 4830 otel_span_attr
-  section 4830 5426 default span attributes
-  section 5426 5929 embedded variables
-  section 5465 5602 $otel_trace_id
-  section 5602 5701 $otel_span_id
-  section 5701 5801 $otel_parent_id
-  section 5801 5929 $otel_parent_sampled
+  section 17 522 name
+  section 522 973 example configuration
+  section 973 4063 directives
+  section 992 1719 otel_exporter
+  section 1118 1215 endpoint
+  section 1215 1310 interval
+  section 1310 1423 batch_size
+  section 1423 1719 batch_count
+  section 1719 2021 otel_service_name
+  section 2021 2669 otel_trace
+  section 2669 3492 otel_trace_context
+  section 3060 3229 extract
+  section 3229 3325 inject
+  section 3325 3419 propagate
+  section 3419 3492 ignore
+  section 3492 3834 otel_span_name
+  section 3834 4063 otel_span_attr
+  section 4063 4710 default span attributes
+  section 4710 5213 embedded variables
+  section 4749 4886 $otel_trace_id
+  section 4886 4985 $otel_span_id
+  section 4985 5085 $otel_parent_id
+  section 5085 5213 $otel_parent_sampled
 
 module ngx_stream_access_module
   section 17 206 name
@@ -2021,55 +1832,51 @@ module ngx_stream_access_module
 module ngx_stream_core_module
   section 17 283 name
   section 283 1262 example configuration
-  section 1262 15495 directives
-  section 1281 8319 listen
-  section 8319 8587 preread_buffer_size
-  section 8587 8852 preread_timeout
-  section 8852 9218 proxy_protocol_timeout
-  section 9218 10699 resolver
-  section 10699 11079 resolver_timeout
-  section 11079 11604 server
-  section 11604 13597 server_name
-  section 13597 14025 server_names_hash_bucket_size
-  section 14025 14360 server_names_hash_max_size
-  section 14360 14522 stream
-  section 14522 14845 tcp_nodelay
-  section 14845 15169 variables_hash_bucket_size
-  section 15169 15495 variables_hash_max_size
-  section 15495 20156 embedded variables
-  section 15604 15758 $binary_remote_addr
-  section 15758 15838 $bytes_received
-  section 15838 15899 $bytes_sent
-  section 15899 15952 $connection
-  section 15952 15988 $hostname
-  section 15988 16067 $msec
-  section 16067 16112 $nginx_version
-  section 16112 16159 $pid
-  section 16159 16257 $protocol
-  section 16257 16471 $proxy_protocol_addr
-  section 16471 16682 $proxy_protocol_port
-  section 16682 16903 $proxy_protocol_server_addr
-  section 16903 17121 $proxy_protocol_server_port
-  section 17121 18834 $proxy_protocol_tlv_i<name>
-  section 18834 18878 $remote_addr
-  section 18878 18919 $remote_port
-  section 18919 19178 $server_addr
-  section 19178 19254 $server_port
-  section 19254 19353 $session_time
-  section 19353 20006 $status
-  section 20006 20079 $time_iso8601
-  section 20079 20156 $time_local
+  section 1262 10999 directives
+  section 1281 6996 listen
+  section 6996 7264 preread_buffer_size
+  section 7264 7529 preread_timeout
+  section 7529 7895 proxy_protocol_timeout
+  section 7895 9376 resolver
+  section 9376 9756 resolver_timeout
+  section 9756 9864 server
+  section 9864 10026 stream
+  section 10026 10349 tcp_nodelay
+  section 10349 10673 variables_hash_bucket_size
+  section 10673 10999 variables_hash_max_size
+  section 10999 15660 embedded variables
+  section 11108 11262 $binary_remote_addr
+  section 11262 11342 $bytes_received
+  section 11342 11403 $bytes_sent
+  section 11403 11456 $connection
+  section 11456 11492 $hostname
+  section 11492 11571 $msec
+  section 11571 11616 $nginx_version
+  section 11616 11663 $pid
+  section 11663 11761 $protocol
+  section 11761 11975 $proxy_protocol_addr
+  section 11975 12186 $proxy_protocol_port
+  section 12186 12407 $proxy_protocol_server_addr
+  section 12407 12625 $proxy_protocol_server_port
+  section 12625 14338 $proxy_protocol_tlv_i<name>
+  section 14338 14382 $remote_addr
+  section 14382 14423 $remote_port
+  section 14423 14682 $server_addr
+  section 14682 14758 $server_port
+  section 14758 14857 $session_time
+  section 14857 15510 $status
+  section 15510 15583 $time_iso8601
+  section 15583 15660 $time_local
 
 module ngx_stream_geo_module
   section 17 212 name
   section 212 443 example configuration
-  section 443 2939 directives
-  section 462 2939 geo
+  section 443 2859 directives
+  section 462 2859 geo
   section 1341 1395 delete
   section 1395 1722 default
   section 1722 1822 include
-  section 1822 2010 ranges
-  section 2010 2939 volatile
+  section 1822 2859 ranges
 
 module ngx_stream_geoip_module
   section 17 612 name
@@ -2097,38 +1904,30 @@ module ngx_stream_geoip_module
 module ngx_stream_js_module
   section 17 292 name
   section 292 2338 example configuration
-  section 2338 21893 directives
-  section 2357 3358 js_access
-  section 2821 3358 s
-  section 3358 3792 js_context_reuse
-  section 3792 4158 js_engine
-  section 4158 4452 js_fetch_buffer_size
-  section 4452 4895 js_fetch_ciphers
-  section 4895 5204 js_fetch_max_response_buffer_size
-  section 5204 5559 js_fetch_protocols
-  section 5559 5996 js_fetch_timeout
-  section 5996 6343 js_fetch_trusted_certificate
-  section 6343 6640 js_fetch_verify
-  section 6640 6942 js_fetch_verify_depth
-  section 6942 7671 js_fetch_proxy
-  section 7671 8474 js_fetch_keepalive
-  section 8474 9089 js_fetch_keepalive_requests
-  section 9089 9519 js_fetch_keepalive_time
-  section 9519 9858 js_fetch_keepalive_timeout
-  section 9858 10805 js_filter
-  section 10253 10805 s
-  section 10805 11581 js_import
-  section 11581 12149 js_include
-  section 12149 13467 js_load_stream_native_module
-  section 13467 13759 js_path
-  section 13759 15613 js_periodic
-  section 15613 16251 js_preload_object
-  section 16251 17759 js_preread
-  section 16719 17759 s
-  section 17759 19194 js_set
-  section 19194 21521 js_shared_dict_zone
-  section 21521 21893 js_var
-  section 21893 22018 session object properties
+  section 2338 16059 directives
+  section 2357 3383 js_access
+  section 2846 3383 s
+  section 3383 3677 js_fetch_buffer_size
+  section 3677 4120 js_fetch_ciphers
+  section 4120 4429 js_fetch_max_response_buffer_size
+  section 4429 4784 js_fetch_protocols
+  section 4784 5221 js_fetch_timeout
+  section 5221 5568 js_fetch_trusted_certificate
+  section 5568 5865 js_fetch_verify
+  section 5865 6167 js_fetch_verify_depth
+  section 6167 7139 js_filter
+  section 6587 7139 s
+  section 7139 7915 js_import
+  section 7915 8483 js_include
+  section 8483 8775 js_path
+  section 8775 10662 js_periodic
+  section 10662 11297 js_preload_object
+  section 11297 12830 js_preread
+  section 11790 12830 s
+  section 12830 13918 js_set
+  section 13918 15687 js_shared_dict_zone
+  section 15687 16059 js_var
+  section 16059 16184 session object properties
 
 module ngx_stream_keyval_module
   section 17 422 name
@@ -2194,58 +1993,40 @@ module ngx_stream_mqtt_preread_module
   section 979 1065 $mqtt_preread_clientid
   section 1065 1164 $mqtt_preread_username
 
-module ngx_stream_num_map_module
-  section 17 320 name
-  section 320 528 example configuration
-  section 528 1573 directives
-  section 547 1573 num_map
-  section 1204 1400 default
-  section 1400 1486 include
-  section 1486 1573 volatile
-
-module ngx_stream_pass_module
-  section 17 291 name
-  section 291 806 example configuration
-  section 806 1210 directives
-  section 825 1210 pass
-
 module ngx_stream_proxy_module
   section 17 229 name
   section 229 722 example configuration
-  section 722 16624 directives
+  section 722 14268 directives
   section 741 1930 proxy_bind
-  section 1930 2292 proxy_bind_dynamic
-  section 2292 2647 proxy_buffer_size
-  section 2647 2877 proxy_connect_timeout
-  section 2877 3645 proxy_download_rate
-  section 3645 4035 proxy_half_close
-  section 4035 4434 proxy_next_upstream
-  section 4434 4710 proxy_next_upstream_timeout
-  section 4710 5000 proxy_next_upstream_tries
-  section 5000 5796 proxy_pass
-  section 5796 6124 proxy_protocol
-  section 6124 6702 proxy_requests
-  section 6702 7294 proxy_responses
-  section 7294 8115 proxy_session_drop
-  section 8115 8613 proxy_socket_keepalive
-  section 8613 8831 proxy_ssl
-  section 8831 9150 proxy_ssl_certificate
-  section 9150 10407 proxy_ssl_certificate_cache
-  section 10407 11011 proxy_ssl_certificate_key
-  section 11011 11388 proxy_ssl_ciphers
-  section 11388 12169 proxy_ssl_conf_command
-  section 12169 12419 proxy_ssl_crl
-  section 12419 12910 proxy_ssl_key_log
-  section 12910 13378 proxy_ssl_name
-  section 13378 13684 proxy_ssl_password_file
-  section 13684 14080 proxy_ssl_protocols
-  section 14080 14470 proxy_ssl_server_name
-  section 14470 14820 proxy_ssl_session_reuse
-  section 14820 15099 proxy_ssl_trusted_certificate
-  section 15099 15328 proxy_ssl_verify
-  section 15328 15559 proxy_ssl_verify_depth
-  section 15559 15887 proxy_timeout
-  section 15887 16624 proxy_upload_rate
+  section 1930 2285 proxy_buffer_size
+  section 2285 2515 proxy_connect_timeout
+  section 2515 3283 proxy_download_rate
+  section 3283 3673 proxy_half_close
+  section 3673 4072 proxy_next_upstream
+  section 4072 4348 proxy_next_upstream_timeout
+  section 4348 4638 proxy_next_upstream_tries
+  section 4638 5434 proxy_pass
+  section 5434 5762 proxy_protocol
+  section 5762 6340 proxy_requests
+  section 6340 6932 proxy_responses
+  section 6932 7753 proxy_session_drop
+  section 7753 8251 proxy_socket_keepalive
+  section 8251 8469 proxy_ssl
+  section 8469 8788 proxy_ssl_certificate
+  section 8788 9114 proxy_ssl_certificate_key
+  section 9114 9491 proxy_ssl_ciphers
+  section 9491 10272 proxy_ssl_conf_command
+  section 10272 10522 proxy_ssl_crl
+  section 10522 10990 proxy_ssl_name
+  section 10990 11296 proxy_ssl_password_file
+  section 11296 11706 proxy_ssl_protocols
+  section 11706 12096 proxy_ssl_server_name
+  section 12096 12464 proxy_ssl_session_reuse
+  section 12464 12743 proxy_ssl_trusted_certificate
+  section 12743 12972 proxy_ssl_verify
+  section 12972 13203 proxy_ssl_verify_depth
+  section 13203 13531 proxy_timeout
+  section 13531 14268 proxy_upload_rate
 
 module ngx_stream_proxy_protocol_vendor_module
   section 17 765 name
@@ -2283,69 +2064,53 @@ module ngx_stream_split_clients_module
   section 662 1405 split_clients
 
 module ngx_stream_ssl_module
-  section 17 446 name
-  section 446 1407 example configuration
-  section 1407 22604 directives
-  section 1426 2001 ssl_alpn
-  section 2001 4119 ssl_certificate
-  section 4119 5328 ssl_certificate_cache
-  section 5328 5935 ssl_certificate_compression
-  section 5935 7035 ssl_certificate_key
-  section 7035 7471 ssl_ciphers
-  section 7471 7948 ssl_client_certificate
-  section 7948 8769 ssl_conf_command
-  section 8769 9035 ssl_crl
-  section 9035 9373 ssl_dhparam
-  section 9373 10206 ssl_ecdh_curve
-  section 10206 10789 ssl_ech_file
-  section 10789 11003 ssl_handshake_timeout
-  section 11003 11474 ssl_key_log
-  section 11474 12160 ssl_ocsp
-  section 12160 12673 ssl_ocsp_cache
-  section 12673 13194 ssl_ocsp_responder
-  section 13194 13944 ssl_password_file
-  section 13944 14236 ssl_prefer_server_ciphers
-  section 14236 14984 ssl_protocols
-  section 14984 15711 ssl_reject_handshake
-  section 15711 17300 ssl_session_cache
-  section 16079 16215 off
-  section 16215 16396 none
-  section 16396 16631 builtin
-  section 16631 17300 shared
-  section 17300 18168 ssl_session_ticket_key
-  section 18168 18451 ssl_session_tickets
-  section 18451 18678 ssl_session_timeout
-  section 18678 19466 ssl_stapling
-  section 19466 19891 ssl_stapling_file
-  section 19891 20386 ssl_stapling_responder
-  section 20386 20883 ssl_stapling_verify
-  section 20883 21359 ssl_trusted_certificate
-  section 21359 22347 ssl_verify_client
-  section 22347 22604 ssl_verify_depth
-  section 22604 27587 embedded variables
-  section 22712 22850 $ssl_alpn_protocol
-  section 22850 22949 $ssl_cipher
-  section 22949 23354 $ssl_ciphers
-  section 23354 23546 $ssl_client_cert
-  section 23546 23685 $ssl_client_fingerprint
-  section 23685 23895 $ssl_client_i_dn
-  section 23895 24026 $ssl_client_raw_cert
-  section 24026 24237 $ssl_client_s_dn
-  section 24237 24368 $ssl_client_serial
-  section 24368 24805 $ssl_client_sigalg
-  section 24805 24896 $ssl_client_v_end
-  section 24896 25007 $ssl_client_v_remain
-  section 25007 25102 $ssl_client_v_start
-  section 25102 25301 $ssl_client_verify
-  section 25301 25664 $ssl_curve
-  section 25664 26095 $ssl_curves
-  section 26095 26302 $ssl_ech_outer_server_name
-  section 26302 26717 $ssl_ech_status
-  section 26717 26802 $ssl_protocol
-  section 26802 26937 $ssl_server_name
-  section 26937 27034 $ssl_session_id
-  section 27034 27144 $ssl_session_reused
-  section 27144 27587 $ssl_sigalg
+  section 17 362 name
+  section 362 1337 example configuration
+  section 1337 14070 directives
+  section 1356 1931 ssl_alpn
+  section 1931 3698 ssl_certificate
+  section 3698 4512 ssl_certificate_key
+  section 4512 4948 ssl_ciphers
+  section 4948 5375 ssl_client_certificate
+  section 5375 6196 ssl_conf_command
+  section 6196 6462 ssl_crl
+  section 6462 6800 ssl_dhparam
+  section 6800 7633 ssl_ecdh_curve
+  section 7633 7847 ssl_handshake_timeout
+  section 7847 8597 ssl_password_file
+  section 8597 8889 ssl_prefer_server_ciphers
+  section 8889 9440 ssl_protocols
+  section 9440 11021 ssl_session_cache
+  section 9808 9944 off
+  section 9944 10125 none
+  section 10125 10360 builtin
+  section 10360 11021 shared
+  section 11021 11889 ssl_session_ticket_key
+  section 11889 12172 ssl_session_tickets
+  section 12172 12399 ssl_session_timeout
+  section 12399 12825 ssl_trusted_certificate
+  section 12825 13813 ssl_verify_client
+  section 13813 14070 ssl_verify_depth
+  section 14070 17564 embedded variables
+  section 14178 14316 $ssl_alpn_protocol
+  section 14316 14415 $ssl_cipher
+  section 14415 14820 $ssl_ciphers
+  section 14820 15012 $ssl_client_cert
+  section 15012 15151 $ssl_client_fingerprint
+  section 15151 15361 $ssl_client_i_dn
+  section 15361 15492 $ssl_client_raw_cert
+  section 15492 15703 $ssl_client_s_dn
+  section 15703 15834 $ssl_client_serial
+  section 15834 15925 $ssl_client_v_end
+  section 15925 16036 $ssl_client_v_remain
+  section 16036 16131 $ssl_client_v_start
+  section 16131 16330 $ssl_client_verify
+  section 16330 16693 $ssl_curve
+  section 16693 17124 $ssl_curves
+  section 17124 17209 $ssl_protocol
+  section 17209 17344 $ssl_server_name
+  section 17344 17441 $ssl_session_id
+  section 17441 17564 $ssl_session_reused
 
 module ngx_stream_ssl_preread_module
   section 17 648 name
@@ -2368,30 +2133,29 @@ module ngx_stream_upstream_hc_module
 module ngx_stream_upstream_module
   section 17 264 name
   section 264 1528 example configuration
-  section 1528 14836 directives
+  section 1528 14418 directives
   section 1547 2641 upstream
-  section 2641 7619 server
-  section 7619 8403 zone
-  section 8403 9296 state
-  section 9296 10435 hash
-  section 10435 10784 least_conn
-  section 10784 11823 least_time
-  section 11823 12950 random
-  section 12950 14441 resolver
-  section 14441 14836 resolver_timeout
-  section 14836 16676 embedded variables
-  section 14959 15343 $upstream_addr
-  section 15343 15546 $upstream_bytes_received
-  section 15546 15739 $upstream_bytes_sent
-  section 15739 15984 $upstream_connect_time
-  section 15984 16232 $upstream_first_byte_time
-  section 16232 16458 $upstream_last_addr
-  section 16458 16676 $upstream_session_time
+  section 2641 7389 server
+  section 7389 8173 zone
+  section 8173 9066 state
+  section 9066 10205 hash
+  section 10205 10554 least_conn
+  section 10554 11593 least_time
+  section 11593 12720 random
+  section 12720 14079 resolver
+  section 14079 14418 resolver_timeout
+  section 14418 16032 embedded variables
+  section 14541 14925 $upstream_addr
+  section 14925 15128 $upstream_bytes_received
+  section 15128 15321 $upstream_bytes_sent
+  section 15321 15566 $upstream_connect_time
+  section 15566 15814 $upstream_first_byte_time
+  section 15814 16032 $upstream_session_time
 
 module ngx_stream_zone_sync_module
   section 17 745 name
   section 745 2155 example configuration
-  section 2155 10325 directives
+  section 2155 10331 directives
   section 2174 2411 zone_sync
   section 2411 2891 zone_sync_buffers
   section 2891 3144 zone_sync_connect_retry_interval
@@ -2407,20 +2171,21 @@ module ngx_stream_zone_sync_module
   section 7323 7585 zone_sync_ssl_crl
   section 7585 8119 zone_sync_ssl_name
   section 8119 8433 zone_sync_ssl_password_file
-  section 8433 8769 zone_sync_ssl_protocols
-  section 8769 9217 zone_sync_ssl_server_name
-  section 9217 9508 zone_sync_ssl_trusted_certificate
-  section 9508 9749 zone_sync_ssl_verify
-  section 9749 9992 zone_sync_ssl_verify_depth
-  section 9992 10325 zone_sync_timeout
-  section 10325 10548 api endpoints
-  section 10548 11610 starting, stopping, removing a cluster node
+  section 8433 8775 zone_sync_ssl_protocols
+  section 8775 9223 zone_sync_ssl_server_name
+  section 9223 9514 zone_sync_ssl_trusted_certificate
+  section 9514 9755 zone_sync_ssl_verify
+  section 9755 9998 zone_sync_ssl_verify_depth
+  section 9998 10331 zone_sync_timeout
+  section 10331 10554 api endpoints
+  section 10554 11616 starting, stopping, removing a cluster node
 
 module quic
-  section 18 386 name
-  section 386 1864 building from sources
-  section 1864 2962 configuration tips
-  section 2962 4125 troubleshooting
+  section 18 450 name
+  section 450 2061 building from sources
+  section 2061 3233 configuration
+  section 3233 4040 example configuration
+  section 4040 5203 troubleshooting
 
 module request_processing
   section 18 85 name
@@ -2446,9 +2211,7 @@ module switches
   section 18 1806 name
 
 module syntax
-  section 18 213 name
-  section 213 572 sizes and offsets
-  section 572 1383 time intervals
+  section 18 1040 name
 
 module sys_errlist
   section 18 535 name
@@ -2472,8 +2235,8 @@ module welcome_nginx_facebook
 
 module windows
   section 18 2272 name
-  section 2272 2484 known issues
-  section 2484 2733 possible future enhancements
+  section 2272 2466 known issues
+  section 2466 2715 possible future enhancements
 
 dist lua-5.1.5
   modules lua-5.1.5
@@ -2973,7 +2736,648 @@ module lua-5.1.5
   section 195704 197381 the complete syntax of lua
 
 dist luajit-2.1
-  modules contact ext_c_api ext_ffi ext_ffi_api ext_ffi_semantics ext_ffi_tutorial ext_jit ext_profiler extensions faq install luajit-2.1 running status
+  modules changes contact ext_c_api ext_ffi ext_ffi_api ext_ffi_semantics ext_ffi_tutorial ext_jit ext_profiler extensions faq install luajit-2.1 running status
+
+module changes
+  section 14 39336 luajit change history
+  section 51 74 luajit
+  section 74 104 download e<rchevron>
+  section 104 126 installation
+  section 126 150 running
+  section 150 177 extensions
+  section 177 205 ffi library
+  section 205 227 ffi tutorial
+  section 227 246 ffi.* api
+  section 246 276 ffi semantics
+  section 276 299 jit.* library
+  section 299 318 lua/c api
+  section 318 343 profiler
+  section 343 366 status
+  section 366 390 changes
+  section 390 403 faq
+  section 403 436 performance e<rchevron>
+  section 436 462 wiki e<rchevron>
+  section 462 716 mailing list e<rchevron>
+  section 716 1836 luajit 2.1.0-beta3 e<mdash> 2017-05-01
+  section 770 811 rewrite memory block allocator.
+  section 811 860 add various extension from lua 5.2/5.3.
+  section 860 911 remove old lua 5.0 compatibility defines.
+  section 911 982 set arg table before evaluating lua_init and -e chunks.
+  section 982 1041 fix fold rules for math.abs() and fp negation.
+  section 1041 1093 fix soft-float math.abs() and negation.
+  section 1093 1159 fix formatting of some small denormals at low precision.
+  section 1159 1203 lj_gc64: add jit compiler support.
+  section 1203 1251 x64/lj_gc64: add jit compiler backend.
+  section 1251 1317 x86/x64: generate bmi2 shifts and rotates, if available.
+  section 1317 1376 windows/x86: add full exception interoperability.
+  section 1376 1416 arm64: add big-endian support.
+  section 1416 1458 arm64: add jit compiler backend.
+  section 1458 1495 mips: fix tsetr barrier.
+  section 1495 1539 mips: support mips16 interlinking.
+  section 1539 1598 mips soft-float: fix code generation for href.
+  section 1598 1659 mips64: add mips64 hard-float jit compiler backend.
+  section 1659 1733 mips64: add mips64 hard-float/soft-float support to
+  section 1733 1778 ffi: compile bitfield loads/stores.
+  section 1778 1836 various fixes common with the 2.0 branch.
+  section 1836 2337 luajit 2.1.0-beta2 e<mdash> 2016-03-03
+  section 1890 1923 enable trace stitching.
+  section 1923 1998 use internal implementation for converting fp numbers to
+  section 1998 2063 parse unicode escape \u{xx...} in string literals.
+  section 2063 2101 add mips soft-float support.
+  section 2101 2148 switch mips port to dual-number mode.
+  section 2148 2214 x86/x64: add support for aes-ni, avx and avx2 to dynasm.
+  section 2214 2256 ffi: add ssize_t declaration.
+  section 2256 2300 ffi: parse #line nn and #nn.
+  section 2300 2337 various minor fixes.
+  section 2337 4583 luajit 2.1.0-beta1 e<mdash> 2015-08-25
+  section 2527 2567 changes to the vm core:
+  section 2567 2612 add low-overhead profiler (-jp).
+  section 2612 2714 add lj_gc64 mode: 64 bit gc object references (really: 47
+  section 2714 2793 add lj_fr2 mode: two-slot frame info. required by lj_gc64
+  section 2793 2843 add table.new() and table.clear().
+  section 2843 2900 parse binary number literals (0bxxx).
+  section 2900 2950 improvements to the jit compiler:
+  section 2950 2999 add trace stitching (disabled for now).
+  section 2999 3223 compile various builtins: string.char(),
+  section 3223 3298 compile string.find() for fixed string searches (no
+  section 3298 3349 compile bc_tsetm, e.g. {1,2,3,f()}.
+  section 3349 3401 compile string concatenations (bc_cat).
+  section 3401 3442 compile __concat metamethod.
+  section 3442 3487 various minor optimizations.
+  section 3487 3521 internal changes:
+  section 3521 3586 add support for embedding luajit bytecode for builtins.
+  section 3586 3644 replace various builtins with embedded bytecode.
+  section 3644 3700 refactor string buffers and string formatting.
+  section 3700 3778 remove obsolete non-truncating number to integer conversions.
+  section 3778 3801 ports:
+  section 3801 3847 add xbox one port (lj_gc64 mode).
+  section 3847 3910 arm64: add port of the interpreter (lj_gc64 mode).
+  section 3910 3981 x64: add separate port of the interpreter to lj_gc64 mode.
+  section 3981 4053 x86/x64: drop internal x87 math functions. use libm functions.
+  section 4053 4127 x86: remove x87 support from interpreter. sse2 is mandatory
+  section 4127 4189 ppc/e500: drop support for this architecture.
+  section 4189 4218 ffi library:
+  section 4218 4263 ffi: add 64 bit bitwise operations.
+  section 4263 4350 ffi: compile vla/vls and large cdata allocations with default
+  section 4350 4421 ffi: compile conversions from functions to function pointers.
+  section 4421 4482 ffi: compile lightuserdata to void * conversion.
+  section 4482 4532 ffi: compile ffi.gc(cdata, nil), too.
+  section 4532 4583 ffi: add ffi.typeinfo().
+  section 4583 6868 luajit 2.0.5 e<mdash> 2017-05-01
+  section 4631 4684 add workaround for msvc 2015 stdio changes.
+  section 4684 4758 limit mcode alloc probing, depending on the available pool
+  section 4758 4829 fix overly restrictive range calculation in mcode allocation.
+  section 4829 4880 fix out-of-scope goto handling in parser.
+  section 4880 4950 remove internal __mode = k and replace with safe check.
+  section 4950 5004 add proto field to jit.util.funcinfo().
+  section 5004 5043 fix gc step size calculation.
+  section 5043 5115 initialize uv->immutable for upvalues of loaded chunks.
+  section 5115 5177 fix for cdata vs. non-cdata arithmetics/comparisons.
+  section 5177 5240 drop leftover regs in for iterator assignment, too.
+  section 5240 5281 fix phi remarking in sink pass.
+  section 5281 5354 dont try to record outermost pcall() return to lower frame.
+  section 5354 5431 add guard for obscure aliasing between open upvalues and ssa
+  section 5431 5510 remove assumption that lj_math_random_step() doesnt clobber
+  section 5510 5580 fix handling of non-numeric strings in arithmetic coercions.
+  section 5580 5647 fix recording of select(n, ...) with off-trace varargs
+  section 5647 5686 fix install for cross-builds.
+  section 5686 5762 dont allocate unused 2nd result register in jit compiler
+  section 5762 5823 drop marks from replayed instructions when sinking.
+  section 5823 5853 fix unsinking check.
+  section 5853 5902 properly handle oom in trace_save().
+  section 5902 5979 limit number of arguments given to io.lines() and
+  section 5979 6015 fix narrowing of tobit.
+  section 6015 6058 osx: fix build with recent xcode.
+  section 6058 6123 x86/x64: dont spill an explicit ref_base in the ir.
+  section 6123 6173 x86/x64: fix instruction length decoder.
+  section 6173 6246 x86/x64: search for exit jumps with instruction length decoder.
+  section 6246 6310 arm: fix blx encoding for thumb interworking calls.
+  section 6310 6368 mips: dont use rid_gp as a scratch register.
+  section 6368 6429 mips: fix emitted code for u32 to float conversion.
+  section 6429 6491 mips: backport workaround for compact unwind tables.
+  section 6491 6535 mips: fix cross-endian jit.bcsave.
+  section 6535 6582 mips: fix bc_isnext fallback path.
+  section 6582 6646 mips: fix use of ffgccheck delay slots in interpreter.
+  section 6646 6703 ffi: fix fold rules for int64_t comparisons.
+  section 6703 6753 ffi: fix split pass for conv i64.u64.
+  section 6753 6794 ffi: fix ipairs() recording.
+  section 6794 6868 ffi: dont propagate qualifiers into subtypes of complex.
+  section 6868 9694 luajit 2.0.4 e<mdash> 2015-05-14
+  section 6916 6968 fix stack check in narrowing optimization.
+  section 6968 7028 fix lua/c api typecheck error for special indexes.
+  section 7028 7070 fix string to number conversion.
+  section 7070 7122 fix lexer error for chunks without tokens.
+  section 7122 7196 dont compile ir_retf after callt to ff with-side
+  section 7196 7263 fix bc_uclo/bc_jmp join optimization in lua parser.
+  section 7263 7320 fix corner case in string to number conversion.
+  section 7320 7389 gracefully handle lua_error() for a suspended coroutine.
+  section 7389 7445 avoid error messages when building with clang.
+  section 7445 7519 fix snapshot #0 handling for traces with a stack check on
+  section 7519 7583 fix fused constant loads under high register pressure.
+  section 7583 7636 invalidate backpropagation cache after dce.
+  section 7636 7666 fix abc elimination.
+  section 7666 7727 fix debug info for main chunk of stripped bytecode.
+  section 7727 7782 fix fold rule for string.sub(s, ...) == k.
+  section 7782 7831 fix fold rule for strref of snew.
+  section 7831 7896 fix frame traversal while searching for error function.
+  section 7896 7962 prevent gc estimate miscalculation due to buffer growth.
+  section 7962 8016 prevent adding side traces for stack checks.
+  section 8016 8084 fix top slot calculation for snapshots with continuations.
+  section 8084 8141 fix check for reuse of scev results in forl.
+  section 8141 8168 add ps vita port.
+  section 8168 8216 fix compatibility issues with illumos.
+  section 8216 8260 fix dragonfly build (unsupported).
+  section 8260 8332 openbsd/x86: better executable memory allocation for w^x mode.
+  section 8332 8392 x86: fix argument checks for ipairs() iterator.
+  section 8392 8463 x86: lj_math_random_step() clobbers xmm regs on osx clang.
+  section 8463 8536 x86: fix code generation for unused result of math.random().
+  section 8536 8622 x64: allow building with luajit_use_sysmalloc and
+  section 8622 8675 x86/x64: fix argument check for bit shifts.
+  section 8675 8739 x86/x64: fix code generation for fused test/arith ops.
+  section 8739 8793 arm: fix write barrier check in bc_usets.
+  section 8793 8857 ppc: fix red zone overflow in machine code generation.
+  section 8857 8898 ppc: dont use mcrxr on ppe.
+  section 8898 8962 various archs: fix excess stack growth in interpreter.
+  section 8962 9022 ffi: fix fold rule for tobit + conv num.u32.
+  section 9022 9072 ffi: prevent dse across ffi.string().
+  section 9072 9147 ffi: no meta fallback when indexing pointer to incomplete
+  section 9147 9203 ffi: fix initialization of unions of subtypes.
+  section 9203 9269 ffi: fix cdata vs. non-cdata arithmetic and comparisons.
+  section 9269 9346 ffi: fix __index/__newindex metamethod resolution for
+  section 9346 9403 ffi: fix compilation of reference field access.
+  section 9403 9472 ffi: fix frame traversal for backtraces with ffi callbacks.
+  section 9472 9550 ffi: fix recording of indexing a struct pointer ctype object
+  section 9550 9627 ffi: allow non-scalar cdata to be compared for equality by
+  section 9627 9694 ffi: fix pseudo type conversions for type punning.
+  section 9694 11483 luajit 2.0.3 e<mdash> 2014-03-12
+  section 9742 9765 add ps4 port.
+  section 9765 9814 add support for multilib distro builds.
+  section 9814 9838 fix osx build.
+  section 9838 9864 fix mingw build.
+  section 9864 9893 fix xbox 360 build.
+  section 9893 9946 improve uload forwarding for open upvalues.
+  section 9946 10021 fix gc steps threshold handling when called by jit-compiled
+  section 10021 10087 fix argument checks for math.deg() and math.rad().
+  section 10087 10125 fix jit.flush(func|true).
+  section 10125 10194 respect jit.off(func) when returning to a function, too.
+  section 10194 10249 fix compilation of string.byte(s, nil, n).
+  section 10249 10317 fix line number for relocated bytecode after closure fixup
+  section 10317 10362 fix frame traversal for backtraces.
+  section 10362 10392 fix abc elimination.
+  section 10392 10433 fix handling of redundant phis.
+  section 10433 10492 fix snapshot restore for exit to function header.
+  section 10492 10557 fix type punning alias analysis for constified pointers
+  section 10557 10627 fix call unroll checks in the presence of metamethod frames.
+  section 10627 10683 fix initial maxslot for down-recursive traces.
+  section 10683 10752 prevent base register coalescing if parent uses ir_retf.
+  section 10752 10822 dont purge modified function from stack slots in bc_ret.
+  section 10822 10860 fix recording of bc_varg.
+  section 10860 10920 dont access dangling reference to reallocated ir.
+  section 10920 10985 fix frame depth display for bytecode dump in -jdump.
+  section 10985 11050 arm: fix register allocation when rematerializing fprs.
+  section 11050 11111 x64: fix store to upvalue for lightuserdata values.
+  section 11111 11181 ffi: add missing gc steps for callback argument conversions.
+  section 11181 11224 ffi: properly unload loaded dlls.
+  section 11224 11279 ffi: fix argument checks for ffi.string().
+  section 11279 11339 ffi/x64: fix passing of vector arguments to calls.
+  section 11339 11403 ffi: rehash finalizer table after gc cycle, if needed.
+  section 11403 11483 ffi: fix cts->l for cdata unsinking in snapshot restore.
+  section 11483 13243 luajit 2.0.2 e<mdash> 2013-06-03
+  section 11531 11591 fix memory access check for fast string interning.
+  section 11591 11640 fix msvc intrinsics for older versions.
+  section 11640 11693 add missing gc steps for io.* functions.
+  section 11693 11762 fix spurious red zone overflows in machine code generation.
+  section 11762 11816 fix jump-range constrained mcode allocation.
+  section 11816 11867 inhibit dse for implicit loads via calls.
+  section 11867 11937 fix builtin string to number conversion for overflow digits.
+  section 11937 12003 fix optional argument handling while recording builtins.
+  section 12003 12065 fix optional argument handling in table.concat().
+  section 12065 12133 add partial support for building with mingw64 gcc 4.8-seh.
+  section 12133 12213 add missing phi barrier to string.sub(str, a, b) == kstr
+  section 12213 12261 fix compatibility issues with illumos.
+  section 12261 12333 arm: fix cache flush/sync for exit stubs of jit-compiled code.
+  section 12333 12402 mips: fix cache flush/sync for jit-compiled code jump area.
+  section 12402 12474 ppc: add plt suffix for external calls from assembler code.
+  section 12474 12529 ffi: fix snapshot substitution in split pass.
+  section 12529 12595 ffi/x86: fix register allocation for 64 bit comparisons.
+  section 12595 12670 ffi: fix tailcall in lowest frame to c function with bool
+  section 12670 12734 ffi: ignore long type specifier in ffi.istype().
+  section 12734 12823 ffi: fix calling conventions for 32 bit osx and ios simulator
+  section 12823 12903 ffi: fix calling conventions for arm hard-float eabi (nested
+  section 12903 12981 ffi: improve error messages for arithmetic and comparison
+  section 12981 13053 ffi: insert no-op type conversion for pointer to integer cast.
+  section 13053 13103 ffi: fix unroll limit for ffi.fill().
+  section 13103 13161 ffi: must sink xbar together with xstores.
+  section 13161 13243 ffi: preserve intermediate string for const char *
+  section 13243 14290 luajit 2.0.1 e<mdash> 2013-02-19
+  section 13291 13343 dont clear frame for out-of-memory error.
+  section 13343 13407 leave hook when resume catches error thrown from hook.
+  section 13407 13466 add missing gc steps for template table creation.
+  section 13466 13525 fix discharge order of comparisons in lua parser.
+  section 13525 13576 improve buffer handling for io.read().
+  section 13576 13643 osx: add support for mach-o object files to -b option.
+  section 13643 13666 fix ps3 port.
+  section 13666 13701 fix/enable xbox 360 port.
+  section 13701 13764 x86/x64: always mark ref for shift count as non-weak.
+  section 13764 13828 x64: dont fuse implicitly 32-to-64 extended operands.
+  section 13828 13876 arm: fix armhf call argument handling.
+  section 13876 13941 arm: fix code generation for integer math.min/math.max.
+  section 13941 13994 ppc/e500: fix lj_vm_floor() for inf/nan.
+  section 13994 14067 ffi: change priority of table initializer variants for structs.
+  section 14067 14140 ffi: fix code generation for bool call result check on x86/x64.
+  section 14140 14215 ffi: load ffi library on-demand for bytecode with cdata
+  section 14215 14290 ffi: fix handling of qualified transparent structs/unions.
+  section 14290 15159 luajit 2.0.0 e<mdash> 2012-11-08
+  section 14338 14384 correctness and completeness:
+  section 14384 14416 fix android/x86 build.
+  section 14416 14489 fix recording of equality comparisons with __eq metamethods.
+  section 14489 14535 fix detection of immutable upvalues.
+  section 14535 14607 replace error with panic for callbacks from jit-compiled code.
+  section 14607 14672 fix builtin string to number conversion for int_min.
+  section 14672 14735 dont create unneeded array part for template tables.
+  section 14735 14773 fix conv.num.int sinking.
+  section 14773 14846 dont propagate implicitly widened number to index metamethods.
+  section 14846 14910 arm: fix ordered comparisons of number vs. non-number.
+  section 14910 14977 ffi: fix code generation for replay of sunk float fields.
+  section 14977 15015 ffi: fix signedness of bool.
+  section 15015 15081 ffi: fix recording of bool call result check on x86/x64.
+  section 15081 15159 ffi: fix stack-adjustment for __thiscall callbacks.
+  section 15159 20704 luajit 2.0.0-beta11 e<mdash> 2012-10-16
+  section 15214 15244 new features:
+  section 15244 15316 use arm vfp instructions, if available (build-time detection).
+  section 15316 15373 add support for arm hard-float eabi (armhf).
+  section 15373 15396 add ps3 port.
+  section 15396 15478 add many features from lua 5.2, e.g. goto/labels. refer to
+  section 15478 15519 ffi: add parameterized c types.
+  section 15519 15568 ffi: add support for copy constructors.
+  section 15568 15652 ffi: equality comparisons never raise an error (treat as
+  section 15652 15702 ffi: box all accessed or returned enums.
+  section 15702 15774 ffi: check for __new metamethod when calling a constructor.
+  section 15774 15849 ffi: handle __pairs/__ipairs metamethods for cdata
+  section 15849 15934 ffi: convert io.* file handle to file * pointer (but as a
+  section 15934 15996 ffi: detect and support type punning through unions.
+  section 15996 16049 ffi: improve various error messages.
+  section 16049 16094 build-system reorganization:
+  section 16094 16286 reorganize directory layout:
+  section 16286 16367 add minified lua interpreter plus lua bitop (minilua) to run
+  section 16367 16422 change dynasm bit operations to use lua bitop
+  section 16422 16493 translate only vm_*.dasc for detected target architecture.
+  section 16493 16549 improve target detection for msvcbuild.bat.
+  section 16549 16615 fix build issues on cygwin and mingw with optional msys.
+  section 16615 16695 handle cross-compiles with fpu/no-fpu or hard-fp/soft-fp abi
+  section 16695 16760 remove some library functions for no-jit/no-ffi builds.
+  section 16760 16820 add uninstall target to top-level makefile.
+  section 16820 16866 correctness and completeness:
+  section 16866 16915 preserve snapshot #0 pc for all traces.
+  section 16915 16971 fix argument checks for coroutine.create().
+  section 16971 17052 command line prints version and jit status to stdout, not
+  section 17052 17114 fix userdata __gc separations at lua state close.
+  section 17114 17184 fix tdup to hload forwarding for lj_dualnum builds.
+  section 17184 17230 fix buffer check in bytecode writer.
+  section 17230 17270 make os.date() thread-safe.
+  section 17270 17325 add missing declarations for msvc intrinsics.
+  section 17325 17385 fix dispatch table modifications for return hooks.
+  section 17385 17481 workaround for msvc conversion bug (double e<rarr>
+  section 17481 17527 fix fold rule (i-j)-i => 0-j.
+  section 17527 17573 never use dwarf unwinder on windows.
+  section 17573 17642 fix shrinking of direct mapped blocks in builtin allocator.
+  section 17642 17701 limit recursion depth in string.match() et al.
+  section 17701 17777 fix late despecialization of itern after loop has been
+  section 17777 17861 fix f and l options for debug.getinfo() and
+  section 17861 17899 fix package.searchpath().
+  section 17899 17971 osx: change dylib names to be consistent with other platforms.
+  section 17971 18035 android: workaround for broken sprintf(%g, -0.0).
+  section 18035 18119 x86: remove support for ancient cpus without cmov (before
+  section 18119 18192 x86: fix register allocation for calls returning register pair.
+  section 18192 18273 x86/x64: fix fusion of unsigned byte comparisons with swapped
+  section 18273 18321 arm: fix tonumber() argument check.
+  section 18321 18409 arm: fix modulo operator and math.floor()/math.ceil() for
+  section 18409 18467 arm: invoke split pass for leftover ir_tobit.
+  section 18467 18511 arm: fix base register coalescing.
+  section 18511 18567 ppc: fix interpreter state setup in callbacks.
+  section 18567 18614 ppc: fix string.sub() range check.
+  section 18614 18686 mips: support generation of mips/mipsel bytecode object files.
+  section 18686 18747 mips: fix calls to floor()/ceil()/trunc().
+  section 18747 18807 arm/ppc: detect more target architecture variants.
+  section 18807 18890 arm/ppc/e500/mips: fix tailcalls from fast functions, esp.
+  section 18890 18952 arm/ppc/mips: fix rematerialization of fp constants.
+  section 18952 19014 ffi: dont call freelibrary() on our own exe/dll.
+  section 19014 19071 ffi: resolve metamethods for constructors, too.
+  section 19071 19154 ffi: properly disable callbacks on ios (would require
+  section 19154 19211 ffi: fix cdecl string parsing during recording.
+  section 19211 19276 ffi: show address pointed to for tostring(ref), too.
+  section 19276 19341 ffi: fix alignment of c call argument/return structure.
+  section 19341 19396 ffi: initialize all fields of standard types.
+  section 19396 19475 ffi: fix callback handling when new c types are declared in
+  section 19475 19533 ffi: fix recording of constructors for pointers.
+  section 19533 19599 ffi: always resolve metamethods for pointers to structs.
+  section 19599 19679 ffi: correctly propagate alignment when interning nested types.
+  section 19679 19736 structural and performance enhancements:
+  section 19736 19800 add allocation sinking and store sinking optimization.
+  section 19800 19838 constify immutable upvalues.
+  section 19838 19955 add builtin string to integer or fp number conversion. improves
+  section 19955 20063 create string hash slots in template tables for non-const
+  section 20063 20128 eliminate hrefk guard for template table references.
+  section 20128 20165 add various new fold rules.
+  section 20165 20234 dont use stack unwinding for lua_yield() (slow on x64).
+  section 20234 20313 arm, ppc, mips: improve xload operand fusion and register
+  section 20313 20391 ppc, mips: compile math.sqrt() to sqrt instruction, if
+  section 20391 20451 ffi: fold kptr + constant offset in split pass.
+  section 20451 20514 ffi: optimize/inline ffi.copy() and ffi.fill().
+  section 20514 20570 ffi: compile and optimize array/struct copies.
+  section 20570 20704 ffi: compile ffi.typeof(cdata|ctype), ffi.sizeof(),
+  section 20704 24056 luajit 2.0.0-beta10 e<mdash> 2012-05-09
+  section 20759 20789 new features:
+  section 20789 20954 the mips of luajit is complete. it requires a cpu conforming to
+  section 20954 21043 auto-detect target arch via cross-compiler. no need for
+  section 21043 21089 make dynasm compatible with lua 5.2.
+  section 21089 21179 from lua 5.2: try __tostring metamethod on non-string error
+  section 21179 21225 correctness and completeness:
+  section 21225 21278 fix parsing of hex literals with exponents.
+  section 21278 21335 fix bytecode dump for certain number constants.
+  section 21335 21403 fix argument type in error message for relative arguments.
+  section 21403 21471 fix argument error handling on lua stacks without a frame.
+  section 21471 21532 add missing mcode limit check in assembler backend.
+  section 21532 21569 fix compilation on openbsd.
+  section 21569 21634 avoid recursive gc steps after gc-triggered trace exit.
+  section 21634 21699 replace <unwind.h> definitions with our own.
+  section 21699 21773 fix osx build issues. bump minimum required osx version to
+  section 21773 21832 fix discharge order of comparisons in lua parser.
+  section 21832 21911 ensure running __gc of userdata created in __gc at state
+  section 21911 21981 limit number of userdata __gc separations at state close.
+  section 21981 22069 fix bytecode jmp slot range when optimizing and/or
+  section 22069 22100 fix dse of ustore.
+  section 22100 22167 make lua_concat() work from c hook with partial frame.
+  section 22167 22249 add required phis for implicit conversions, e.g. via xref
+  section 22249 22318 add more comparison variants to valgrind suppressions file.
+  section 22318 22389 disable loading bytecode with an extra header (bom or #!).
+  section 22389 22426 fix phi stack slot syncing.
+  section 22426 22486 arm: reorder type/value tests to silence valgrind.
+  section 22486 22556 arm: fix register allocation for ldrd-optimized hrefk.
+  section 22556 22612 arm: fix conditional branch fixup for obar.
+  section 22612 22676 arm: invoke split pass for double args in ffi call.
+  section 22676 22752 arm: handle all call* ops with double results in split
+  section 22752 22802 arm: fix rejoin of pow in split pass.
+  section 22802 22877 arm: fix compilation of math.sinh, math.cosh,
+  section 22877 22942 arm, ppc: avoid pointless arg clearing in bc_ifuncf.
+  section 22942 22990 ppc: fix resume after yield from hook.
+  section 22990 23043 ppc: fix argument checking for rawget().
+  section 23043 23106 ppc: fix fusion of floating-point xload/xstore.
+  section 23106 23166 ppc: fix hrefk code generation for huge tables.
+  section 23166 23226 ppc: use builtin d-cache/i-cache sync code.
+  section 23226 23255 ffi library:
+  section 23255 23306 ignore empty statements in ffi.cdef().
+  section 23306 23372 ignore number parsing errors while skipping definitions.
+  section 23372 23446 dont touch frame in callbacks with tailcalls to fast
+  section 23446 23495 fix library unloading on posix systems.
+  section 23495 23559 finalize cdata before userdata when closing the state.
+  section 23559 23625 change ffi.load() library name resolution for cygwin.
+  section 23625 23691 fix resolving of function name redirects on windows/x86.
+  section 23691 23748 fix symbol resolving error messages on windows.
+  section 23748 23808 fix blacklisting of c functions calling callbacks.
+  section 23808 23856 fix result type of pointer difference.
+  section 23856 23913 use correct pc in ffi metamethod error message.
+  section 23913 23978 allow typedef _bool int bool; for the windows api.
+  section 23978 24056 dont record test for bool result of call, if ignored.
+  section 24056 27553 luajit 2.0.0-beta9 e<mdash> 2011-12-14
+  section 24110 24140 new features:
+  section 24140 24296 ppc port of luajit is complete. default is the dual-number port
+  section 24296 24331 add ffi callback support.
+  section 24331 24422 extend -b to generate .c, .h or .obj/.o files with
+  section 24422 24482 allow loading embedded bytecode with require().
+  section 24482 24573 from lua 5.2: change to \z escape. reject undefined escape
+  section 24573 24619 correctness and completeness:
+  section 24619 24691 fix osx 10.7 build. fix install_name and versioning on osx.
+  section 24691 24715 fix ios build.
+  section 24715 24753 install dis_arm.lua, too.
+  section 24753 24807 mark installed shared library as executable.
+  section 24807 24881 add debug option to msvcbuild.bat and improve error
+  section 24881 24928 fix data-flow analysis for iterators.
+  section 24928 24990 fix forced unwinding triggered by external unwinder.
+  section 24990 25062 record missing for loop slot loads (return to lower frame).
+  section 25062 25125 always use ansi variants of windows system functions.
+  section 25125 25196 fix gc barrier for multi-result table constructor (tsetm).
+  section 25196 25233 fix/add various fold rules.
+  section 25233 25308 add potential phi for number conversions due to type
+  section 25308 25372 do not eliminate phis only referenced from other phis.
+  section 25372 25450 correctly anchor implicit number to string conversions in lua/c
+  section 25450 25491 fix various stack limit checks.
+  section 25491 25572 x64: use thread-safe exceptions for external unwinding (gcc
+  section 25572 25630 x64: fix result type of cdata index conversions.
+  section 25630 25701 x64: fix math.random() and bit.bswap() code generation.
+  section 25701 25749 x64: fix lightuserdata comparisons.
+  section 25749 25817 x64: always extend stack-passed arguments to pointer size.
+  section 25817 25870 arm: many fixes to code generation backend.
+  section 25870 25925 ppc/e500: fix dispatch for binop metamethods.
+  section 25925 26007 ppc/e500: save/restore condition registers when
+  section 26007 26085 ppc/e500: fix write barrier in stores of strings to upvalues.
+  section 26085 26114 ffi library:
+  section 26114 26146 fix c comment parsing.
+  section 26146 26204 fix snapshot optimization for cdata comparisons.
+  section 26204 26264 fix recording of const/enum lookups in namespaces.
+  section 26264 26339 fix call argument and return handling for i8/u8/i16/u16
+  section 26339 26383 fix unfused loads of float fields.
+  section 26383 26423 fix ffi.string() recording.
+  section 26423 26503 save getlasterror() around ffi.load() and symbol
+  section 26503 26558 improve ld script detection in ffi.load().
+  section 26558 26624 record loads/stores to external variables in namespaces.
+  section 26624 26690 compile calls to stdcall, fastcall and vararg functions.
+  section 26690 26751 treat function ctypes like pointers in comparisons.
+  section 26751 26808 resolve __call metamethod for pointers, too.
+  section 26808 26866 record c function calls with bool return values.
+  section 26866 26898 record ffi.errno().
+  section 26898 26959 x86: fix number to uint32_t conversion rounding.
+  section 26959 27017 x86: fix 64 bit arithmetic in assembler backend.
+  section 27017 27072 x64: fix struct-by-value calling conventions.
+  section 27072 27148 arm: ensure invocation of split pass for float conversions.
+  section 27148 27205 structural and performance enhancements:
+  section 27205 27261 display trace types with -jv and -jdump.
+  section 27261 27332 record isolated calls. but prefer recording loops over calls.
+  section 27332 27469 specialize to prototype for non-monomorphic functions. solves
+  section 27469 27553 always generate a portable vmdef.lua. easier for distros.
+  section 27553 29179 luajit 2.0.0-beta8 e<mdash> 2011-06-23
+  section 27607 27637 new features:
+  section 27637 27689 soft-float arm port of luajit is complete.
+  section 27689 27769 add support for bytecode loading/saving and -b command line
+  section 27769 27853 from lua 5.2: __len metamethod for tables (disabled by
+  section 27853 27899 correctness and completeness:
+  section 27899 27942 arm: misc. fixes for interpreter.
+  section 27942 28007 x86/x64: fix bit.* argument checking in interpreter.
+  section 28007 28078 catch early out-of-memory in memory allocator initialization.
+  section 28078 28149 fix data-flow analysis for paths leading to an upvalue close.
+  section 28149 28213 fix check for missing arguments in string.format().
+  section 28213 28276 fix solaris/x86 build (note: not a supported target).
+  section 28276 28349 fix recording of loops with instable directions in side traces.
+  section 28349 28421 x86/x64: fix fusion of comparisons with u8/u16 xload.
+  section 28421 28491 x86/x64: fix register allocation for variable shifts.
+  section 28491 28520 ffi library:
+  section 28520 28605 add ffi.errno(). save errno/getlasterror() around
+  section 28605 28653 fix __gc for vla/vls cdata objects.
+  section 28653 28725 fix recording of casts from 32 bit cdata pointers to integers.
+  section 28725 28785 tonumber(cdata) returns nil for non-numbers.
+  section 28785 28844 show address pointed to for tostring(pointer).
+  section 28844 28912 print null pointers as cdata<... *>: null.
+  section 28912 28991 support __tostring metamethod for pointers to structs, too.
+  section 28991 29048 structural and performance enhancements:
+  section 29048 29100 more tuning for loop unrolling heuristics.
+  section 29100 29179 flatten and compress in-memory debug info (saves ~70%).
+  section 29179 30940 luajit 2.0.0-beta7 e<mdash> 2011-05-05
+  section 29233 29263 new features:
+  section 29263 29320 arm port of the luajit interpreter is complete.
+  section 29320 29395 ffi library: add ffi.gc(), ffi.metatype(),
+  section 29395 29465 ffi library: resolve ld script redirection in ffi.load().
+  section 29465 29548 from lua 5.2: package.searchpath(), fp:read(*l),
+  section 29548 29668 from lua 5.2, disabled by default: empty statement,
+  section 29668 29714 correctness and completeness:
+  section 29714 29752 ffi library: numerous fixes.
+  section 29752 29810 fix type mismatches in store-to-load forwarding.
+  section 29810 29858 fix error handling within metamethods.
+  section 29858 29888 fix table.maxn().
+  section 29888 29933 improve accuracy of x^-k on x64.
+  section 29933 29990 fix code generation for intel atom in x64 mode.
+  section 29990 30021 fix narrowing of pow.
+  section 30021 30071 fix recording of retried fast functions.
+  section 30071 30134 fix code generation for bit.bnot() and multiplies.
+  section 30134 30184 fix error location within cpcall frames.
+  section 30184 30235 add workaround for old libgcc unwind bug.
+  section 30235 30306 fix lua_yield() and getmetatable(lightuserdata) on x64.
+  section 30306 30353 misc. fixes for ppc/e500 interpreter.
+  section 30353 30412 fix stack slot updates for down-recursion.
+  section 30412 30469 structural and performance enhancements:
+  section 30469 30541 add dual-number mode (int/double) for the vm. enabled for arm.
+  section 30541 30610 improve narrowing of arithmetic operators and for loops.
+  section 30610 30686 tune loop unrolling heuristics and increase trace recorder
+  section 30686 30764 eliminate dead slots in snapshots using bytecode data-flow
+  section 30764 30811 avoid phantom stores to proxy tables.
+  section 30811 30860 optimize lookups in empty proxy tables.
+  section 30860 30940 improve bytecode optimization of and/or operators.
+  section 30940 32899 luajit 2.0.0-beta6 e<mdash> 2011-02-11
+  section 30994 31024 new features:
+  section 31024 31092 powerpc/e500v2 port of the luajit interpreter is complete.
+  section 31092 31304 various minor features from lua 5.2: hex escapes in literals,
+  section 31304 31383 lua 5.2 __pairs and __ipairs metamethods (disabled by
+  section 31383 31435 initial release of the ffi library.
+  section 31435 31481 correctness and completeness:
+  section 31481 31537 fix string.format() for non-finite numbers.
+  section 31537 31607 fix memory leak when compiled to use the built-in allocator.
+  section 31607 31670 x86/x64: fix unnecessary resize in tsetm bytecode.
+  section 31670 31733 fix various gc issues with traces and jit.flush().
+  section 31733 31791 x64: fix fusion of indexes for array references.
+  section 31791 31860 x86/x64: fix stack overflow handling for coroutine results.
+  section 31860 31918 enable low-2gb memory allocation on freebsd/x64.
+  section 31918 31993 fix collectgarbage(count) result if more than 2gb is in
+  section 31993 32029 fix parsing of hex floats.
+  section 32029 32102 x86/x64: fix loop branch inversion with trailing href+ne/eq.
+  section 32102 32133 add jit.os string.
+  section 32133 32198 coroutine.create() permits running c functions, too.
+  section 32198 32255 fix osx build to work with newer ld64 versions.
+  section 32255 32324 fix bytecode optimization of and/or operators.
+  section 32324 32381 structural and performance enhancements:
+  section 32381 32442 emit specialized bytecode for pairs()/next().
+  section 32442 32500 improve bytecode coalescing of nil constants.
+  section 32500 32544 compile calls to vararg functions.
+  section 32544 32574 compile select().
+  section 32574 32640 improve alias analysis, esp. for loads from allocations.
+  section 32640 32688 tuning of various compiler heuristics.
+  section 32688 32745 refactor and extend ir conversion instructions.
+  section 32745 32812 x86/x64: various backend enhancements related to the ffi.
+  section 32812 32899 add split pass to split 64 bit ir instructions for 32 bit cpus.
+  section 32899 34221 luajit 2.0.0-beta5 e<mdash> 2010-08-24
+  section 32953 32999 correctness and completeness:
+  section 32999 33053 fix trace exit dispatch to function headers.
+  section 33053 33114 fix windows and osx builds with luajit_disable_jit.
+  section 33114 33186 reorganize and fix placement of generated machine code on x64.
+  section 33186 33224 fix tnew in x64 interpreter.
+  section 33224 33299 do not eliminate phis for values only referenced from side
+  section 33299 33375 os-independent canonicalization of strings for non-finite
+  section 33375 33425 fix string.char() range check on x64.
+  section 33425 33481 fix tostring() resolving within print().
+  section 33481 33524 fix error handling for next().
+  section 33524 33593 fix passing of constant arguments to external calls on x64.
+  section 33593 33670 fix interpreter argument check for two-argument sse math
+  section 33670 33735 fix c frame chain corruption caused by lua_cpcall().
+  section 33735 33798 fix return from pcall() within active hook.
+  section 33798 33855 structural and performance enhancements:
+  section 33855 33921 replace on-trace gc frame syncing with interpreter exit.
+  section 33921 34002 improve hash lookup specialization by not removing dead keys
+  section 34002 34045 turn traces into true gc objects.
+  section 34045 34112 avoid starting a gc cycle immediately after library init.
+  section 34112 34171 add weak guards to improve dead-code elimination.
+  section 34171 34221 speed up string interning.
+  section 34221 34989 luajit 2.0.0-beta4 e<mdash> 2010-03-28
+  section 34275 34321 correctness and completeness:
+  section 34321 34384 fix precondition for on-trace creation of table keys.
+  section 34384 34436 fix {f()} on x64 when table is resized.
+  section 34436 34502 fix folding of ordered comparisons with same references.
+  section 34502 34561 fix snapshot restores for multi-result bytecodes.
+  section 34561 34635 fix potential hang when recording bytecode with nested
+  section 34635 34718 fix recording of getmetatable(), tonumber() and bad
+  section 34718 34783 fix sload fusion across returns to lower frames.
+  section 34783 34840 structural and performance enhancements:
+  section 34840 34917 add array bounds check elimination. -oabc is enabled by
+  section 34917 34989 more tuning for x64, e.g. smaller table objects.
+  section 34989 37371 luajit 2.0.0-beta3 e<mdash> 2010-03-07
+  section 35043 35076 luajit x64 port:
+  section 35076 35157 port integrated memory allocator to linux/x64, windows/x64 and
+  section 35157 35208 port interpreter and jit compiler to x64.
+  section 35208 35237 port dynasm to x64.
+  section 35237 35281 many 32/64 bit cleanups in the vm.
+  section 35281 35358 allow building the interpreter with either x87 or sse2
+  section 35358 35441 add external unwinding and c++ exception interop (default on
+  section 35441 35487 correctness and completeness:
+  section 35487 35564 fix constructor bytecode generation for certain conditional
+  section 35564 35619 fix some cases of ordered string comparisons.
+  section 35619 35654 fix lua_tocfunction().
+  section 35654 35733 fix cutoff register in jmp bytecode for some conditional
+  section 35733 35803 fix phi marking algorithm for references from variant slots.
+  section 35803 35857 fix package.cpath for non-default prefix.
+  section 35857 35926 fix dwarf2 frame unwind information for interpreter on osx.
+  section 35926 35993 drive the gc forward on string allocations in the parser.
+  section 35993 36055 implement call/return hooks (zero-cost if disabled).
+  section 36055 36094 implement yield from c hooks.
+  section 36094 36175 disable jit compiler on older non-sse2 cpus instead of
+  section 36175 36232 structural and performance enhancements:
+  section 36232 36297 compile recursive code (tail-, up- and down-recursion).
+  section 36297 36366 improve heuristics for bytecode penalties and blacklisting.
+  section 36366 36444 split call/func recording and clean up fast function call
+  section 36444 36504 major redesign of internal function call handling.
+  section 36504 36575 improve for loop const specialization and integerness checks.
+  section 36575 36640 switch to pre-initialized stacks. avoid frame-clearing.
+  section 36640 36725 colocation of prototypes and related data: bytecode, constants,
+  section 36725 36785 cleanup parser and streamline bytecode generation.
+  section 36785 36852 add support for weak ir references to register allocator.
+  section 36852 36905 switch to compressed, extensible snapshots.
+  section 36905 36963 compile returns to frames below the start frame.
+  section 36963 37042 improve alias analysis of upvalues using a disambiguation hash
+  section 37042 37121 compile floor/ceil/trunc to sse2 helper calls or sse4.1
+  section 37121 37177 add generic c call handling to ir and backend.
+  section 37177 37225 improve knum fuse vs. load heuristics.
+  section 37225 37271 compile various io.*() functions.
+  section 37271 37371 compile math.sinh(), math.cosh(), math.tanh() and
+  section 37371 38758 luajit 2.0.0-beta2 e<mdash> 2009-11-09
+  section 37425 37497 reorganize build system. build static+shared library on posix.
+  section 37497 37580 allow c++ exception conversion on all platforms using a wrapper
+  section 37580 37661 automatically catch c++ exceptions and rethrow lua error
+  section 37661 37731 check for the correct x87 fpu precision at strategic points.
+  section 37731 37780 always use wrappers for libm functions.
+  section 37780 37844 resurrect metamethod name strings before copying them.
+  section 37844 37899 mark current trace, even if compiler is idle.
+  section 37899 37952 ensure file metatable is created only once.
+  section 37952 38025 fix type comparisons when different integer types are involved.
+  section 38025 38067 fix getmetatable() recording.
+  section 38067 38119 fix tdup with dead keys in template table.
+  section 38119 38214 jit.flush(tr) returns status. prevent manual flush of a
+  section 38214 38288 improve register allocation heuristics for invariant
+  section 38288 38371 compile the push/pop variants of table.insert() and
+  section 38371 38420 compatibility with msvc link /debug.
+  section 38420 38455 fix lua_iscfunction().
+  section 38455 38520 fix math.random() when compiled with -fpic (osx).
+  section 38520 38550 fix table.maxn().
+  section 38550 38603 bump macosx_deployment_target to 10.4
+  section 38603 38758 lual_check*() and lual_opt*() now support negative
+  section 38758 39336 luajit 2.0.0-beta1 e<mdash> 2009-10-31
+  section 38812 38869 this is the first public release of luajit 2.0.
+  section 38869 39336 the whole vm has been rewritten from the ground up, so theres
 
 module contact
   section 14 1157 contact

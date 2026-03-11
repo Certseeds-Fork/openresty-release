@@ -91,12 +91,6 @@ EdDSA (Ed25519 and Ed448 signatures) (1.15.7)
 
 
 
-=item *
-
-PS256, PS384, PS512 (1.29.0)
-
-
-
 =back
 
 
@@ -541,9 +535,9 @@ JWT claims.
 =head2 auth_jwt_type
 
 
-B<syntax:> auth_jwt_type I<C<signed> E<verbar>
-        C<encrypted> E<verbar>
-        C<nested>>
+B<syntax:> auth_jwt_type I<I<C<signed>> E<verbar>
+        I<C<encrypted>> E<verbar>
+        I<C<nested>>>
 
 
 B<default:> I<signed>

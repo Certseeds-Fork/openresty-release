@@ -303,6 +303,23 @@ marks the server as permanently unavailable.
 
 
 
+
+=back
+
+
+
+
+
+
+
+Additionally,
+the following parameters are available as part of our
+commercial subscription:
+
+=over
+
+
+
 =item 
 C<resolve>
 
@@ -327,14 +344,14 @@ or in the corresponding upstream block.
 
 
 
-
-B<NOTE>
-
-Prior to version 1.27.3, this parameter was available only as part of our
-commercial subscription.
+=item 
+C<route>=I<C<string>>
 
 
 
+
+
+sets the server route name.
 
 
 
@@ -390,45 +407,6 @@ high-priority SRV records are resolved as backup servers,
 the rest of SRV records are ignored.
 
 
-
-
-
-
-B<NOTE>
-
-Prior to version 1.27.3, this parameter was available only as part of our
-commercial subscription.
-
-
-
-
-
-
-
-=back
-
-
-
-
-
-
-
-Additionally,
-the following parameters are available as part of our
-commercial subscription:
-
-=over
-
-
-
-=item 
-C<route>=I<C<string>>
-
-
-
-
-
-sets the server route name.
 
 
 
@@ -813,7 +791,7 @@ Example configuration of memcached upstream with keepalive connections:
 
 
 For HTTP, the L<ngx_http_proxy_module>
-directive should be set to “C<1.1>” or “C<2>”
+directive should be set to “C<1.1>”
 and the C<Connection> header field should be cleared:
 
     
@@ -1029,7 +1007,7 @@ keeping the authentication context.
 In order for NTLM authentication to work,
 it is necessary to enable keepalive connections to upstream servers.
 The L<ngx_http_proxy_module>
-directive should be set to “C<1.1>” or “C<2>”
+directive should be set to “C<1.1>”
 and the C<Connection> header field should be cleared:
 
     
@@ -1307,7 +1285,7 @@ B<context:> I<upstream>
 
 
 
-This directive appeared in version 1.27.3.
+This directive appeared in version 1.17.5.
 
 
 
@@ -1356,13 +1334,11 @@ configuring DNS servers in a properly secured trusted local network.
 
 
 
-The optional C<status_zone> parameter (1.17.5)
+The optional C<status_zone> parameter
 enables
 L<collection|ngx_http_api_module>
 of DNS server statistics of requests and responses
 in the specified I<C<zone>>.
-The parameter is available as part of our
-commercial subscription.
 
 
 
@@ -1371,8 +1347,7 @@ commercial subscription.
 
 B<NOTE>
 
-Since version 1.17.5 and prior to version 1.27.3,
-this directive was available only as part of our
+This directive is available as part of our
 commercial subscription.
 
 
@@ -1395,7 +1370,7 @@ B<context:> I<upstream>
 
 
 
-This directive appeared in version 1.27.3.
+This directive appeared in version 1.17.5.
 
 
 
@@ -1415,8 +1390,7 @@ Sets a timeout for name resolution, for example:
 
 B<NOTE>
 
-Since version 1.17.5 and prior to version 1.27.3,
-this directive was available only as part of our
+This directive is available as part of our
 commercial subscription.
 
 
@@ -1940,57 +1914,6 @@ The rules of converting header field names to variable names are the same
 as for the variables that start with the
 “L<$http_|ngx_http_core_module>” prefix.
 Only the header fields from the response of the last server are saved.
-
-
-
-=item C<$upstream_last_addr>
-
-
-
-
-keeps the IP address or the path to the UNIX-domain socket
-of the last selected upstream server (1.29.3).
-
-
-
-
-B<NOTE>
-
-This variable is available as part of our
-commercial subscription.
-
-
-
-
-
-
-
-=item C<$upstream_last_server_name>
-
-
-
-
-keeps the name of last selected upstream server (1.25.3);
-allows passing it
-L<through SNI|ngx_http_proxy_module>:
-
-    
-    proxy_ssl_server_name on;
-    proxy_ssl_name        $upstream_last_server_name;
-
-
-
-
-
-
-B<NOTE>
-
-This variable is available as part of our
-commercial subscription.
-
-
-
-
 
 
 

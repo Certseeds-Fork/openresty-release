@@ -996,56 +996,6 @@ modules currently ignore this directive.
 
 
 
-=head2 early_hints
-
-
-B<syntax:> early_hints I<I<C<string>> ...>
-
-
-
-B<context:> I<http>
-
-
-B<context:> I<server>
-
-
-B<context:> I<location>
-
-
-
-This directive appeared in version 1.29.0.
-
-
-
-
-
-Defines conditions under which
-the C<103> (C<Early Hints>) response
-will be passed to a client.
-If at least one value of the string parameters is not empty and is not
-equal to “0” then the response will be passed:
-
-    
-    map $http_sec_fetch_mode $early_hints {
-        navigate $http2$http3;
-    }
-    
-    server {
-        ...
-        location / {
-            early_hints $early_hints;
-            proxy_pass http://example.com;
-        }
-    }
-
-
-
-
-
-
-
-
-
 =head2 error_page
 
 
@@ -1498,41 +1448,6 @@ Prior to version 1.1.18, the value C<safari> matched
 all Safari and Safari-like browsers on all operating systems, and
 keep-alive connections with them were disabled by default.
 
-
-
-
-
-
-
-
-=head2 keepalive_min_timeout
-
-
-B<syntax:> keepalive_min_timeout I<I<C<timeout>>>
-
-
-B<default:> I<0>
-
-
-B<context:> I<http>
-
-
-B<context:> I<server>
-
-
-B<context:> I<location>
-
-
-
-This directive appeared in version 1.27.4.
-
-
-
-
-
-Sets a timeout during which a keep-alive
-client connection will not be closed on the server side
-for connection reuse or on graceful shutdown of worker processes.
 
 
 
@@ -2462,9 +2377,8 @@ C<SO_KEEPALIVE> option is turned off for the socket.
 Some operating systems support setting of TCP keepalive parameters on
 a per-socket basis using the C<TCP_KEEPIDLE>,
 C<TCP_KEEPINTVL>, and C<TCP_KEEPCNT> socket options.
-On such systems
-(currently, Linux, NetBSD, Dragonfly, FreeBSD, and macOS),
-they can be configured
+On such systems (currently, Linux 2.4+, NetBSD 5+, and
+FreeBSD 9.0-STABLE), they can be configured
 using the I<C<keepidle>>, I<C<keepintvl>>, and
 I<C<keepcnt>> parameters.
 One or two parameters may be omitted, in which case the system default setting
@@ -3611,11 +3525,8 @@ Allows access if all (C<all>) or at least one
 L<ngx_http_access_module|ngx_http_access_module>,
 L<ngx_http_auth_basic_module|ngx_http_auth_basic_module>,
 L<ngx_http_auth_request_module|ngx_http_auth_request_module>,
-L<ngx_http_auth_jwt_module|ngx_http_auth_jwt_module>
-(1.13.10),
 or
-L<ngx_http_auth_oidc_module|ngx_http_auth_jwt_module>
-(1.27.4)
+L<ngx_http_auth_jwt_module|ngx_http_auth_jwt_module>
 modules allow access.
 
 
@@ -4934,17 +4845,6 @@ or an empty string otherwise
 
 
 
-=item C<$is_request_port>
-
-
-
-
-“C<:>” if
-$request_port is non-empty,
-or an empty string otherwise (1.29.3)
-
-
-
 =item C<$limit_rate>
 
 
@@ -5368,19 +5268,6 @@ request length (including request line, header, and request body)
 
 request method, usually
 “C<GET>” or “C<POST>”
-
-
-
-=item C<$request_port>
-
-
-
-
-in this order of precedence:
-port number from the
-L<URI|https://datatracker.ietf.org/doc/html/rfc9110#section-4.2.1>
-authority component, or
-port number from the C<Host> request header field (1.29.3)
 
 
 
