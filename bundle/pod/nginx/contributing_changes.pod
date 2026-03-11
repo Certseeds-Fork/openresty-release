@@ -146,6 +146,17 @@ extension.
 
 
 
+=head1 Website
+
+
+
+L<GitHub|https://www.github.com/nginx/nginx.org> is used
+to store the sources for this website. Documentation changes should be
+submitted as a pull request.
+
+
+
+
 =head1 License
 
 
