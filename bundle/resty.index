@@ -1,5 +1,5 @@
 dist nginx
-  modules accept_failed beginners_guide chunked_encoding_from_backend configure configuring_https_servers contributing_changes control converting_rewrite_rules daemon_master_process_off debugging_log development_guide events example faq freebsd_tuning hash howto_build_on_win32 install license_copyright load_balancing nginx nginx_dtrace_pid_provider ngx_core_module ngx_google_perftools_module ngx_http_access_module ngx_http_addition_module ngx_http_api_module_head ngx_http_auth_basic_module ngx_http_auth_jwt_module ngx_http_auth_request_module ngx_http_autoindex_module ngx_http_browser_module ngx_http_charset_module ngx_http_core_module ngx_http_dav_module ngx_http_empty_gif_module ngx_http_f4f_module ngx_http_fastcgi_module ngx_http_flv_module ngx_http_geo_module ngx_http_geoip_module ngx_http_grpc_module ngx_http_gunzip_module ngx_http_gzip_module ngx_http_gzip_static_module ngx_http_headers_module ngx_http_hls_module ngx_http_image_filter_module ngx_http_index_module ngx_http_js_module ngx_http_keyval_module ngx_http_limit_conn_module ngx_http_limit_req_module ngx_http_log_module ngx_http_map_module ngx_http_memcached_module ngx_http_mirror_module ngx_http_mp4_module ngx_http_perl_module ngx_http_proxy_module ngx_http_random_index_module ngx_http_realip_module ngx_http_referer_module ngx_http_rewrite_module ngx_http_scgi_module ngx_http_secure_link_module ngx_http_session_log_module ngx_http_slice_module ngx_http_spdy_module ngx_http_split_clients_module ngx_http_ssi_module ngx_http_ssl_module ngx_http_status_module ngx_http_stub_status_module ngx_http_sub_module ngx_http_upstream_conf_module ngx_http_upstream_hc_module ngx_http_upstream_module ngx_http_userid_module ngx_http_uwsgi_module ngx_http_v2_module ngx_http_xslt_module ngx_mail_auth_http_module ngx_mail_core_module ngx_mail_imap_module ngx_mail_pop3_module ngx_mail_proxy_module ngx_mail_smtp_module ngx_mail_ssl_module ngx_stream_access_module ngx_stream_core_module ngx_stream_geo_module ngx_stream_geoip_module ngx_stream_js_module ngx_stream_keyval_module ngx_stream_limit_conn_module ngx_stream_log_module ngx_stream_map_module ngx_stream_proxy_module ngx_stream_realip_module ngx_stream_return_module ngx_stream_split_clients_module ngx_stream_ssl_module ngx_stream_ssl_preread_module ngx_stream_upstream_hc_module ngx_stream_upstream_module ngx_stream_zone_sync_module request_processing server_names stream_processing switches syntax sys_errlist syslog variables_in_config websocket welcome_nginx_facebook windows
+  modules accept_failed beginners_guide chunked_encoding_from_backend configure configuring_https_servers contributing_changes control converting_rewrite_rules daemon_master_process_off debugging_log development_guide events example faq freebsd_tuning hash howto_build_on_win32 install license_copyright load_balancing nginx nginx_dtrace_pid_provider ngx_core_module ngx_google_perftools_module ngx_http_access_module ngx_http_addition_module ngx_http_api_module_head ngx_http_auth_basic_module ngx_http_auth_jwt_module ngx_http_auth_request_module ngx_http_autoindex_module ngx_http_browser_module ngx_http_charset_module ngx_http_core_module ngx_http_dav_module ngx_http_empty_gif_module ngx_http_f4f_module ngx_http_fastcgi_module ngx_http_flv_module ngx_http_geo_module ngx_http_geoip_module ngx_http_grpc_module ngx_http_gunzip_module ngx_http_gzip_module ngx_http_gzip_static_module ngx_http_headers_module ngx_http_hls_module ngx_http_image_filter_module ngx_http_index_module ngx_http_js_module ngx_http_keyval_module ngx_http_limit_conn_module ngx_http_limit_req_module ngx_http_log_module ngx_http_map_module ngx_http_memcached_module ngx_http_mirror_module ngx_http_mp4_module ngx_http_perl_module ngx_http_proxy_module ngx_http_random_index_module ngx_http_realip_module ngx_http_referer_module ngx_http_rewrite_module ngx_http_scgi_module ngx_http_secure_link_module ngx_http_session_log_module ngx_http_slice_module ngx_http_spdy_module ngx_http_split_clients_module ngx_http_ssi_module ngx_http_ssl_module ngx_http_status_module ngx_http_stub_status_module ngx_http_sub_module ngx_http_upstream_conf_module ngx_http_upstream_hc_module ngx_http_upstream_module ngx_http_userid_module ngx_http_uwsgi_module ngx_http_v2_module ngx_http_xslt_module ngx_mail_auth_http_module ngx_mail_core_module ngx_mail_imap_module ngx_mail_pop3_module ngx_mail_proxy_module ngx_mail_smtp_module ngx_mail_ssl_module ngx_stream_access_module ngx_stream_core_module ngx_stream_geo_module ngx_stream_geoip_module ngx_stream_js_module ngx_stream_keyval_module ngx_stream_limit_conn_module ngx_stream_log_module ngx_stream_map_module ngx_stream_proxy_module ngx_stream_realip_module ngx_stream_return_module ngx_stream_set_module ngx_stream_split_clients_module ngx_stream_ssl_module ngx_stream_ssl_preread_module ngx_stream_upstream_hc_module ngx_stream_upstream_module ngx_stream_zone_sync_module request_processing server_names stream_processing switches syntax sys_errlist syslog variables_in_config websocket welcome_nginx_facebook windows
 
 module accept_failed
   section 18 652 name
@@ -119,25 +119,26 @@ module development_guide
   section 151486 155038 buffer reuse
   section 155038 163559 load balancing
   section 163559 163691 examples
-  section 163691 177772 code style
-  section 163711 164629 general rules
-  section 164629 165889 files
-  section 165889 166350 comments
-  section 166350 167406 preprocessor
-  section 167406 169676 types
-  section 169676 171194 variables
-  section 171194 172976 functions
-  section 172976 175020 expressions
-  section 175020 177287 conditionals and loops
-  section 177287 177772 labels
-  section 177772 182531 common pitfalls
-  section 177797 178463 writing a c module
-  section 178463 178940 c strings
-  section 178940 179624 global variables
-  section 179624 180091 manual memory management
-  section 180091 180672 threads
-  section 180672 181149 blocking libraries
-  section 181149 182531 http requests to external services
+  section 163691 177779 code style
+  section 163711 164636 general rules
+  section 164636 165896 files
+  section 165896 166357 comments
+  section 166357 167413 preprocessor
+  section 167413 169683 types
+  section 169683 171201 variables
+  section 171201 172983 functions
+  section 172983 175027 expressions
+  section 175027 177294 conditionals and loops
+  section 177294 177779 labels
+  section 177779 179019 debugging memory issues
+  section 179019 183778 common pitfalls
+  section 179044 179710 writing a c module
+  section 179710 180187 c strings
+  section 180187 180871 global variables
+  section 180871 181338 manual memory management
+  section 181338 181919 threads
+  section 181919 182396 blocking libraries
+  section 182396 183778 http requests to external services
 
 module events
   section 18 1854 name
@@ -194,7 +195,7 @@ module nginx
   section 62 861 introduction
   section 861 1213 how-to
   section 1213 1327 development
-  section 1327 6829 modules reference
+  section 1327 6888 modules reference
 
 module nginx_dtrace_pid_provider
   section 18 5035 name
@@ -203,36 +204,36 @@ module nginx_dtrace_pid_provider
 module ngx_core_module
   section 17 71 name
   section 71 297 example configuration
-  section 297 14824 directives
+  section 297 14838 directives
   section 316 930 accept_mutex
   section 930 1262 accept_mutex_delay
   section 1262 1457 daemon
   section 1457 2371 debug_connection
   section 2371 2766 debug_points
   section 2766 4064 env
-  section 4064 5712 error_log
-  section 5712 5894 events
-  section 5894 6229 include
-  section 6229 6458 load_module
-  section 6458 6903 lock_file
-  section 6903 7131 master_process
-  section 7131 7582 multi_accept
-  section 7582 8241 pcre_jit
-  section 8241 8427 pid
-  section 8427 8570 ssl_engine
-  section 8570 9335 thread_pool
-  section 9335 10010 timer_resolution
-  section 10010 10271 use
-  section 10271 10548 user
-  section 10548 10961 worker_aio_requests
-  section 10961 11542 worker_connections
-  section 11542 12706 worker_cpu_affinity
-  section 12706 13060 worker_priority
-  section 13060 13641 worker_processes
-  section 13641 13904 worker_rlimit_core
-  section 13904 14176 worker_rlimit_nofile
-  section 14176 14518 worker_shutdown_timeout
-  section 14518 14824 working_directory
+  section 4064 5726 error_log
+  section 5726 5908 events
+  section 5908 6243 include
+  section 6243 6472 load_module
+  section 6472 6917 lock_file
+  section 6917 7145 master_process
+  section 7145 7596 multi_accept
+  section 7596 8255 pcre_jit
+  section 8255 8441 pid
+  section 8441 8584 ssl_engine
+  section 8584 9349 thread_pool
+  section 9349 10024 timer_resolution
+  section 10024 10285 use
+  section 10285 10562 user
+  section 10562 10975 worker_aio_requests
+  section 10975 11556 worker_connections
+  section 11556 12720 worker_cpu_affinity
+  section 12720 13074 worker_priority
+  section 13074 13655 worker_processes
+  section 13655 13918 worker_rlimit_core
+  section 13918 14190 worker_rlimit_nofile
+  section 14190 14532 worker_shutdown_timeout
+  section 14532 14838 working_directory
 
 module ngx_google_perftools_module
   section 17 560 name
@@ -269,9 +270,9 @@ module ngx_http_auth_basic_module
   aliases ngx_auth_basic
   section 17 568 name
   section 568 723 example configuration
-  section 723 2737 directives
-  section 742 1288 auth_basic
-  section 1288 2737 auth_basic_user_file
+  section 723 2727 directives
+  section 742 1278 auth_basic
+  section 1278 2727 auth_basic_user_file
 
 module ngx_http_auth_jwt_module
   aliases ngx_auth_jwt
@@ -333,7 +334,7 @@ module ngx_http_charset_module
 module ngx_http_core_module
   aliases ngx_core
   section 17 85 name
-  section 85 65230 directives
+  section 85 65244 directives
   section 104 472 absolute_redirect
   section 472 2923 aio
   section 2923 3347 aio_write
@@ -357,121 +358,121 @@ module ngx_http_core_module
   section 11708 11808 on
   section 11808 11988 if_not_owner
   section 11988 13398 from=part
-  section 13398 15539 error_page
-  section 15539 15844 etag
-  section 15844 16000 http
-  section 16000 16673 if_modified_since
-  section 16396 16483 off
-  section 16483 16518 exact
-  section 16518 16673 before
-  section 16673 17269 ignore_invalid_headers
-  section 17269 18580 internal
-  section 18580 19411 keepalive_disable
-  section 19411 20005 keepalive_requests
-  section 20005 20680 keepalive_timeout
-  section 20680 21436 large_client_header_buffers
-  section 21436 22276 limit_except
-  section 22276 23507 limit_rate
-  section 23507 24035 limit_rate_after
-  section 24035 25038 lingering_close
-  section 25038 25452 lingering_time
-  section 25452 26016 lingering_timeout
-  section 26016 34858 listen
-  section 34858 39024 location
-  section 39024 39287 log_not_found
-  section 39287 39540 log_subrequest
-  section 39540 39992 max_ranges
-  section 39992 41044 merge_slashes
-  section 41044 41359 msie_padding
-  section 41359 41613 msie_refresh
-  section 41613 42870 open_file_cache
-  section 42870 43138 open_file_cache_errors
-  section 43138 43530 open_file_cache_min_uses
-  section 43530 43787 open_file_cache_valid
-  section 43787 44128 output_buffers
-  section 44128 44504 port_in_redirect
-  section 44504 44852 postpone_output
-  section 44852 45420 read_ahead
-  section 45420 45736 recursive_error_pages
-  section 45736 46025 request_pool_size
-  section 46025 46796 reset_timedout_connection
-  section 46796 48497 resolver
-  section 48497 48752 resolver_timeout
-  section 48752 49463 root
-  section 49463 50154 satisfy
-  section 50154 50640 send_lowat
-  section 50640 51060 send_timeout
-  section 51060 52074 sendfile
-  section 52074 52438 sendfile_max_chunk
-  section 52438 52950 server
-  section 52950 55684 server_name
-  section 55684 56288 server_name_in_redirect
-  section 56288 56668 server_names_hash_bucket_size
-  section 56668 56955 server_names_hash_max_size
-  section 56955 57687 server_tokens
-  section 57687 58336 subrequest_output_buffer_size
-  section 58336 58765 tcp_nodelay
-  section 58765 59316 tcp_nopush
-  section 59316 62365 try_files
-  section 62365 63236 types
-  section 63236 63659 types_hash_bucket_size
-  section 63659 63976 types_hash_max_size
-  section 63976 64613 underscores_in_headers
-  section 64613 64889 variables_hash_bucket_size
-  section 64889 65230 variables_hash_max_size
-  section 65230 72273 embedded variables
-  section 65547 65619 $arg_i<name>
-  section 65619 65671 $args
-  section 65671 65825 $binary_remote_addr
-  section 65825 66024 $body_bytes_sent
-  section 66024 66100 $bytes_sent
-  section 66100 66168 $connection
-  section 66168 66273 $connection_requests
-  section 66273 66344 $content_length
-  section 66344 66411 $content_type
-  section 66411 66468 $cookie_i<name>
-  section 66468 66565 $document_root
-  section 66565 66611 $document_uri
-  section 66611 66785 $host
-  section 66785 66821 $hostname
-  section 66821 66997 $http_i<name>
-  section 66997 67097 $https
-  section 67097 67195 $is_args
-  section 67195 67296 $limit_rate
-  section 67296 67390 $msec
-  section 67390 67435 $nginx_version
-  section 67435 67482 $pid
-  section 67482 67578 $pipe
-  section 67578 67792 $proxy_protocol_addr
-  section 67792 68003 $proxy_protocol_port
-  section 68003 68224 $proxy_protocol_server_addr
-  section 68224 68442 $proxy_protocol_server_port
-  section 68442 68489 $query_string
-  section 68489 68676 $realpath_root
-  section 68676 68720 $remote_addr
-  section 68720 68761 $remote_port
-  section 68761 68839 $remote_user
-  section 68839 68891 $request
-  section 68891 69179 $request_body
-  section 69179 69835 $request_body_file
-  section 69835 69940 $request_completion
-  section 69940 70076 $request_filename
-  section 70076 70186 $request_id
-  section 70186 70300 $request_length
-  section 70300 70386 $request_method
-  section 70386 70559 $request_time
-  section 70559 70631 $request_uri
-  section 70631 70703 $scheme
-  section 70703 70885 $sent_http_i<name>
-  section 70885 71095 $sent_trailer_i<name>
-  section 71095 71351 $server_addr
-  section 71351 71424 $server_name
-  section 71424 71497 $server_port
-  section 71497 71649 $server_protocol
-  section 71649 71909 $status
-  section 71909 71998 $time_iso8601
-  section 71998 72078 $time_local
-  section 72078 72273 $uri
+  section 13398 15553 error_page
+  section 15553 15858 etag
+  section 15858 16014 http
+  section 16014 16687 if_modified_since
+  section 16410 16497 off
+  section 16497 16532 exact
+  section 16532 16687 before
+  section 16687 17283 ignore_invalid_headers
+  section 17283 18594 internal
+  section 18594 19425 keepalive_disable
+  section 19425 20019 keepalive_requests
+  section 20019 20694 keepalive_timeout
+  section 20694 21450 large_client_header_buffers
+  section 21450 22290 limit_except
+  section 22290 23521 limit_rate
+  section 23521 24049 limit_rate_after
+  section 24049 25052 lingering_close
+  section 25052 25466 lingering_time
+  section 25466 26030 lingering_timeout
+  section 26030 34872 listen
+  section 34872 39038 location
+  section 39038 39301 log_not_found
+  section 39301 39554 log_subrequest
+  section 39554 40006 max_ranges
+  section 40006 41058 merge_slashes
+  section 41058 41373 msie_padding
+  section 41373 41627 msie_refresh
+  section 41627 42884 open_file_cache
+  section 42884 43152 open_file_cache_errors
+  section 43152 43544 open_file_cache_min_uses
+  section 43544 43801 open_file_cache_valid
+  section 43801 44142 output_buffers
+  section 44142 44518 port_in_redirect
+  section 44518 44866 postpone_output
+  section 44866 45434 read_ahead
+  section 45434 45750 recursive_error_pages
+  section 45750 46039 request_pool_size
+  section 46039 46810 reset_timedout_connection
+  section 46810 48511 resolver
+  section 48511 48766 resolver_timeout
+  section 48766 49477 root
+  section 49477 50168 satisfy
+  section 50168 50654 send_lowat
+  section 50654 51074 send_timeout
+  section 51074 52088 sendfile
+  section 52088 52452 sendfile_max_chunk
+  section 52452 52964 server
+  section 52964 55698 server_name
+  section 55698 56302 server_name_in_redirect
+  section 56302 56682 server_names_hash_bucket_size
+  section 56682 56969 server_names_hash_max_size
+  section 56969 57701 server_tokens
+  section 57701 58350 subrequest_output_buffer_size
+  section 58350 58779 tcp_nodelay
+  section 58779 59330 tcp_nopush
+  section 59330 62379 try_files
+  section 62379 63250 types
+  section 63250 63673 types_hash_bucket_size
+  section 63673 63990 types_hash_max_size
+  section 63990 64627 underscores_in_headers
+  section 64627 64903 variables_hash_bucket_size
+  section 64903 65244 variables_hash_max_size
+  section 65244 72287 embedded variables
+  section 65561 65633 $arg_i<name>
+  section 65633 65685 $args
+  section 65685 65839 $binary_remote_addr
+  section 65839 66038 $body_bytes_sent
+  section 66038 66114 $bytes_sent
+  section 66114 66182 $connection
+  section 66182 66287 $connection_requests
+  section 66287 66358 $content_length
+  section 66358 66425 $content_type
+  section 66425 66482 $cookie_i<name>
+  section 66482 66579 $document_root
+  section 66579 66625 $document_uri
+  section 66625 66799 $host
+  section 66799 66835 $hostname
+  section 66835 67011 $http_i<name>
+  section 67011 67111 $https
+  section 67111 67209 $is_args
+  section 67209 67310 $limit_rate
+  section 67310 67404 $msec
+  section 67404 67449 $nginx_version
+  section 67449 67496 $pid
+  section 67496 67592 $pipe
+  section 67592 67806 $proxy_protocol_addr
+  section 67806 68017 $proxy_protocol_port
+  section 68017 68238 $proxy_protocol_server_addr
+  section 68238 68456 $proxy_protocol_server_port
+  section 68456 68503 $query_string
+  section 68503 68690 $realpath_root
+  section 68690 68734 $remote_addr
+  section 68734 68775 $remote_port
+  section 68775 68853 $remote_user
+  section 68853 68905 $request
+  section 68905 69193 $request_body
+  section 69193 69849 $request_body_file
+  section 69849 69954 $request_completion
+  section 69954 70090 $request_filename
+  section 70090 70200 $request_id
+  section 70200 70314 $request_length
+  section 70314 70400 $request_method
+  section 70400 70573 $request_time
+  section 70573 70645 $request_uri
+  section 70645 70717 $scheme
+  section 70717 70899 $sent_http_i<name>
+  section 70899 71109 $sent_trailer_i<name>
+  section 71109 71365 $server_addr
+  section 71365 71438 $server_name
+  section 71438 71511 $server_port
+  section 71511 71663 $server_protocol
+  section 71663 71923 $status
+  section 71923 72012 $time_iso8601
+  section 72012 72092 $time_local
+  section 72092 72287 $uri
 
 module ngx_http_dav_module
   aliases ngx_dav
@@ -502,7 +503,7 @@ module ngx_http_fastcgi_module
   aliases ngx_fastcgi
   section 17 188 name
   section 188 628 example configuration
-  section 628 40273 directives
+  section 628 40287 directives
   section 647 1912 fastcgi_bind
   section 1912 2409 fastcgi_buffer_size
   section 2409 3673 fastcgi_buffering
@@ -548,25 +549,25 @@ module ngx_http_fastcgi_module
   section 28715 29072 fastcgi_next_upstream_timeout
   section 29072 29432 fastcgi_next_upstream_tries
   section 29432 29982 fastcgi_no_cache
-  section 29982 31495 fastcgi_param
-  section 31495 32310 fastcgi_pass
-  section 32310 32554 fastcgi_pass_header
-  section 32554 32890 fastcgi_pass_request_body
-  section 32890 33246 fastcgi_pass_request_headers
-  section 33246 33698 fastcgi_read_timeout
-  section 33698 34378 fastcgi_request_buffering
-  section 34378 34890 fastcgi_send_lowat
-  section 34890 35340 fastcgi_send_timeout
-  section 35340 35866 fastcgi_socket_keepalive
-  section 35866 36768 fastcgi_split_path_info
-  section 36768 38438 fastcgi_store
-  section 38438 38928 fastcgi_store_access
-  section 38928 39501 fastcgi_temp_file_write_size
-  section 39501 40273 fastcgi_temp_path
-  section 40273 40741 parameters passed to a fastcgi server
-  section 40741 41901 embedded variables
-  section 40920 41711 $fastcgi_script_name
-  section 41711 41901 $fastcgi_path_info
+  section 29982 31509 fastcgi_param
+  section 31509 32324 fastcgi_pass
+  section 32324 32568 fastcgi_pass_header
+  section 32568 32904 fastcgi_pass_request_body
+  section 32904 33260 fastcgi_pass_request_headers
+  section 33260 33712 fastcgi_read_timeout
+  section 33712 34392 fastcgi_request_buffering
+  section 34392 34904 fastcgi_send_lowat
+  section 34904 35354 fastcgi_send_timeout
+  section 35354 35880 fastcgi_socket_keepalive
+  section 35880 36782 fastcgi_split_path_info
+  section 36782 38452 fastcgi_store
+  section 38452 38942 fastcgi_store_access
+  section 38942 39515 fastcgi_temp_file_write_size
+  section 39515 40287 fastcgi_temp_path
+  section 40287 40755 parameters passed to a fastcgi server
+  section 40755 41915 embedded variables
+  section 40934 41725 $fastcgi_script_name
+  section 41725 41915 $fastcgi_path_info
 
 module ngx_http_flv_module
   aliases ngx_flv
@@ -618,7 +619,7 @@ module ngx_http_grpc_module
   aliases ngx_grpc
   section 17 259 name
   section 259 423 example configuration
-  section 423 14515 directives
+  section 423 15322 directives
   section 442 1596 grpc_bind
   section 1596 1953 grpc_buffer_size
   section 1953 2273 grpc_connect_timeout
@@ -644,20 +645,21 @@ module ngx_http_grpc_module
   section 8128 8363 grpc_pass_header
   section 8363 8803 grpc_read_timeout
   section 8803 9241 grpc_send_timeout
-  section 9241 9907 grpc_set_header
-  section 9907 10424 grpc_socket_keepalive
-  section 10424 10693 grpc_ssl_certificate
-  section 10693 11145 grpc_ssl_certificate_key
-  section 11145 11542 grpc_ssl_ciphers
-  section 11542 11815 grpc_ssl_crl
-  section 11815 12231 grpc_ssl_name
-  section 12231 12559 grpc_ssl_password_file
-  section 12559 12907 grpc_ssl_protocols
-  section 12907 13320 grpc_ssl_server_name
-  section 13320 13707 grpc_ssl_session_reuse
-  section 13707 14009 grpc_ssl_trusted_certificate
-  section 14009 14261 grpc_ssl_verify
-  section 14261 14515 grpc_ssl_verify_depth
+  section 9241 9921 grpc_set_header
+  section 9921 10438 grpc_socket_keepalive
+  section 10438 10707 grpc_ssl_certificate
+  section 10707 11159 grpc_ssl_certificate_key
+  section 11159 11556 grpc_ssl_ciphers
+  section 11556 12349 grpc_ssl_conf_command
+  section 12349 12622 grpc_ssl_crl
+  section 12622 13038 grpc_ssl_name
+  section 13038 13366 grpc_ssl_password_file
+  section 13366 13714 grpc_ssl_protocols
+  section 13714 14127 grpc_ssl_server_name
+  section 14127 14514 grpc_ssl_session_reuse
+  section 14514 14816 grpc_ssl_trusted_certificate
+  section 14816 15068 grpc_ssl_verify
+  section 15068 15322 grpc_ssl_verify_depth
 
 module ngx_http_gunzip_module
   aliases ngx_gunzip
@@ -704,10 +706,10 @@ module ngx_http_headers_module
   aliases ngx_headers
   section 17 252 name
   section 252 489 example configuration
-  section 489 3870 directives
-  section 508 1228 add_header
-  section 1228 1951 add_trailer
-  section 1951 3870 expires
+  section 489 3898 directives
+  section 508 1242 add_header
+  section 1242 1979 add_trailer
+  section 1979 3898 expires
 
 module ngx_http_hls_module
   aliases ngx_hls
@@ -774,52 +776,52 @@ module ngx_http_limit_conn_module
   aliases ngx_limit_conn
   section 17 452 name
   section 452 714 example configuration
-  section 714 5008 directives
-  section 733 1993 limit_conn
-  section 1993 2405 limit_conn_dry_run
-  section 2405 2780 limit_conn_log_level
-  section 2780 3066 limit_conn_status
-  section 3066 4626 limit_conn_zone
-  section 4626 5008 limit_zone
-  section 5008 5207 embedded variables
-  section 5047 5207 $limit_conn_status
+  section 714 5030 directives
+  section 733 2015 limit_conn
+  section 2015 2427 limit_conn_dry_run
+  section 2427 2802 limit_conn_log_level
+  section 2802 3088 limit_conn_status
+  section 3088 4648 limit_conn_zone
+  section 4648 5030 limit_zone
+  section 5030 5229 embedded variables
+  section 5069 5229 $limit_conn_status
 
 module ngx_http_limit_req_module
   aliases ngx_limit_req
   section 17 362 name
   section 362 639 example configuration
-  section 639 5913 directives
-  section 658 2558 limit_req
-  section 2558 2964 limit_req_dry_run
-  section 2964 3554 limit_req_log_level
-  section 3554 3838 limit_req_status
-  section 3838 5913 limit_req_zone
-  section 5913 6145 embedded variables
-  section 5952 6145 $limit_req_status
+  section 639 5935 directives
+  section 658 2580 limit_req
+  section 2580 2986 limit_req_dry_run
+  section 2986 3576 limit_req_log_level
+  section 3576 3860 limit_req_status
+  section 3860 5935 limit_req_zone
+  section 5935 6167 embedded variables
+  section 5974 6167 $limit_req_status
 
 module ngx_http_log_module
   aliases ngx_log
   section 17 384 name
   section 384 713 example configuration
-  section 713 8326 directives
-  section 732 4055 access_log
-  section 4055 7120 log_format
-  section 5190 5255 $bytes_sent
-  section 5255 5308 $connection
-  section 5308 5412 $connection_requests
-  section 5412 5510 $msec
-  section 5510 5590 $pipe
-  section 5590 5688 $request_length
-  section 5688 5911 $request_time
-  section 5911 5951 $status
-  section 5951 6024 $time_iso8601
-  section 6024 7120 $time_local
-  section 7120 8326 open_log_file_cache
-  section 7568 7718 max
-  section 7718 7866 inactive
-  section 7866 8039 min_uses
-  section 8039 8178 valid
-  section 8178 8326 off
+  section 713 8354 directives
+  section 732 4083 access_log
+  section 4083 7148 log_format
+  section 5218 5283 $bytes_sent
+  section 5283 5336 $connection
+  section 5336 5440 $connection_requests
+  section 5440 5538 $msec
+  section 5538 5618 $pipe
+  section 5618 5716 $request_length
+  section 5716 5939 $request_time
+  section 5939 5979 $status
+  section 5979 6052 $time_iso8601
+  section 6052 7148 $time_local
+  section 7148 8354 open_log_file_cache
+  section 7596 7746 max
+  section 7746 7894 inactive
+  section 7894 8067 min_uses
+  section 8067 8206 valid
+  section 8206 8354 off
 
 module ngx_http_map_module
   aliases ngx_map
@@ -863,9 +865,9 @@ module ngx_http_mirror_module
   aliases ngx_mirror
   section 17 281 name
   section 281 513 example configuration
-  section 513 1700 directives
-  section 532 813 mirror
-  section 813 1700 mirror_request_body
+  section 513 1714 directives
+  section 532 827 mirror
+  section 827 1714 mirror_request_body
 
 module ngx_http_mp4_module
   aliases ngx_mp4
@@ -911,7 +913,7 @@ module ngx_http_proxy_module
   aliases ngx_proxy
   section 17 180 name
   section 180 386 example configuration
-  section 386 53604 directives
+  section 386 55358 directives
   section 405 1662 proxy_bind
   section 1662 2155 proxy_buffer_size
   section 2155 3358 proxy_buffering
@@ -934,66 +936,68 @@ module ngx_http_proxy_module
   section 16331 18145 proxy_cache_use_stale
   section 18145 20017 proxy_cache_valid
   section 20017 20342 proxy_connect_timeout
-  section 20342 22005 proxy_cookie_domain
-  section 22005 23533 proxy_cookie_path
-  section 23533 23918 proxy_force_ranges
-  section 23918 24315 proxy_headers_hash_bucket_size
-  section 24315 24707 proxy_headers_hash_max_size
-  section 24707 25211 proxy_hide_header
-  section 25211 25657 proxy_http_version
-  section 25657 26001 proxy_ignore_client_abort
-  section 26001 27116 proxy_ignore_headers
-  section 27116 27520 proxy_intercept_errors
-  section 27520 28149 proxy_limit_rate
-  section 28149 28932 proxy_max_temp_file_size
-  section 28932 29257 proxy_method
-  section 29257 31971 proxy_next_upstream
-  section 29824 29968 error
-  section 29968 30119 timeout
-  section 30119 30196 invalid_header
-  section 30196 30267 http_500
-  section 30267 30338 http_502
-  section 30338 30409 http_503
-  section 30409 30480 http_504
-  section 30480 30551 http_403
-  section 30551 30622 http_404
-  section 30622 30703 http_429
-  section 30703 31019 non_idempotent
-  section 31019 31971 off
-  section 31971 32324 proxy_next_upstream_timeout
-  section 32324 32680 proxy_next_upstream_tries
-  section 32680 33220 proxy_no_cache
-  section 33220 36220 proxy_pass
-  section 36220 36460 proxy_pass_header
-  section 36460 37004 proxy_pass_request_body
-  section 37004 37564 proxy_pass_request_headers
-  section 37564 38012 proxy_read_timeout
-  section 38012 40799 proxy_redirect
-  section 40799 41682 proxy_request_buffering
-  section 41682 42190 proxy_send_lowat
-  section 42190 42636 proxy_send_timeout
-  section 42636 42919 proxy_set_body
-  section 42919 44571 proxy_set_header
-  section 44571 45093 proxy_socket_keepalive
-  section 45093 45414 proxy_ssl_certificate
-  section 45414 45926 proxy_ssl_certificate_key
-  section 45926 46375 proxy_ssl_ciphers
-  section 46375 46700 proxy_ssl_crl
-  section 46700 47172 proxy_ssl_name
-  section 47172 47547 proxy_ssl_password_file
-  section 47547 47947 proxy_ssl_protocols
-  section 47947 48412 proxy_ssl_server_name
-  section 48412 48804 proxy_ssl_session_reuse
-  section 48804 49158 proxy_ssl_trusted_certificate
-  section 49158 49462 proxy_ssl_verify
-  section 49462 49768 proxy_ssl_verify_depth
-  section 49768 51801 proxy_store
-  section 51801 52283 proxy_store_access
-  section 52283 52846 proxy_temp_file_write_size
-  section 52846 53604 proxy_temp_path
-  section 53604 54361 embedded variables
-  section 53785 53891 $proxy_host
-  section 53891 54361 $proxy_port
+  section 20342 21910 proxy_cookie_domain
+  section 21910 23123 proxy_cookie_flags
+  section 23123 24581 proxy_cookie_path
+  section 24581 24966 proxy_force_ranges
+  section 24966 25363 proxy_headers_hash_bucket_size
+  section 25363 25755 proxy_headers_hash_max_size
+  section 25755 26259 proxy_hide_header
+  section 26259 26705 proxy_http_version
+  section 26705 27049 proxy_ignore_client_abort
+  section 27049 28164 proxy_ignore_headers
+  section 28164 28568 proxy_intercept_errors
+  section 28568 29197 proxy_limit_rate
+  section 29197 29980 proxy_max_temp_file_size
+  section 29980 30305 proxy_method
+  section 30305 33019 proxy_next_upstream
+  section 30872 31016 error
+  section 31016 31167 timeout
+  section 31167 31244 invalid_header
+  section 31244 31315 http_500
+  section 31315 31386 http_502
+  section 31386 31457 http_503
+  section 31457 31528 http_504
+  section 31528 31599 http_403
+  section 31599 31670 http_404
+  section 31670 31751 http_429
+  section 31751 32067 non_idempotent
+  section 32067 33019 off
+  section 33019 33372 proxy_next_upstream_timeout
+  section 33372 33728 proxy_next_upstream_tries
+  section 33728 34268 proxy_no_cache
+  section 34268 37268 proxy_pass
+  section 37268 37508 proxy_pass_header
+  section 37508 38052 proxy_pass_request_body
+  section 38052 38612 proxy_pass_request_headers
+  section 38612 39060 proxy_read_timeout
+  section 39060 41737 proxy_redirect
+  section 41737 42620 proxy_request_buffering
+  section 42620 43128 proxy_send_lowat
+  section 43128 43574 proxy_send_timeout
+  section 43574 43857 proxy_set_body
+  section 43857 45523 proxy_set_header
+  section 45523 46045 proxy_socket_keepalive
+  section 46045 46366 proxy_ssl_certificate
+  section 46366 46878 proxy_ssl_certificate_key
+  section 46878 47327 proxy_ssl_ciphers
+  section 47327 48129 proxy_ssl_conf_command
+  section 48129 48454 proxy_ssl_crl
+  section 48454 48926 proxy_ssl_name
+  section 48926 49301 proxy_ssl_password_file
+  section 49301 49701 proxy_ssl_protocols
+  section 49701 50166 proxy_ssl_server_name
+  section 50166 50558 proxy_ssl_session_reuse
+  section 50558 50912 proxy_ssl_trusted_certificate
+  section 50912 51216 proxy_ssl_verify
+  section 51216 51522 proxy_ssl_verify_depth
+  section 51522 53555 proxy_store
+  section 53555 54037 proxy_store_access
+  section 54037 54600 proxy_temp_file_write_size
+  section 54600 55358 proxy_temp_path
+  section 55358 56115 embedded variables
+  section 55539 55645 $proxy_host
+  section 55645 56115 $proxy_port
 
 module ngx_http_random_index_module
   aliases ngx_random_index
@@ -1051,7 +1055,7 @@ module ngx_http_scgi_module
   aliases ngx_scgi
   section 17 177 name
   section 177 309 example configuration
-  section 309 35504 directives
+  section 309 35518 directives
   section 328 1528 scgi_bind
   section 1528 2016 scgi_buffer_size
   section 2016 3202 scgi_buffering
@@ -1094,19 +1098,19 @@ module ngx_http_scgi_module
   section 26006 26357 scgi_next_upstream_timeout
   section 26357 26711 scgi_next_upstream_tries
   section 26711 27246 scgi_no_cache
-  section 27246 28157 scgi_param
-  section 28157 28955 scgi_pass
-  section 28955 29191 scgi_pass_header
-  section 29191 29515 scgi_pass_request_body
-  section 29515 29859 scgi_pass_request_headers
-  section 29859 30299 scgi_read_timeout
-  section 30299 31130 scgi_request_buffering
-  section 31130 31568 scgi_send_timeout
-  section 31568 32086 scgi_socket_keepalive
-  section 32086 33723 scgi_store
-  section 33723 34201 scgi_store_access
-  section 34201 34756 scgi_temp_file_write_size
-  section 34756 35504 scgi_temp_path
+  section 27246 28171 scgi_param
+  section 28171 28969 scgi_pass
+  section 28969 29205 scgi_pass_header
+  section 29205 29529 scgi_pass_request_body
+  section 29529 29873 scgi_pass_request_headers
+  section 29873 30313 scgi_read_timeout
+  section 30313 31144 scgi_request_buffering
+  section 31144 31582 scgi_send_timeout
+  section 31582 32100 scgi_socket_keepalive
+  section 32100 33737 scgi_store
+  section 33737 34215 scgi_store_access
+  section 34215 34770 scgi_temp_file_write_size
+  section 34770 35518 scgi_temp_path
 
 module ngx_http_secure_link_module
   aliases ngx_secure_link
@@ -1123,13 +1127,13 @@ module ngx_http_session_log_module
   aliases ngx_session_log
   section 17 346 name
   section 346 790 example configuration
-  section 790 2791 directives
-  section 809 1147 session_log
-  section 1147 1545 session_log_format
-  section 1545 2791 session_log_zone
-  section 2791 3057 embedded variables
-  section 2906 2958 $session_log_id
-  section 2958 3057 $session_log_binary_id
+  section 790 2805 directives
+  section 809 1161 session_log
+  section 1161 1559 session_log_format
+  section 1559 2805 session_log_zone
+  section 2805 3071 embedded variables
+  section 2920 2972 $session_log_id
+  section 2972 3071 $session_log_binary_id
 
 module ngx_http_slice_module
   aliases ngx_slice
@@ -1199,61 +1203,63 @@ module ngx_http_ssl_module
   aliases ngx_ssl
   section 17 375 name
   section 375 1461 example configuration
-  section 1461 17922 directives
+  section 1461 19440 directives
   section 1480 1751 ssl
   section 1751 2219 ssl_buffer_size
   section 2219 4249 ssl_certificate
   section 4249 5077 ssl_certificate_key
   section 5077 5622 ssl_ciphers
   section 5622 6051 ssl_client_certificate
-  section 6051 6314 ssl_crl
-  section 6314 6695 ssl_dhparam
-  section 6695 7408 ssl_early_data
-  section 7408 8102 ssl_ecdh_curve
-  section 8102 8784 ssl_ocsp
-  section 8784 9295 ssl_ocsp_cache
-  section 9295 9804 ssl_ocsp_responder
-  section 9804 10607 ssl_password_file
-  section 10607 10894 ssl_prefer_server_ciphers
-  section 10894 11400 ssl_protocols
-  section 11400 12803 ssl_session_cache
-  section 11766 11902 off
-  section 11902 12083 none
-  section 12083 12318 builtin
-  section 12318 12803 shared
-  section 12803 13714 ssl_session_ticket_key
-  section 13714 14030 ssl_session_tickets
-  section 14030 14255 ssl_session_timeout
-  section 14255 15028 ssl_stapling
-  section 15028 15450 ssl_stapling_file
-  section 15450 15932 ssl_stapling_responder
-  section 15932 16426 ssl_stapling_verify
-  section 16426 16899 ssl_trusted_certificate
-  section 16899 17713 ssl_verify_client
-  section 17713 17922 ssl_verify_depth
-  section 17922 18494 error processing
-  section 18494 22444 embedded variables
-  section 18596 18695 $ssl_cipher
-  section 18695 19100 $ssl_ciphers
-  section 19100 19247 $ssl_client_escaped_cert
-  section 19247 19606 $ssl_client_cert
-  section 19606 19744 $ssl_client_fingerprint
-  section 19744 19944 $ssl_client_i_dn
-  section 19944 20160 $ssl_client_i_dn_legacy
-  section 20160 20282 $ssl_client_raw_cert
-  section 20282 20483 $ssl_client_s_dn
-  section 20483 20700 $ssl_client_s_dn_legacy
-  section 20700 20822 $ssl_client_serial
-  section 20822 20913 $ssl_client_v_end
-  section 20913 21024 $ssl_client_v_remain
-  section 21024 21119 $ssl_client_v_start
-  section 21119 21413 $ssl_client_verify
-  section 21413 21844 $ssl_curves
-  section 21844 21987 $ssl_early_data
-  section 21987 22072 $ssl_protocol
-  section 22072 22215 $ssl_server_name
-  section 22215 22312 $ssl_session_id
-  section 22312 22444 $ssl_session_reused
+  section 6051 6861 ssl_conf_command
+  section 6861 7124 ssl_crl
+  section 7124 7505 ssl_dhparam
+  section 7505 8218 ssl_early_data
+  section 8218 8912 ssl_ecdh_curve
+  section 8912 9594 ssl_ocsp
+  section 9594 10105 ssl_ocsp_cache
+  section 10105 10614 ssl_ocsp_responder
+  section 10614 11417 ssl_password_file
+  section 11417 11704 ssl_prefer_server_ciphers
+  section 11704 12210 ssl_protocols
+  section 12210 12918 ssl_reject_handshake
+  section 12918 14321 ssl_session_cache
+  section 13284 13420 off
+  section 13420 13601 none
+  section 13601 13836 builtin
+  section 13836 14321 shared
+  section 14321 15232 ssl_session_ticket_key
+  section 15232 15548 ssl_session_tickets
+  section 15548 15773 ssl_session_timeout
+  section 15773 16546 ssl_stapling
+  section 16546 16968 ssl_stapling_file
+  section 16968 17450 ssl_stapling_responder
+  section 17450 17944 ssl_stapling_verify
+  section 17944 18417 ssl_trusted_certificate
+  section 18417 19231 ssl_verify_client
+  section 19231 19440 ssl_verify_depth
+  section 19440 20012 error processing
+  section 20012 23962 embedded variables
+  section 20114 20213 $ssl_cipher
+  section 20213 20618 $ssl_ciphers
+  section 20618 20765 $ssl_client_escaped_cert
+  section 20765 21124 $ssl_client_cert
+  section 21124 21262 $ssl_client_fingerprint
+  section 21262 21462 $ssl_client_i_dn
+  section 21462 21678 $ssl_client_i_dn_legacy
+  section 21678 21800 $ssl_client_raw_cert
+  section 21800 22001 $ssl_client_s_dn
+  section 22001 22218 $ssl_client_s_dn_legacy
+  section 22218 22340 $ssl_client_serial
+  section 22340 22431 $ssl_client_v_end
+  section 22431 22542 $ssl_client_v_remain
+  section 22542 22637 $ssl_client_v_start
+  section 22637 22931 $ssl_client_verify
+  section 22931 23362 $ssl_curves
+  section 23362 23505 $ssl_early_data
+  section 23505 23590 $ssl_protocol
+  section 23590 23733 $ssl_server_name
+  section 23733 23830 $ssl_session_id
+  section 23830 23962 $ssl_session_reused
 
 module ngx_http_status_module
   aliases ngx_status
@@ -1413,11 +1419,11 @@ module ngx_http_sub_module
   aliases ngx_sub
   section 17 337 name
   section 337 595 example configuration
-  section 595 2278 directives
-  section 614 1178 sub_filter
-  section 1178 1659 sub_filter_last_modified
-  section 1659 1914 sub_filter_once
-  section 1914 2278 sub_filter_types
+  section 595 2297 directives
+  section 614 1197 sub_filter
+  section 1197 1678 sub_filter_last_modified
+  section 1678 1933 sub_filter_once
+  section 1933 2297 sub_filter_types
 
 module ngx_http_upstream_conf_module
   aliases ngx_upstream_conf
@@ -1455,53 +1461,53 @@ module ngx_http_upstream_module
   aliases ngx_upstream
   section 17 387 name
   section 387 1639 example configuration
-  section 1639 28158 directives
+  section 1639 28159 directives
   section 1658 2738 upstream
   section 2738 8239 server
   section 8239 9068 zone
   section 9068 9961 state
   section 9961 11090 hash
   section 11090 12291 ip_hash
-  section 12291 14719 keepalive
-  section 14719 15266 keepalive_requests
-  section 15266 15539 keepalive_timeout
-  section 15539 16841 ntlm
-  section 16841 17277 least_conn
-  section 17277 18242 least_time
-  section 18242 19141 queue
-  section 19141 20158 random
-  section 20158 21445 resolver
-  section 21445 21784 resolver_timeout
-  section 21784 27738 sticky
-  section 22448 23861 cookie
-  section 23861 24158 expires=time
-  section 24158 24296 domain=domain
-  section 24296 24376 httponly
-  section 24376 24453 secure
-  section 24453 24627 path=path
-  section 24627 26025 route
-  section 26025 27738 learn
-  section 27738 28158 sticky_cookie_insert
-  section 28158 32156 embedded variables
-  section 28279 28965 $upstream_addr
-  section 28965 29179 $upstream_bytes_received
-  section 29179 29383 $upstream_bytes_sent
-  section 29383 29628 $upstream_cache_status
-  section 29628 29966 $upstream_connect_time
-  section 29966 30193 $upstream_cookie_i<name>
-  section 30193 30483 $upstream_header_time
-  section 30483 30901 $upstream_http_i<name>
-  section 30901 31165 $upstream_queue_time
-  section 31165 31425 $upstream_response_length
-  section 31425 31701 $upstream_response_time
-  section 31701 32011 $upstream_status
-  section 32011 32156 $upstream_trailer_i<name>
+  section 12291 14720 keepalive
+  section 14720 15267 keepalive_requests
+  section 15267 15540 keepalive_timeout
+  section 15540 16842 ntlm
+  section 16842 17278 least_conn
+  section 17278 18243 least_time
+  section 18243 19142 queue
+  section 19142 20159 random
+  section 20159 21446 resolver
+  section 21446 21785 resolver_timeout
+  section 21785 27739 sticky
+  section 22449 23862 cookie
+  section 23862 24159 expires=time
+  section 24159 24297 domain=domain
+  section 24297 24377 httponly
+  section 24377 24454 secure
+  section 24454 24628 path=path
+  section 24628 26026 route
+  section 26026 27739 learn
+  section 27739 28159 sticky_cookie_insert
+  section 28159 32157 embedded variables
+  section 28280 28966 $upstream_addr
+  section 28966 29180 $upstream_bytes_received
+  section 29180 29384 $upstream_bytes_sent
+  section 29384 29629 $upstream_cache_status
+  section 29629 29967 $upstream_connect_time
+  section 29967 30194 $upstream_cookie_i<name>
+  section 30194 30484 $upstream_header_time
+  section 30484 30902 $upstream_http_i<name>
+  section 30902 31166 $upstream_queue_time
+  section 31166 31426 $upstream_response_length
+  section 31426 31702 $upstream_response_time
+  section 31702 32012 $upstream_status
+  section 32012 32157 $upstream_trailer_i<name>
 
 module ngx_http_userid_module
   aliases ngx_userid
   section 17 390 name
   section 390 637 example configuration
-  section 637 4188 directives
+  section 637 4593 directives
   section 656 1341 userid
   section 944 1041 on
   section 1041 1138 v1
@@ -1509,21 +1515,22 @@ module ngx_http_userid_module
   section 1236 1341 off
   section 1341 1640 userid_domain
   section 1640 2083 userid_expires
-  section 2083 2906 userid_mark
-  section 2906 3091 userid_name
-  section 3091 3459 userid_p3p
-  section 3459 3669 userid_path
-  section 3669 4188 userid_service
-  section 4188 4723 embedded variables
-  section 4307 4380 $uid_got
-  section 4380 4641 $uid_reset
-  section 4641 4723 $uid_set
+  section 2083 2488 userid_flags
+  section 2488 3311 userid_mark
+  section 3311 3496 userid_name
+  section 3496 3864 userid_p3p
+  section 3864 4074 userid_path
+  section 4074 4593 userid_service
+  section 4593 5128 embedded variables
+  section 4712 4785 $uid_got
+  section 4785 5046 $uid_reset
+  section 5046 5128 $uid_set
 
 module ngx_http_uwsgi_module
   aliases ngx_uwsgi
   section 17 180 name
   section 180 315 example configuration
-  section 315 41372 directives
+  section 315 42188 directives
   section 334 1539 uwsgi_bind
   section 1539 2030 uwsgi_buffer_size
   section 2030 3227 uwsgi_buffering
@@ -1568,31 +1575,32 @@ module ngx_http_uwsgi_module
   section 26770 27123 uwsgi_next_upstream_timeout
   section 27123 27479 uwsgi_next_upstream_tries
   section 27479 28019 uwsgi_no_cache
-  section 28019 28938 uwsgi_param
-  section 28938 30044 uwsgi_pass
-  section 30044 30282 uwsgi_pass_header
-  section 30282 30610 uwsgi_pass_request_body
-  section 30610 30958 uwsgi_pass_request_headers
-  section 30958 31402 uwsgi_read_timeout
-  section 31402 32236 uwsgi_request_buffering
-  section 32236 32678 uwsgi_send_timeout
-  section 32678 33198 uwsgi_socket_keepalive
-  section 33198 33519 uwsgi_ssl_certificate
-  section 33519 34031 uwsgi_ssl_certificate_key
-  section 34031 34480 uwsgi_ssl_ciphers
-  section 34480 34805 uwsgi_ssl_crl
-  section 34805 35280 uwsgi_ssl_name
-  section 35280 35655 uwsgi_ssl_password_file
-  section 35655 36055 uwsgi_ssl_protocols
-  section 36055 36520 uwsgi_ssl_server_name
-  section 36520 36961 uwsgi_ssl_session_reuse
-  section 36961 37315 uwsgi_ssl_trusted_certificate
-  section 37315 37619 uwsgi_ssl_verify
-  section 37619 37925 uwsgi_ssl_verify_depth
-  section 37925 39573 uwsgi_store
-  section 39573 40055 uwsgi_store_access
-  section 40055 40616 uwsgi_temp_file_write_size
-  section 40616 41372 uwsgi_temp_path
+  section 28019 28952 uwsgi_param
+  section 28952 30058 uwsgi_pass
+  section 30058 30296 uwsgi_pass_header
+  section 30296 30624 uwsgi_pass_request_body
+  section 30624 30972 uwsgi_pass_request_headers
+  section 30972 31416 uwsgi_read_timeout
+  section 31416 32250 uwsgi_request_buffering
+  section 32250 32692 uwsgi_send_timeout
+  section 32692 33212 uwsgi_socket_keepalive
+  section 33212 33533 uwsgi_ssl_certificate
+  section 33533 34045 uwsgi_ssl_certificate_key
+  section 34045 34494 uwsgi_ssl_ciphers
+  section 34494 35296 uwsgi_ssl_conf_command
+  section 35296 35621 uwsgi_ssl_crl
+  section 35621 36096 uwsgi_ssl_name
+  section 36096 36471 uwsgi_ssl_password_file
+  section 36471 36871 uwsgi_ssl_protocols
+  section 36871 37336 uwsgi_ssl_server_name
+  section 37336 37777 uwsgi_ssl_session_reuse
+  section 37777 38131 uwsgi_ssl_trusted_certificate
+  section 38131 38435 uwsgi_ssl_verify
+  section 38435 38741 uwsgi_ssl_verify_depth
+  section 38741 40389 uwsgi_store
+  section 40389 40871 uwsgi_store_access
+  section 40871 41432 uwsgi_temp_file_write_size
+  section 41432 42188 uwsgi_temp_path
 
 module ngx_http_v2_module
   aliases ngx_v2
@@ -1619,13 +1627,13 @@ module ngx_http_xslt_module
   aliases ngx_xslt
   section 17 455 name
   section 455 672 example configuration
-  section 672 4661 directives
+  section 672 4689 directives
   section 691 1268 xml_entities
   section 1268 1863 xslt_last_modified
-  section 1863 2509 xslt_param
-  section 2509 3101 xslt_string_param
-  section 3101 4211 xslt_stylesheet
-  section 4211 4661 xslt_types
+  section 1863 2523 xslt_param
+  section 2523 3129 xslt_string_param
+  section 3129 4239 xslt_stylesheet
+  section 4239 4689 xslt_types
 
 module ngx_mail_auth_http_module
   section 17 95 name
@@ -1672,11 +1680,12 @@ module ngx_mail_pop3_module
 
 module ngx_mail_proxy_module
   section 17 87 name
-  section 87 3026 directives
+  section 87 3415 directives
   section 106 407 proxy_buffer
   section 407 1363 proxy_pass_error_message
-  section 1363 1689 proxy_timeout
-  section 1689 3026 xclient
+  section 1363 1752 proxy_smtp_auth
+  section 1752 2078 proxy_timeout
+  section 2078 3415 xclient
 
 module ngx_mail_smtp_module
   section 17 85 name
@@ -1694,33 +1703,34 @@ module ngx_mail_smtp_module
 module ngx_mail_ssl_module
   section 17 428 name
   section 428 1391 example configuration
-  section 1391 12573 directives
+  section 1391 13383 directives
   section 1410 1681 ssl
   section 1681 3078 ssl_certificate
   section 3078 3768 ssl_certificate_key
   section 3768 4313 ssl_ciphers
   section 4313 4738 ssl_client_certificate
-  section 4738 5002 ssl_crl
-  section 5002 5383 ssl_dhparam
-  section 5383 6077 ssl_ecdh_curve
-  section 6077 6882 ssl_password_file
-  section 6882 7172 ssl_prefer_server_ciphers
-  section 7172 7678 ssl_protocols
-  section 7678 9073 ssl_session_cache
-  section 8044 8180 off
-  section 8180 8361 none
-  section 8361 8596 builtin
-  section 8596 9073 shared
-  section 9073 9984 ssl_session_ticket_key
-  section 9984 10300 ssl_session_tickets
-  section 10300 10525 ssl_session_timeout
-  section 10525 10949 ssl_trusted_certificate
-  section 10949 11884 ssl_verify_client
-  section 11884 12139 ssl_verify_depth
-  section 12139 12573 starttls
-  section 12310 12428 on
-  section 12428 12500 off
-  section 12500 12573 only
+  section 4738 5548 ssl_conf_command
+  section 5548 5812 ssl_crl
+  section 5812 6193 ssl_dhparam
+  section 6193 6887 ssl_ecdh_curve
+  section 6887 7692 ssl_password_file
+  section 7692 7982 ssl_prefer_server_ciphers
+  section 7982 8488 ssl_protocols
+  section 8488 9883 ssl_session_cache
+  section 8854 8990 off
+  section 8990 9171 none
+  section 9171 9406 builtin
+  section 9406 9883 shared
+  section 9883 10794 ssl_session_ticket_key
+  section 10794 11110 ssl_session_tickets
+  section 11110 11335 ssl_session_timeout
+  section 11335 11759 ssl_trusted_certificate
+  section 11759 12694 ssl_verify_client
+  section 12694 12949 ssl_verify_depth
+  section 12949 13383 starttls
+  section 13120 13238 on
+  section 13238 13310 off
+  section 13310 13383 only
 
 module ngx_stream_access_module
   section 17 206 name
@@ -1803,15 +1813,15 @@ module ngx_stream_geoip_module
 module ngx_stream_js_module
   section 17 292 name
   section 292 2324 example configuration
-  section 2324 4764 directives
+  section 2324 4766 directives
   section 2343 2639 js_access
   section 2639 2871 js_filter
   section 2871 3530 js_import
   section 3530 4045 js_include
-  section 4045 4217 js_path
-  section 4217 4516 js_preread
-  section 4516 4764 js_set
-  section 4764 4889 session object properties
+  section 4045 4219 js_path
+  section 4219 4518 js_preread
+  section 4518 4766 js_set
+  section 4766 4891 session object properties
 
 module ngx_stream_keyval_module
   section 17 336 name
@@ -1826,26 +1836,26 @@ module ngx_stream_keyval_module
 module ngx_stream_limit_conn_module
   section 17 297 name
   section 297 575 example configuration
-  section 575 3233 directives
-  section 594 1321 limit_conn
-  section 1321 1709 limit_conn_dry_run
-  section 1709 2014 limit_conn_log_level
-  section 2014 3233 limit_conn_zone
-  section 3233 3432 embedded variables
-  section 3272 3432 $limit_conn_status
+  section 575 3257 directives
+  section 594 1345 limit_conn
+  section 1345 1733 limit_conn_dry_run
+  section 1733 2038 limit_conn_log_level
+  section 2038 3257 limit_conn_zone
+  section 3257 3456 embedded variables
+  section 3296 3456 $limit_conn_status
 
 module ngx_stream_log_module
   section 17 191 name
   section 191 461 example configuration
-  section 461 5411 directives
-  section 480 2930 access_log
-  section 2930 4229 log_format
-  section 4229 5411 open_log_file_cache
-  section 4653 4803 max
-  section 4803 4951 inactive
-  section 4951 5124 min_uses
-  section 5124 5263 valid
-  section 5263 5411 off
+  section 461 5425 directives
+  section 480 2944 access_log
+  section 2944 4243 log_format
+  section 4243 5425 open_log_file_cache
+  section 4667 4817 max
+  section 4817 4965 inactive
+  section 4965 5138 min_uses
+  section 5138 5277 valid
+  section 5277 5425 off
 
 module ngx_stream_map_module
   section 17 214 name
@@ -1862,7 +1872,7 @@ module ngx_stream_map_module
 module ngx_stream_proxy_module
   section 17 229 name
   section 229 722 example configuration
-  section 722 12869 directives
+  section 722 13641 directives
   section 741 1930 proxy_bind
   section 1930 2285 proxy_buffer_size
   section 2285 2515 proxy_connect_timeout
@@ -1880,17 +1890,18 @@ module ngx_stream_proxy_module
   section 8079 8325 proxy_ssl_certificate
   section 8325 8578 proxy_ssl_certificate_key
   section 8578 8955 proxy_ssl_ciphers
-  section 8955 9205 proxy_ssl_crl
-  section 9205 9673 proxy_ssl_name
-  section 9673 9979 proxy_ssl_password_file
-  section 9979 10307 proxy_ssl_protocols
-  section 10307 10697 proxy_ssl_server_name
-  section 10697 11065 proxy_ssl_session_reuse
-  section 11065 11344 proxy_ssl_trusted_certificate
-  section 11344 11573 proxy_ssl_verify
-  section 11573 11804 proxy_ssl_verify_depth
-  section 11804 12132 proxy_timeout
-  section 12132 12869 proxy_upload_rate
+  section 8955 9727 proxy_ssl_conf_command
+  section 9727 9977 proxy_ssl_crl
+  section 9977 10445 proxy_ssl_name
+  section 10445 10751 proxy_ssl_password_file
+  section 10751 11079 proxy_ssl_protocols
+  section 11079 11469 proxy_ssl_server_name
+  section 11469 11837 proxy_ssl_session_reuse
+  section 11837 12116 proxy_ssl_trusted_certificate
+  section 12116 12345 proxy_ssl_verify
+  section 12345 12576 proxy_ssl_verify_depth
+  section 12576 12904 proxy_timeout
+  section 12904 13641 proxy_upload_rate
 
 module ngx_stream_realip_module
   section 17 501 name
@@ -1907,6 +1918,12 @@ module ngx_stream_return_module
   section 350 564 directives
   section 369 564 return
 
+module ngx_stream_set_module
+  section 17 185 name
+  section 185 294 example configuration
+  section 294 530 directives
+  section 313 530 set
+
 module ngx_stream_split_clients_module
   section 17 254 name
   section 254 643 example configuration
@@ -1916,47 +1933,48 @@ module ngx_stream_split_clients_module
 module ngx_stream_ssl_module
   section 17 362 name
   section 362 1329 example configuration
-  section 1329 12185 directives
+  section 1329 12997 directives
   section 1348 3115 ssl_certificate
   section 3115 3929 ssl_certificate_key
   section 3929 4365 ssl_ciphers
   section 4365 4792 ssl_client_certificate
-  section 4792 5058 ssl_crl
-  section 5058 5396 ssl_dhparam
-  section 5396 6002 ssl_ecdh_curve
-  section 6002 6216 ssl_handshake_timeout
-  section 6216 6966 ssl_password_file
-  section 6966 7258 ssl_prefer_server_ciphers
-  section 7258 7749 ssl_protocols
-  section 7749 9146 ssl_session_cache
-  section 8117 8253 off
-  section 8253 8434 none
-  section 8434 8669 builtin
-  section 8669 9146 shared
-  section 9146 10014 ssl_session_ticket_key
-  section 10014 10287 ssl_session_tickets
-  section 10287 10514 ssl_session_timeout
-  section 10514 10940 ssl_trusted_certificate
-  section 10940 11928 ssl_verify_client
-  section 11928 12185 ssl_verify_depth
-  section 12185 15158 embedded variables
-  section 12293 12392 $ssl_cipher
-  section 12392 12797 $ssl_ciphers
-  section 12797 12989 $ssl_client_cert
-  section 12989 13128 $ssl_client_fingerprint
-  section 13128 13328 $ssl_client_i_dn
-  section 13328 13459 $ssl_client_raw_cert
-  section 13459 13660 $ssl_client_s_dn
-  section 13660 13791 $ssl_client_serial
-  section 13791 13882 $ssl_client_v_end
-  section 13882 13993 $ssl_client_v_remain
-  section 13993 14088 $ssl_client_v_start
-  section 14088 14287 $ssl_client_verify
-  section 14287 14718 $ssl_curves
-  section 14718 14803 $ssl_protocol
-  section 14803 14938 $ssl_server_name
-  section 14938 15035 $ssl_session_id
-  section 15035 15158 $ssl_session_reused
+  section 4792 5604 ssl_conf_command
+  section 5604 5870 ssl_crl
+  section 5870 6208 ssl_dhparam
+  section 6208 6814 ssl_ecdh_curve
+  section 6814 7028 ssl_handshake_timeout
+  section 7028 7778 ssl_password_file
+  section 7778 8070 ssl_prefer_server_ciphers
+  section 8070 8561 ssl_protocols
+  section 8561 9958 ssl_session_cache
+  section 8929 9065 off
+  section 9065 9246 none
+  section 9246 9481 builtin
+  section 9481 9958 shared
+  section 9958 10826 ssl_session_ticket_key
+  section 10826 11099 ssl_session_tickets
+  section 11099 11326 ssl_session_timeout
+  section 11326 11752 ssl_trusted_certificate
+  section 11752 12740 ssl_verify_client
+  section 12740 12997 ssl_verify_depth
+  section 12997 15970 embedded variables
+  section 13105 13204 $ssl_cipher
+  section 13204 13609 $ssl_ciphers
+  section 13609 13801 $ssl_client_cert
+  section 13801 13940 $ssl_client_fingerprint
+  section 13940 14140 $ssl_client_i_dn
+  section 14140 14271 $ssl_client_raw_cert
+  section 14271 14472 $ssl_client_s_dn
+  section 14472 14603 $ssl_client_serial
+  section 14603 14694 $ssl_client_v_end
+  section 14694 14805 $ssl_client_v_remain
+  section 14805 14900 $ssl_client_v_start
+  section 14900 15099 $ssl_client_verify
+  section 15099 15530 $ssl_curves
+  section 15530 15615 $ssl_protocol
+  section 15615 15750 $ssl_server_name
+  section 15750 15847 $ssl_session_id
+  section 15847 15970 $ssl_session_reused
 
 module ngx_stream_ssl_preread_module
   section 17 618 name
@@ -2042,7 +2060,7 @@ module server_names
   section 9903 10791 compatibility
 
 module stream_processing
-  section 18 1508 name
+  section 18 1561 name
 
 module switches
   section 18 1616 name
@@ -4148,30 +4166,38 @@ module lua-cjson-2.1.0.8
   section 3242 3492 encode_escape_forward_slash
   section 3492 4422 decode_array_with_array_mt
 
-dist luajit-2.1-20200102
-  modules luajit-2.1-20200102
+dist luajit-2.1-20201027
+  modules luajit-2.1-20201027
 
-module luajit-2.1-20200102
+module luajit-2.1-20201027
   section 18 95 name
   section 95 316 description
-  section 316 7157 openresty extensions
-  section 547 4017 new lua apis
+  section 316 8830 openresty extensions
+  section 547 4722 new lua apis
   section 570 1052 table.isempty
   section 1052 1455 table.isarray
   section 1455 1882 table.nkeys
   section 1882 2375 table.clone
-  section 2375 2858 jit.prngstate
-  section 2858 4017 thread.exdata
-  section 4017 4282 new macros
-  section 4108 4282 openresty_luajit
-  section 4282 5048 optimizations
-  section 4306 4584 updated jit default parameters
-  section 4584 5048 string hashing
-  section 5048 5967 updated bytecode options
-  section 5083 5576 new -bl option
-  section 5576 5967 updated -bl option
-  section 5967 7157 miscellaneous
-  section 7157 7803 copyright & license
+  section 2375 3412 jit.prngstate
+  section 3412 4571 thread.exdata
+  section 4571 4722 thread.exdata2
+  section 4722 5765 new c api
+  section 4742 4899 lua_setexdata
+  section 4899 5043 lua_getexdata
+  section 5043 5196 lua_setexdata2
+  section 5196 5335 lua_getexdata2
+  section 5335 5765 lua_resetthread
+  section 5765 6131 new macros
+  section 5858 6030 openresty_luajit
+  section 6030 6131 have_lua_resetthread
+  section 6131 6897 optimizations
+  section 6155 6433 updated jit default parameters
+  section 6433 6897 string hashing
+  section 6897 7816 updated bytecode options
+  section 6932 7425 new -bl option
+  section 7425 7816 updated -bl option
+  section 7816 8830 miscellaneous
+  section 8830 9476 copyright & license
 
 dist lua-rds-parser-0.06
   aliases rds.parser
@@ -4209,72 +4235,74 @@ module lua-redis-parser-0.13
   section 7070 8562 copyright & license
   section 8562 8905 see also
 
-dist lua-resty-core-0.1.19
+dist lua-resty-core-0.1.21
   aliases resty.core
-  modules .github.issue_template .github.pull_request_template lua-resty-core-0.1.19 ngx.balancer ngx.base64 ngx.errlog ngx.ocsp ngx.pipe ngx.process ngx.re ngx.req ngx.resp ngx.semaphore ngx.ssl ngx.ssl.session
+  modules .github.issue_template .github.pull_request_template lua-resty-core-0.1.21 ngx.balancer ngx.base64 ngx.errlog ngx.ocsp ngx.pipe ngx.process ngx.re ngx.req ngx.resp ngx.semaphore ngx.ssl ngx.ssl.session
 
 module .github.issue_template
 
 module .github.pull_request_template
 
-module lua-resty-core-0.1.19
+module lua-resty-core-0.1.21
   aliases resty.core
   section 18 125 name
   section 125 176 status
   section 176 1090 synopsis
   section 1090 2113 description
-  section 2113 2792 prerequisites
-  section 2792 10768 api implemented
-  section 2819 3104 resty.core.hash
-  section 3104 3339 resty.core.base64
-  section 3339 3563 resty.core.uri
-  section 3563 4018 resty.core.regex
-  section 4018 4139 resty.core.exit
-  section 4139 5620 resty.core.shdict
-  section 5620 5755 resty.core.var
-  section 5755 5873 resty.core.ctx
-  section 5873 6596 resty.core.request
-  section 6596 6738 resty.core.response
-  section 6738 7049 resty.core.misc
-  section 7049 7776 resty.core.time
-  section 7776 8181 resty.core.worker
-  section 8181 8313 resty.core.phase
-  section 8313 8448 resty.core.ndk
-  section 8448 8733 ngx.semaphore
-  section 8733 8920 ngx.balancer
-  section 8920 9172 ngx.ssl
-  section 9172 9405 ngx.ssl.session
-  section 9405 9602 ngx.re
-  section 9602 9784 ngx.resp
-  section 9784 10052 ngx.pipe
-  section 10052 10283 ngx.process
-  section 10283 10533 ngx.errlog
-  section 10533 10768 ngx.base64
-  section 10768 10995 caveat
-  section 10995 11175 todo
-  section 11175 11273 author
-  section 11273 12727 copyright and license
-  section 12727 12899 see also
+  section 2113 2780 prerequisites
+  section 2780 10896 api implemented
+  section 2807 3092 resty.core.hash
+  section 3092 3327 resty.core.base64
+  section 3327 3551 resty.core.uri
+  section 3551 4006 resty.core.regex
+  section 4006 4127 resty.core.exit
+  section 4127 5608 resty.core.shdict
+  section 5608 5743 resty.core.var
+  section 5743 5861 resty.core.ctx
+  section 5861 6584 resty.core.request
+  section 6584 6726 resty.core.response
+  section 6726 7037 resty.core.misc
+  section 7037 7764 resty.core.time
+  section 7764 8169 resty.core.worker
+  section 8169 8301 resty.core.phase
+  section 8301 8436 resty.core.ndk
+  section 8436 8576 resty.core.socket
+  section 8576 8861 ngx.semaphore
+  section 8861 9048 ngx.balancer
+  section 9048 9300 ngx.ssl
+  section 9300 9533 ngx.ssl.session
+  section 9533 9730 ngx.re
+  section 9730 9912 ngx.resp
+  section 9912 10180 ngx.pipe
+  section 10180 10411 ngx.process
+  section 10411 10661 ngx.errlog
+  section 10661 10896 ngx.base64
+  section 10896 11123 caveat
+  section 11123 11303 todo
+  section 11303 11401 author
+  section 11401 12855 copyright and license
+  section 12855 13027 see also
 
 module ngx.balancer
   section 18 103 name
   section 103 174 status
-  section 174 2736 synopsis
-  section 192 1534 http subsystem
-  section 1534 2736 stream subsystem
-  section 2736 3317 description
-  section 3317 7888 methods
-  section 3470 4205 set_current_peer
-  section 4205 5241 set_more_tries
-  section 5241 6511 get_last_failure
-  section 6511 7888 set_timeouts
-  section 7888 8175 community
-  section 7909 8045 english mailing list
-  section 8045 8175 chinese mailing list
-  section 8175 8426 bugs and patches
-  section 8426 8512 author
-  section 8512 9966 copyright and license
-  section 9966 10318 see also
+  section 174 2740 synopsis
+  section 192 1536 http subsystem
+  section 1536 2740 stream subsystem
+  section 2740 3321 description
+  section 3321 9173 methods
+  section 3474 4209 set_current_peer
+  section 4209 5245 set_more_tries
+  section 5245 6515 get_last_failure
+  section 6515 7892 set_timeouts
+  section 7892 9173 recreate_request
+  section 9173 9460 community
+  section 9194 9330 english mailing list
+  section 9330 9460 chinese mailing list
+  section 9460 9711 bugs and patches
+  section 9711 9797 author
+  section 9797 11251 copyright and license
+  section 11251 11603 see also
 
 module ngx.base64
   section 18 108 name
@@ -4441,28 +4469,30 @@ module ngx.ssl
   section 99 153 status
   section 153 2517 synopsis
   section 2517 3315 description
-  section 3315 13534 methods
+  section 3315 14743 methods
   section 3332 3627 clear_certs
   section 3627 4463 cert_pem_to_der
   section 4463 5028 set_der_cert
   section 5028 5578 priv_key_pem_to_der
   section 5578 6139 set_der_priv_key
   section 6139 6944 server_name
-  section 6944 8495 raw_server_addr
-  section 8495 10078 raw_client_addr
-  section 10078 10569 get_tls1_version
-  section 10569 11180 get_tls1_version_str
-  section 11180 11744 parse_pem_cert
-  section 11744 12172 parse_pem_priv_key
-  section 12172 12847 set_cert
-  section 12847 13534 set_priv_key
-  section 13534 13821 community
-  section 13555 13691 english mailing list
-  section 13691 13821 chinese mailing list
-  section 13821 14072 bugs and patches
-  section 14072 14158 author
-  section 14158 15612 copyright and license
-  section 15612 16021 see also
+  section 6944 7254 server_port
+  section 7254 8805 raw_server_addr
+  section 8805 10388 raw_client_addr
+  section 10388 10879 get_tls1_version
+  section 10879 11490 get_tls1_version_str
+  section 11490 12054 parse_pem_cert
+  section 12054 12482 parse_pem_priv_key
+  section 12482 13157 set_cert
+  section 13157 13844 set_priv_key
+  section 13844 14743 verify_client
+  section 14743 15030 community
+  section 14764 14900 english mailing list
+  section 14900 15030 chinese mailing list
+  section 15030 15281 bugs and patches
+  section 15281 15367 author
+  section 15367 16821 copyright and license
+  section 16821 17230 see also
 
 module ngx.ssl.session
   section 18 139 name
@@ -4718,50 +4748,51 @@ module lua-resty-memcached-0.15
   section 15669 17163 copyright and license
   section 17163 17558 see also
 
-dist lua-resty-mysql-0.21
+dist lua-resty-mysql-0.23
   aliases resty.mysql
-  modules .github.issue_template lua-resty-mysql-0.21
+  modules .github.issue_template lua-resty-mysql-0.23
 
 module .github.issue_template
 
-module lua-resty-mysql-0.21
+module lua-resty-mysql-0.23
   aliases resty.mysql
   section 18 113 name
   section 113 175 status
   section 175 746 description
   section 746 4942 synopsis
-  section 4942 12746 methods
+  section 4942 14988 methods
   section 4961 5117 new
-  section 5117 7788 connect
-  section 7788 7941 set_timeout
-  section 7941 8664 set_keepalive
-  section 8664 9242 get_reused_times
-  section 9242 9458 close
-  section 9458 9799 send_query
-  section 9799 11778 read_result
-  section 11778 12200 query
-  section 12200 12434 server_ver
-  section 12434 12746 set_compact_arrays
-  section 12746 13213 sql literal quoting
-  section 13213 15103 multi-resultset support
-  section 15103 15516 debugging
-  section 15516 16046 automatic error logging
-  section 16046 16838 limitations
-  section 16838 17594 installation
-  section 17594 17881 community
-  section 17615 17751 english mailing list
-  section 17751 17881 chinese mailing list
-  section 17881 18198 bugs and patches
-  section 18198 18530 todo
-  section 18530 18628 author
-  section 18628 20122 copyright and license
-  section 20122 20610 see also
+  section 5117 10030 connect
+  section 10030 10183 set_timeout
+  section 10183 10906 set_keepalive
+  section 10906 11484 get_reused_times
+  section 11484 11700 close
+  section 11700 12041 send_query
+  section 12041 14020 read_result
+  section 14020 14442 query
+  section 14442 14676 server_ver
+  section 14676 14988 set_compact_arrays
+  section 14988 15455 sql literal quoting
+  section 15455 17345 multi-resultset support
+  section 17345 17758 debugging
+  section 17758 18288 automatic error logging
+  section 18288 19080 limitations
+  section 19080 19834 more authentication method support
+  section 19834 20590 installation
+  section 20590 20877 community
+  section 20611 20747 english mailing list
+  section 20747 20877 chinese mailing list
+  section 20877 21194 bugs and patches
+  section 21194 21463 todo
+  section 21463 21561 author
+  section 21561 23055 copyright and license
+  section 23055 23543 see also
 
-dist lua-resty-redis-0.28
+dist lua-resty-redis-0.29
   aliases resty.redis
-  modules lua-resty-redis-0.28
+  modules lua-resty-redis-0.29
 
-module lua-resty-redis-0.28
+module lua-resty-redis-0.29
   aliases resty.redis
   section 18 117 name
   section 117 179 status
@@ -4879,17 +4910,17 @@ module lua-resty-upstream-healthcheck-0.06
   section 7121 8575 copyright and license
   section 8575 8823 see also
 
-dist lua-resty-websocket-0.07
+dist lua-resty-websocket-0.08
   aliases resty.websocket
-  modules lua-resty-websocket-0.07
+  modules lua-resty-websocket-0.08
 
-module lua-resty-websocket-0.07
+module lua-resty-websocket-0.08
   aliases resty.websocket
   section 18 107 name
   section 107 169 status
   section 169 610 description
   section 610 2874 synopsis
-  section 2874 13821 modules
+  section 2874 14077 modules
   section 2893 7383 resty.websocket.server
   section 3020 7383 methods
   section 3040 4082 new
@@ -4901,36 +4932,36 @@ module lua-resty-websocket-0.07
   section 5551 5997 send_close
   section 5997 6624 send_frame
   section 6624 7383 recv_frame
-  section 7383 13222 resty.websocket.client
-  section 8419 13222 methods
+  section 7383 13451 resty.websocket.client
+  section 8419 13451 methods
   section 8439 9345 client:new
-  section 9345 10776 client:connect
-  section 10776 10961 client:close
-  section 10961 11693 client:set_keepalive
-  section 11693 11836 client:set_timeout
-  section 11836 11988 client:send_text
-  section 11988 12146 client:send_binary
-  section 12146 12337 client:send_ping
-  section 12337 12528 client:send_pong
-  section 12528 12729 client:send_close
-  section 12729 13067 client:send_frame
-  section 13067 13222 client:recv_frame
-  section 13222 13821 resty.websocket.protocol
-  section 13355 13821 methods
-  section 13375 13529 recv_frame
-  section 13529 13668 build_frame
-  section 13668 13821 send_frame
-  section 13821 14321 automatic error logging
-  section 14321 15115 limitations
-  section 15115 16170 installation
-  section 16170 16186 todo
-  section 16186 16473 community
-  section 16207 16343 english mailing list
-  section 16343 16473 chinese mailing list
-  section 16473 16772 bugs and patches
-  section 16772 16870 author
-  section 16870 18352 copyright and license
-  section 18352 18973 see also
+  section 9345 11005 client:connect
+  section 11005 11190 client:close
+  section 11190 11922 client:set_keepalive
+  section 11922 12065 client:set_timeout
+  section 12065 12217 client:send_text
+  section 12217 12375 client:send_binary
+  section 12375 12566 client:send_ping
+  section 12566 12757 client:send_pong
+  section 12757 12958 client:send_close
+  section 12958 13296 client:send_frame
+  section 13296 13451 client:recv_frame
+  section 13451 14077 resty.websocket.protocol
+  section 13584 14077 methods
+  section 13604 13767 protocol.recv_frame
+  section 13767 13915 protocol.build_frame
+  section 13915 14077 protocol.send_frame
+  section 14077 14577 automatic error logging
+  section 14577 15371 limitations
+  section 15371 16426 installation
+  section 16426 16442 todo
+  section 16442 16729 community
+  section 16463 16599 english mailing list
+  section 16599 16729 chinese mailing list
+  section 16729 17028 bugs and patches
+  section 17028 17126 author
+  section 17126 18608 copyright and license
+  section 18608 19229 see also
 
 dist lua-tablepool-0.01
   aliases tablepool
@@ -5057,271 +5088,274 @@ module readme_auto_lib
   section 16888 16914 license
   section 16914 16987 copyright
 
-dist ngx_lua-0.10.17
+dist ngx_lua-0.10.19
   aliases ngx_http_lua_module
-  modules .github.issue_template .github.pull_request_template ngx_lua-0.10.17
+  modules .github.issue_template .github.pull_request_template ngx_lua-0.10.19
 
 module .github.issue_template
 
 module .github.pull_request_template
 
-module ngx_lua-0.10.17
+module ngx_lua-0.10.19
   section 19 344 name
   section 344 379 status
-  section 379 529 version
-  section 529 4246 synopsis
-  section 4246 7711 description
-  section 7711 9119 typical uses
-  section 9119 9637 nginx compatibility
-  section 9637 13838 installation
-  section 12187 12768 building as a dynamic module
-  section 12768 13838 c macro configurations
-  section 13838 14125 community
-  section 13859 13995 english mailing list
-  section 13995 14125 chinese mailing list
-  section 14125 14294 code repository
-  section 14294 14559 bugs and patches
-  section 14559 15736 luajit bytecode support
-  section 15736 16145 system environment variable support
-  section 16145 17237 http 1.0 support
-  section 17237 20341 statically linking pure lua modules
-  section 20341 23342 data sharing within an nginx worker
-  section 23342 33846 known issues
-  section 23366 23790 tcp socket connect operation issues
-  section 23790 24384 lua coroutine yielding/resuming
-  section 24384 27096 lua variable scope
-  section 27096 28231 locations configured by subrequest directives of other modules
-  section 28231 29029 cosockets not available everywhere
-  section 29029 32706 special escaping sequences
-  section 32706 32965 mixing with ssi not supported
-  section 32965 33161 spdy mode not fully supported
-  section 33161 33846 missing data on short circuited requests
-  section 33846 35145 todo
-  section 35145 35311 changes
-  section 35311 38318 test suite
-  section 38318 39901 copyright and license
-  section 39901 42172 see also
-  section 42172 121914 directives
-  section 44893 45419 lua_load_resty_core
-  section 45419 47828 lua_capture_error_log
-  section 47828 48428 lua_use_default_type
-  section 48428 49762 lua_malloc_trim
-  section 49762 51643 lua_code_cache
-  section 51643 52931 lua_regex_cache_max_entries
-  section 52931 53622 lua_regex_match_limit
-  section 53622 54296 lua_package_path
-  section 54296 54971 lua_package_cpath
-  section 54971 59197 init_by_lua
-  section 59197 59729 init_by_lua_block
-  section 59729 60309 init_by_lua_file
-  section 60309 61953 init_worker_by_lua
-  section 61953 62619 init_worker_by_lua_block
-  section 62619 63040 init_worker_by_lua_file
-  section 63040 66117 set_by_lua
-  section 66117 66879 set_by_lua_block
-  section 66879 68097 set_by_lua_file
-  section 68097 68874 content_by_lua
-  section 68874 69430 content_by_lua_block
-  section 69430 70978 content_by_lua_file
-  section 70978 75210 rewrite_by_lua
-  section 75210 75759 rewrite_by_lua_block
-  section 75759 77121 rewrite_by_lua_file
-  section 77121 79766 access_by_lua
-  section 79766 80310 access_by_lua_block
-  section 80310 81525 access_by_lua_file
-  section 81525 82654 header_filter_by_lua
-  section 82654 83232 header_filter_by_lua_block
-  section 83232 83920 header_filter_by_lua_file
-  section 83920 87499 body_filter_by_lua
-  section 87499 88077 body_filter_by_lua_block
-  section 88077 88758 body_filter_by_lua_file
-  section 88758 91132 log_by_lua
-  section 91132 91680 log_by_lua_block
-  section 91680 92322 log_by_lua_file
-  section 92322 94662 balancer_by_lua_block
-  section 94662 95299 balancer_by_lua_file
-  section 95299 97255 lua_need_request_body
-  section 97255 101329 ssl_certificate_by_lua_block
-  section 101329 102004 ssl_certificate_by_lua_file
-  section 102004 105202 ssl_session_fetch_by_lua_block
-  section 105202 106021 ssl_session_fetch_by_lua_file
-  section 106021 107662 ssl_session_store_by_lua_block
-  section 107662 108480 ssl_session_store_by_lua_file
-  section 108480 109251 lua_shared_dict
-  section 109251 109886 lua_socket_connect_timeout
-  section 109886 110494 lua_socket_send_timeout
-  section 110494 110729 lua_socket_send_lowat
-  section 110729 111458 lua_socket_read_timeout
-  section 111458 112000 lua_socket_buffer_size
-  section 112000 112849 lua_socket_pool_size
-  section 112849 113589 lua_socket_keepalive_timeout
-  section 113589 114133 lua_socket_log_errors
-  section 114133 114600 lua_ssl_ciphers
-  section 114600 114947 lua_ssl_crl
-  section 114947 115426 lua_ssl_protocols
-  section 115426 115842 lua_ssl_trusted_certificate
-  section 115842 116174 lua_ssl_verify_depth
-  section 116174 117115 lua_http10_buffering
-  section 117115 117590 rewrite_by_lua_no_postpone
-  section 117590 118056 access_by_lua_no_postpone
-  section 118056 118504 lua_transform_underscores_in_response_headers
-  section 118504 120514 lua_check_client_abort
-  section 120514 120978 lua_max_pending_timers
-  section 120978 121540 lua_max_running_timers
-  section 121540 121914 lua_sa_restart
-  section 121914 334894 nginx api for lua
-  section 126495 128153 introduction
-  section 128153 129286 ngx.arg
-  section 129286 131207 ngx.var.variable
-  section 131207 132217 core constants
-  section 132217 133325 http method constants
-  section 133325 135884 http status constants
-  section 135884 136469 nginx log level constants
-  section 136469 137598 print
-  section 137598 141269 ngx.ctx
-  section 141269 152650 ngx.location.capture
-  section 152650 154592 ngx.location.capture_multi
-  section 154592 155159 ngx.status
-  section 155159 158051 ngx.header.header
-  section 158051 159158 ngx.resp.get_headers
-  section 159158 159726 ngx.req.is_internal
-  section 159726 160446 ngx.req.start_time
-  section 160446 160871 ngx.req.http_version
-  section 160871 161775 ngx.req.raw_header
-  section 161775 162378 ngx.req.get_method
-  section 162378 162947 ngx.req.set_method
-  section 162947 166107 ngx.req.set_uri
-  section 166107 167299 ngx.req.set_uri_args
-  section 167299 170097 ngx.req.get_uri_args
-  section 170097 173124 ngx.req.get_post_args
-  section 173124 175726 ngx.req.get_headers
-  section 175726 177280 ngx.req.set_header
-  section 177280 177717 ngx.req.clear_header
-  section 177717 179446 ngx.req.read_body
-  section 179446 180004 ngx.req.discard_body
-  section 180004 181478 ngx.req.get_body_data
-  section 181478 182495 ngx.req.get_body_file
-  section 182495 183314 ngx.req.set_body_data
-  section 183314 184590 ngx.req.set_body_file
-  section 184590 186588 ngx.req.init_body
-  section 186588 187771 ngx.req.append_body
-  section 187771 188617 ngx.req.finish_body
-  section 188617 190726 ngx.req.socket
-  section 190726 193054 ngx.exec
-  section 193054 195312 ngx.redirect
-  section 195312 195845 ngx.send_headers
-  section 195845 196154 ngx.headers_sent
-  section 196154 197724 ngx.print
-  section 197724 197914 ngx.say
-  section 197914 199122 ngx.log
-  section 199122 200483 ngx.flush
-  section 200483 202660 ngx.exit
-  section 202660 204536 ngx.eof
-  section 204536 205069 ngx.sleep
-  section 205069 205940 ngx.escape_uri
-  section 205940 206425 ngx.unescape_uri
-  section 206425 207486 ngx.encode_args
-  section 207486 208664 ngx.decode_args
-  section 208664 209310 ngx.encode_base64
-  section 209310 209789 ngx.decode_base64
-  section 209789 210588 ngx.crc32_short
-  section 210588 211388 ngx.crc32_long
-  section 211388 212544 ngx.hmac_sha1
-  section 212544 213200 ngx.md5
-  section 213200 213695 ngx.md5_bin
-  section 213695 214314 ngx.sha1_bin
-  section 214314 214770 ngx.quote_sql_str
-  section 214770 215295 ngx.today
-  section 215295 215897 ngx.time
-  section 215897 216626 ngx.now
-  section 216626 217178 ngx.update_time
-  section 217178 217790 ngx.localtime
-  section 217790 218396 ngx.utctime
-  section 218396 219037 ngx.cookie_time
-  section 219037 219720 ngx.http_time
-  section 219720 220378 ngx.parse_http_time
-  section 220378 220698 ngx.is_subrequest
-  section 220698 227463 ngx.re.match
-  section 227463 229816 ngx.re.find
-  section 229816 232222 ngx.re.gmatch
-  section 232222 234992 ngx.re.sub
-  section 234992 236138 ngx.re.gsub
-  section 236138 238719 ngx.shared.dict
-  section 238719 239996 ngx.shared.dict.get
-  section 239996 240787 ngx.shared.dict.get_stale
-  section 240787 244274 ngx.shared.dict.set
-  section 244274 245030 ngx.shared.dict.safe_set
-  section 245030 245870 ngx.shared.dict.add
-  section 245870 246626 ngx.shared.dict.safe_add
-  section 246626 247470 ngx.shared.dict.replace
-  section 247470 248102 ngx.shared.dict.delete
-  section 248102 251145 ngx.shared.dict.incr
-  section 251145 252261 ngx.shared.dict.lpush
-  section 252261 252888 ngx.shared.dict.rpush
-  section 252888 253644 ngx.shared.dict.lpop
-  section 253644 254399 ngx.shared.dict.rpop
-  section 254399 255176 ngx.shared.dict.llen
-  section 255176 256685 ngx.shared.dict.ttl
-  section 256685 258117 ngx.shared.dict.expire
-  section 258117 258814 ngx.shared.dict.flush_all
-  section 258814 259734 ngx.shared.dict.flush_expired
-  section 259734 260699 ngx.shared.dict.get_keys
-  section 260699 261729 ngx.shared.dict.capacity
-  section 261729 263503 ngx.shared.dict.free_space
-  section 263503 264288 ngx.socket.udp
-  section 264288 266864 udpsock:setpeername
-  section 266864 267643 udpsock:send
-  section 267643 269006 udpsock:receive
-  section 269006 269666 udpsock:close
-  section 269666 270150 udpsock:settimeout
-  section 270150 270382 ngx.socket.stream
-  section 270382 272795 ngx.socket.tcp
-  section 272795 278164 tcpsock:connect
-  section 278164 280443 tcpsock:sslhandshake
-  section 280443 281890 tcpsock:send
-  section 281890 284207 tcpsock:receive
-  section 284207 285667 tcpsock:receiveany
-  section 285667 290119 tcpsock:receiveuntil
-  section 290119 291008 tcpsock:close
-  section 291008 291806 tcpsock:settimeout
-  section 291806 292764 tcpsock:settimeouts
-  section 292764 293247 tcpsock:setoption
-  section 293247 296037 tcpsock:setkeepalive
-  section 296037 296845 tcpsock:getreusedtimes
-  section 296845 297665 ngx.socket.connect
-  section 297665 299125 ngx.get_phase
-  section 299125 305319 ngx.thread.spawn
-  section 305319 308269 ngx.thread.wait
-  section 308269 308985 ngx.thread.kill
-  section 308985 310777 ngx.on_abort
-  section 310777 317701 ngx.timer.at
-  section 317701 318787 ngx.timer.every
-  section 318787 319302 ngx.timer.running_count
-  section 319302 319807 ngx.timer.pending_count
-  section 319807 320459 ngx.config.subsystem
-  section 320459 320938 ngx.config.debug
-  section 320938 321523 ngx.config.prefix
-  section 321523 322063 ngx.config.nginx_version
-  section 322063 322494 ngx.config.nginx_configure
-  section 322494 323017 ngx.config.ngx_lua_version
-  section 323017 323587 ngx.worker.exiting
-  section 323587 324182 ngx.worker.pid
-  section 324182 324736 ngx.worker.count
-  section 324736 325421 ngx.worker.id
-  section 325421 326348 ngx.semaphore
-  section 326348 326987 ngx.balancer
-  section 326987 327547 ngx.ssl
-  section 327547 328283 ngx.ocsp
-  section 328283 330911 ndk.set_var.directive
-  section 330911 331641 coroutine.create
-  section 331641 332390 coroutine.resume
-  section 332390 333092 coroutine.yield
-  section 333092 333730 coroutine.wrap
-  section 333730 334311 coroutine.running
-  section 334311 334894 coroutine.status
-  section 334894 335402 obsolete sections
-  section 335079 335178 special pcre sequences
-  section 335178 335402 lua/luajit bytecode support
+  section 379 528 version
+  section 528 4245 synopsis
+  section 4245 7710 description
+  section 7710 9118 typical uses
+  section 9118 9676 nginx compatibility
+  section 9676 13881 installation
+  section 12230 12811 building as a dynamic module
+  section 12811 13881 c macro configurations
+  section 13881 14168 community
+  section 13902 14038 english mailing list
+  section 14038 14168 chinese mailing list
+  section 14168 14337 code repository
+  section 14337 14602 bugs and patches
+  section 14602 15779 luajit bytecode support
+  section 15779 16188 system environment variable support
+  section 16188 17280 http 1.0 support
+  section 17280 20384 statically linking pure lua modules
+  section 20384 23385 data sharing within an nginx worker
+  section 23385 33889 known issues
+  section 23409 23833 tcp socket connect operation issues
+  section 23833 24427 lua coroutine yielding/resuming
+  section 24427 27139 lua variable scope
+  section 27139 28274 locations configured by subrequest directives of other modules
+  section 28274 29072 cosockets not available everywhere
+  section 29072 32749 special escaping sequences
+  section 32749 33008 mixing with ssi not supported
+  section 33008 33204 spdy mode not fully supported
+  section 33204 33889 missing data on short circuited requests
+  section 33889 35188 todo
+  section 35188 35354 changes
+  section 35354 38361 test suite
+  section 38361 39944 copyright and license
+  section 39944 42808 see also
+  section 42808 124614 directives
+  section 45646 46172 lua_load_resty_core
+  section 46172 48581 lua_capture_error_log
+  section 48581 49181 lua_use_default_type
+  section 49181 50515 lua_malloc_trim
+  section 50515 52396 lua_code_cache
+  section 52396 52943 lua_thread_cache_max_entries
+  section 52943 54231 lua_regex_cache_max_entries
+  section 54231 54922 lua_regex_match_limit
+  section 54922 55596 lua_package_path
+  section 55596 56271 lua_package_cpath
+  section 56271 60889 init_by_lua
+  section 60889 61421 init_by_lua_block
+  section 61421 62001 init_by_lua_file
+  section 62001 63645 init_worker_by_lua
+  section 63645 64311 init_worker_by_lua_block
+  section 64311 64732 init_worker_by_lua_file
+  section 64732 65409 exit_worker_by_lua_block
+  section 65409 65742 exit_worker_by_lua_file
+  section 65742 68817 set_by_lua
+  section 68817 69579 set_by_lua_block
+  section 69579 70797 set_by_lua_file
+  section 70797 71574 content_by_lua
+  section 71574 72130 content_by_lua_block
+  section 72130 73678 content_by_lua_file
+  section 73678 77909 rewrite_by_lua
+  section 77909 78458 rewrite_by_lua_block
+  section 78458 79820 rewrite_by_lua_file
+  section 79820 82465 access_by_lua
+  section 82465 83009 access_by_lua_block
+  section 83009 84224 access_by_lua_file
+  section 84224 85353 header_filter_by_lua
+  section 85353 85931 header_filter_by_lua_block
+  section 85931 86619 header_filter_by_lua_file
+  section 86619 90198 body_filter_by_lua
+  section 90198 90776 body_filter_by_lua_block
+  section 90776 91457 body_filter_by_lua_file
+  section 91457 93831 log_by_lua
+  section 93831 94379 log_by_lua_block
+  section 94379 95021 log_by_lua_file
+  section 95021 97361 balancer_by_lua_block
+  section 97361 97998 balancer_by_lua_file
+  section 97998 99955 lua_need_request_body
+  section 99955 104029 ssl_certificate_by_lua_block
+  section 104029 104704 ssl_certificate_by_lua_file
+  section 104704 107902 ssl_session_fetch_by_lua_block
+  section 107902 108721 ssl_session_fetch_by_lua_file
+  section 108721 110362 ssl_session_store_by_lua_block
+  section 110362 111180 ssl_session_store_by_lua_file
+  section 111180 111951 lua_shared_dict
+  section 111951 112586 lua_socket_connect_timeout
+  section 112586 113194 lua_socket_send_timeout
+  section 113194 113429 lua_socket_send_lowat
+  section 113429 114158 lua_socket_read_timeout
+  section 114158 114700 lua_socket_buffer_size
+  section 114700 115549 lua_socket_pool_size
+  section 115549 116289 lua_socket_keepalive_timeout
+  section 116289 116833 lua_socket_log_errors
+  section 116833 117300 lua_ssl_ciphers
+  section 117300 117647 lua_ssl_crl
+  section 117647 118126 lua_ssl_protocols
+  section 118126 118542 lua_ssl_trusted_certificate
+  section 118542 118874 lua_ssl_verify_depth
+  section 118874 119815 lua_http10_buffering
+  section 119815 120290 rewrite_by_lua_no_postpone
+  section 120290 120756 access_by_lua_no_postpone
+  section 120756 121204 lua_transform_underscores_in_response_headers
+  section 121204 123214 lua_check_client_abort
+  section 123214 123678 lua_max_pending_timers
+  section 123678 124240 lua_max_running_timers
+  section 124240 124614 lua_sa_restart
+  section 124614 342090 nginx api for lua
+  section 129195 130853 introduction
+  section 130853 131986 ngx.arg
+  section 131986 133928 ngx.var.variable
+  section 133928 134938 core constants
+  section 134938 136046 http method constants
+  section 136046 138605 http status constants
+  section 138605 139215 nginx log level constants
+  section 139215 140369 print
+  section 140369 144607 ngx.ctx
+  section 144607 155981 ngx.location.capture
+  section 155981 157923 ngx.location.capture_multi
+  section 157923 158490 ngx.status
+  section 158490 161378 ngx.header.header
+  section 161378 162485 ngx.resp.get_headers
+  section 162485 163053 ngx.req.is_internal
+  section 163053 163773 ngx.req.start_time
+  section 163773 164198 ngx.req.http_version
+  section 164198 165102 ngx.req.raw_header
+  section 165102 165705 ngx.req.get_method
+  section 165705 166274 ngx.req.set_method
+  section 166274 169434 ngx.req.set_uri
+  section 169434 170626 ngx.req.set_uri_args
+  section 170626 173424 ngx.req.get_uri_args
+  section 173424 176451 ngx.req.get_post_args
+  section 176451 179053 ngx.req.get_headers
+  section 179053 180607 ngx.req.set_header
+  section 180607 181044 ngx.req.clear_header
+  section 181044 182773 ngx.req.read_body
+  section 182773 183331 ngx.req.discard_body
+  section 183331 184805 ngx.req.get_body_data
+  section 184805 185822 ngx.req.get_body_file
+  section 185822 186641 ngx.req.set_body_data
+  section 186641 187917 ngx.req.set_body_file
+  section 187917 189915 ngx.req.init_body
+  section 189915 191098 ngx.req.append_body
+  section 191098 191944 ngx.req.finish_body
+  section 191944 194083 ngx.req.socket
+  section 194083 196407 ngx.exec
+  section 196407 198664 ngx.redirect
+  section 198664 199197 ngx.send_headers
+  section 199197 199506 ngx.headers_sent
+  section 199506 201076 ngx.print
+  section 201076 201266 ngx.say
+  section 201266 202499 ngx.log
+  section 202499 203860 ngx.flush
+  section 203860 206037 ngx.exit
+  section 206037 207913 ngx.eof
+  section 207913 208446 ngx.sleep
+  section 208446 209317 ngx.escape_uri
+  section 209317 209827 ngx.unescape_uri
+  section 209827 210888 ngx.encode_args
+  section 210888 212066 ngx.decode_args
+  section 212066 212712 ngx.encode_base64
+  section 212712 213191 ngx.decode_base64
+  section 213191 213990 ngx.crc32_short
+  section 213990 214790 ngx.crc32_long
+  section 214790 215946 ngx.hmac_sha1
+  section 215946 216602 ngx.md5
+  section 216602 217097 ngx.md5_bin
+  section 217097 217716 ngx.sha1_bin
+  section 217716 218172 ngx.quote_sql_str
+  section 218172 218722 ngx.today
+  section 218722 219349 ngx.time
+  section 219349 220103 ngx.now
+  section 220103 220680 ngx.update_time
+  section 220680 221317 ngx.localtime
+  section 221317 221948 ngx.utctime
+  section 221948 222614 ngx.cookie_time
+  section 222614 223322 ngx.http_time
+  section 223322 224005 ngx.parse_http_time
+  section 224005 224325 ngx.is_subrequest
+  section 224325 231115 ngx.re.match
+  section 231115 233493 ngx.re.find
+  section 233493 235924 ngx.re.gmatch
+  section 235924 238719 ngx.re.sub
+  section 238719 239890 ngx.re.gsub
+  section 239890 242496 ngx.shared.dict
+  section 242496 243773 ngx.shared.dict.get
+  section 243773 244564 ngx.shared.dict.get_stale
+  section 244564 248051 ngx.shared.dict.set
+  section 248051 248807 ngx.shared.dict.safe_set
+  section 248807 249647 ngx.shared.dict.add
+  section 249647 250403 ngx.shared.dict.safe_add
+  section 250403 251247 ngx.shared.dict.replace
+  section 251247 251879 ngx.shared.dict.delete
+  section 251879 254922 ngx.shared.dict.incr
+  section 254922 256038 ngx.shared.dict.lpush
+  section 256038 256665 ngx.shared.dict.rpush
+  section 256665 257421 ngx.shared.dict.lpop
+  section 257421 258176 ngx.shared.dict.rpop
+  section 258176 258953 ngx.shared.dict.llen
+  section 258953 260462 ngx.shared.dict.ttl
+  section 260462 261894 ngx.shared.dict.expire
+  section 261894 262591 ngx.shared.dict.flush_all
+  section 262591 263511 ngx.shared.dict.flush_expired
+  section 263511 264476 ngx.shared.dict.get_keys
+  section 264476 265506 ngx.shared.dict.capacity
+  section 265506 267280 ngx.shared.dict.free_space
+  section 267280 268065 ngx.socket.udp
+  section 268065 270641 udpsock:setpeername
+  section 270641 271420 udpsock:send
+  section 271420 272783 udpsock:receive
+  section 272783 273443 udpsock:close
+  section 273443 273927 udpsock:settimeout
+  section 273927 274159 ngx.socket.stream
+  section 274159 276572 ngx.socket.tcp
+  section 276572 281941 tcpsock:connect
+  section 281941 284220 tcpsock:sslhandshake
+  section 284220 285667 tcpsock:send
+  section 285667 287984 tcpsock:receive
+  section 287984 289444 tcpsock:receiveany
+  section 289444 293896 tcpsock:receiveuntil
+  section 293896 294785 tcpsock:close
+  section 294785 295583 tcpsock:settimeout
+  section 295583 296541 tcpsock:settimeouts
+  section 296541 300026 tcpsock:setoption
+  section 300026 302816 tcpsock:setkeepalive
+  section 302816 303624 tcpsock:getreusedtimes
+  section 303624 304444 ngx.socket.connect
+  section 304444 305997 ngx.get_phase
+  section 305997 312191 ngx.thread.spawn
+  section 312191 315141 ngx.thread.wait
+  section 315141 315857 ngx.thread.kill
+  section 315857 317649 ngx.on_abort
+  section 317649 324598 ngx.timer.at
+  section 324598 325709 ngx.timer.every
+  section 325709 326249 ngx.timer.running_count
+  section 326249 326779 ngx.timer.pending_count
+  section 326779 327456 ngx.config.subsystem
+  section 327456 327960 ngx.config.debug
+  section 327960 328570 ngx.config.prefix
+  section 328570 329135 ngx.config.nginx_version
+  section 329135 329566 ngx.config.nginx_configure
+  section 329566 330089 ngx.config.ngx_lua_version
+  section 330089 330684 ngx.worker.exiting
+  section 330684 331304 ngx.worker.pid
+  section 331304 331883 ngx.worker.count
+  section 331883 332593 ngx.worker.id
+  section 332593 333520 ngx.semaphore
+  section 333520 334159 ngx.balancer
+  section 334159 334719 ngx.ssl
+  section 334719 335455 ngx.ocsp
+  section 335455 338107 ndk.set_var.directive
+  section 338107 338837 coroutine.create
+  section 338837 339586 coroutine.resume
+  section 339586 340288 coroutine.yield
+  section 340288 340926 coroutine.wrap
+  section 340926 341507 coroutine.running
+  section 341507 342090 coroutine.status
+  section 342090 342598 obsolete sections
+  section 342275 342374 special pcre sequences
+  section 342374 342598 lua/luajit bytecode support
 
 dist ngx_lua_upstream-0.07
   aliases ngx_http_lua_upstream_module
@@ -5381,41 +5415,42 @@ module ngx_postgres-1.0
 
 module todo
 
-dist ngx_stream_lua-0.0.8
+dist ngx_stream_lua-0.0.9
   aliases ngx_stream_lua_module
-  modules dev_notes ngx_stream_lua-0.0.8
+  modules dev_notes ngx_stream_lua-0.0.9
 
 module dev_notes
   section 102 806 install
   section 806 1299 status
 
-module ngx_stream_lua-0.0.8
+module ngx_stream_lua-0.0.9
   section 19 341 name
   section 341 376 status
-  section 376 529 version
-  section 529 2064 synopsis
-  section 2064 23081 description
-  section 2361 6352 directives
-  section 6352 7356 preread_by_lua_block
-  section 7356 8469 preread_by_lua_file
-  section 8469 8946 log_by_lua_block
-  section 8946 10043 log_by_lua_file
-  section 10043 10541 lua_add_variable
-  section 10541 10961 preread_by_lua_no_postpone
-  section 10961 12914 nginx api for lua
-  section 12914 14805 tcpsock:shutdown
-  section 14805 23081 reqsock:peek
-  section 23081 23311 todo
-  section 23311 23671 nginx compatibility
-  section 23671 25881 installation
-  section 25881 26168 community
-  section 25902 26038 english mailing list
-  section 26038 26168 chinese mailing list
-  section 26168 26351 code repository
-  section 26351 26623 bugs and patches
-  section 26623 27219 acknowledgments
-  section 27219 28802 copyright and license
-  section 28802 29053 see also
+  section 376 538 version
+  section 538 2073 synopsis
+  section 2073 23450 description
+  section 2370 6361 directives
+  section 6361 7365 preread_by_lua_block
+  section 7365 8478 preread_by_lua_file
+  section 8478 8955 log_by_lua_block
+  section 8955 10052 log_by_lua_file
+  section 10052 10550 lua_add_variable
+  section 10550 10970 preread_by_lua_no_postpone
+  section 10970 12923 nginx api for lua
+  section 12923 13283 reqsock:receiveany
+  section 13283 15174 tcpsock:shutdown
+  section 15174 23450 reqsock:peek
+  section 23450 23680 todo
+  section 23680 24040 nginx compatibility
+  section 24040 26250 installation
+  section 26250 26537 community
+  section 26271 26407 english mailing list
+  section 26407 26537 chinese mailing list
+  section 26537 26720 code repository
+  section 26720 26992 bugs and patches
+  section 26992 27588 acknowledgments
+  section 27588 29171 copyright and license
+  section 29171 29422 see also
 
 dist opm-0.0.5
   modules opm-0.0.5
@@ -5552,18 +5587,18 @@ module redis2-nginx-module-0.15
 dist redis-nginx-module-0.3.7
   aliases ngx_redis ngx_http_redis_module
 
-dist resty-cli-0.25
-  modules resty-cli-0.25
+dist resty-cli-0.27
+  modules resty-cli-0.27
 
-module resty-cli-0.25
+module resty-cli-0.27
   section 18 89 name
   section 89 1304 description
-  section 1304 6628 synopsis
-  section 6628 6920 new lua api
-  section 6920 7813 installation
-  section 7813 8580 test suite
-  section 8580 8783 authors
-  section 8783 10317 copyright and license
+  section 1304 6755 synopsis
+  section 6755 7047 new lua api
+  section 7047 7940 installation
+  section 7940 8707 test suite
+  section 8707 8910 authors
+  section 8910 10447 copyright and license
 
 dist set-misc-nginx-module-0.32
   aliases ngx_set_misc ngx_http_set_misc_module
