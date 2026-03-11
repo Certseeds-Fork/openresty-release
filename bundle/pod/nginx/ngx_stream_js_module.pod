@@ -21,7 +21,7 @@ a subset of the JavaScript language.
 
 This module is not built by default, it should be compiled with
 the nginScript module using the
-C<--add_module> configuration parameter:
+C<--add-module> configuration parameter:
 
     
     ./configure --add-module=<value>path-to-njs</value>/nginx
@@ -39,7 +39,7 @@ This module can also be built as
 L<dynamic|ngx_core_module>:
 
     
-    ./configure --add-dynamic_module=<value>path-to-njs</value>/nginx
+    ./configure --add-dynamic-module=<value>path-to-njs</value>/nginx
 
 
 

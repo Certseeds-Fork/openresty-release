@@ -373,7 +373,7 @@ with nginScript sources can be cloned with the following command:
 
 
 Then the modules should be compiled using the
-C<--add_module> configuration parameter:
+C<--add-module> configuration parameter:
 
     
     ./configure --add-module=<value>path-to-njs</value>/nginx
@@ -383,7 +383,7 @@ The modules can also be built as
 L<dynamic|ngx_core_module>:
 
     
-    ./configure --add-dynamic_module=<value>path-to-njs</value>/nginx
+    ./configure --add-dynamic-module=<value>path-to-njs</value>/nginx
 
 
 

@@ -5828,10 +5828,12 @@ No additional handlers can be registered at this phase.
 
 =item *
 
-C<NGX_HTTP_TRY_FILES_PHASE> — Special phase where
-the L<ngx_http_core_module> directive
-is processed.
-No additional handlers can be registered at this phase.
+C<NGX_HTTP_PRECONTENT_PHASE> — Phase for handlers to be called
+prior to generating content.
+Standard modules such as
+L<ngx_http_try_files_module|ngx_http_core_module> and
+L<ngx_http_mirror_module|ngx_http_mirror_module>
+register their handlers at this phase.
 
 
 
@@ -6239,7 +6241,7 @@ into the configuration, for example:
     
         { ngx_string("foo_v1"), NULL, ngx_http_foo_v1_variable, 0, 0, 0 },
     
-        { ngx_null_string, NULL, NULL, 0, 0, 0 }
+          ngx_http_null_variable
     };
     
     static ngx_int_t

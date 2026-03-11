@@ -799,7 +799,7 @@ static ngx_http_variable_t  ngx_http_proxy_vars[] = {
       NGX_HTTP_VAR_CHANGEABLE|NGX_HTTP_VAR_NOCACHEABLE, 0 },
 
     { ngx_string("proxy_add_x_forwarded_for"), NULL,
-      ngx_http_proxy_add_x_forwarded_for_variable, 0, NGX_HTTP_VAR_NOHASH, 0 },
+      ngx_http_proxy_add_x_forwarded_for_variable, 0, 0, 0 },
 
 #if 0
     { ngx_string("proxy_add_via"), NULL, NULL, 0, NGX_HTTP_VAR_NOHASH, 0 },

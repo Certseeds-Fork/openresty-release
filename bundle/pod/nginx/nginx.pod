@@ -497,6 +497,12 @@ L<ngx_http_memcached_module|ngx_http_memcached_module>
 
 =item *
 
+L<ngx_http_mirror_module|ngx_http_mirror_module>
+
+
+
+=item *
+
 L<ngx_http_mp4_module|ngx_http_mp4_module>
 
 
