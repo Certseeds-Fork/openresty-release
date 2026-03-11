@@ -212,6 +212,16 @@ for my $opt (@ARGV) {
     } elsif ($opt eq '--without-http_ssl_module') {
         $resty_opts{no_http_ssl} = 1;
 
+    } elsif ($opt =~ /^--add-module=(.*)/) {
+
+        my $mod_path = File::Spec->rel2abs($1);
+        push @ngx_opts, "--add-module=$mod_path";
+
+    } elsif ($opt =~ /^--with-openssl=(.*)/) {
+
+        my $path = File::Spec->rel2abs($1);
+        push @ngx_opts, "--with-openssl=$path";
+
     } elsif ($opt =~ /^--\w.*/) {
         push @ngx_opts, $opt;
 
@@ -401,14 +411,14 @@ _END_
     }
 
     if (-d 'build') {
-        system("rm -rf build");
+        system("rm -rf build") == 0 or
+            die "failed to remove directory build/.\n";
     }
 
     if (-f 'build') {
-        die "build/ directory already exists\n";
+        die "file \"build\" already exists. please remove it first.\n";
     }
-
-    shell "cp -rp bundle/ build/";
+    shell "cp -rp bundle/ build";
 
     cd 'build';
 
@@ -986,9 +996,9 @@ sub gen_makefile {
 
     print $out ".PHONY: all install clean\n\n";
 
-    print $out "all:\n\t" . join("\n\t", @make_cmds) . "\n\n";
+        print $out "all:\n\t" . join("\n\t", @make_cmds) . "\n\n";
 
-    print $out "install:\n\t" . join("\n\t", @make_install_cmds) . "\n\n";
+    print $out "install: all\n\t" . join("\n\t", @make_install_cmds) . "\n\n";
 
     print $out "clean:\n\trm -rf build\n";
 
