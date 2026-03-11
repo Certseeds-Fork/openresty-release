@@ -35,6 +35,72 @@ requests to a uwsgi server.
 
 =head1 Directives
 
+=head2 uwsgi_allow_upstream
+
+
+B<syntax:> uwsgi_allow_upstream I<I<C<string>> ...>
+
+
+
+B<context:> I<http>
+
+
+B<context:> I<server>
+
+
+B<context:> I<location>
+
+
+
+This directive appeared in version 1.29.3.
+
+
+
+
+
+Defines conditions under which access to a uwsgi server
+is allowed or denied.
+If all string parameters are not empty
+and not equal to “0” then the access is allowed.
+The conditions are evaluated each time
+before a connection to a uwsgi server is established.
+Parameter values can contain variables:
+
+    
+    geo $upstream_last_addr $allow {
+        volatile;
+        10.10.0.0/24        1;
+    }
+    
+    server {
+        listen 127.0.0.1:8080;
+    
+        location / {
+            uwsgi_pass           localhost:9000;
+            uwsgi_allow_upstream $allow;
+            ...
+        }
+    }
+
+
+
+
+
+
+
+
+B<NOTE>
+
+This directive is available as part of our
+commercial subscription.
+
+
+
+
+
+
+
+
 =head2 uwsgi_bind
 
 
@@ -86,6 +152,51 @@ the C<transparent> parameter is specified, worker processes
 inherit the C<CAP_NET_RAW> capability from the master process.
 It is also necessary to configure kernel routing table
 to intercept network traffic from the uwsgi server.
+
+
+
+
+
+
+
+=head2 uwsgi_bind_dynamic
+
+
+B<syntax:> uwsgi_bind_dynamic I<C<on> E<verbar> C<off>>
+
+
+B<default:> I<off>
+
+
+B<context:> I<http>
+
+
+B<context:> I<server>
+
+
+B<context:> I<location>
+
+
+
+This directive appeared in version 1.29.3.
+
+
+
+
+
+When enabled, makes the bind operation
+at each connection attempt.
+
+
+
+
+
+
+B<NOTE>
+
+This directive is available as part of our
+commercial subscription.
+
 
 
 
@@ -1595,6 +1706,7 @@ packet header|http://uwsgi-docs.readthedocs.org/en/latest/Protocol.html#uwsgi-pa
 B<syntax:> uwsgi_next_upstream I<
     C<error> E<verbar>
     C<timeout> E<verbar>
+    C<denied> E<verbar>
     C<invalid_header> E<verbar>
     C<http_500> E<verbar>
     C<http_503> E<verbar>
@@ -1641,6 +1753,25 @@ server, passing a request to it, or reading the response header;
 
 a timeout has occurred while establishing a connection with the
 server, passing a request to it, or reading the response header;
+
+
+=item C<denied>
+
+
+
+the server denied
+the connection (1.29.3);
+
+
+
+B<NOTE>
+
+This parameter is available as part of our
+commercial subscription.
+
+
+
+
 
 
 =item C<invalid_header>
@@ -1727,7 +1858,8 @@ transferring of a response, fixing this is impossible.
 The directive also defines what is considered an
 L<unsuccessful
 attempt|ngx_http_upstream_module> of communication with a server.
-The cases of C<error>, C<timeout> and
+The cases of C<error>, C<timeout>,
+C<denied> and
 C<invalid_header> are always considered unsuccessful attempts,
 even if they are not specified in the directive.
 The cases of C<http_500>, C<http_503>,
@@ -1863,6 +1995,8 @@ B<syntax:> uwsgi_param I<
     I<C<parameter>> I<C<value>>
     [C<if_not_empty>]>
 
+
+B<default:> I<HTTP_HOST $host$is_request_port$request_port>
 
 
 B<context:> I<http>
@@ -2173,6 +2307,54 @@ the request body will be buffered regardless of the directive value.
 
 
 
+=head2 uwsgi_request_dynamic
+
+
+B<syntax:> uwsgi_request_dynamic I<C<on> E<verbar> C<off>>
+
+
+B<default:> I<off>
+
+
+B<context:> I<http>
+
+
+B<context:> I<server>
+
+
+B<context:> I<location>
+
+
+
+This directive appeared in version 1.29.3.
+
+
+
+
+
+Enables or disables creation of a separate request instance
+for each uwsgi server.
+By default, a single request is used for all uwsgi servers.
+If enabled, a separate request instance is created,
+allowing per-server request customization.
+
+
+
+
+
+
+B<NOTE>
+
+This directive is available as part of our
+commercial subscription.
+
+
+
+
+
+
+
+
 =head2 uwsgi_send_timeout
 
 
@@ -2281,6 +2463,127 @@ Since version 1.21.0, variables can be used in the I<C<file>> name.
 
 
 
+=head2 uwsgi_ssl_certificate_cache
+
+
+B<syntax:> uwsgi_ssl_certificate_cache I<C<off>>
+
+
+B<syntax:> uwsgi_ssl_certificate_cache I<
+    C<max>=I<C<N>>
+    [C<inactive>=I<C<time>>]
+    [C<valid>=I<C<time>>]>
+
+
+B<default:> I<off>
+
+
+B<context:> I<http>
+
+
+B<context:> I<server>
+
+
+B<context:> I<location>
+
+
+
+This directive appeared in version 1.27.4.
+
+
+
+
+
+Defines a cache that stores
+SSL certificates and
+secret keys
+specified with variables.
+
+
+
+
+
+The directive has the following parameters:
+
+=over
+
+
+
+=item 
+C<max>
+
+
+
+
+
+sets the maximum number of elements in the cache;
+on cache overflow the least recently used (LRU) elements are removed;
+
+
+
+=item 
+C<inactive>
+
+
+
+
+
+defines a time after which an element is removed from the cache
+if it has not been accessed during this time;
+by default, it is 10 seconds;
+
+
+
+=item 
+C<valid>
+
+
+
+
+
+defines a time during which
+an element in the cache is considered valid
+and can be reused;
+by default, it is 60 seconds.
+Certificates that exceed this time will be reloaded or revalidated;
+
+
+
+=item 
+C<off>
+
+
+
+
+
+disables the cache.
+
+
+
+
+=back
+
+
+
+
+
+
+
+Example:
+
+    
+    uwsgi_ssl_certificate       $uwsgi_ssl_server_name.crt;
+    uwsgi_ssl_certificate_key   $uwsgi_ssl_server_name.key;
+    uwsgi_ssl_certificate_cache max=1000 inactive=20s valid=1m;
+
+
+
+
+
+
+
+
+
 =head2 uwsgi_ssl_certificate_key
 
 
@@ -2316,6 +2619,17 @@ C<engine>:I<C<name>>:I<C<id>>
 can be specified instead of the I<C<file>> (1.7.9),
 which loads a secret key with a specified I<C<id>>
 from the OpenSSL engine I<C<name>>.
+
+
+
+
+
+The value
+C<store>:I<C<scheme>>:I<C<id>>
+can be specified instead of the I<C<file>> (1.29.0),
+which is used to load a secret key with a specified I<C<id>>
+and OpenSSL provider registered URI I<C<scheme>>, such as
+L<C<pkcs11>|https://datatracker.ietf.org/doc/html/rfc7512>.
 
 
 
@@ -2463,6 +2777,52 @@ the certificate of the secured uwsgi server.
 
 
 
+=head2 uwsgi_ssl_key_log
+
+
+B<syntax:> uwsgi_ssl_key_log I<path>
+
+
+
+B<context:> I<http>
+
+
+B<context:> I<server>
+
+
+B<context:> I<location>
+
+
+
+This directive appeared in version 1.27.2.
+
+
+
+
+
+Enables logging of secured uwsgi server connection SSL keys
+and specifies the path to the key log file.
+Keys are logged in the
+L<SSLKEYLOGFILE|https://datatracker.ietf.org/doc/html/draft-ietf-tls-keylogfile>
+format compatible with Wireshark.
+
+
+
+
+
+
+B<NOTE>
+
+This directive is available as part of our
+commercial subscription.
+
+
+
+
+
+
+
+
 =head2 uwsgi_ssl_name
 
 
@@ -2552,7 +2912,7 @@ B<syntax:> uwsgi_ssl_protocols I<
     [C<TLSv1.3>]>
 
 
-B<default:> I<TLSv1 TLSv1.1 TLSv1.2 TLSv1.3>
+B<default:> I<TLSv1.2 TLSv1.3>
 
 
 B<context:> I<http>
@@ -2654,7 +3014,7 @@ This directive appeared in version 1.5.8.
 Determines whether SSL sessions can be reused when working with
 a secured uwsgi server.
 If the errors
-“C<SSL3_GET_FINISHED:digest check failed>”
+“C<digest check failed>”
 appear in the logs, try disabling session reuse.
 
 
