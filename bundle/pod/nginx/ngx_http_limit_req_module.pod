@@ -52,7 +52,8 @@ The limitation is done using the “leaky bucket” method.
 B<syntax:> limit_req I<
     C<zone>=I<C<name>>
     [C<burst>=I<C<number>>]
-    [C<nodelay>]>
+    [C<nodelay> E<verbar>
+     C<delay>=I<C<number>>]>
 
 
 
@@ -103,6 +104,14 @@ desired, the parameter C<nodelay> should be used:
     limit_req zone=one burst=5 nodelay;
 
 
+
+
+
+
+
+The C<delay> parameter (1.15.7) specifies a limit
+at which excessive requests become delayed.
+Default value is zero, i.e. all excessive requests are delayed.
 
 
 
@@ -223,7 +232,8 @@ Sets the status code to return in response to rejected requests.
 B<syntax:> limit_req_zone I<
     I<C<key>>
     C<zone>=I<C<name>>:I<C<size>>
-    C<rate>=I<C<rate>>>
+    C<rate>=I<C<rate>>
+    [C<sync>]>
 
 
 
@@ -288,6 +298,20 @@ The rate is specified in requests per second (rE<sol>s).
 If a rate of less than one request per second is desired,
 it is specified in request per minute (rE<sol>m).
 For example, half-request per second is 30rE<sol>m.
+
+
+
+
+
+The C<sync> parameter (1.15.3) enables
+L<synchronization|ngx_stream_zone_sync_module>
+of the shared memory zone.
+
+B<NOTE>
+
+The C<sync> parameter is available as part of our
+commercial subscription.
+
 
 
 

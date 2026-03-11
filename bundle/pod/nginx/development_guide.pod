@@ -483,6 +483,15 @@ C<ngx_memzero()> — Fills memory with zeroes.
 
 =item *
 
+C<ngx_explicit_memzero()> — Does the same as
+C<ngx_memzero()>, but this call is never removed by the
+compiler's dead store elimination optimization.
+This function can be used to clear sensitive data such as passwords and keys.
+
+
+
+=item *
+
 C<ngx_cpymem()> — Does the same as
 C<ngx_memcpy()>, but returns the final destination address
 This one is handy for appending multiple strings in a row.
@@ -1000,9 +1009,6 @@ on Windows.
 To obtain the current time, it is usually sufficient to access one of the
 available global variables, representing the cached time value in the desired
 format.
-For example, the C<ngx_current_msec> variable holds the number
-of milliseconds elapsed since Epoch and truncated to
-C<ngx_msec_t>.
 
 
 
@@ -2577,14 +2583,14 @@ C<log-E<gt>action>), client request line, server name etc.
 
     
     /* specify what is currently done */
-    log->action = "sending mp4 to client”;
+    log->action = "sending mp4 to client";
     
     /* error and debug log */
     ngx_log_error(NGX_LOG_INFO, c->log, 0, "client prematurely
-                  closed connection”);
+                  closed connection");
     
     ngx_log_debug2(NGX_LOG_DEBUG_HTTP, mp4->file.log, 0,
-                   "mp4 start:%ui, length:%ui”, mp4->start, mp4->length);
+                   "mp4 start:%ui, length:%ui", mp4->start, mp4->length);
 
 
 
@@ -2598,7 +2604,7 @@ The example above results in log entries like these:
 
     
     2016/09/16 22:08:52 [info] 17445#0: *1 client prematurely closed connection while
-    sending mp4 to client, client: 127.0.0.1, server: , request: "GET /file.mp4 HTTP/1.1”
+    sending mp4 to client, client: 127.0.0.1, server: , request: "GET /file.mp4 HTTP/1.1"
     2016/09/16 23:28:33 [debug] 22140#0: *1 mp4 start:0, length:10000
 
 
@@ -3359,13 +3365,21 @@ event handler.
 
 
 An event can be set to send a notification when a timeout expires.
+The timer used by events counts milliseconds since some unspecified point
+in the past truncated to C<ngx_msec_t> type.
+Its current value can be obtained from the C<ngx_current_msec>
+variable.
+
+
+
+
+
 The function C<ngx_add_timer(ev, timer)> sets a timeout for an
 event, C<ngx_del_timer(ev)> deletes a previously set timeout.
 The global timeout red-black tree C<ngx_event_timer_rbtree>
 stores all timeouts currently set.
 The key in the tree is of type C<ngx_msec_t> and is the time
-when the event expires, expressed in milliseconds since the midnight on of
-January 1, 1970 modulus C<ngx_msec_t> max value.
+when the event occurs.
 The tree structure enables fast insertion and deletion operations, as well as
 access to the nearest timeouts, which nginx uses to find out how long to wait
 for IE<sol>O events and for expiring timeout events.
@@ -5769,7 +5783,7 @@ where a location is chosen based on the request URI.
 Before this phase, the default location for the relevant virtual server
 is assigned to the request, and any module requesting a location configuration
 receives the configuration for the default server location.
-This phase a assigns a new location to the request.
+This phase assigns a new location to the request.
 No additional handlers can be registered at this phase.
 
 

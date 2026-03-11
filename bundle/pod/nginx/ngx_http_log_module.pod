@@ -288,7 +288,7 @@ Specifies log format.
 The C<escape> parameter (1.11.8) allows setting
 C<json> or C<default> characters escaping
 in variables, by default, C<default> escaping is used.
-The C<none> parameter (1.13.10) disables escaping.
+The C<none> value (1.13.10) disables escaping.
 
 
 

@@ -542,8 +542,9 @@ Defines a timeout for reading client request body.
 The timeout is set only for a period between two successive read operations,
 not for the transmission of the whole request body.
 If a client does not transmit anything within this time, the
+request is terminated with the
 C<408> (C<Request Time-out>)
-error is returned to the client.
+error.
 
 
 
@@ -604,8 +605,9 @@ B<context:> I<server>
 
 Defines a timeout for reading client request header.
 If a client does not transmit the entire header within this time, the
+request is terminated with the
 C<408> (C<Request Time-out>)
-error is returned to the client.
+error.
 
 
 
@@ -1342,7 +1344,7 @@ Example:
     
     error_page 404 /404.html;
     
-    location /404.html {
+    location = /404.html {
         internal;
     }
 
@@ -2197,9 +2199,12 @@ C<reuseport>
 
 this parameter (1.9.1) instructs to create an individual listening socket
 for each worker process
-(using the C<SO_REUSEPORT> socket option), allowing a kernel
+(using the
+C<SO_REUSEPORT> socket option on Linux 3.9+ and DragonFly BSD,
+or C<SO_REUSEPORT_LB> on FreeBSDE<nbsp>12+), allowing a kernel
 to distribute incoming connections between worker processes.
-This currently works only on Linux 3.9+ and DragonFly BSD.
+This currently works only on Linux 3.9+, DragonFly BSD,
+and FreeBSD 12+ (1.15.1).
 
 B<NOTE>
 

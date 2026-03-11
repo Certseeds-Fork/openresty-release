@@ -1221,7 +1221,7 @@ server has returned an invalid response.
 This allows handling application errors in nginx, for example:
 
     
-    location /php {
+    location /php/ {
         fastcgi_pass backend:9000;
         ...
         fastcgi_catch_stderr "PHP Fatal error";
@@ -2318,6 +2318,43 @@ The timeout is set only between two successive write operations,
 not for the transmission of the whole request.
 If the FastCGI server does not receive anything within this time,
 the connection is closed.
+
+
+
+
+
+
+
+=head2 fastcgi_socket_keepalive
+
+
+B<syntax:> fastcgi_socket_keepalive I<C<on> E<verbar> C<off>>
+
+
+B<default:> I<off>
+
+
+B<context:> I<http>
+
+
+B<context:> I<server>
+
+
+B<context:> I<location>
+
+
+
+This directive appeared in version 1.15.6.
+
+
+
+
+
+Configures the “TCP keepalive” behavior
+for outgoing connections to a FastCGI server.
+By default, the operating system’s settings are in effect for the socket.
+If the directive is set to the value “C<on>”, the
+C<SO_KEEPALIVE> socket option is turned on for the socket.
 
 
 

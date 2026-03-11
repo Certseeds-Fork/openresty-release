@@ -92,7 +92,9 @@ specified by the C<zone> parameter.
 
 B<syntax:> keyval_zone I<
     C<zone>=I<C<name>>:I<C<size>>
-    [C<state>=I<C<file>>]>
+    [C<state>=I<C<file>>]
+    [C<timeout>=I<C<time>>]
+    [C<sync>]>
 
 
 
@@ -114,6 +116,34 @@ L<API|ngx_http_api_module>.
 The optional C<state> parameter specifies a I<C<file>>
 that keeps the current state of the key-value database in the JSON format
 and makes it persistent across nginx restarts.
+
+
+
+
+
+The optional C<timeout> parameter (1.15.0) sets
+the time after which key-value pairs are removed from the zone.
+
+
+
+
+
+The optional C<sync> parameter (1.15.0) enables
+L<synchronization|ngx_stream_zone_sync_module>
+of the shared memory zone.
+The synchronization requires the
+C<timeout> parameter to be set.
+
+B<NOTE>
+
+If the synchronization is enabled, removal of key-value pairs (no matter
+L<one|ngx_http_api_module>
+or
+L<all|ngx_http_api_module>)
+will be performed only on a target cluster node.
+The same key-value pairs on other cluster nodes
+will be removed upon C<timeout>.
+
 
 
 

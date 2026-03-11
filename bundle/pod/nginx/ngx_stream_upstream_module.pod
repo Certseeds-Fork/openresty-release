@@ -447,7 +447,7 @@ Defines the I<C<name>> and I<C<size>> of the shared
 memory zone that keeps the group’s configuration and run-time state that are
 shared between worker processes.
 Several groups may share the same zone.
-In this case, it is enough to specify the zone size only once.
+In this case, it is enough to specify the I<C<size>> only once.
 
 
 
@@ -514,7 +514,7 @@ Examples:
 The state is currently limited to the list of servers with their parameters.
 The file is read when parsing the configuration and is updated each time
 the upstream configuration is
-L<changed|ngx_http_upstream_conf_module>.
+L<changed|ngx_http_api_module>.
 Changing the file content directly should be avoided.
 The directive cannot be used
 along with the L</server> directive.
@@ -563,7 +563,7 @@ B<context:> I<upstream>
 
 
 Specifies a load balancing method for a server group
-where client-server mapping is based on the hashed I<C<key>> value.
+where the client-server mapping is based on the hashed I<C<key>> value.
 The I<C<key>> can contain text, variables,
 and their combinations (1.11.2).
 Usage example:
@@ -575,7 +575,7 @@ Usage example:
 Note that adding or removing a server from the group
 may result in remapping most of the keys to different servers.
 The method is compatible with the
-L<Cache::Memcached|http://search.cpan.org/perldoc?Cache%3A%3AMemcached>
+L<Cache::Memcached|https://metacpan.org/pod/Cache::Memcached>
 Perl library.
 
 
@@ -583,14 +583,14 @@ Perl library.
 
 
 If the C<consistent> parameter is specified,
-the L<ketama|http://www.last.fm/user/RJ/journal/2007/04/10/392555/>
+the L<ketama|https://www.metabrew.com/article/libketama-consistent-hashing-algo-memcached-clients>
 consistent hashing method will be used instead.
 The method ensures that only a few keys
 will be remapped to different servers
 when a server is added to or removed from the group.
 This helps to achieve a higher cache hit ratio for caching servers.
 The method is compatible with the
-L<Cache::Memcached::Fast|http://search.cpan.org/perldoc?Cache%3A%3AMemcached%3A%3AFast>
+L<Cache::Memcached::Fast|https://metacpan.org/pod/Cache::Memcached::Fast>
 Perl library with the I<C<ketama_points>> parameter set to 160.
 
 
@@ -610,8 +610,7 @@ B<context:> I<upstream>
 
 
 
-Specifies that a server group should use a load balancing method
-where a connection
+Specifies that a group should use a load balancing method where a connection
 is passed to the server with the least number of active connections,
 taking into account weights of servers.
 If there are several such servers, they are tried in turn using a
@@ -651,11 +650,15 @@ weighted round-robin balancing method.
 
 
 If the C<connect> parameter is specified,
-time to connect to the upstream server is used.
+time to
+connect
+to the upstream server is used.
 If the C<first_byte> parameter is specified,
-time to receive the first byte of data is used.
+time to receive the
+first byte of data is used.
 If the C<last_byte> is specified,
-time to receive the last byte of data is used.
+time to receive the
+last byte of data is used.
 If the C<inflight> parameter is specified (1.11.6),
 incomplete connections are also taken into account.
 
@@ -673,6 +676,69 @@ incomplete connections were taken into account by default.
 B<NOTE>
 
 This directive is available as part of our
+commercial subscription.
+
+
+
+
+
+
+
+
+=head2 random
+
+
+B<syntax:> random I<[C<two> [I<C<method>>]]>
+
+
+
+B<context:> I<upstream>
+
+
+
+This directive appeared in version 1.15.1.
+
+
+
+
+
+Specifies that a group should use a load balancing method where a connection
+is passed to a randomly selected server, taking into account weights
+of servers.
+
+
+
+
+
+The optional C<two> parameter
+instructs nginx to randomly select
+L<two|https://homes.cs.washington.edu/~karlin/papers/balls.pdf>
+servers and then choose a server
+using the specified C<method>.
+The default method is C<least_conn>
+which passes a connection to a server
+with the least number of active connections.
+
+
+
+
+
+The C<least_time> method passes a connection to a server
+with the least average time and least number of active connections.
+If C<least_time=connect> parameter is specified,
+time to
+connect
+to the upstream server is used.
+If C<least_time=first_byte> parameter is specified,
+time to receive the
+first byte of data is used.
+If C<least_time=last_byte> is specified,
+time to receive the
+last byte of data is used.
+
+B<NOTE>
+
+The C<least_time> method is available as a part of our
 commercial subscription.
 
 
@@ -708,24 +774,24 @@ the variable keeps the name of the server group.
 
 
 
-=item C<$upstream_bytes_sent>
-
-
-
-
-number of bytes sent to an upstream server (1.11.4).
-Values from several connections
-are separated by commas like addresses in the
-$upstream_addr variable.
-
-
-
 =item C<$upstream_bytes_received>
 
 
 
 
 number of bytes received from an upstream server (1.11.4).
+Values from several connections
+are separated by commas like addresses in the
+$upstream_addr variable.
+
+
+
+=item C<$upstream_bytes_sent>
+
+
+
+
+number of bytes sent to an upstream server (1.11.4).
 Values from several connections
 are separated by commas like addresses in the
 $upstream_addr variable.

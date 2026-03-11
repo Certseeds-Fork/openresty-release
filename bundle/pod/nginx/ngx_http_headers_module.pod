@@ -210,8 +210,6 @@ the “C<@>” prefix (0.7.9, 0.6.34):
 
 
 
-The C<epoch> parameter corresponds to the absolute time
-“C<Thu, 01 Jan 1970 00:00:01 GMT>”.
 The contents of the C<Cache-Control> field depends
 on the sign of the specified time:
 
@@ -237,6 +235,14 @@ where I<C<t>> is a time specified in the directive, in seconds.
 =back
 
 
+
+
+
+
+
+The C<epoch> parameter sets C<Expires>
+to the value “C<Thu, 01 Jan 1970 00:00:01 GMT>”,
+and C<Cache-Control> to “C<no-cache>”.
 
 
 

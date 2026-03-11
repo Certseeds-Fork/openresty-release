@@ -109,21 +109,21 @@ a supported API version in the URI.
 Examples of API requests with this configuration:
 
     
-    http://127.0.0.1/api/3/
-    http://127.0.0.1/api/3/nginx
-    http://127.0.0.1/api/3/connections
-    http://127.0.0.1/api/3/http/requests
-    http://127.0.0.1/api/3/http/server_zones/server_backend
-    http://127.0.0.1/api/3/http/caches/cache_backend
-    http://127.0.0.1/api/3/http/upstreams/backend
-    http://127.0.0.1/api/3/http/upstreams/backend/servers/
-    http://127.0.0.1/api/3/http/upstreams/backend/servers/1
-    http://127.0.0.1/api/3/http/keyvals/one?key=arg1
-    http://127.0.0.1/api/3/stream/
-    http://127.0.0.1/api/3/stream/server_zones/server_backend
-    http://127.0.0.1/api/3/stream/upstreams/
-    http://127.0.0.1/api/3/stream/upstreams/backend
-    http://127.0.0.1/api/3/stream/upstreams/backend/servers/1
+    http://127.0.0.1/api/4/
+    http://127.0.0.1/api/4/nginx
+    http://127.0.0.1/api/4/connections
+    http://127.0.0.1/api/4/http/requests
+    http://127.0.0.1/api/4/http/server_zones/server_backend
+    http://127.0.0.1/api/4/http/caches/cache_backend
+    http://127.0.0.1/api/4/http/upstreams/backend
+    http://127.0.0.1/api/4/http/upstreams/backend/servers/
+    http://127.0.0.1/api/4/http/upstreams/backend/servers/1
+    http://127.0.0.1/api/4/http/keyvals/one?key=arg1
+    http://127.0.0.1/api/4/stream/
+    http://127.0.0.1/api/4/stream/server_zones/server_backend
+    http://127.0.0.1/api/4/stream/upstreams/
+    http://127.0.0.1/api/4/stream/upstreams/backend
+    http://127.0.0.1/api/4/stream/upstreams/backend/servers/1
 
 
 
@@ -165,7 +165,7 @@ By default, the API is read-only.
 All API requests should contain a supported API version in the URI.
 If the request URI equals the location prefix,
 the list of supported API versions is returned.
-The current API version is “C<3>”.
+The current API version is “C<4>”.
 
 
 
@@ -175,9 +175,39 @@ The optional “C<fields>” argument in the request line
 specifies which fields of the requested objects will be output:
 
     
-    http://127.0.0.1/api/3/nginx?fields=version,build
+    http://127.0.0.1/api/4/nginx?fields=version,build
 
 
+
+
+
+
+
+
+
+=head2 status_zone
+
+
+B<syntax:> status_zone I<I<C<zone>>>
+
+
+
+B<context:> I<server>
+
+
+
+This directive appeared in version 1.13.12.
+
+
+
+
+
+Enables collection of virtual
+L<http|ngx_http_core_module>
+or
+L<stream|ngx_stream_core_module>
+server status information in the specified I<C<zone>>.
+Several servers may share the same zone.
 
 
 
@@ -192,6 +222,16 @@ specifies which fields of the requested objects will be output:
 
 =over
 
+
+
+
+=item *
+
+The C<path> and C<method> fields of
+nginx error object
+were removed in version 4.
+These fields continue to exist in earlier api versions,
+but show an empty value.
 
 
 
