@@ -684,6 +684,19 @@ B<context:> I<server>
 
 Enables the specified protocols.
 
+
+
+
+
+If the directive is specified
+on the L<ngx_stream_core_module> level,
+the value from the default server can be used.
+
+
+
+
+
+
 B<NOTE>
 
 The C<TLSv1.1> and C<TLSv1.2> parameters work
@@ -700,6 +713,59 @@ B<NOTE>
 
 The C<TLSv1.3> parameter is used by default
 since 1.23.4.
+
+
+
+
+
+
+
+
+=head2 ssl_reject_handshake
+
+
+B<syntax:> ssl_reject_handshake I<C<on> E<verbar> C<off>>
+
+
+B<default:> I<off>
+
+
+B<context:> I<stream>
+
+
+B<context:> I<server>
+
+
+
+This directive appeared in version 1.25.5.
+
+
+
+
+
+If enabled, SSL handshakes in
+the L<ngx_stream_core_module> block will be rejected.
+
+
+
+
+
+For example, in the following configuration, SSL handshakes with
+server names other than C<example.com> are rejected:
+
+    
+    server {
+        listen               443 ssl default_server;
+        ssl_reject_handshake on;
+    }
+    
+    server {
+        listen              443 ssl;
+        server_name         example.com;
+        ssl_certificate     example.com.crt;
+        ssl_certificate_key example.com.key;
+    }
+
 
 
 
