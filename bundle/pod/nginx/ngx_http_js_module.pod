@@ -201,6 +201,11 @@ the incoming data chunk,
 may be a string or Buffer
 depending on the C<buffer_type> value,
 by default is a string.
+Since L<0.8.5|changes>, the
+C<data> value is implicitly converted to a valid UTF-8 string
+by default.
+For binary data, the C<buffer_type> value
+should be set to C<buffer>.
 
 
 

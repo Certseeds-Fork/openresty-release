@@ -3405,7 +3405,7 @@ which is processed late in the event loop — after all IE<sol>O and timer
 events are already handled.
 The function C<ngx_event_process_posted()> is called to process
 an event queue.
-It calls event handlers until the queue is not empty.
+It calls event handlers until the queue is empty.
 This means that a posted event handler can post more events to be processed
 within the current event loop iteration.
 

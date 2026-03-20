@@ -22,7 +22,7 @@ To build nginx on the Microsoft Win32 E<copy> platform you need:
 =item *
 
 Microsoft Visual C compiler. Microsoft Visual Studio E<copy>
-8 and 10 are known to work.
+8, 10, 17 are known to work.
 
 
 
