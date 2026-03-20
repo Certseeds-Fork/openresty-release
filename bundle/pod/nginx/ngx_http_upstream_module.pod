@@ -813,7 +813,7 @@ Example configuration of memcached upstream with keepalive connections:
 
 
 For HTTP, the L<ngx_http_proxy_module>
-directive should be set to “C<1.1>”
+directive should be set to “C<1.1>” or “C<2>”
 and the C<Connection> header field should be cleared:
 
     
@@ -1029,7 +1029,7 @@ keeping the authentication context.
 In order for NTLM authentication to work,
 it is necessary to enable keepalive connections to upstream servers.
 The L<ngx_http_proxy_module>
-directive should be set to “C<1.1>”
+directive should be set to “C<1.1>” or “C<2>”
 and the C<Connection> header field should be cleared:
 
     
@@ -1940,6 +1940,28 @@ The rules of converting header field names to variable names are the same
 as for the variables that start with the
 “L<$http_|ngx_http_core_module>” prefix.
 Only the header fields from the response of the last server are saved.
+
+
+
+=item C<$upstream_last_addr>
+
+
+
+
+keeps the IP address or the path to the UNIX-domain socket
+of the last selected upstream server (1.29.3).
+
+
+
+
+B<NOTE>
+
+This variable is available as part of our
+commercial subscription.
+
+
+
+
 
 
 

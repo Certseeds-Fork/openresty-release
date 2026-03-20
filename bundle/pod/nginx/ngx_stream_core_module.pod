@@ -394,8 +394,9 @@ C<SO_KEEPALIVE> option is turned off for the socket.
 Some operating systems support setting of TCP keepalive parameters on
 a per-socket basis using the C<TCP_KEEPIDLE>,
 C<TCP_KEEPINTVL>, and C<TCP_KEEPCNT> socket options.
-On such systems (currently, Linux 2.4+, NetBSD 5+, and
-FreeBSD 9.0-STABLE), they can be configured
+On such systems
+(currently, Linux, NetBSD, Dragonfly, FreeBSD, and macOS),
+they can be configured
 using the I<C<keepidle>>, I<C<keepintvl>>, and
 I<C<keepcnt>> parameters.
 One or two parameters may be omitted, in which case the system default setting
