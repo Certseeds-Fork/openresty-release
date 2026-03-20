@@ -966,7 +966,7 @@ This directive appeared in version 0.7.8.
 Preloads an
 L<immutable object|preload_objects>
 at configure time.
-The C<name> is used as a name of the global variable
+The C<name> is used a name of the global variable
 though which the object is available in njs code.
 If the C<name> is not specified,
 the file name will be used instead.
@@ -1107,15 +1107,7 @@ allows redefining the value type to number.
 
 
 The optional C<timeout> parameter sets
-the time in milliseconds
-after which all shared dictionary entries are removed from the zone.
-If some entries require a different removal time, it can be set
-with the C<timeout> argument of the
-L<add|reference>,
-L<incr|reference>, and
-L<set|reference>
-methods
-(L<0.8.5|changes>).
+the time after which all shared dictionary entries are removed from the zone.
 
 
 

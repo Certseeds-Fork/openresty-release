@@ -612,8 +612,8 @@ Specifies a I<C<file>> that keeps the ID of nginx instance.
 Examples:
 
     
-    uuid_file /var/lib/nginx/nginx.id; # path for Linux
-    uuid_file /var/db/nginx/nginx.id;  # path for FreeBSD
+    state /var/lib/nginx/nginx.id; # path for Linux
+    state /var/db/nginx/nginx.id;  # path for FreeBSD
 
 
 
