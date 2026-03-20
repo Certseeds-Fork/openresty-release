@@ -2603,6 +2603,63 @@ L</proxy_pass_request_body> directives.
 
 
 
+=head2 proxy_pass_trailers
+
+
+B<syntax:> proxy_pass_trailers I<C<on> E<verbar> C<off>>
+
+
+B<default:> I<off>
+
+
+B<context:> I<http>
+
+
+B<context:> I<server>
+
+
+B<context:> I<location>
+
+
+
+This directive appeared in version 1.27.2.
+
+
+
+
+
+Permits passing trailer fields from a proxied server to a client.
+
+
+
+
+
+
+B<NOTE>
+
+A trailer section in HTTPE<sol>1.1 is
+L<explicitly
+enabled|https://datatracker.ietf.org/doc/html/rfc9110#section-6.5.1>.
+
+
+    
+    location / {
+        proxy_http_version 1.1;
+        proxy_set_header Connection "te";
+        proxy_set_header TE "trailers";
+        proxy_pass_trailers on;
+    
+        proxy_pass ...
+    }
+
+
+
+
+
+
+
+
+
 =head2 proxy_read_timeout
 
 

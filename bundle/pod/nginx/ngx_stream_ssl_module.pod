@@ -338,7 +338,8 @@ This directive appeared in version 1.11.8.
 
 
 Specifies a I<C<file>> with trusted CA certificates in the PEM format
-used to verify client certificates.
+used to verify client certificates and
+OCSP responses if L</ssl_stapling> is enabled.
 
 
 
@@ -570,6 +571,152 @@ B<context:> I<server>
 
 
 Specifies a timeout for the SSL handshake to complete.
+
+
+
+
+
+
+
+=head2 ssl_ocsp
+
+
+B<syntax:> ssl_ocsp I<C<on> E<verbar>
+        C<off> E<verbar>
+        C<leaf>>
+
+
+B<default:> I<off>
+
+
+B<context:> I<stream>
+
+
+B<context:> I<server>
+
+
+
+This directive appeared in version 1.27.2.
+
+
+
+
+
+Enables OCSP validation of the client certificate chain.
+The C<leaf> parameter
+enables validation of the client certificate only.
+
+
+
+
+
+For the OCSP validation to work,
+the L</ssl_verify_client> directive should be set to
+C<on> or C<optional>.
+
+
+
+
+
+To resolve the OCSP responder hostname,
+the L<ngx_stream_core_module> directive
+should also be specified.
+
+
+
+
+
+Example:
+
+    
+    ssl_verify_client on;
+    ssl_ocsp          on;
+    resolver          192.0.2.1;
+
+
+
+
+
+
+
+
+
+=head2 ssl_ocsp_cache
+
+
+B<syntax:> ssl_ocsp_cache I<
+    C<off> E<verbar>
+    [C<shared>:I<C<name>>:I<C<size>>]>
+
+
+B<default:> I<off>
+
+
+B<context:> I<stream>
+
+
+B<context:> I<server>
+
+
+
+This directive appeared in version 1.27.2.
+
+
+
+
+
+Sets C<name> and C<size> of the cache
+that stores client certificates status for OCSP validation.
+The cache is shared between all worker processes.
+A cache with the same name can be used in several virtual servers.
+
+
+
+
+
+The C<off> parameter prohibits the use of the cache.
+
+
+
+
+
+
+
+=head2 ssl_ocsp_responder
+
+
+B<syntax:> ssl_ocsp_responder I<I<C<url>>>
+
+
+
+B<context:> I<stream>
+
+
+B<context:> I<server>
+
+
+
+This directive appeared in version 1.27.2.
+
+
+
+
+
+Overrides the URL of the OCSP responder specified in the
+“L<Authority
+Information Access|https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.1>” certificate extension
+for validation of client certificates.
+
+
+
+
+
+Only “C<http:E<sol>E<sol>>” OCSP responders are supported:
+
+    
+    ssl_ocsp_responder http://ocsp.example.com/;
+
+
 
 
 
@@ -988,6 +1135,182 @@ session parameters.
 
 
 
+=head2 ssl_stapling
+
+
+B<syntax:> ssl_stapling I<C<on> E<verbar> C<off>>
+
+
+B<default:> I<off>
+
+
+B<context:> I<stream>
+
+
+B<context:> I<server>
+
+
+
+This directive appeared in version 1.27.2.
+
+
+
+
+
+Enables or disables
+L<stapling
+of OCSP responses|https://datatracker.ietf.org/doc/html/rfc6066#section-8> by the server.
+Example:
+
+    
+    ssl_stapling on;
+    resolver 192.0.2.1;
+
+
+
+
+
+
+
+For the OCSP stapling to work, the certificate of the server certificate
+issuer should be known.
+If the L</ssl_certificate> file does
+not contain intermediate certificates,
+the certificate of the server certificate issuer should be
+present in the
+L</ssl_trusted_certificate> file.
+
+
+
+
+
+For a resolution of the OCSP responder hostname,
+the L<ngx_stream_core_module> directive
+should also be specified.
+
+
+
+
+
+
+
+=head2 ssl_stapling_file
+
+
+B<syntax:> ssl_stapling_file I<I<C<file>>>
+
+
+
+B<context:> I<stream>
+
+
+B<context:> I<server>
+
+
+
+This directive appeared in version 1.27.2.
+
+
+
+
+
+When set, the stapled OCSP response will be taken from the
+specified I<C<file>> instead of querying
+the OCSP responder specified in the server certificate.
+
+
+
+
+
+The file should be in the DER format as produced by the
+“C<openssl ocsp>” command.
+
+
+
+
+
+
+
+=head2 ssl_stapling_responder
+
+
+B<syntax:> ssl_stapling_responder I<I<C<url>>>
+
+
+
+B<context:> I<stream>
+
+
+B<context:> I<server>
+
+
+
+This directive appeared in version 1.27.2.
+
+
+
+
+
+Overrides the URL of the OCSP responder specified in the
+“L<Authority
+Information Access|https://datatracker.ietf.org/doc/html/rfc5280#section-4.2.2.1>” certificate extension.
+
+
+
+
+
+Only “C<http:E<sol>E<sol>>” OCSP responders are supported:
+
+    
+    ssl_stapling_responder http://ocsp.example.com/;
+
+
+
+
+
+
+
+
+
+=head2 ssl_stapling_verify
+
+
+B<syntax:> ssl_stapling_verify I<C<on> E<verbar> C<off>>
+
+
+B<default:> I<off>
+
+
+B<context:> I<stream>
+
+
+B<context:> I<server>
+
+
+
+This directive appeared in version 1.27.2.
+
+
+
+
+
+Enables or disables verification of OCSP responses by the server.
+
+
+
+
+
+For verification to work, the certificate of the server certificate
+issuer, the root certificate, and all intermediate certificates
+should be configured as trusted using the
+L</ssl_trusted_certificate> directive.
+
+
+
+
+
+
+
 =head2 ssl_trusted_certificate
 
 
@@ -1009,7 +1332,8 @@ This directive appeared in version 1.11.8.
 
 
 Specifies a I<C<file>> with trusted CA certificates in the PEM format
-used to verify client certificates.
+used to verify client certificates and
+OCSP responses if L</ssl_stapling> is enabled.
 
 
 
