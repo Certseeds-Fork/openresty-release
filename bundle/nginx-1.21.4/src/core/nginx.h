@@ -11,7 +11,7 @@
 
 #define nginx_version      1021004
 #define NGINX_VERSION      "1.21.4"
-#define NGINX_VER          "openresty/" NGINX_VERSION ".3"
+#define NGINX_VER          "openresty/" NGINX_VERSION ".4"
 
 #ifdef NGX_BUILD
 #define NGINX_VER_BUILD    NGINX_VER " (" NGX_BUILD ")"
