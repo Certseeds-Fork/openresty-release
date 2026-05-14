@@ -78,6 +78,7 @@ B<syntax:> listen I<
     I<C<address>>:I<C<port>>
     [C<ssl>]
     [C<proxy_protocol>]
+    [C<multipath>]
     [C<backlog>=I<C<number>>]
     [C<rcvbuf>=I<C<size>>]
     [C<sndbuf>=I<C<size>>]
@@ -147,6 +148,23 @@ Obtained information is passed to the
 L<authentication server|ngx_mail_auth_http_module>
 and can be used to
 L<change the client address|ngx_mail_realip_module>.
+
+
+
+
+
+The C<multipath> parameter configures a listening socket
+for working with
+L<Multipath TCP|https://datatracker.ietf.org/doc/html/rfc8684>
+protocol (1.29.7).
+
+B<NOTE>
+
+Adding or removing this parameter will also enable
+the C<SO_REUSEPORT> socket option, which may have
+the same security implications as when using
+the reuseport parameter.
+
 
 
 

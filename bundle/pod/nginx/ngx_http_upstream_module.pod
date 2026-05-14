@@ -831,8 +831,10 @@ Example configuration of memcached upstream with keepalive connections:
 
 
 For HTTP, the L<ngx_http_proxy_module>
-directive should be set to “C<1.1>” or “C<2>”
-and the C<Connection> header field should be cleared:
+directive should be “C<1.1>” (by default since 1.29.7)
+or set to “C<2>”
+and the C<Connection> header field should be cleared.
+This example is for versions prior to 1.29.7:
 
     
     upstream http_backend {
@@ -1047,8 +1049,10 @@ keeping the authentication context.
 In order for NTLM authentication to work,
 it is necessary to enable keepalive connections to upstream servers.
 The L<ngx_http_proxy_module>
-directive should be set to “C<1.1>” or “C<2>”
-and the C<Connection> header field should be cleared:
+directive should be “C<1.1>” (by default since 1.29.7)
+or set to “C<2>”
+and the C<Connection> header field should be cleared.
+This example is for versions prior to 1.29.7:
 
     
     upstream http_backend {

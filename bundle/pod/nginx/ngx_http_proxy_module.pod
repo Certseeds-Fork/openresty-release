@@ -1820,7 +1820,7 @@ B<syntax:> proxy_http_version I<
     C<2>>
 
 
-B<default:> I<1.0>
+B<default:> I<1.1>
 
 
 B<context:> I<http>
@@ -1840,7 +1840,8 @@ This directive appeared in version 1.1.4.
 
 
 Sets the HTTP protocol version for proxying.
-By default, version 1.0 is used.
+Since 1.29.7, version 1.1 is used by default.
+Before 1.29.7, version 1.0 was used by default.
 Version 1.1 or 2 (1.29.4) is recommended for use with
 L<ngx_http_upstream_module>
 connections and
@@ -1848,7 +1849,7 @@ L<NTLM authentication|ngx_http_upstream_module>.
 
 B<NOTE>
 
-The version 2 requires the
+Version 2 requires the
 L<ngx_http_v2_module|ngx_http_v2_module> module.
 
 
@@ -2779,17 +2780,16 @@ Permits passing trailer fields from a proxied server to a client.
 
 B<NOTE>
 
-A trailer section in HTTPE<sol>1.1 is
-L<explicitly
-enabled|https://datatracker.ietf.org/doc/html/rfc9110#section-6.5.1>.
+A trailer section should be
+L<explicitly enabled|https://datatracker.ietf.org/doc/html/rfc9110#section-6.5.1>:
 
 
     
     location / {
-        proxy_http_version 1.1;
-        proxy_set_header Connection "te";
-        proxy_set_header TE "trailers";
-        proxy_pass_trailers on;
+        # proxy_http_version 1.1;  #for versions before 1.29.7
+        proxy_set_header     Connection "te";
+        proxy_set_header     TE "trailers";
+        proxy_pass_trailers  on;
     
         proxy_pass ...
     }
