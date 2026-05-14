@@ -237,7 +237,9 @@ B<context:> I<location>
 
 Sets the I<C<size>> of the buffer used for reading the first part
 of the response received from the FastCGI server.
-This part usually contains a small response header.
+This part usually contains a small response header;
+if it exceeds the buffer size, the response is considered
+invalid.
 By default, the buffer size is equal to one memory page.
 This is either 4K or 8K, depending on a platform.
 It can be made smaller, however.
@@ -2072,6 +2074,8 @@ B<syntax:> fastcgi_param I<
     I<C<parameter>> I<C<value>>
     [C<if_not_empty>]>
 
+
+B<default:> I<HTTP_HOST $host$is_request_port$request_port>
 
 
 B<context:> I<http>

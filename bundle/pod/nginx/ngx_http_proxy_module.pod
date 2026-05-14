@@ -232,7 +232,9 @@ B<context:> I<location>
 
 Sets the I<C<size>> of the buffer used for reading the first part
 of the response received from the proxied server.
-This part usually contains a small response header.
+This part usually contains a small response header;
+if it exceeds the buffer size, the response is considered
+invalid.
 By default, the buffer size is equal to one memory page.
 This is either 4K or 8K, depending on a platform.
 It can be made smaller, however.
@@ -1843,6 +1845,12 @@ Version 1.1 or 2 (1.29.4) is recommended for use with
 L<ngx_http_upstream_module>
 connections and
 L<NTLM authentication|ngx_http_upstream_module>.
+
+B<NOTE>
+
+The version 2 requires the
+L<ngx_http_v2_module|ngx_http_v2_module> module.
+
 
 
 

@@ -937,6 +937,88 @@ The L</js_import> directive should be used instead.
 
 
 
+=head2 js_load_stream_native_module
+
+
+B<syntax:> js_load_stream_native_module I<I<C<path>> [C<as> I<C<name>>]>
+
+
+
+B<context:> I<main>
+
+
+
+This directive appeared in version 0.9.5.
+
+
+
+
+
+Loads a L<native module|native_modules>
+(shared library) for use in Stream JavaScript code.
+The directive is
+L<QuickJS|engine>-only
+and is not available when using the njs built-in JavaScript engine.
+
+
+
+
+
+The I<C<path>> parameter
+specifies the absolute path to the shared library file.
+The optional C<as> I<C<name>> parameter
+provides an alias name for importing the module in JavaScript code.
+If not specified, the module can be imported using its filename.
+
+
+
+
+
+Example:
+
+    
+    js_load_stream_native_module /path/to/mylib.so;
+    js_load_stream_native_module /path/to/other.so as myalias;
+    
+    stream {
+        js_import main.js;
+        # ... rest of stream configuration
+    }
+
+
+In JavaScript code:
+
+    
+    // Import by filename
+    import * as mylib from 'mylib.so';
+    
+    // Import by alias
+    import * as myalias from 'myalias';
+    
+    // Use exported functions
+    let result = mylib.add(5, 10);
+
+
+
+
+
+
+
+
+B<NOTE>
+
+For security reasons, this directive is only allowed
+in the C<main> configuration context.
+Native modules run with full process privileges;
+use absolute paths and ensure proper code review.
+
+
+
+
+
+
+
+
 =head2 js_path
 
 
