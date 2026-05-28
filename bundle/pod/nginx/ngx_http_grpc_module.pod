@@ -736,6 +736,17 @@ L<ngx_http_core_module>.
 
 
 
+B<NOTE>
+
+Trailer fields received from
+an upstream server are passed to a client as is, without interpretation.
+
+
+
+
+
+
+
 
 =head2 grpc_pass_header
 

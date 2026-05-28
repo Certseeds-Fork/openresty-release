@@ -690,7 +690,7 @@ module ngx_http_grpc_module
   aliases ngx_grpc
   section 17 259 name
   section 259 440 example configuration
-  section 440 20178 directives
+  section 440 20296 directives
   section 459 1365 grpc_allow_upstream
   section 1365 2519 grpc_bind
   section 2519 2903 grpc_bind_dynamic
@@ -715,28 +715,28 @@ module ngx_http_grpc_module
   section 7287 8250 off
   section 8250 8556 grpc_next_upstream_timeout
   section 8556 8865 grpc_next_upstream_tries
-  section 8865 9899 grpc_pass
-  section 9899 10134 grpc_pass_header
-  section 10134 10574 grpc_read_timeout
-  section 10574 11302 grpc_request_dynamic
-  section 11302 11740 grpc_send_timeout
-  section 11740 12420 grpc_set_header
-  section 12420 12937 grpc_socket_keepalive
-  section 12937 13279 grpc_ssl_certificate
-  section 13279 14552 grpc_ssl_certificate_cache
-  section 14552 15355 grpc_ssl_certificate_key
-  section 15355 15752 grpc_ssl_ciphers
-  section 15752 16554 grpc_ssl_conf_command
-  section 16554 16914 grpc_ssl_crl
-  section 16914 17428 grpc_ssl_key_log
-  section 17428 17844 grpc_ssl_name
-  section 17844 18172 grpc_ssl_password_file
-  section 18172 18588 grpc_ssl_protocols
-  section 18588 19001 grpc_ssl_server_name
-  section 19001 19370 grpc_ssl_session_reuse
-  section 19370 19672 grpc_ssl_trusted_certificate
-  section 19672 19924 grpc_ssl_verify
-  section 19924 20178 grpc_ssl_verify_depth
+  section 8865 10017 grpc_pass
+  section 10017 10252 grpc_pass_header
+  section 10252 10692 grpc_read_timeout
+  section 10692 11420 grpc_request_dynamic
+  section 11420 11858 grpc_send_timeout
+  section 11858 12538 grpc_set_header
+  section 12538 13055 grpc_socket_keepalive
+  section 13055 13397 grpc_ssl_certificate
+  section 13397 14670 grpc_ssl_certificate_cache
+  section 14670 15473 grpc_ssl_certificate_key
+  section 15473 15870 grpc_ssl_ciphers
+  section 15870 16672 grpc_ssl_conf_command
+  section 16672 17032 grpc_ssl_crl
+  section 17032 17546 grpc_ssl_key_log
+  section 17546 17962 grpc_ssl_name
+  section 17962 18290 grpc_ssl_password_file
+  section 18290 18706 grpc_ssl_protocols
+  section 18706 19119 grpc_ssl_server_name
+  section 19119 19488 grpc_ssl_session_reuse
+  section 19488 19790 grpc_ssl_trusted_certificate
+  section 19790 20042 grpc_ssl_verify
+  section 20042 20296 grpc_ssl_verify_depth
 
 module ngx_http_gunzip_module
   aliases ngx_gunzip
@@ -838,41 +838,41 @@ module ngx_http_internal_redirect_module
 module ngx_http_js_module
   aliases ngx_js
   section 17 308 name
-  section 308 3001 example configuration
-  section 3001 25394 directives
-  section 3020 5489 js_body_filter
-  section 3447 3502 r
-  section 3502 3809 data
-  section 3809 3878 flags
-  section 3878 5489 last
-  section 5489 6806 js_access
-  section 6806 7205 js_content
-  section 7205 7656 js_context_reuse
-  section 7656 8046 js_engine
-  section 8046 8364 js_fetch_buffer_size
-  section 8364 8828 js_fetch_ciphers
-  section 8828 9161 js_fetch_max_response_buffer_size
-  section 9161 9537 js_fetch_protocols
-  section 9537 9998 js_fetch_timeout
-  section 9998 10369 js_fetch_trusted_certificate
-  section 10369 10690 js_fetch_verify
-  section 10690 11016 js_fetch_verify_depth
-  section 11016 11756 js_fetch_proxy
-  section 11756 12570 js_fetch_keepalive
-  section 12570 13209 js_fetch_keepalive_requests
-  section 13209 13663 js_fetch_keepalive_time
-  section 13663 14026 js_fetch_keepalive_timeout
-  section 14026 14733 js_header_filter
-  section 14733 16382 js_import
-  section 16382 16901 js_include
-  section 16901 18205 js_load_http_native_module
-  section 18205 18537 js_path
-  section 18537 20393 js_periodic
-  section 20393 21055 js_preload_object
-  section 21055 22536 js_set
-  section 22536 24861 js_shared_dict_zone
-  section 24861 25394 js_var
-  section 25394 25501 request argument
+  section 308 3051 example configuration
+  section 3051 25585 directives
+  section 3070 5539 js_body_filter
+  section 3497 3552 r
+  section 3552 3859 data
+  section 3859 3928 flags
+  section 3928 5539 last
+  section 5539 6856 js_access
+  section 6856 7255 js_content
+  section 7255 7706 js_context_reuse
+  section 7706 8237 js_engine
+  section 8237 8555 js_fetch_buffer_size
+  section 8555 9019 js_fetch_ciphers
+  section 9019 9352 js_fetch_max_response_buffer_size
+  section 9352 9728 js_fetch_protocols
+  section 9728 10189 js_fetch_timeout
+  section 10189 10560 js_fetch_trusted_certificate
+  section 10560 10881 js_fetch_verify
+  section 10881 11207 js_fetch_verify_depth
+  section 11207 11947 js_fetch_proxy
+  section 11947 12761 js_fetch_keepalive
+  section 12761 13400 js_fetch_keepalive_requests
+  section 13400 13854 js_fetch_keepalive_time
+  section 13854 14217 js_fetch_keepalive_timeout
+  section 14217 14924 js_header_filter
+  section 14924 16573 js_import
+  section 16573 17092 js_include
+  section 17092 18396 js_load_http_native_module
+  section 18396 18728 js_path
+  section 18728 20584 js_periodic
+  section 20584 21246 js_preload_object
+  section 21246 22727 js_set
+  section 22727 25052 js_shared_dict_zone
+  section 25052 25585 js_var
+  section 25585 25692 request argument
 
 module ngx_http_keyval_module
   aliases ngx_keyval
@@ -1070,7 +1070,7 @@ module ngx_http_proxy_module
   aliases ngx_proxy
   section 17 180 name
   section 180 386 example configuration
-  section 386 61814 directives
+  section 386 61932 directives
   section 405 1306 proxy_allow_upstream
   section 1306 2563 proxy_bind
   section 2563 2949 proxy_bind_dynamic
@@ -1130,38 +1130,38 @@ module ngx_http_proxy_module
   section 39443 39683 proxy_pass_header
   section 39683 40227 proxy_pass_request_body
   section 40227 40787 proxy_pass_request_headers
-  section 40787 41462 proxy_pass_trailers
-  section 41462 41910 proxy_read_timeout
-  section 41910 44725 proxy_redirect
-  section 44725 45623 proxy_request_buffering
-  section 45623 46361 proxy_request_dynamic
-  section 46361 46869 proxy_send_lowat
-  section 46869 47315 proxy_send_timeout
-  section 47315 47598 proxy_set_body
-  section 47598 49607 proxy_set_header
-  section 49607 50129 proxy_socket_keepalive
-  section 50129 50523 proxy_ssl_certificate
-  section 50523 51804 proxy_ssl_certificate_cache
-  section 51804 52667 proxy_ssl_certificate_key
-  section 52667 53116 proxy_ssl_ciphers
-  section 53116 53927 proxy_ssl_conf_command
-  section 53927 54339 proxy_ssl_crl
-  section 54339 54860 proxy_ssl_key_log
-  section 54860 55332 proxy_ssl_name
-  section 55332 55707 proxy_ssl_password_file
-  section 55707 56175 proxy_ssl_protocols
-  section 56175 56640 proxy_ssl_server_name
-  section 56640 57014 proxy_ssl_session_reuse
-  section 57014 57368 proxy_ssl_trusted_certificate
-  section 57368 57672 proxy_ssl_verify
-  section 57672 57978 proxy_ssl_verify_depth
-  section 57978 60011 proxy_store
-  section 60011 60493 proxy_store_access
-  section 60493 61056 proxy_temp_file_write_size
-  section 61056 61814 proxy_temp_path
-  section 61814 62571 embedded variables
-  section 61995 62101 $proxy_host
-  section 62101 62571 $proxy_port
+  section 40787 41580 proxy_pass_trailers
+  section 41580 42028 proxy_read_timeout
+  section 42028 44843 proxy_redirect
+  section 44843 45741 proxy_request_buffering
+  section 45741 46479 proxy_request_dynamic
+  section 46479 46987 proxy_send_lowat
+  section 46987 47433 proxy_send_timeout
+  section 47433 47716 proxy_set_body
+  section 47716 49725 proxy_set_header
+  section 49725 50247 proxy_socket_keepalive
+  section 50247 50641 proxy_ssl_certificate
+  section 50641 51922 proxy_ssl_certificate_cache
+  section 51922 52785 proxy_ssl_certificate_key
+  section 52785 53234 proxy_ssl_ciphers
+  section 53234 54045 proxy_ssl_conf_command
+  section 54045 54457 proxy_ssl_crl
+  section 54457 54978 proxy_ssl_key_log
+  section 54978 55450 proxy_ssl_name
+  section 55450 55825 proxy_ssl_password_file
+  section 55825 56293 proxy_ssl_protocols
+  section 56293 56758 proxy_ssl_server_name
+  section 56758 57132 proxy_ssl_session_reuse
+  section 57132 57486 proxy_ssl_trusted_certificate
+  section 57486 57790 proxy_ssl_verify
+  section 57790 58096 proxy_ssl_verify_depth
+  section 58096 60129 proxy_store
+  section 60129 60611 proxy_store_access
+  section 60611 61174 proxy_temp_file_write_size
+  section 61174 61932 proxy_temp_path
+  section 61932 62689 embedded variables
+  section 62113 62219 $proxy_host
+  section 62219 62689 $proxy_port
 
 module ngx_http_proxy_protocol_vendor_module
   aliases ngx_proxy_protocol_vendor
@@ -2102,39 +2102,39 @@ module ngx_stream_geoip_module
 
 module ngx_stream_js_module
   section 17 292 name
-  section 292 2338 example configuration
-  section 2338 21893 directives
-  section 2357 3358 js_access
-  section 2821 3358 s
-  section 3358 3792 js_context_reuse
-  section 3792 4158 js_engine
-  section 4158 4452 js_fetch_buffer_size
-  section 4452 4895 js_fetch_ciphers
-  section 4895 5204 js_fetch_max_response_buffer_size
-  section 5204 5559 js_fetch_protocols
-  section 5559 5996 js_fetch_timeout
-  section 5996 6343 js_fetch_trusted_certificate
-  section 6343 6640 js_fetch_verify
-  section 6640 6942 js_fetch_verify_depth
-  section 6942 7671 js_fetch_proxy
-  section 7671 8474 js_fetch_keepalive
-  section 8474 9089 js_fetch_keepalive_requests
-  section 9089 9519 js_fetch_keepalive_time
-  section 9519 9858 js_fetch_keepalive_timeout
-  section 9858 10805 js_filter
-  section 10253 10805 s
-  section 10805 11581 js_import
-  section 11581 12149 js_include
-  section 12149 13467 js_load_stream_native_module
-  section 13467 13759 js_path
-  section 13759 15613 js_periodic
-  section 15613 16251 js_preload_object
-  section 16251 17759 js_preread
-  section 16719 17759 s
-  section 17759 19194 js_set
-  section 19194 21521 js_shared_dict_zone
-  section 21521 21893 js_var
-  section 21893 22018 session object properties
+  section 292 2388 example configuration
+  section 2388 22084 directives
+  section 2407 3408 js_access
+  section 2871 3408 s
+  section 3408 3842 js_context_reuse
+  section 3842 4349 js_engine
+  section 4349 4643 js_fetch_buffer_size
+  section 4643 5086 js_fetch_ciphers
+  section 5086 5395 js_fetch_max_response_buffer_size
+  section 5395 5750 js_fetch_protocols
+  section 5750 6187 js_fetch_timeout
+  section 6187 6534 js_fetch_trusted_certificate
+  section 6534 6831 js_fetch_verify
+  section 6831 7133 js_fetch_verify_depth
+  section 7133 7862 js_fetch_proxy
+  section 7862 8665 js_fetch_keepalive
+  section 8665 9280 js_fetch_keepalive_requests
+  section 9280 9710 js_fetch_keepalive_time
+  section 9710 10049 js_fetch_keepalive_timeout
+  section 10049 10996 js_filter
+  section 10444 10996 s
+  section 10996 11772 js_import
+  section 11772 12340 js_include
+  section 12340 13658 js_load_stream_native_module
+  section 13658 13950 js_path
+  section 13950 15804 js_periodic
+  section 15804 16442 js_preload_object
+  section 16442 17950 js_preread
+  section 16910 17950 s
+  section 17950 19385 js_set
+  section 19385 21712 js_shared_dict_zone
+  section 21712 22084 js_var
+  section 22084 22209 session object properties
 
 module ngx_stream_keyval_module
   section 17 422 name
