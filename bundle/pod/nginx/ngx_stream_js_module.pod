@@ -643,6 +643,23 @@ When this number is exceeded, the least recently used connections are closed.
 
 
 
+In Stream, the cache is maintained separately for each server configuration.
+A value set at the C<stream> level is inherited by servers,
+but each server uses its own cache.
+Cached connections are reused for requests with the same protocol, host,
+and port.
+
+
+
+
+
+When enabled, keepalive assumes that destination servers send valid HTTP
+responses.
+
+
+
+
+
 Example:
 
     

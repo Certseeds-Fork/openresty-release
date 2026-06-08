@@ -934,6 +934,24 @@ When this number is exceeded, the least recently used connections are closed.
 
 
 
+In HTTP, the cache is maintained separately for each effective location
+configuration. A value set at the C<http> or
+C<server> level is inherited by locations, but each location
+uses its own cache.
+Cached connections are reused for requests with the same protocol, host,
+and port.
+
+
+
+
+
+When enabled, keepalive assumes that destination servers send valid HTTP
+responses.
+
+
+
+
+
 Example:
 
     

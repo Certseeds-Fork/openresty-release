@@ -839,7 +839,7 @@ module ngx_http_js_module
   aliases ngx_js
   section 17 308 name
   section 308 3051 example configuration
-  section 3051 25585 directives
+  section 3051 25960 directives
   section 3070 5539 js_body_filter
   section 3497 3552 r
   section 3552 3859 data
@@ -858,21 +858,21 @@ module ngx_http_js_module
   section 10560 10881 js_fetch_verify
   section 10881 11207 js_fetch_verify_depth
   section 11207 11947 js_fetch_proxy
-  section 11947 12761 js_fetch_keepalive
-  section 12761 13400 js_fetch_keepalive_requests
-  section 13400 13854 js_fetch_keepalive_time
-  section 13854 14217 js_fetch_keepalive_timeout
-  section 14217 14924 js_header_filter
-  section 14924 16573 js_import
-  section 16573 17092 js_include
-  section 17092 18396 js_load_http_native_module
-  section 18396 18728 js_path
-  section 18728 20584 js_periodic
-  section 20584 21246 js_preload_object
-  section 21246 22727 js_set
-  section 22727 25052 js_shared_dict_zone
-  section 25052 25585 js_var
-  section 25585 25692 request argument
+  section 11947 13136 js_fetch_keepalive
+  section 13136 13775 js_fetch_keepalive_requests
+  section 13775 14229 js_fetch_keepalive_time
+  section 14229 14592 js_fetch_keepalive_timeout
+  section 14592 15299 js_header_filter
+  section 15299 16948 js_import
+  section 16948 17467 js_include
+  section 17467 18771 js_load_http_native_module
+  section 18771 19103 js_path
+  section 19103 20959 js_periodic
+  section 20959 21621 js_preload_object
+  section 21621 23102 js_set
+  section 23102 25427 js_shared_dict_zone
+  section 25427 25960 js_var
+  section 25960 26067 request argument
 
 module ngx_http_keyval_module
   aliases ngx_keyval
@@ -2103,7 +2103,7 @@ module ngx_stream_geoip_module
 module ngx_stream_js_module
   section 17 292 name
   section 292 2388 example configuration
-  section 2388 22084 directives
+  section 2388 22434 directives
   section 2407 3408 js_access
   section 2871 3408 s
   section 3408 3842 js_context_reuse
@@ -2117,24 +2117,24 @@ module ngx_stream_js_module
   section 6534 6831 js_fetch_verify
   section 6831 7133 js_fetch_verify_depth
   section 7133 7862 js_fetch_proxy
-  section 7862 8665 js_fetch_keepalive
-  section 8665 9280 js_fetch_keepalive_requests
-  section 9280 9710 js_fetch_keepalive_time
-  section 9710 10049 js_fetch_keepalive_timeout
-  section 10049 10996 js_filter
-  section 10444 10996 s
-  section 10996 11772 js_import
-  section 11772 12340 js_include
-  section 12340 13658 js_load_stream_native_module
-  section 13658 13950 js_path
-  section 13950 15804 js_periodic
-  section 15804 16442 js_preload_object
-  section 16442 17950 js_preread
-  section 16910 17950 s
-  section 17950 19385 js_set
-  section 19385 21712 js_shared_dict_zone
-  section 21712 22084 js_var
-  section 22084 22209 session object properties
+  section 7862 9015 js_fetch_keepalive
+  section 9015 9630 js_fetch_keepalive_requests
+  section 9630 10060 js_fetch_keepalive_time
+  section 10060 10399 js_fetch_keepalive_timeout
+  section 10399 11346 js_filter
+  section 10794 11346 s
+  section 11346 12122 js_import
+  section 12122 12690 js_include
+  section 12690 14008 js_load_stream_native_module
+  section 14008 14300 js_path
+  section 14300 16154 js_periodic
+  section 16154 16792 js_preload_object
+  section 16792 18300 js_preread
+  section 17260 18300 s
+  section 18300 19735 js_set
+  section 19735 22062 js_shared_dict_zone
+  section 22062 22434 js_var
+  section 22434 22559 session object properties
 
 module ngx_stream_keyval_module
   section 17 422 name
@@ -4627,15 +4627,15 @@ module lua-redis-parser-0.13
   section 7070 8562 copyright & license
   section 8562 8905 see also
 
-dist lua-resty-core-0.1.34rc2
+dist lua-resty-core-0.1.34rc3
   aliases resty.core
-  modules .github.issue_template .github.pull_request_template lua-resty-core-0.1.34rc2 ngx.balancer ngx.base64 ngx.errlog ngx.ocsp ngx.pipe ngx.process ngx.proxyssl ngx.re ngx.req ngx.resp ngx.semaphore ngx.ssl ngx.ssl.clienthello ngx.ssl.proxysslcert ngx.ssl.proxysslverify ngx.ssl.session resty.core.time t.cert.ocsp.cfssl.readme
+  modules .github.issue_template .github.pull_request_template lua-resty-core-0.1.34rc3 ngx.balancer ngx.base64 ngx.errlog ngx.ocsp ngx.pipe ngx.process ngx.proxyssl ngx.re ngx.req ngx.resp ngx.semaphore ngx.ssl ngx.ssl.clienthello ngx.ssl.proxysslcert ngx.ssl.proxysslverify ngx.ssl.session resty.core.time t.cert.ocsp.cfssl.readme
 
 module .github.issue_template
 
 module .github.pull_request_template
 
-module lua-resty-core-0.1.34rc2
+module lua-resty-core-0.1.34rc3
   aliases resty.core
   section 18 125 name
   section 125 176 status
@@ -6046,15 +6046,15 @@ module readme_auto_lib
   section 16888 16914 license
   section 16914 16987 copyright
 
-dist ngx_lua-0.10.31rc2
+dist ngx_lua-0.10.31rc5
   aliases ngx_http_lua_module
-  modules .github.issue_template .github.pull_request_template ngx_lua-0.10.31rc2
+  modules .github.issue_template .github.pull_request_template ngx_lua-0.10.31rc5
 
 module .github.issue_template
 
 module .github.pull_request_template
 
-module ngx_lua-0.10.31rc2
+module ngx_lua-0.10.31rc5
   section 18 345 name
   section 345 380 status
   section 380 530 version
@@ -6404,15 +6404,15 @@ module ngx_postgres-1.0
 
 module todo
 
-dist ngx_stream_lua-0.0.19rc3
+dist ngx_stream_lua-0.0.19rc4
   aliases ngx_stream_lua_module
-  modules dev_notes ngx_stream_lua-0.0.19rc3
+  modules dev_notes ngx_stream_lua-0.0.19rc4
 
 module dev_notes
   section 102 806 install
   section 806 1299 status
 
-module ngx_stream_lua-0.0.19rc3
+module ngx_stream_lua-0.0.19rc4
   section 19 341 name
   section 341 376 status
   section 376 539 version
